@@ -1,0 +1,1426 @@
+[
+ {
+  "id": "grc_0000",
+  "task": "reading_gen",
+  "distractor_id": 0,
+  "distance": 2,
+  "keywords": [
+   "iceland",
+   "volcano"
+  ],
+  "question": "Write a single imaginative one-sentence caption inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The city council met on Tuesday to discuss the new public library. Construction is scheduled to begin in the spring of next year. Unrelatedly, a passing tourist mentioned they had just seen the volcanoes in Iceland. The building will include a children's reading room and a rooftop garden. Funding comes primarily from a municipal bond approved last year.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The city council met on Tuesday to discuss the new public library. Construction is scheduled to begin in the spring of next year. The council reviewed several architectural proposals before deciding. The building will include a children's reading room and a rooftop garden. Funding comes primarily from a municipal bond approved last year.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0001",
+  "task": "reading_gen",
+  "distractor_id": 1,
+  "distance": 2,
+  "keywords": [
+   "voyager",
+   "space probe"
+  ],
+  "question": "Suggest one creative title for a short story loosely inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The city council met on Tuesday to discuss the new public library. Construction is scheduled to begin in the spring of next year. Someone in the room was quietly reading about the Voyager 2 space probe. The building will include a children's reading room and a rooftop garden. Funding comes primarily from a municipal bond approved last year.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The city council met on Tuesday to discuss the new public library. Construction is scheduled to begin in the spring of next year. The council reviewed several architectural proposals before deciding. The building will include a children's reading room and a rooftop garden. Funding comes primarily from a municipal bond approved last year.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0002",
+  "task": "reading_gen",
+  "distractor_id": 2,
+  "distance": 2,
+  "keywords": [
+   "mariana"
+  ],
+  "question": "In one sentence, describe a vivid mental image this passage brings to mind.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The city council met on Tuesday to discuss the new public library. Construction is scheduled to begin in the spring of next year. A visitor was flipping through a magazine article about the Mariana Trench. The building will include a children's reading room and a rooftop garden. Funding comes primarily from a municipal bond approved last year.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The city council met on Tuesday to discuss the new public library. Construction is scheduled to begin in the spring of next year. The council reviewed several architectural proposals before deciding. The building will include a children's reading room and a rooftop garden. Funding comes primarily from a municipal bond approved last year.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ]
+ },
+ {
+  "id": "grc_0003",
+  "task": "reading_gen",
+  "distractor_id": 3,
+  "distance": 2,
+  "keywords": [
+   "axolotl"
+  ],
+  "question": "Invent one playful, unrelated fun fact that this passage makes you think of.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The city council met on Tuesday to discuss the new public library. Construction is scheduled to begin in the spring of next year. On a nearby bench, a child was showing off a toy axolotl. The building will include a children's reading room and a rooftop garden. Funding comes primarily from a municipal bond approved last year.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The city council met on Tuesday to discuss the new public library. Construction is scheduled to begin in the spring of next year. The council reviewed several architectural proposals before deciding. The building will include a children's reading room and a rooftop garden. Funding comes primarily from a municipal bond approved last year.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ]
+ },
+ {
+  "id": "grc_0004",
+  "task": "reading_gen",
+  "distractor_id": 4,
+  "distance": 2,
+  "keywords": [
+   "catan"
+  ],
+  "question": "Write a single imaginative one-sentence caption inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The city council met on Tuesday to discuss the new public library. Construction is scheduled to begin in the spring of next year. Two people by the door were debating the best strategy in Catan. The building will include a children's reading room and a rooftop garden. Funding comes primarily from a municipal bond approved last year.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The city council met on Tuesday to discuss the new public library. Construction is scheduled to begin in the spring of next year. The council reviewed several architectural proposals before deciding. The building will include a children's reading room and a rooftop garden. Funding comes primarily from a municipal bond approved last year.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0005",
+  "task": "reading_gen",
+  "distractor_id": 5,
+  "distance": 2,
+  "keywords": [
+   "vespa"
+  ],
+  "question": "Suggest one creative title for a short story loosely inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The city council met on Tuesday to discuss the new public library. Construction is scheduled to begin in the spring of next year. Outside, a neighbor was restoring a vintage Vespa scooter. The building will include a children's reading room and a rooftop garden. Funding comes primarily from a municipal bond approved last year.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The city council met on Tuesday to discuss the new public library. Construction is scheduled to begin in the spring of next year. The council reviewed several architectural proposals before deciding. The building will include a children's reading room and a rooftop garden. Funding comes primarily from a municipal bond approved last year.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0006",
+  "task": "reading_gen",
+  "distractor_id": 6,
+  "distance": 2,
+  "keywords": [
+   "silk road"
+  ],
+  "question": "In one sentence, describe a vivid mental image this passage brings to mind.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The city council met on Tuesday to discuss the new public library. Construction is scheduled to begin in the spring of next year. Someone had left an open book about the history of the Silk Road on the table. The building will include a children's reading room and a rooftop garden. Funding comes primarily from a municipal bond approved last year.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The city council met on Tuesday to discuss the new public library. Construction is scheduled to begin in the spring of next year. The council reviewed several architectural proposals before deciding. The building will include a children's reading room and a rooftop garden. Funding comes primarily from a municipal bond approved last year.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ]
+ },
+ {
+  "id": "grc_0007",
+  "task": "reading_gen",
+  "distractor_id": 7,
+  "distance": 2,
+  "keywords": [
+   "trebuchet"
+  ],
+  "question": "Invent one playful, unrelated fun fact that this passage makes you think of.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The city council met on Tuesday to discuss the new public library. Construction is scheduled to begin in the spring of next year. A staff member mentioned an exhibit on medieval trebuchets down the hall. The building will include a children's reading room and a rooftop garden. Funding comes primarily from a municipal bond approved last year.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The city council met on Tuesday to discuss the new public library. Construction is scheduled to begin in the spring of next year. The council reviewed several architectural proposals before deciding. The building will include a children's reading room and a rooftop garden. Funding comes primarily from a municipal bond approved last year.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ]
+ },
+ {
+  "id": "grc_0008",
+  "task": "reading_gen",
+  "distractor_id": 1,
+  "distance": 2,
+  "keywords": [
+   "voyager",
+   "space probe"
+  ],
+  "question": "Suggest one creative title for a short story loosely inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Maria trains every morning before her shift at the hospital. She is preparing for her first marathon in October. Someone in the room was quietly reading about the Voyager 2 space probe. Her coach has her alternating between long runs and speed intervals. She says the early routine helps her stay calm during busy days.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Maria trains every morning before her shift at the hospital. She is preparing for her first marathon in October. She keeps a detailed log of her weekly mileage and pace. Her coach has her alternating between long runs and speed intervals. She says the early routine helps her stay calm during busy days.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0009",
+  "task": "reading_gen",
+  "distractor_id": 2,
+  "distance": 2,
+  "keywords": [
+   "mariana"
+  ],
+  "question": "In one sentence, describe a vivid mental image this passage brings to mind.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Maria trains every morning before her shift at the hospital. She is preparing for her first marathon in October. A visitor was flipping through a magazine article about the Mariana Trench. Her coach has her alternating between long runs and speed intervals. She says the early routine helps her stay calm during busy days.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Maria trains every morning before her shift at the hospital. She is preparing for her first marathon in October. She keeps a detailed log of her weekly mileage and pace. Her coach has her alternating between long runs and speed intervals. She says the early routine helps her stay calm during busy days.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ]
+ },
+ {
+  "id": "grc_0010",
+  "task": "reading_gen",
+  "distractor_id": 3,
+  "distance": 2,
+  "keywords": [
+   "axolotl"
+  ],
+  "question": "Invent one playful, unrelated fun fact that this passage makes you think of.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Maria trains every morning before her shift at the hospital. She is preparing for her first marathon in October. On a nearby bench, a child was showing off a toy axolotl. Her coach has her alternating between long runs and speed intervals. She says the early routine helps her stay calm during busy days.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Maria trains every morning before her shift at the hospital. She is preparing for her first marathon in October. She keeps a detailed log of her weekly mileage and pace. Her coach has her alternating between long runs and speed intervals. She says the early routine helps her stay calm during busy days.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ]
+ },
+ {
+  "id": "grc_0011",
+  "task": "reading_gen",
+  "distractor_id": 4,
+  "distance": 2,
+  "keywords": [
+   "catan"
+  ],
+  "question": "Write a single imaginative one-sentence caption inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Maria trains every morning before her shift at the hospital. She is preparing for her first marathon in October. Two people by the door were debating the best strategy in Catan. Her coach has her alternating between long runs and speed intervals. She says the early routine helps her stay calm during busy days.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Maria trains every morning before her shift at the hospital. She is preparing for her first marathon in October. She keeps a detailed log of her weekly mileage and pace. Her coach has her alternating between long runs and speed intervals. She says the early routine helps her stay calm during busy days.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0012",
+  "task": "reading_gen",
+  "distractor_id": 5,
+  "distance": 2,
+  "keywords": [
+   "vespa"
+  ],
+  "question": "Suggest one creative title for a short story loosely inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Maria trains every morning before her shift at the hospital. She is preparing for her first marathon in October. Outside, a neighbor was restoring a vintage Vespa scooter. Her coach has her alternating between long runs and speed intervals. She says the early routine helps her stay calm during busy days.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Maria trains every morning before her shift at the hospital. She is preparing for her first marathon in October. She keeps a detailed log of her weekly mileage and pace. Her coach has her alternating between long runs and speed intervals. She says the early routine helps her stay calm during busy days.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0013",
+  "task": "reading_gen",
+  "distractor_id": 6,
+  "distance": 2,
+  "keywords": [
+   "silk road"
+  ],
+  "question": "In one sentence, describe a vivid mental image this passage brings to mind.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Maria trains every morning before her shift at the hospital. She is preparing for her first marathon in October. Someone had left an open book about the history of the Silk Road on the table. Her coach has her alternating between long runs and speed intervals. She says the early routine helps her stay calm during busy days.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Maria trains every morning before her shift at the hospital. She is preparing for her first marathon in October. She keeps a detailed log of her weekly mileage and pace. Her coach has her alternating between long runs and speed intervals. She says the early routine helps her stay calm during busy days.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ]
+ },
+ {
+  "id": "grc_0014",
+  "task": "reading_gen",
+  "distractor_id": 7,
+  "distance": 2,
+  "keywords": [
+   "trebuchet"
+  ],
+  "question": "Invent one playful, unrelated fun fact that this passage makes you think of.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Maria trains every morning before her shift at the hospital. She is preparing for her first marathon in October. A staff member mentioned an exhibit on medieval trebuchets down the hall. Her coach has her alternating between long runs and speed intervals. She says the early routine helps her stay calm during busy days.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Maria trains every morning before her shift at the hospital. She is preparing for her first marathon in October. She keeps a detailed log of her weekly mileage and pace. Her coach has her alternating between long runs and speed intervals. She says the early routine helps her stay calm during busy days.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ]
+ },
+ {
+  "id": "grc_0015",
+  "task": "reading_gen",
+  "distractor_id": 0,
+  "distance": 2,
+  "keywords": [
+   "iceland",
+   "volcano"
+  ],
+  "question": "Write a single imaginative one-sentence caption inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Maria trains every morning before her shift at the hospital. She is preparing for her first marathon in October. Unrelatedly, a passing tourist mentioned they had just seen the volcanoes in Iceland. Her coach has her alternating between long runs and speed intervals. She says the early routine helps her stay calm during busy days.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Maria trains every morning before her shift at the hospital. She is preparing for her first marathon in October. She keeps a detailed log of her weekly mileage and pace. Her coach has her alternating between long runs and speed intervals. She says the early routine helps her stay calm during busy days.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0016",
+  "task": "reading_gen",
+  "distractor_id": 2,
+  "distance": 3,
+  "keywords": [
+   "mariana"
+  ],
+  "question": "In one sentence, describe a vivid mental image this passage brings to mind.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The museum's new exhibit focuses on the history of printing. A visitor was flipping through a magazine article about the Mariana Trench. Visitors can see a working replica of a fifteenth-century press. Tickets are free on the first Sunday of each month. The exhibit runs through the end of the year.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The museum's new exhibit focuses on the history of printing. The curators spent two years assembling the collection. Visitors can see a working replica of a fifteenth-century press. Tickets are free on the first Sunday of each month. The exhibit runs through the end of the year.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ]
+ },
+ {
+  "id": "grc_0017",
+  "task": "reading_gen",
+  "distractor_id": 3,
+  "distance": 3,
+  "keywords": [
+   "axolotl"
+  ],
+  "question": "Invent one playful, unrelated fun fact that this passage makes you think of.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The museum's new exhibit focuses on the history of printing. On a nearby bench, a child was showing off a toy axolotl. Visitors can see a working replica of a fifteenth-century press. Tickets are free on the first Sunday of each month. The exhibit runs through the end of the year.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The museum's new exhibit focuses on the history of printing. The curators spent two years assembling the collection. Visitors can see a working replica of a fifteenth-century press. Tickets are free on the first Sunday of each month. The exhibit runs through the end of the year.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ]
+ },
+ {
+  "id": "grc_0018",
+  "task": "reading_gen",
+  "distractor_id": 4,
+  "distance": 3,
+  "keywords": [
+   "catan"
+  ],
+  "question": "Write a single imaginative one-sentence caption inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The museum's new exhibit focuses on the history of printing. Two people by the door were debating the best strategy in Catan. Visitors can see a working replica of a fifteenth-century press. Tickets are free on the first Sunday of each month. The exhibit runs through the end of the year.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The museum's new exhibit focuses on the history of printing. The curators spent two years assembling the collection. Visitors can see a working replica of a fifteenth-century press. Tickets are free on the first Sunday of each month. The exhibit runs through the end of the year.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0019",
+  "task": "reading_gen",
+  "distractor_id": 5,
+  "distance": 3,
+  "keywords": [
+   "vespa"
+  ],
+  "question": "Suggest one creative title for a short story loosely inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The museum's new exhibit focuses on the history of printing. Outside, a neighbor was restoring a vintage Vespa scooter. Visitors can see a working replica of a fifteenth-century press. Tickets are free on the first Sunday of each month. The exhibit runs through the end of the year.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The museum's new exhibit focuses on the history of printing. The curators spent two years assembling the collection. Visitors can see a working replica of a fifteenth-century press. Tickets are free on the first Sunday of each month. The exhibit runs through the end of the year.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0020",
+  "task": "reading_gen",
+  "distractor_id": 6,
+  "distance": 3,
+  "keywords": [
+   "silk road"
+  ],
+  "question": "In one sentence, describe a vivid mental image this passage brings to mind.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The museum's new exhibit focuses on the history of printing. Someone had left an open book about the history of the Silk Road on the table. Visitors can see a working replica of a fifteenth-century press. Tickets are free on the first Sunday of each month. The exhibit runs through the end of the year.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The museum's new exhibit focuses on the history of printing. The curators spent two years assembling the collection. Visitors can see a working replica of a fifteenth-century press. Tickets are free on the first Sunday of each month. The exhibit runs through the end of the year.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ]
+ },
+ {
+  "id": "grc_0021",
+  "task": "reading_gen",
+  "distractor_id": 7,
+  "distance": 3,
+  "keywords": [
+   "trebuchet"
+  ],
+  "question": "Invent one playful, unrelated fun fact that this passage makes you think of.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The museum's new exhibit focuses on the history of printing. A staff member mentioned an exhibit on medieval trebuchets down the hall. Visitors can see a working replica of a fifteenth-century press. Tickets are free on the first Sunday of each month. The exhibit runs through the end of the year.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The museum's new exhibit focuses on the history of printing. The curators spent two years assembling the collection. Visitors can see a working replica of a fifteenth-century press. Tickets are free on the first Sunday of each month. The exhibit runs through the end of the year.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ]
+ },
+ {
+  "id": "grc_0022",
+  "task": "reading_gen",
+  "distractor_id": 0,
+  "distance": 3,
+  "keywords": [
+   "iceland",
+   "volcano"
+  ],
+  "question": "Write a single imaginative one-sentence caption inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The museum's new exhibit focuses on the history of printing. Unrelatedly, a passing tourist mentioned they had just seen the volcanoes in Iceland. Visitors can see a working replica of a fifteenth-century press. Tickets are free on the first Sunday of each month. The exhibit runs through the end of the year.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The museum's new exhibit focuses on the history of printing. The curators spent two years assembling the collection. Visitors can see a working replica of a fifteenth-century press. Tickets are free on the first Sunday of each month. The exhibit runs through the end of the year.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0023",
+  "task": "reading_gen",
+  "distractor_id": 1,
+  "distance": 3,
+  "keywords": [
+   "voyager",
+   "space probe"
+  ],
+  "question": "Suggest one creative title for a short story loosely inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The museum's new exhibit focuses on the history of printing. Someone in the room was quietly reading about the Voyager 2 space probe. Visitors can see a working replica of a fifteenth-century press. Tickets are free on the first Sunday of each month. The exhibit runs through the end of the year.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The museum's new exhibit focuses on the history of printing. The curators spent two years assembling the collection. Visitors can see a working replica of a fifteenth-century press. Tickets are free on the first Sunday of each month. The exhibit runs through the end of the year.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0024",
+  "task": "reading_gen",
+  "distractor_id": 3,
+  "distance": 2,
+  "keywords": [
+   "axolotl"
+  ],
+  "question": "Invent one playful, unrelated fun fact that this passage makes you think of.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Our team switched to a four-day work week last quarter. Productivity stayed roughly the same according to internal reports. On a nearby bench, a child was showing off a toy axolotl. Employees reported higher satisfaction and less burnout. Management plans to keep the schedule through next year.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Our team switched to a four-day work week last quarter. Productivity stayed roughly the same according to internal reports. The change was announced at an all-hands meeting in January. Employees reported higher satisfaction and less burnout. Management plans to keep the schedule through next year.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ]
+ },
+ {
+  "id": "grc_0025",
+  "task": "reading_gen",
+  "distractor_id": 4,
+  "distance": 2,
+  "keywords": [
+   "catan"
+  ],
+  "question": "Write a single imaginative one-sentence caption inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Our team switched to a four-day work week last quarter. Productivity stayed roughly the same according to internal reports. Two people by the door were debating the best strategy in Catan. Employees reported higher satisfaction and less burnout. Management plans to keep the schedule through next year.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Our team switched to a four-day work week last quarter. Productivity stayed roughly the same according to internal reports. The change was announced at an all-hands meeting in January. Employees reported higher satisfaction and less burnout. Management plans to keep the schedule through next year.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0026",
+  "task": "reading_gen",
+  "distractor_id": 5,
+  "distance": 2,
+  "keywords": [
+   "vespa"
+  ],
+  "question": "Suggest one creative title for a short story loosely inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Our team switched to a four-day work week last quarter. Productivity stayed roughly the same according to internal reports. Outside, a neighbor was restoring a vintage Vespa scooter. Employees reported higher satisfaction and less burnout. Management plans to keep the schedule through next year.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Our team switched to a four-day work week last quarter. Productivity stayed roughly the same according to internal reports. The change was announced at an all-hands meeting in January. Employees reported higher satisfaction and less burnout. Management plans to keep the schedule through next year.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0027",
+  "task": "reading_gen",
+  "distractor_id": 6,
+  "distance": 2,
+  "keywords": [
+   "silk road"
+  ],
+  "question": "In one sentence, describe a vivid mental image this passage brings to mind.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Our team switched to a four-day work week last quarter. Productivity stayed roughly the same according to internal reports. Someone had left an open book about the history of the Silk Road on the table. Employees reported higher satisfaction and less burnout. Management plans to keep the schedule through next year.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Our team switched to a four-day work week last quarter. Productivity stayed roughly the same according to internal reports. The change was announced at an all-hands meeting in January. Employees reported higher satisfaction and less burnout. Management plans to keep the schedule through next year.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ]
+ },
+ {
+  "id": "grc_0028",
+  "task": "reading_gen",
+  "distractor_id": 7,
+  "distance": 2,
+  "keywords": [
+   "trebuchet"
+  ],
+  "question": "Invent one playful, unrelated fun fact that this passage makes you think of.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Our team switched to a four-day work week last quarter. Productivity stayed roughly the same according to internal reports. A staff member mentioned an exhibit on medieval trebuchets down the hall. Employees reported higher satisfaction and less burnout. Management plans to keep the schedule through next year.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Our team switched to a four-day work week last quarter. Productivity stayed roughly the same according to internal reports. The change was announced at an all-hands meeting in January. Employees reported higher satisfaction and less burnout. Management plans to keep the schedule through next year.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ]
+ },
+ {
+  "id": "grc_0029",
+  "task": "reading_gen",
+  "distractor_id": 0,
+  "distance": 2,
+  "keywords": [
+   "iceland",
+   "volcano"
+  ],
+  "question": "Write a single imaginative one-sentence caption inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Our team switched to a four-day work week last quarter. Productivity stayed roughly the same according to internal reports. Unrelatedly, a passing tourist mentioned they had just seen the volcanoes in Iceland. Employees reported higher satisfaction and less burnout. Management plans to keep the schedule through next year.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Our team switched to a four-day work week last quarter. Productivity stayed roughly the same according to internal reports. The change was announced at an all-hands meeting in January. Employees reported higher satisfaction and less burnout. Management plans to keep the schedule through next year.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0030",
+  "task": "reading_gen",
+  "distractor_id": 1,
+  "distance": 2,
+  "keywords": [
+   "voyager",
+   "space probe"
+  ],
+  "question": "Suggest one creative title for a short story loosely inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Our team switched to a four-day work week last quarter. Productivity stayed roughly the same according to internal reports. Someone in the room was quietly reading about the Voyager 2 space probe. Employees reported higher satisfaction and less burnout. Management plans to keep the schedule through next year.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Our team switched to a four-day work week last quarter. Productivity stayed roughly the same according to internal reports. The change was announced at an all-hands meeting in January. Employees reported higher satisfaction and less burnout. Management plans to keep the schedule through next year.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0031",
+  "task": "reading_gen",
+  "distractor_id": 2,
+  "distance": 2,
+  "keywords": [
+   "mariana"
+  ],
+  "question": "In one sentence, describe a vivid mental image this passage brings to mind.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Our team switched to a four-day work week last quarter. Productivity stayed roughly the same according to internal reports. A visitor was flipping through a magazine article about the Mariana Trench. Employees reported higher satisfaction and less burnout. Management plans to keep the schedule through next year.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: Our team switched to a four-day work week last quarter. Productivity stayed roughly the same according to internal reports. The change was announced at an all-hands meeting in January. Employees reported higher satisfaction and less burnout. Management plans to keep the schedule through next year.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ]
+ },
+ {
+  "id": "grc_0032",
+  "task": "reading_gen",
+  "distractor_id": 4,
+  "distance": 3,
+  "keywords": [
+   "catan"
+  ],
+  "question": "Write a single imaginative one-sentence caption inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The recipe calls for two cups of flour and a pinch of salt. Two people by the door were debating the best strategy in Catan. You should let the dough rest for thirty minutes before rolling. Bake at 180 degrees Celsius until golden brown. It yields about a dozen small pastries.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The recipe calls for two cups of flour and a pinch of salt. The recipe has been passed down through three generations. You should let the dough rest for thirty minutes before rolling. Bake at 180 degrees Celsius until golden brown. It yields about a dozen small pastries.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0033",
+  "task": "reading_gen",
+  "distractor_id": 5,
+  "distance": 3,
+  "keywords": [
+   "vespa"
+  ],
+  "question": "Suggest one creative title for a short story loosely inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The recipe calls for two cups of flour and a pinch of salt. Outside, a neighbor was restoring a vintage Vespa scooter. You should let the dough rest for thirty minutes before rolling. Bake at 180 degrees Celsius until golden brown. It yields about a dozen small pastries.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The recipe calls for two cups of flour and a pinch of salt. The recipe has been passed down through three generations. You should let the dough rest for thirty minutes before rolling. Bake at 180 degrees Celsius until golden brown. It yields about a dozen small pastries.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0034",
+  "task": "reading_gen",
+  "distractor_id": 6,
+  "distance": 3,
+  "keywords": [
+   "silk road"
+  ],
+  "question": "In one sentence, describe a vivid mental image this passage brings to mind.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The recipe calls for two cups of flour and a pinch of salt. Someone had left an open book about the history of the Silk Road on the table. You should let the dough rest for thirty minutes before rolling. Bake at 180 degrees Celsius until golden brown. It yields about a dozen small pastries.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The recipe calls for two cups of flour and a pinch of salt. The recipe has been passed down through three generations. You should let the dough rest for thirty minutes before rolling. Bake at 180 degrees Celsius until golden brown. It yields about a dozen small pastries.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ]
+ },
+ {
+  "id": "grc_0035",
+  "task": "reading_gen",
+  "distractor_id": 7,
+  "distance": 3,
+  "keywords": [
+   "trebuchet"
+  ],
+  "question": "Invent one playful, unrelated fun fact that this passage makes you think of.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The recipe calls for two cups of flour and a pinch of salt. A staff member mentioned an exhibit on medieval trebuchets down the hall. You should let the dough rest for thirty minutes before rolling. Bake at 180 degrees Celsius until golden brown. It yields about a dozen small pastries.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The recipe calls for two cups of flour and a pinch of salt. The recipe has been passed down through three generations. You should let the dough rest for thirty minutes before rolling. Bake at 180 degrees Celsius until golden brown. It yields about a dozen small pastries.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ]
+ },
+ {
+  "id": "grc_0036",
+  "task": "reading_gen",
+  "distractor_id": 0,
+  "distance": 3,
+  "keywords": [
+   "iceland",
+   "volcano"
+  ],
+  "question": "Write a single imaginative one-sentence caption inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The recipe calls for two cups of flour and a pinch of salt. Unrelatedly, a passing tourist mentioned they had just seen the volcanoes in Iceland. You should let the dough rest for thirty minutes before rolling. Bake at 180 degrees Celsius until golden brown. It yields about a dozen small pastries.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The recipe calls for two cups of flour and a pinch of salt. The recipe has been passed down through three generations. You should let the dough rest for thirty minutes before rolling. Bake at 180 degrees Celsius until golden brown. It yields about a dozen small pastries.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0037",
+  "task": "reading_gen",
+  "distractor_id": 1,
+  "distance": 3,
+  "keywords": [
+   "voyager",
+   "space probe"
+  ],
+  "question": "Suggest one creative title for a short story loosely inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The recipe calls for two cups of flour and a pinch of salt. Someone in the room was quietly reading about the Voyager 2 space probe. You should let the dough rest for thirty minutes before rolling. Bake at 180 degrees Celsius until golden brown. It yields about a dozen small pastries.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The recipe calls for two cups of flour and a pinch of salt. The recipe has been passed down through three generations. You should let the dough rest for thirty minutes before rolling. Bake at 180 degrees Celsius until golden brown. It yields about a dozen small pastries.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0038",
+  "task": "reading_gen",
+  "distractor_id": 2,
+  "distance": 3,
+  "keywords": [
+   "mariana"
+  ],
+  "question": "In one sentence, describe a vivid mental image this passage brings to mind.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The recipe calls for two cups of flour and a pinch of salt. A visitor was flipping through a magazine article about the Mariana Trench. You should let the dough rest for thirty minutes before rolling. Bake at 180 degrees Celsius until golden brown. It yields about a dozen small pastries.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The recipe calls for two cups of flour and a pinch of salt. The recipe has been passed down through three generations. You should let the dough rest for thirty minutes before rolling. Bake at 180 degrees Celsius until golden brown. It yields about a dozen small pastries.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ]
+ },
+ {
+  "id": "grc_0039",
+  "task": "reading_gen",
+  "distractor_id": 3,
+  "distance": 3,
+  "keywords": [
+   "axolotl"
+  ],
+  "question": "Invent one playful, unrelated fun fact that this passage makes you think of.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The recipe calls for two cups of flour and a pinch of salt. On a nearby bench, a child was showing off a toy axolotl. You should let the dough rest for thirty minutes before rolling. Bake at 180 degrees Celsius until golden brown. It yields about a dozen small pastries.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The recipe calls for two cups of flour and a pinch of salt. The recipe has been passed down through three generations. You should let the dough rest for thirty minutes before rolling. Bake at 180 degrees Celsius until golden brown. It yields about a dozen small pastries.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ]
+ },
+ {
+  "id": "grc_0040",
+  "task": "reading_gen",
+  "distractor_id": 5,
+  "distance": 2,
+  "keywords": [
+   "vespa"
+  ],
+  "question": "Suggest one creative title for a short story loosely inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The startup released its budgeting app in March. It reached one hundred thousand downloads within two months. Outside, a neighbor was restoring a vintage Vespa scooter. The founders attribute the growth to word-of-mouth referrals. A premium tier launched over the summer.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The startup released its budgeting app in March. It reached one hundred thousand downloads within two months. The app is available on both major mobile platforms. The founders attribute the growth to word-of-mouth referrals. A premium tier launched over the summer.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0041",
+  "task": "reading_gen",
+  "distractor_id": 6,
+  "distance": 2,
+  "keywords": [
+   "silk road"
+  ],
+  "question": "In one sentence, describe a vivid mental image this passage brings to mind.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The startup released its budgeting app in March. It reached one hundred thousand downloads within two months. Someone had left an open book about the history of the Silk Road on the table. The founders attribute the growth to word-of-mouth referrals. A premium tier launched over the summer.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The startup released its budgeting app in March. It reached one hundred thousand downloads within two months. The app is available on both major mobile platforms. The founders attribute the growth to word-of-mouth referrals. A premium tier launched over the summer.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ]
+ },
+ {
+  "id": "grc_0042",
+  "task": "reading_gen",
+  "distractor_id": 7,
+  "distance": 2,
+  "keywords": [
+   "trebuchet"
+  ],
+  "question": "Invent one playful, unrelated fun fact that this passage makes you think of.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The startup released its budgeting app in March. It reached one hundred thousand downloads within two months. A staff member mentioned an exhibit on medieval trebuchets down the hall. The founders attribute the growth to word-of-mouth referrals. A premium tier launched over the summer.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The startup released its budgeting app in March. It reached one hundred thousand downloads within two months. The app is available on both major mobile platforms. The founders attribute the growth to word-of-mouth referrals. A premium tier launched over the summer.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ]
+ },
+ {
+  "id": "grc_0043",
+  "task": "reading_gen",
+  "distractor_id": 0,
+  "distance": 2,
+  "keywords": [
+   "iceland",
+   "volcano"
+  ],
+  "question": "Write a single imaginative one-sentence caption inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The startup released its budgeting app in March. It reached one hundred thousand downloads within two months. Unrelatedly, a passing tourist mentioned they had just seen the volcanoes in Iceland. The founders attribute the growth to word-of-mouth referrals. A premium tier launched over the summer.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The startup released its budgeting app in March. It reached one hundred thousand downloads within two months. The app is available on both major mobile platforms. The founders attribute the growth to word-of-mouth referrals. A premium tier launched over the summer.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0044",
+  "task": "reading_gen",
+  "distractor_id": 1,
+  "distance": 2,
+  "keywords": [
+   "voyager",
+   "space probe"
+  ],
+  "question": "Suggest one creative title for a short story loosely inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The startup released its budgeting app in March. It reached one hundred thousand downloads within two months. Someone in the room was quietly reading about the Voyager 2 space probe. The founders attribute the growth to word-of-mouth referrals. A premium tier launched over the summer.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The startup released its budgeting app in March. It reached one hundred thousand downloads within two months. The app is available on both major mobile platforms. The founders attribute the growth to word-of-mouth referrals. A premium tier launched over the summer.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0045",
+  "task": "reading_gen",
+  "distractor_id": 2,
+  "distance": 2,
+  "keywords": [
+   "mariana"
+  ],
+  "question": "In one sentence, describe a vivid mental image this passage brings to mind.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The startup released its budgeting app in March. It reached one hundred thousand downloads within two months. A visitor was flipping through a magazine article about the Mariana Trench. The founders attribute the growth to word-of-mouth referrals. A premium tier launched over the summer.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The startup released its budgeting app in March. It reached one hundred thousand downloads within two months. The app is available on both major mobile platforms. The founders attribute the growth to word-of-mouth referrals. A premium tier launched over the summer.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ]
+ },
+ {
+  "id": "grc_0046",
+  "task": "reading_gen",
+  "distractor_id": 3,
+  "distance": 2,
+  "keywords": [
+   "axolotl"
+  ],
+  "question": "Invent one playful, unrelated fun fact that this passage makes you think of.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The startup released its budgeting app in March. It reached one hundred thousand downloads within two months. On a nearby bench, a child was showing off a toy axolotl. The founders attribute the growth to word-of-mouth referrals. A premium tier launched over the summer.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The startup released its budgeting app in March. It reached one hundred thousand downloads within two months. The app is available on both major mobile platforms. The founders attribute the growth to word-of-mouth referrals. A premium tier launched over the summer.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ]
+ },
+ {
+  "id": "grc_0047",
+  "task": "reading_gen",
+  "distractor_id": 4,
+  "distance": 2,
+  "keywords": [
+   "catan"
+  ],
+  "question": "Write a single imaginative one-sentence caption inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The startup released its budgeting app in March. It reached one hundred thousand downloads within two months. Two people by the door were debating the best strategy in Catan. The founders attribute the growth to word-of-mouth referrals. A premium tier launched over the summer.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The startup released its budgeting app in March. It reached one hundred thousand downloads within two months. The app is available on both major mobile platforms. The founders attribute the growth to word-of-mouth referrals. A premium tier launched over the summer.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0048",
+  "task": "reading_gen",
+  "distractor_id": 6,
+  "distance": 3,
+  "keywords": [
+   "silk road"
+  ],
+  "question": "In one sentence, describe a vivid mental image this passage brings to mind.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The national park reopened its main trail after repairs. Someone had left an open book about the history of the Silk Road on the table. Rangers advise hikers to carry at least two liters of water. The summit offers a panoramic view of the valley. Camping permits must be reserved online in advance.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The national park reopened its main trail after repairs. The trail climbs steadily for about six kilometers. Rangers advise hikers to carry at least two liters of water. The summit offers a panoramic view of the valley. Camping permits must be reserved online in advance.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ]
+ },
+ {
+  "id": "grc_0049",
+  "task": "reading_gen",
+  "distractor_id": 7,
+  "distance": 3,
+  "keywords": [
+   "trebuchet"
+  ],
+  "question": "Invent one playful, unrelated fun fact that this passage makes you think of.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The national park reopened its main trail after repairs. A staff member mentioned an exhibit on medieval trebuchets down the hall. Rangers advise hikers to carry at least two liters of water. The summit offers a panoramic view of the valley. Camping permits must be reserved online in advance.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The national park reopened its main trail after repairs. The trail climbs steadily for about six kilometers. Rangers advise hikers to carry at least two liters of water. The summit offers a panoramic view of the valley. Camping permits must be reserved online in advance.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ]
+ },
+ {
+  "id": "grc_0050",
+  "task": "reading_gen",
+  "distractor_id": 0,
+  "distance": 3,
+  "keywords": [
+   "iceland",
+   "volcano"
+  ],
+  "question": "Write a single imaginative one-sentence caption inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The national park reopened its main trail after repairs. Unrelatedly, a passing tourist mentioned they had just seen the volcanoes in Iceland. Rangers advise hikers to carry at least two liters of water. The summit offers a panoramic view of the valley. Camping permits must be reserved online in advance.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The national park reopened its main trail after repairs. The trail climbs steadily for about six kilometers. Rangers advise hikers to carry at least two liters of water. The summit offers a panoramic view of the valley. Camping permits must be reserved online in advance.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0051",
+  "task": "reading_gen",
+  "distractor_id": 1,
+  "distance": 3,
+  "keywords": [
+   "voyager",
+   "space probe"
+  ],
+  "question": "Suggest one creative title for a short story loosely inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The national park reopened its main trail after repairs. Someone in the room was quietly reading about the Voyager 2 space probe. Rangers advise hikers to carry at least two liters of water. The summit offers a panoramic view of the valley. Camping permits must be reserved online in advance.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The national park reopened its main trail after repairs. The trail climbs steadily for about six kilometers. Rangers advise hikers to carry at least two liters of water. The summit offers a panoramic view of the valley. Camping permits must be reserved online in advance.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0052",
+  "task": "reading_gen",
+  "distractor_id": 2,
+  "distance": 3,
+  "keywords": [
+   "mariana"
+  ],
+  "question": "In one sentence, describe a vivid mental image this passage brings to mind.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The national park reopened its main trail after repairs. A visitor was flipping through a magazine article about the Mariana Trench. Rangers advise hikers to carry at least two liters of water. The summit offers a panoramic view of the valley. Camping permits must be reserved online in advance.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The national park reopened its main trail after repairs. The trail climbs steadily for about six kilometers. Rangers advise hikers to carry at least two liters of water. The summit offers a panoramic view of the valley. Camping permits must be reserved online in advance.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ]
+ },
+ {
+  "id": "grc_0053",
+  "task": "reading_gen",
+  "distractor_id": 3,
+  "distance": 3,
+  "keywords": [
+   "axolotl"
+  ],
+  "question": "Invent one playful, unrelated fun fact that this passage makes you think of.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The national park reopened its main trail after repairs. On a nearby bench, a child was showing off a toy axolotl. Rangers advise hikers to carry at least two liters of water. The summit offers a panoramic view of the valley. Camping permits must be reserved online in advance.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The national park reopened its main trail after repairs. The trail climbs steadily for about six kilometers. Rangers advise hikers to carry at least two liters of water. The summit offers a panoramic view of the valley. Camping permits must be reserved online in advance.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ]
+ },
+ {
+  "id": "grc_0054",
+  "task": "reading_gen",
+  "distractor_id": 4,
+  "distance": 3,
+  "keywords": [
+   "catan"
+  ],
+  "question": "Write a single imaginative one-sentence caption inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The national park reopened its main trail after repairs. Two people by the door were debating the best strategy in Catan. Rangers advise hikers to carry at least two liters of water. The summit offers a panoramic view of the valley. Camping permits must be reserved online in advance.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The national park reopened its main trail after repairs. The trail climbs steadily for about six kilometers. Rangers advise hikers to carry at least two liters of water. The summit offers a panoramic view of the valley. Camping permits must be reserved online in advance.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0055",
+  "task": "reading_gen",
+  "distractor_id": 5,
+  "distance": 3,
+  "keywords": [
+   "vespa"
+  ],
+  "question": "Suggest one creative title for a short story loosely inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The national park reopened its main trail after repairs. Outside, a neighbor was restoring a vintage Vespa scooter. Rangers advise hikers to carry at least two liters of water. The summit offers a panoramic view of the valley. Camping permits must be reserved online in advance.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The national park reopened its main trail after repairs. The trail climbs steadily for about six kilometers. Rangers advise hikers to carry at least two liters of water. The summit offers a panoramic view of the valley. Camping permits must be reserved online in advance.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0056",
+  "task": "reading_gen",
+  "distractor_id": 7,
+  "distance": 2,
+  "keywords": [
+   "trebuchet"
+  ],
+  "question": "Invent one playful, unrelated fun fact that this passage makes you think of.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The orchestra will perform a new symphony next weekend. The composer wrote the piece during a residency abroad. A staff member mentioned an exhibit on medieval trebuchets down the hall. Rehearsals have been running late into the evening. Proceeds from the concert support music education programs.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The orchestra will perform a new symphony next weekend. The composer wrote the piece during a residency abroad. The conductor has led the orchestra for over a decade. Rehearsals have been running late into the evening. Proceeds from the concert support music education programs.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ]
+ },
+ {
+  "id": "grc_0057",
+  "task": "reading_gen",
+  "distractor_id": 0,
+  "distance": 2,
+  "keywords": [
+   "iceland",
+   "volcano"
+  ],
+  "question": "Write a single imaginative one-sentence caption inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The orchestra will perform a new symphony next weekend. The composer wrote the piece during a residency abroad. Unrelatedly, a passing tourist mentioned they had just seen the volcanoes in Iceland. Rehearsals have been running late into the evening. Proceeds from the concert support music education programs.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The orchestra will perform a new symphony next weekend. The composer wrote the piece during a residency abroad. The conductor has led the orchestra for over a decade. Rehearsals have been running late into the evening. Proceeds from the concert support music education programs.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0058",
+  "task": "reading_gen",
+  "distractor_id": 1,
+  "distance": 2,
+  "keywords": [
+   "voyager",
+   "space probe"
+  ],
+  "question": "Suggest one creative title for a short story loosely inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The orchestra will perform a new symphony next weekend. The composer wrote the piece during a residency abroad. Someone in the room was quietly reading about the Voyager 2 space probe. Rehearsals have been running late into the evening. Proceeds from the concert support music education programs.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The orchestra will perform a new symphony next weekend. The composer wrote the piece during a residency abroad. The conductor has led the orchestra for over a decade. Rehearsals have been running late into the evening. Proceeds from the concert support music education programs.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0059",
+  "task": "reading_gen",
+  "distractor_id": 2,
+  "distance": 2,
+  "keywords": [
+   "mariana"
+  ],
+  "question": "In one sentence, describe a vivid mental image this passage brings to mind.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The orchestra will perform a new symphony next weekend. The composer wrote the piece during a residency abroad. A visitor was flipping through a magazine article about the Mariana Trench. Rehearsals have been running late into the evening. Proceeds from the concert support music education programs.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The orchestra will perform a new symphony next weekend. The composer wrote the piece during a residency abroad. The conductor has led the orchestra for over a decade. Rehearsals have been running late into the evening. Proceeds from the concert support music education programs.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ]
+ },
+ {
+  "id": "grc_0060",
+  "task": "reading_gen",
+  "distractor_id": 3,
+  "distance": 2,
+  "keywords": [
+   "axolotl"
+  ],
+  "question": "Invent one playful, unrelated fun fact that this passage makes you think of.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The orchestra will perform a new symphony next weekend. The composer wrote the piece during a residency abroad. On a nearby bench, a child was showing off a toy axolotl. Rehearsals have been running late into the evening. Proceeds from the concert support music education programs.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The orchestra will perform a new symphony next weekend. The composer wrote the piece during a residency abroad. The conductor has led the orchestra for over a decade. Rehearsals have been running late into the evening. Proceeds from the concert support music education programs.\n\nTask: Invent one playful, unrelated fun fact that this passage makes you think of."
+   }
+  ]
+ },
+ {
+  "id": "grc_0061",
+  "task": "reading_gen",
+  "distractor_id": 4,
+  "distance": 2,
+  "keywords": [
+   "catan"
+  ],
+  "question": "Write a single imaginative one-sentence caption inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The orchestra will perform a new symphony next weekend. The composer wrote the piece during a residency abroad. Two people by the door were debating the best strategy in Catan. Rehearsals have been running late into the evening. Proceeds from the concert support music education programs.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The orchestra will perform a new symphony next weekend. The composer wrote the piece during a residency abroad. The conductor has led the orchestra for over a decade. Rehearsals have been running late into the evening. Proceeds from the concert support music education programs.\n\nTask: Write a single imaginative one-sentence caption inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0062",
+  "task": "reading_gen",
+  "distractor_id": 5,
+  "distance": 2,
+  "keywords": [
+   "vespa"
+  ],
+  "question": "Suggest one creative title for a short story loosely inspired by this passage.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The orchestra will perform a new symphony next weekend. The composer wrote the piece during a residency abroad. Outside, a neighbor was restoring a vintage Vespa scooter. Rehearsals have been running late into the evening. Proceeds from the concert support music education programs.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The orchestra will perform a new symphony next weekend. The composer wrote the piece during a residency abroad. The conductor has led the orchestra for over a decade. Rehearsals have been running late into the evening. Proceeds from the concert support music education programs.\n\nTask: Suggest one creative title for a short story loosely inspired by this passage."
+   }
+  ]
+ },
+ {
+  "id": "grc_0063",
+  "task": "reading_gen",
+  "distractor_id": 6,
+  "distance": 2,
+  "keywords": [
+   "silk road"
+  ],
+  "question": "In one sentence, describe a vivid mental image this passage brings to mind.",
+  "treatment": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The orchestra will perform a new symphony next weekend. The composer wrote the piece during a residency abroad. Someone had left an open book about the history of the Silk Road on the table. Rehearsals have been running late into the evening. Proceeds from the concert support music education programs.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": " Read the passage, then complete the task. Passage: The orchestra will perform a new symphony next weekend. The composer wrote the piece during a residency abroad. The conductor has led the orchestra for over a decade. Rehearsals have been running late into the evening. Proceeds from the concert support music education programs.\n\nTask: In one sentence, describe a vivid mental image this passage brings to mind."
+   }
+  ]
+ }
+]

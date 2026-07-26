@@ -1,0 +1,5642 @@
+[
+ {
+  "id": "dlg_0000",
+  "task": "dialogue",
+  "distractor_id": 0,
+  "distance": 1,
+  "keywords": [
+   "iceland",
+   "volcano"
+  ],
+  "question": "By the way, what are a couple of good tips for staying focused while studying?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my sister just got back from a trip to see the volcanoes in Iceland. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are a couple of good tips for staying focused while studying?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — honestly my day has been pretty ordinary, nothing much worth mentioning. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are a couple of good tips for staying focused while studying?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0001",
+  "task": "dialogue",
+  "distractor_id": 0,
+  "distance": 2,
+  "keywords": [
+   "iceland",
+   "volcano"
+  ],
+  "question": "Anyway, could you recommend a few ways to save money on groceries?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my sister just got back from a trip to see the volcanoes in Iceland. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, could you recommend a few ways to save money on groceries?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — honestly my day has been pretty ordinary, nothing much worth mentioning. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, could you recommend a few ways to save money on groceries?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0002",
+  "task": "dialogue",
+  "distractor_id": 0,
+  "distance": 3,
+  "keywords": [
+   "iceland",
+   "volcano"
+  ],
+  "question": "On a different note, what's a good beginner strategy for getting better at running?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my sister just got back from a trip to see the volcanoes in Iceland. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "On a different note, what's a good beginner strategy for getting better at running?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — honestly my day has been pretty ordinary, nothing much worth mentioning. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "On a different note, what's a good beginner strategy for getting better at running?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0003",
+  "task": "dialogue",
+  "distractor_id": 0,
+  "distance": 4,
+  "keywords": [
+   "iceland",
+   "volcano"
+  ],
+  "question": "Anyway, do you have advice for someone trying to sleep better at night?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my sister just got back from a trip to see the volcanoes in Iceland. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, do you have advice for someone trying to sleep better at night?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — honestly my day has been pretty ordinary, nothing much worth mentioning. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, do you have advice for someone trying to sleep better at night?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0004",
+  "task": "dialogue",
+  "distractor_id": 0,
+  "distance": 5,
+  "keywords": [
+   "iceland",
+   "volcano"
+  ],
+  "question": "By the way, what are some thoughtful low-cost gift ideas for a coworker?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my sister just got back from a trip to see the volcanoes in Iceland. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are some thoughtful low-cost gift ideas for a coworker?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — honestly my day has been pretty ordinary, nothing much worth mentioning. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are some thoughtful low-cost gift ideas for a coworker?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0005",
+  "task": "dialogue",
+  "distractor_id": 0,
+  "distance": 6,
+  "keywords": [
+   "iceland",
+   "volcano"
+  ],
+  "question": "On another topic, how can I make my small apartment feel more spacious?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my sister just got back from a trip to see the volcanoes in Iceland. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "On another topic, how can I make my small apartment feel more spacious?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — honestly my day has been pretty ordinary, nothing much worth mentioning. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "On another topic, how can I make my small apartment feel more spacious?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0006",
+  "task": "dialogue",
+  "distractor_id": 1,
+  "distance": 1,
+  "keywords": [
+   "axolotl"
+  ],
+  "question": "Anyway, could you recommend a few ways to save money on groceries?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — we adopted a pet axolotl for the kids last month. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Anyway, could you recommend a few ways to save money on groceries?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — anyway, things have been fairly quiet on my end lately. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Anyway, could you recommend a few ways to save money on groceries?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0007",
+  "task": "dialogue",
+  "distractor_id": 1,
+  "distance": 2,
+  "keywords": [
+   "axolotl"
+  ],
+  "question": "On a different note, what's a good beginner strategy for getting better at running?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — we adopted a pet axolotl for the kids last month. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "On a different note, what's a good beginner strategy for getting better at running?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — anyway, things have been fairly quiet on my end lately. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "On a different note, what's a good beginner strategy for getting better at running?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0008",
+  "task": "dialogue",
+  "distractor_id": 1,
+  "distance": 3,
+  "keywords": [
+   "axolotl"
+  ],
+  "question": "Anyway, do you have advice for someone trying to sleep better at night?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — we adopted a pet axolotl for the kids last month. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, do you have advice for someone trying to sleep better at night?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — anyway, things have been fairly quiet on my end lately. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, do you have advice for someone trying to sleep better at night?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0009",
+  "task": "dialogue",
+  "distractor_id": 1,
+  "distance": 4,
+  "keywords": [
+   "axolotl"
+  ],
+  "question": "By the way, what are some thoughtful low-cost gift ideas for a coworker?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — we adopted a pet axolotl for the kids last month. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are some thoughtful low-cost gift ideas for a coworker?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — anyway, things have been fairly quiet on my end lately. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are some thoughtful low-cost gift ideas for a coworker?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0010",
+  "task": "dialogue",
+  "distractor_id": 1,
+  "distance": 5,
+  "keywords": [
+   "axolotl"
+  ],
+  "question": "On another topic, how can I make my small apartment feel more spacious?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — we adopted a pet axolotl for the kids last month. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "On another topic, how can I make my small apartment feel more spacious?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — anyway, things have been fairly quiet on my end lately. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "On another topic, how can I make my small apartment feel more spacious?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0011",
+  "task": "dialogue",
+  "distractor_id": 1,
+  "distance": 6,
+  "keywords": [
+   "axolotl"
+  ],
+  "question": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — we adopted a pet axolotl for the kids last month. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — anyway, things have been fairly quiet on my end lately. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0012",
+  "task": "dialogue",
+  "distractor_id": 2,
+  "distance": 1,
+  "keywords": [
+   "catan"
+  ],
+  "question": "On a different note, what's a good beginner strategy for getting better at running?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I got completely hooked on the board game Catan over the holidays. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "On a different note, what's a good beginner strategy for getting better at running?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — not much new to report really, just the usual routine. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "On a different note, what's a good beginner strategy for getting better at running?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0013",
+  "task": "dialogue",
+  "distractor_id": 2,
+  "distance": 2,
+  "keywords": [
+   "catan"
+  ],
+  "question": "Anyway, do you have advice for someone trying to sleep better at night?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I got completely hooked on the board game Catan over the holidays. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, do you have advice for someone trying to sleep better at night?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — not much new to report really, just the usual routine. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, do you have advice for someone trying to sleep better at night?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0014",
+  "task": "dialogue",
+  "distractor_id": 2,
+  "distance": 3,
+  "keywords": [
+   "catan"
+  ],
+  "question": "By the way, what are some thoughtful low-cost gift ideas for a coworker?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I got completely hooked on the board game Catan over the holidays. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are some thoughtful low-cost gift ideas for a coworker?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — not much new to report really, just the usual routine. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are some thoughtful low-cost gift ideas for a coworker?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0015",
+  "task": "dialogue",
+  "distractor_id": 2,
+  "distance": 4,
+  "keywords": [
+   "catan"
+  ],
+  "question": "On another topic, how can I make my small apartment feel more spacious?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I got completely hooked on the board game Catan over the holidays. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "On another topic, how can I make my small apartment feel more spacious?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — not much new to report really, just the usual routine. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "On another topic, how can I make my small apartment feel more spacious?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0016",
+  "task": "dialogue",
+  "distractor_id": 2,
+  "distance": 5,
+  "keywords": [
+   "catan"
+  ],
+  "question": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I got completely hooked on the board game Catan over the holidays. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — not much new to report really, just the usual routine. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0017",
+  "task": "dialogue",
+  "distractor_id": 2,
+  "distance": 6,
+  "keywords": [
+   "catan"
+  ],
+  "question": "Anyway, can you suggest a simple and relaxing weekend morning routine?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I got completely hooked on the board game Catan over the holidays. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, can you suggest a simple and relaxing weekend morning routine?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — not much new to report really, just the usual routine. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, can you suggest a simple and relaxing weekend morning routine?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0018",
+  "task": "dialogue",
+  "distractor_id": 3,
+  "distance": 1,
+  "keywords": [
+   "voyager",
+   "space probe"
+  ],
+  "question": "Anyway, do you have advice for someone trying to sleep better at night?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my roommate keeps talking about the Voyager 2 space probe. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Anyway, do you have advice for someone trying to sleep better at night?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — it's been a calm and uneventful stretch for me recently. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Anyway, do you have advice for someone trying to sleep better at night?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0019",
+  "task": "dialogue",
+  "distractor_id": 3,
+  "distance": 2,
+  "keywords": [
+   "voyager",
+   "space probe"
+  ],
+  "question": "By the way, what are some thoughtful low-cost gift ideas for a coworker?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my roommate keeps talking about the Voyager 2 space probe. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are some thoughtful low-cost gift ideas for a coworker?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — it's been a calm and uneventful stretch for me recently. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are some thoughtful low-cost gift ideas for a coworker?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0020",
+  "task": "dialogue",
+  "distractor_id": 3,
+  "distance": 3,
+  "keywords": [
+   "voyager",
+   "space probe"
+  ],
+  "question": "On another topic, how can I make my small apartment feel more spacious?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my roommate keeps talking about the Voyager 2 space probe. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "On another topic, how can I make my small apartment feel more spacious?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — it's been a calm and uneventful stretch for me recently. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "On another topic, how can I make my small apartment feel more spacious?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0021",
+  "task": "dialogue",
+  "distractor_id": 3,
+  "distance": 4,
+  "keywords": [
+   "voyager",
+   "space probe"
+  ],
+  "question": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my roommate keeps talking about the Voyager 2 space probe. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — it's been a calm and uneventful stretch for me recently. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0022",
+  "task": "dialogue",
+  "distractor_id": 3,
+  "distance": 5,
+  "keywords": [
+   "voyager",
+   "space probe"
+  ],
+  "question": "Anyway, can you suggest a simple and relaxing weekend morning routine?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my roommate keeps talking about the Voyager 2 space probe. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, can you suggest a simple and relaxing weekend morning routine?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — it's been a calm and uneventful stretch for me recently. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, can you suggest a simple and relaxing weekend morning routine?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0023",
+  "task": "dialogue",
+  "distractor_id": 3,
+  "distance": 6,
+  "keywords": [
+   "voyager",
+   "space probe"
+  ],
+  "question": "By the way, what are a couple of good tips for staying focused while studying?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my roommate keeps talking about the Voyager 2 space probe. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are a couple of good tips for staying focused while studying?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — it's been a calm and uneventful stretch for me recently. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are a couple of good tips for staying focused while studying?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0024",
+  "task": "dialogue",
+  "distractor_id": 4,
+  "distance": 1,
+  "keywords": [
+   "constellation",
+   "stargaz"
+  ],
+  "question": "By the way, what are some thoughtful low-cost gift ideas for a coworker?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I've been trying to identify constellations with a stargazing app. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are some thoughtful low-cost gift ideas for a coworker?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — nothing too exciting going on with me these days. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are some thoughtful low-cost gift ideas for a coworker?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0025",
+  "task": "dialogue",
+  "distractor_id": 4,
+  "distance": 2,
+  "keywords": [
+   "constellation",
+   "stargaz"
+  ],
+  "question": "On another topic, how can I make my small apartment feel more spacious?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I've been trying to identify constellations with a stargazing app. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "On another topic, how can I make my small apartment feel more spacious?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — nothing too exciting going on with me these days. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "On another topic, how can I make my small apartment feel more spacious?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0026",
+  "task": "dialogue",
+  "distractor_id": 4,
+  "distance": 3,
+  "keywords": [
+   "constellation",
+   "stargaz"
+  ],
+  "question": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I've been trying to identify constellations with a stargazing app. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — nothing too exciting going on with me these days. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0027",
+  "task": "dialogue",
+  "distractor_id": 4,
+  "distance": 4,
+  "keywords": [
+   "constellation",
+   "stargaz"
+  ],
+  "question": "Anyway, can you suggest a simple and relaxing weekend morning routine?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I've been trying to identify constellations with a stargazing app. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, can you suggest a simple and relaxing weekend morning routine?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — nothing too exciting going on with me these days. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, can you suggest a simple and relaxing weekend morning routine?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0028",
+  "task": "dialogue",
+  "distractor_id": 4,
+  "distance": 5,
+  "keywords": [
+   "constellation",
+   "stargaz"
+  ],
+  "question": "By the way, what are a couple of good tips for staying focused while studying?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I've been trying to identify constellations with a stargazing app. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are a couple of good tips for staying focused while studying?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — nothing too exciting going on with me these days. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are a couple of good tips for staying focused while studying?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0029",
+  "task": "dialogue",
+  "distractor_id": 4,
+  "distance": 6,
+  "keywords": [
+   "constellation",
+   "stargaz"
+  ],
+  "question": "Anyway, could you recommend a few ways to save money on groceries?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I've been trying to identify constellations with a stargazing app. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, could you recommend a few ways to save money on groceries?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — nothing too exciting going on with me these days. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, could you recommend a few ways to save money on groceries?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0030",
+  "task": "dialogue",
+  "distractor_id": 5,
+  "distance": 1,
+  "keywords": [
+   "dog agility"
+  ],
+  "question": "On another topic, how can I make my small apartment feel more spacious?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my cousin competes in competitive dog agility trials. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "On another topic, how can I make my small apartment feel more spacious?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — honestly my day has been pretty ordinary, nothing much worth mentioning. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "On another topic, how can I make my small apartment feel more spacious?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0031",
+  "task": "dialogue",
+  "distractor_id": 5,
+  "distance": 2,
+  "keywords": [
+   "dog agility"
+  ],
+  "question": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my cousin competes in competitive dog agility trials. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — honestly my day has been pretty ordinary, nothing much worth mentioning. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0032",
+  "task": "dialogue",
+  "distractor_id": 5,
+  "distance": 3,
+  "keywords": [
+   "dog agility"
+  ],
+  "question": "Anyway, can you suggest a simple and relaxing weekend morning routine?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my cousin competes in competitive dog agility trials. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, can you suggest a simple and relaxing weekend morning routine?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — honestly my day has been pretty ordinary, nothing much worth mentioning. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, can you suggest a simple and relaxing weekend morning routine?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0033",
+  "task": "dialogue",
+  "distractor_id": 5,
+  "distance": 4,
+  "keywords": [
+   "dog agility"
+  ],
+  "question": "By the way, what are a couple of good tips for staying focused while studying?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my cousin competes in competitive dog agility trials. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are a couple of good tips for staying focused while studying?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — honestly my day has been pretty ordinary, nothing much worth mentioning. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are a couple of good tips for staying focused while studying?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0034",
+  "task": "dialogue",
+  "distractor_id": 5,
+  "distance": 5,
+  "keywords": [
+   "dog agility"
+  ],
+  "question": "Anyway, could you recommend a few ways to save money on groceries?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my cousin competes in competitive dog agility trials. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, could you recommend a few ways to save money on groceries?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — honestly my day has been pretty ordinary, nothing much worth mentioning. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, could you recommend a few ways to save money on groceries?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0035",
+  "task": "dialogue",
+  "distractor_id": 5,
+  "distance": 6,
+  "keywords": [
+   "dog agility"
+  ],
+  "question": "On a different note, what's a good beginner strategy for getting better at running?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my cousin competes in competitive dog agility trials. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "On a different note, what's a good beginner strategy for getting better at running?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — honestly my day has been pretty ordinary, nothing much worth mentioning. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "On a different note, what's a good beginner strategy for getting better at running?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0036",
+  "task": "dialogue",
+  "distractor_id": 6,
+  "distance": 1,
+  "keywords": [
+   "anglerfish"
+  ],
+  "question": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I'm fascinated by the deep-sea anglerfish documentaries. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — anyway, things have been fairly quiet on my end lately. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0037",
+  "task": "dialogue",
+  "distractor_id": 6,
+  "distance": 2,
+  "keywords": [
+   "anglerfish"
+  ],
+  "question": "Anyway, can you suggest a simple and relaxing weekend morning routine?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I'm fascinated by the deep-sea anglerfish documentaries. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, can you suggest a simple and relaxing weekend morning routine?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — anyway, things have been fairly quiet on my end lately. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, can you suggest a simple and relaxing weekend morning routine?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0038",
+  "task": "dialogue",
+  "distractor_id": 6,
+  "distance": 3,
+  "keywords": [
+   "anglerfish"
+  ],
+  "question": "By the way, what are a couple of good tips for staying focused while studying?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I'm fascinated by the deep-sea anglerfish documentaries. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are a couple of good tips for staying focused while studying?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — anyway, things have been fairly quiet on my end lately. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are a couple of good tips for staying focused while studying?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0039",
+  "task": "dialogue",
+  "distractor_id": 6,
+  "distance": 4,
+  "keywords": [
+   "anglerfish"
+  ],
+  "question": "Anyway, could you recommend a few ways to save money on groceries?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I'm fascinated by the deep-sea anglerfish documentaries. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, could you recommend a few ways to save money on groceries?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — anyway, things have been fairly quiet on my end lately. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, could you recommend a few ways to save money on groceries?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0040",
+  "task": "dialogue",
+  "distractor_id": 6,
+  "distance": 5,
+  "keywords": [
+   "anglerfish"
+  ],
+  "question": "On a different note, what's a good beginner strategy for getting better at running?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I'm fascinated by the deep-sea anglerfish documentaries. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "On a different note, what's a good beginner strategy for getting better at running?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — anyway, things have been fairly quiet on my end lately. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "On a different note, what's a good beginner strategy for getting better at running?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0041",
+  "task": "dialogue",
+  "distractor_id": 6,
+  "distance": 6,
+  "keywords": [
+   "anglerfish"
+  ],
+  "question": "Anyway, do you have advice for someone trying to sleep better at night?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I'm fascinated by the deep-sea anglerfish documentaries. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, do you have advice for someone trying to sleep better at night?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — anyway, things have been fairly quiet on my end lately. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, do you have advice for someone trying to sleep better at night?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0042",
+  "task": "dialogue",
+  "distractor_id": 7,
+  "distance": 1,
+  "keywords": [
+   "vespa"
+  ],
+  "question": "Anyway, can you suggest a simple and relaxing weekend morning routine?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my neighbor restores vintage Vespa scooters. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Anyway, can you suggest a simple and relaxing weekend morning routine?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — not much new to report really, just the usual routine. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Anyway, can you suggest a simple and relaxing weekend morning routine?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0043",
+  "task": "dialogue",
+  "distractor_id": 7,
+  "distance": 2,
+  "keywords": [
+   "vespa"
+  ],
+  "question": "By the way, what are a couple of good tips for staying focused while studying?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my neighbor restores vintage Vespa scooters. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are a couple of good tips for staying focused while studying?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — not much new to report really, just the usual routine. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are a couple of good tips for staying focused while studying?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0044",
+  "task": "dialogue",
+  "distractor_id": 7,
+  "distance": 3,
+  "keywords": [
+   "vespa"
+  ],
+  "question": "Anyway, could you recommend a few ways to save money on groceries?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my neighbor restores vintage Vespa scooters. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, could you recommend a few ways to save money on groceries?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — not much new to report really, just the usual routine. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, could you recommend a few ways to save money on groceries?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0045",
+  "task": "dialogue",
+  "distractor_id": 7,
+  "distance": 4,
+  "keywords": [
+   "vespa"
+  ],
+  "question": "On a different note, what's a good beginner strategy for getting better at running?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my neighbor restores vintage Vespa scooters. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "On a different note, what's a good beginner strategy for getting better at running?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — not much new to report really, just the usual routine. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "On a different note, what's a good beginner strategy for getting better at running?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0046",
+  "task": "dialogue",
+  "distractor_id": 7,
+  "distance": 5,
+  "keywords": [
+   "vespa"
+  ],
+  "question": "Anyway, do you have advice for someone trying to sleep better at night?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my neighbor restores vintage Vespa scooters. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, do you have advice for someone trying to sleep better at night?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — not much new to report really, just the usual routine. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, do you have advice for someone trying to sleep better at night?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0047",
+  "task": "dialogue",
+  "distractor_id": 7,
+  "distance": 6,
+  "keywords": [
+   "vespa"
+  ],
+  "question": "By the way, what are some thoughtful low-cost gift ideas for a coworker?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my neighbor restores vintage Vespa scooters. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are some thoughtful low-cost gift ideas for a coworker?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — not much new to report really, just the usual routine. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are some thoughtful low-cost gift ideas for a coworker?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0048",
+  "task": "dialogue",
+  "distractor_id": 8,
+  "distance": 1,
+  "keywords": [
+   "silk road"
+  ],
+  "question": "By the way, what are a couple of good tips for staying focused while studying?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I've been reading about the history of the Silk Road. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are a couple of good tips for staying focused while studying?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — it's been a calm and uneventful stretch for me recently. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are a couple of good tips for staying focused while studying?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0049",
+  "task": "dialogue",
+  "distractor_id": 8,
+  "distance": 2,
+  "keywords": [
+   "silk road"
+  ],
+  "question": "Anyway, could you recommend a few ways to save money on groceries?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I've been reading about the history of the Silk Road. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, could you recommend a few ways to save money on groceries?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — it's been a calm and uneventful stretch for me recently. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, could you recommend a few ways to save money on groceries?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0050",
+  "task": "dialogue",
+  "distractor_id": 8,
+  "distance": 3,
+  "keywords": [
+   "silk road"
+  ],
+  "question": "On a different note, what's a good beginner strategy for getting better at running?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I've been reading about the history of the Silk Road. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "On a different note, what's a good beginner strategy for getting better at running?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — it's been a calm and uneventful stretch for me recently. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "On a different note, what's a good beginner strategy for getting better at running?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0051",
+  "task": "dialogue",
+  "distractor_id": 8,
+  "distance": 4,
+  "keywords": [
+   "silk road"
+  ],
+  "question": "Anyway, do you have advice for someone trying to sleep better at night?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I've been reading about the history of the Silk Road. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, do you have advice for someone trying to sleep better at night?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — it's been a calm and uneventful stretch for me recently. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, do you have advice for someone trying to sleep better at night?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0052",
+  "task": "dialogue",
+  "distractor_id": 8,
+  "distance": 5,
+  "keywords": [
+   "silk road"
+  ],
+  "question": "By the way, what are some thoughtful low-cost gift ideas for a coworker?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I've been reading about the history of the Silk Road. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are some thoughtful low-cost gift ideas for a coworker?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — it's been a calm and uneventful stretch for me recently. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are some thoughtful low-cost gift ideas for a coworker?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0053",
+  "task": "dialogue",
+  "distractor_id": 8,
+  "distance": 6,
+  "keywords": [
+   "silk road"
+  ],
+  "question": "On another topic, how can I make my small apartment feel more spacious?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I've been reading about the history of the Silk Road. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "On another topic, how can I make my small apartment feel more spacious?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — it's been a calm and uneventful stretch for me recently. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "On another topic, how can I make my small apartment feel more spacious?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0054",
+  "task": "dialogue",
+  "distractor_id": 9,
+  "distance": 1,
+  "keywords": [
+   "trebuchet",
+   "siege engine"
+  ],
+  "question": "Anyway, could you recommend a few ways to save money on groceries?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my brother is really into medieval trebuchets and siege engines. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Anyway, could you recommend a few ways to save money on groceries?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — nothing too exciting going on with me these days. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Anyway, could you recommend a few ways to save money on groceries?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0055",
+  "task": "dialogue",
+  "distractor_id": 9,
+  "distance": 2,
+  "keywords": [
+   "trebuchet",
+   "siege engine"
+  ],
+  "question": "On a different note, what's a good beginner strategy for getting better at running?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my brother is really into medieval trebuchets and siege engines. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "On a different note, what's a good beginner strategy for getting better at running?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — nothing too exciting going on with me these days. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "On a different note, what's a good beginner strategy for getting better at running?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0056",
+  "task": "dialogue",
+  "distractor_id": 9,
+  "distance": 3,
+  "keywords": [
+   "trebuchet",
+   "siege engine"
+  ],
+  "question": "Anyway, do you have advice for someone trying to sleep better at night?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my brother is really into medieval trebuchets and siege engines. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, do you have advice for someone trying to sleep better at night?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — nothing too exciting going on with me these days. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, do you have advice for someone trying to sleep better at night?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0057",
+  "task": "dialogue",
+  "distractor_id": 9,
+  "distance": 4,
+  "keywords": [
+   "trebuchet",
+   "siege engine"
+  ],
+  "question": "By the way, what are some thoughtful low-cost gift ideas for a coworker?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my brother is really into medieval trebuchets and siege engines. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are some thoughtful low-cost gift ideas for a coworker?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — nothing too exciting going on with me these days. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are some thoughtful low-cost gift ideas for a coworker?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0058",
+  "task": "dialogue",
+  "distractor_id": 9,
+  "distance": 5,
+  "keywords": [
+   "trebuchet",
+   "siege engine"
+  ],
+  "question": "On another topic, how can I make my small apartment feel more spacious?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my brother is really into medieval trebuchets and siege engines. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "On another topic, how can I make my small apartment feel more spacious?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — nothing too exciting going on with me these days. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "On another topic, how can I make my small apartment feel more spacious?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0059",
+  "task": "dialogue",
+  "distractor_id": 9,
+  "distance": 6,
+  "keywords": [
+   "trebuchet",
+   "siege engine"
+  ],
+  "question": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — my brother is really into medieval trebuchets and siege engines. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — nothing too exciting going on with me these days. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0060",
+  "task": "dialogue",
+  "distractor_id": 10,
+  "distance": 1,
+  "keywords": [
+   "typewriter"
+  ],
+  "question": "On a different note, what's a good beginner strategy for getting better at running?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — a friend showed me her collection of antique typewriters. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "On a different note, what's a good beginner strategy for getting better at running?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — honestly my day has been pretty ordinary, nothing much worth mentioning. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "On a different note, what's a good beginner strategy for getting better at running?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0061",
+  "task": "dialogue",
+  "distractor_id": 10,
+  "distance": 2,
+  "keywords": [
+   "typewriter"
+  ],
+  "question": "Anyway, do you have advice for someone trying to sleep better at night?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — a friend showed me her collection of antique typewriters. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, do you have advice for someone trying to sleep better at night?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — honestly my day has been pretty ordinary, nothing much worth mentioning. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, do you have advice for someone trying to sleep better at night?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0062",
+  "task": "dialogue",
+  "distractor_id": 10,
+  "distance": 3,
+  "keywords": [
+   "typewriter"
+  ],
+  "question": "By the way, what are some thoughtful low-cost gift ideas for a coworker?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — a friend showed me her collection of antique typewriters. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are some thoughtful low-cost gift ideas for a coworker?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — honestly my day has been pretty ordinary, nothing much worth mentioning. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are some thoughtful low-cost gift ideas for a coworker?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0063",
+  "task": "dialogue",
+  "distractor_id": 10,
+  "distance": 4,
+  "keywords": [
+   "typewriter"
+  ],
+  "question": "On another topic, how can I make my small apartment feel more spacious?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — a friend showed me her collection of antique typewriters. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "On another topic, how can I make my small apartment feel more spacious?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — honestly my day has been pretty ordinary, nothing much worth mentioning. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "On another topic, how can I make my small apartment feel more spacious?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0064",
+  "task": "dialogue",
+  "distractor_id": 10,
+  "distance": 5,
+  "keywords": [
+   "typewriter"
+  ],
+  "question": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — a friend showed me her collection of antique typewriters. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — honestly my day has been pretty ordinary, nothing much worth mentioning. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0065",
+  "task": "dialogue",
+  "distractor_id": 10,
+  "distance": 6,
+  "keywords": [
+   "typewriter"
+  ],
+  "question": "Anyway, can you suggest a simple and relaxing weekend morning routine?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — a friend showed me her collection of antique typewriters. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, can you suggest a simple and relaxing weekend morning routine?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — honestly my day has been pretty ordinary, nothing much worth mentioning. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, can you suggest a simple and relaxing weekend morning routine?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0066",
+  "task": "dialogue",
+  "distractor_id": 11,
+  "distance": 1,
+  "keywords": [
+   "mariana"
+  ],
+  "question": "Anyway, do you have advice for someone trying to sleep better at night?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I keep seeing documentaries about the Mariana Trench. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Anyway, do you have advice for someone trying to sleep better at night?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — anyway, things have been fairly quiet on my end lately. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Anyway, do you have advice for someone trying to sleep better at night?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0067",
+  "task": "dialogue",
+  "distractor_id": 11,
+  "distance": 2,
+  "keywords": [
+   "mariana"
+  ],
+  "question": "By the way, what are some thoughtful low-cost gift ideas for a coworker?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I keep seeing documentaries about the Mariana Trench. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are some thoughtful low-cost gift ideas for a coworker?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — anyway, things have been fairly quiet on my end lately. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are some thoughtful low-cost gift ideas for a coworker?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0068",
+  "task": "dialogue",
+  "distractor_id": 11,
+  "distance": 3,
+  "keywords": [
+   "mariana"
+  ],
+  "question": "On another topic, how can I make my small apartment feel more spacious?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I keep seeing documentaries about the Mariana Trench. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "On another topic, how can I make my small apartment feel more spacious?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — anyway, things have been fairly quiet on my end lately. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "On another topic, how can I make my small apartment feel more spacious?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0069",
+  "task": "dialogue",
+  "distractor_id": 11,
+  "distance": 4,
+  "keywords": [
+   "mariana"
+  ],
+  "question": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I keep seeing documentaries about the Mariana Trench. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — anyway, things have been fairly quiet on my end lately. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, what's a healthy and quick breakfast I could make on busy mornings?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0070",
+  "task": "dialogue",
+  "distractor_id": 11,
+  "distance": 5,
+  "keywords": [
+   "mariana"
+  ],
+  "question": "Anyway, can you suggest a simple and relaxing weekend morning routine?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I keep seeing documentaries about the Mariana Trench. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, can you suggest a simple and relaxing weekend morning routine?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — anyway, things have been fairly quiet on my end lately. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Anyway, can you suggest a simple and relaxing weekend morning routine?"
+   }
+  ]
+ },
+ {
+  "id": "dlg_0071",
+  "task": "dialogue",
+  "distractor_id": 11,
+  "distance": 6,
+  "keywords": [
+   "mariana"
+  ],
+  "question": "By the way, what are a couple of good tips for staying focused while studying?",
+  "treatment": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — I keep seeing documentaries about the Mariana Trench. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are a couple of good tips for staying focused while studying?"
+   }
+  ],
+  "control": [
+   {
+    "role": "user",
+    "content": "Hey, quick personal thing — anyway, things have been fairly quiet on my end lately. Nothing important, just chatting."
+   },
+   {
+    "role": "assistant",
+    "content": "Sure, happy to chat! What else is on your mind?"
+   },
+   {
+    "role": "user",
+    "content": "Can you remind me what the boiling point of water is at sea level?"
+   },
+   {
+    "role": "assistant",
+    "content": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit)."
+   },
+   {
+    "role": "user",
+    "content": "What's the difference between weather and climate?"
+   },
+   {
+    "role": "assistant",
+    "content": "Weather is the short-term state of the atmosphere; climate is the long-term average over decades."
+   },
+   {
+    "role": "user",
+    "content": "How many time zones does the world have?"
+   },
+   {
+    "role": "assistant",
+    "content": "There are 24 standard time zones, though some regions use half-hour or quarter-hour offsets."
+   },
+   {
+    "role": "user",
+    "content": "What's a quick way to convert miles to kilometers?"
+   },
+   {
+    "role": "assistant",
+    "content": "Multiply miles by about 1.61 to get kilometers."
+   },
+   {
+    "role": "user",
+    "content": "Can you spell 'necessary' for me?"
+   },
+   {
+    "role": "assistant",
+    "content": "It's spelled n-e-c-e-s-s-a-r-y."
+   },
+   {
+    "role": "user",
+    "content": "By the way, what are a couple of good tips for staying focused while studying?"
+   }
+  ]
+ }
+]

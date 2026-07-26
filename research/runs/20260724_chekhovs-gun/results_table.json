@@ -1,0 +1,328 @@
+{
+  "behavioral": {
+    "full_scoped": {
+      "model": "Qwen/Qwen3-8B",
+      "data": "data_dialogue.json",
+      "n_pairs": 72,
+      "treatment_intrusion_rate": 0.013888888888888888,
+      "control_intrusion_rate": 0.0,
+      "effect": 0.013888888888888888,
+      "mcnemar_b_only_treatment": 1,
+      "mcnemar_c_only_control": 0,
+      "seconds": 70.7
+    },
+    "full_gen": {
+      "model": "Qwen/Qwen3-8B",
+      "data": "data_dialogue_gen.json",
+      "n_pairs": 72,
+      "treatment_intrusion_rate": 0.16666666666666666,
+      "control_intrusion_rate": 0.0,
+      "effect": 0.16666666666666666,
+      "mcnemar_b_only_treatment": 12,
+      "mcnemar_c_only_control": 0,
+      "seconds": 70.5
+    },
+    "full_reading": {
+      "model": "Qwen/Qwen3-8B",
+      "data": "data_reading.json",
+      "n_pairs": 64,
+      "treatment_intrusion_rate": 0.0,
+      "control_intrusion_rate": 0.0,
+      "effect": 0.0,
+      "mcnemar_b_only_treatment": 0,
+      "mcnemar_c_only_control": 0,
+      "seconds": 13.1
+    },
+    "full_reading_gen": {
+      "model": "Qwen/Qwen3-8B",
+      "data": "data_reading_gen.json",
+      "n_pairs": 64,
+      "treatment_intrusion_rate": 0.8125,
+      "control_intrusion_rate": 0.0,
+      "effect": 0.8125,
+      "mcnemar_b_only_treatment": 52,
+      "mcnemar_c_only_control": 0,
+      "seconds": 37.9
+    }
+  },
+  "mechanistic": {
+    "full_scoped": {
+      "model": "Qwen/Qwen3-8B",
+      "data": "data_dialogue.json",
+      "n": 72,
+      "mean_logp_treatment": -20.632697441357948,
+      "mean_logp_control": -27.62861058264227,
+      "mean_delta_logp": 6.995913141284321,
+      "delta_logp_ci95": [
+        5.471342951142191,
+        8.574125994527224
+      ],
+      "frac_pairs_primed": 0.875,
+      "median_delta_logp": 6.183576472194545,
+      "delta_by_distance": {
+        "1": 8.77160854726018,
+        "2": 8.384127819711248,
+        "3": 5.464008560515121,
+        "4": 6.605083559863091,
+        "5": 5.610067215846509,
+        "6": 7.140583144509777
+      },
+      "seconds": 24.6
+    },
+    "full_gen": {
+      "model": "Qwen/Qwen3-8B",
+      "data": "data_dialogue_gen.json",
+      "n": 72,
+      "mean_logp_treatment": -25.6183693383644,
+      "mean_logp_control": -31.800177257274715,
+      "mean_delta_logp": 6.181807918910317,
+      "delta_logp_ci95": [
+        4.845595470044625,
+        7.604182758101069
+      ],
+      "frac_pairs_primed": 0.8888888888888888,
+      "median_delta_logp": 5.155010223388672,
+      "delta_by_distance": {
+        "1": 9.140137458054843,
+        "2": 6.560114281253278,
+        "3": 5.116172115539558,
+        "4": 5.997963437404906,
+        "5": 4.722559335097725,
+        "6": 5.553900886111593
+      },
+      "seconds": 24.5
+    },
+    "full_reading": {
+      "model": "Qwen/Qwen3-8B",
+      "data": "data_reading.json",
+      "n": 64,
+      "mean_logp_treatment": -12.979259834774968,
+      "mean_logp_control": -19.2203817770558,
+      "mean_delta_logp": 6.241121942280831,
+      "delta_logp_ci95": [
+        5.388030315895552,
+        7.183460390785648
+      ],
+      "frac_pairs_primed": 0.984375,
+      "median_delta_logp": 5.441533889865241,
+      "delta_by_distance": {
+        "2": 6.13060549746721,
+        "3": 6.4253160169702
+      },
+      "seconds": 20.8
+    },
+    "full_reading_gen": {
+      "model": "Qwen/Qwen3-8B",
+      "data": "data_reading_gen.json",
+      "n": 64,
+      "mean_logp_treatment": -21.009211752304168,
+      "mean_logp_control": -30.478619182662044,
+      "mean_delta_logp": 9.469407430357874,
+      "delta_logp_ci95": [
+        8.168150923357349,
+        10.901327367797613
+      ],
+      "frac_pairs_primed": 1.0,
+      "median_delta_logp": 8.726289165133494,
+      "delta_by_distance": {
+        "2": 9.270635960008436,
+        "3": 9.800693214273604
+      },
+      "seconds": 22.4
+    }
+  },
+  "decoding": {
+    "gen": {
+      "model": "Qwen/Qwen3-8B",
+      "data": "data_dialogue_gen.json",
+      "top_p": 0.95,
+      "curve": [
+        {
+          "temperature": 0.0,
+          "samples": 1,
+          "treatment_intrusion_rate": 0.16666666666666666,
+          "control_intrusion_rate": 0.0,
+          "n_item_samples": 72
+        },
+        {
+          "temperature": 0.7,
+          "samples": 4,
+          "treatment_intrusion_rate": 0.16319444444444445,
+          "control_intrusion_rate": 0.0,
+          "n_item_samples": 288
+        },
+        {
+          "temperature": 1.0,
+          "samples": 4,
+          "treatment_intrusion_rate": 0.11805555555555555,
+          "control_intrusion_rate": 0.0,
+          "n_item_samples": 288
+        },
+        {
+          "temperature": 1.3,
+          "samples": 4,
+          "treatment_intrusion_rate": 0.1388888888888889,
+          "control_intrusion_rate": 0.0,
+          "n_item_samples": 288
+        }
+      ],
+      "seconds": 850.9
+    },
+    "scoped": {
+      "model": "Qwen/Qwen3-8B",
+      "data": "data_dialogue.json",
+      "top_p": 0.95,
+      "curve": [
+        {
+          "temperature": 0.0,
+          "samples": 1,
+          "treatment_intrusion_rate": 0.013888888888888888,
+          "control_intrusion_rate": 0.0,
+          "n_item_samples": 72
+        },
+        {
+          "temperature": 0.7,
+          "samples": 4,
+          "treatment_intrusion_rate": 0.010416666666666666,
+          "control_intrusion_rate": 0.0,
+          "n_item_samples": 288
+        },
+        {
+          "temperature": 1.0,
+          "samples": 4,
+          "treatment_intrusion_rate": 0.027777777777777776,
+          "control_intrusion_rate": 0.0,
+          "n_item_samples": 288
+        },
+        {
+          "temperature": 1.3,
+          "samples": 4,
+          "treatment_intrusion_rate": 0.017361111111111112,
+          "control_intrusion_rate": 0.0,
+          "n_item_samples": 288
+        }
+      ],
+      "seconds": 844.9
+    }
+  },
+  "semantic": {
+    "full_scoped": {
+      "results": "behavioral/full_scoped/results.jsonl",
+      "n": 72,
+      "mean_cos_treat_topic": 0.40774909199939835,
+      "mean_cos_ctrl_topic": 0.4003801850808991,
+      "mean_delta_sim": 0.007368906918499205,
+      "delta_sim_ci95": [
+        0.0030491112007035148,
+        0.011909520460499657
+      ],
+      "frac_pairs_positive": 0.6527777777777778,
+      "seconds": 2.9
+    },
+    "full_gen": {
+      "results": "behavioral/full_gen/results.jsonl",
+      "n": 72,
+      "mean_cos_treat_topic": 0.4996037876440419,
+      "mean_cos_ctrl_topic": 0.45683406417568523,
+      "mean_delta_sim": 0.04276972346835666,
+      "delta_sim_ci95": [
+        0.023824832091728847,
+        0.06342521185676257
+      ],
+      "frac_pairs_positive": 0.6111111111111112,
+      "seconds": 3.0
+    },
+    "full_reading": {
+      "results": "behavioral/full_reading/results.jsonl",
+      "n": 64,
+      "mean_cos_treat_topic": 0.3786825048737228,
+      "mean_cos_ctrl_topic": 0.37780824303627014,
+      "mean_delta_sim": 0.0008742618374526501,
+      "delta_sim_ci95": [
+        0.00011654524132609367,
+        0.0019811498932540417
+      ],
+      "frac_pairs_positive": 0.125,
+      "seconds": 2.7
+    }
+  },
+  "ablation": {
+    "gen_instructed": {
+      "model": "Qwen/Qwen3-8B",
+      "data": "data_gen_instructed.json",
+      "n_pairs": 72,
+      "treatment_intrusion_rate": 0.1388888888888889,
+      "control_intrusion_rate": 0.0,
+      "effect": 0.1388888888888889,
+      "mcnemar_b_only_treatment": 10,
+      "mcnemar_c_only_control": 0,
+      "seconds": 61.7
+    },
+    "q4_rgen": {
+      "model": "Qwen/Qwen3.5-4B",
+      "data": "data_reading_gen.json",
+      "n_pairs": 64,
+      "treatment_intrusion_rate": 0.796875,
+      "control_intrusion_rate": 0.0,
+      "effect": 0.796875,
+      "mcnemar_b_only_treatment": 51,
+      "mcnemar_c_only_control": 0,
+      "seconds": 33.2
+    },
+    "q4_rext": {
+      "model": "Qwen/Qwen3.5-4B",
+      "data": "data_reading.json",
+      "n_pairs": 64,
+      "treatment_intrusion_rate": 0.0,
+      "control_intrusion_rate": 0.0,
+      "effect": 0.0,
+      "mcnemar_b_only_treatment": 0,
+      "mcnemar_c_only_control": 0,
+      "seconds": 15.4
+    },
+    "llama_rext": {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "data": "data_reading.json",
+      "n_pairs": 64,
+      "treatment_intrusion_rate": 0.03125,
+      "control_intrusion_rate": 0.0,
+      "effect": 0.03125,
+      "mcnemar_b_only_treatment": 2,
+      "mcnemar_c_only_control": 0,
+      "seconds": 14.4
+    },
+    "llama31_8b_gen": {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "data": "data_dialogue_gen.json",
+      "n_pairs": 72,
+      "treatment_intrusion_rate": 0.125,
+      "control_intrusion_rate": 0.0,
+      "effect": 0.125,
+      "mcnemar_b_only_treatment": 9,
+      "mcnemar_c_only_control": 0,
+      "seconds": 51.1
+    },
+    "llama_rgen": {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "data": "data_reading_gen.json",
+      "n_pairs": 64,
+      "treatment_intrusion_rate": 0.578125,
+      "control_intrusion_rate": 0.0,
+      "effect": 0.578125,
+      "mcnemar_b_only_treatment": 37,
+      "mcnemar_c_only_control": 0,
+      "seconds": 28.6
+    },
+    "qwen35_4b_gen": {
+      "model": "Qwen/Qwen3.5-4B",
+      "data": "data_dialogue_gen.json",
+      "n_pairs": 72,
+      "treatment_intrusion_rate": 0.18055555555555555,
+      "control_intrusion_rate": 0.0,
+      "effect": 0.18055555555555555,
+      "mcnemar_b_only_treatment": 13,
+      "mcnemar_c_only_control": 0,
+      "seconds": 80.9
+    }
+  }
+}

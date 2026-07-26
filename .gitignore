@@ -1,2 +1,20 @@
 AI-Scientist-v2/
-research/runs/
+
+# Experiment runs: track the code, the stimuli and the log; ignore generated outputs.
+# The scripts under nodes/ produce every number in the paper, so they must be versioned
+# (the paper's Reproducibility section names them).
+research/runs/**/ablation/
+research/runs/**/behavioral/
+research/runs/**/decoding/
+research/runs/**/harm/
+research/runs/**/ladder/
+research/runs/**/mech/
+research/runs/**/mitigation/
+research/runs/**/semantic/
+research/runs/**/figures/
+research/runs/**/paper/
+research/runs/**/Chekhov_paper_ACL_tmp
+research/runs/**/*.log
+
+__pycache__/
+*.pyc
