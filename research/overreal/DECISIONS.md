@@ -1,0 +1,155 @@
+# DECISIONS.md — OverReal / "When Chekhov's Gun Fires"
+
+Design decisions, their rationale, rejected alternatives, and the literature map.
+Kept because none of this survives in the paper source: `overrealization.tex` records
+*what* to write, not *why it was chosen* or *what was ruled out*.
+
+Companion files: `GOAL.md` (pilot spec), `../../Chekhov_paper_ACL/overrealization.tex`
+(paper skeleton with per-paragraph `\todo` plans).
+
+---
+
+## 1. Literature map — who occupies which family
+
+The most expensive thing here to reconstruct. Verdict per family, with the work that
+would collide.
+
+| Family | Status | Occupying work |
+|---|---|---|
+| **1. Existence-canceling** | 🔴 heavily occupied | NEG-TTOI ("first negation T2I benchmark", 2k samples); [NEGATE](https://arxiv.org/pdf/2603.06533); [SpaceVLM](https://arxiv.org/pdf/2511.12331); [TNG-CLIP](https://arxiv.org/pdf/2505.18434); DCS-Bench; [Six-CD](https://arxiv.org/pdf/2406.14855) (safety-oriented concept removal). Text side: IFEval "forbidden words"; NegE / Modality / Tense errors in summarization taxonomies. Also [Ironic Negation in Transformers](https://arxiv.org/pdf/2511.12381) — the white-bear analogy is already used. |
+| **2. Attribution** | 🟢 mostly open (generation side) | ToM benchmarks are dense (ToMi, FANToM, BigToM, Hi-ToM, OpenToM, XToM, TimeToM) but test *reasoning about* beliefs, not *suppression while generating*. Summarization lists attribution errors as a category. |
+| **3. Figurative** | 🟠 partly occupied, wording collision | [IRFL](https://arxiv.org/pdf/2303.15445) (recognition, not generation); [T2I-ReasonBench](https://arxiv.org/pdf/2508.17472) has an "Idiom Interpretation" dimension and literally writes *"models often fail to suppress the literal rendering"* — our exact framing; SemEval-2025 Task 1 (ADMIRE); [I Spy a Metaphor](https://arxiv.org/abs/2305.14724); ViPE; GOME ("over-literalization"). |
+| **4. Perspectival** | 🟢 open — the most novel cell | Repeated searches returned only camera control, multi-view consistency, storybook character consistency, and [PhyBench](https://arxiv.org/pdf/2406.11802) (physical commonsense). Nothing on whether depicted information is perceivable by an in-scene observer. |
+| **5. Use–mention** | 🟢 open on the generation side | The recognition-side dual is well studied: typographic attacks — Goh et al. 2021 multimodal neurons, [Reading Isn't Believing](https://arxiv.org/pdf/2103.10480), [multi-image setting](https://arxiv.org/pdf/2502.08193) (NAACL 2025). Text-rendering work (TextDiffuser, [glyph-enhanced](https://arxiv.org/pdf/2403.16422)) treats legibility as the goal and never asks why the word is there. |
+| **6. Relevance** | 🟢 ours, but with a close neighbour | [Contextual entrainment](https://arxiv.org/abs/2606.24077) (Liu & Chu 2026) is the closest prior work overall — it establishes the representation-level availability effect in closed QA. Also Shi et al. 2023 (GSM-IC), GSM-DC, [PI-LLM](https://arxiv.org/abs/2506.08184), Sinclair et al. 2022 structural priming. |
+
+**Adjacent, opposite direction — must be distinguished explicitly in Related Work:**
+POPE / CHAIR measure a VLM describing objects *absent from an image*; we measure
+input-mentioned content wrongly realized in output.
+
+**Evaluation precedents:** CLIPScore (known weak for compositionality),
+[TIFA](https://arxiv.org/pdf/2303.11897), [VQAScore](https://arxiv.org/abs/2404.01291),
+[T2I-CompBench(++)](https://arxiv.org/pdf/2307.06350),
+[Commonsense-T2I](https://arxiv.org/abs/2406.07546) (closest methodology: paired
+adversarial prompts + MLLM judge), [VBench-2.0](https://arxiv.org/abs/2503.21755).
+
+**Theory drawn on:** Fauconnier, *Mental Spaces* (space builders) · Lakoff & Johnson
+(conceptual metaphor) · Genette (focalization; diegetic/non-diegetic) · Grice (maxim of
+relation), Sperber & Wilson · Kaup (two-step simulation of negation), Wegner (ironic
+process) · Quine (use–mention), Saussure (signifier/signified), Peirce (icon/symbol) ·
+Forceville (pictorial and multimodal metaphor — the precedent for applying
+cognitive-linguistic frameworks to images) · Roediger & McDermott (DRM intrusion, the
+source of our word "intrusion") · ANLI / Dynabench / AFLite (adversarial construction).
+
+---
+
+## 2. Settled decisions
+
+**Scope and framing**
+1. **Merge the two papers.** The text-only study covered one family in one modality and
+   read thin; the taxonomy alone would have been descriptive with no mechanism. Merged,
+   the mechanism from the first paper *explains* the taxonomy's cross-modal pattern.
+2. **Title**: *When Chekhov's Gun Fires: A Cross-Modal Benchmark of Content That Should
+   Not Be Realized*. "When" encodes the conditionality finding and promises no fix.
+3. **Hook reframed around *dramatic* setup**: Chekhov's gun is a deliberate plant, while
+   real user mentions are incidental; models treat the incidental as if it were planted.
+4. **Position against contextual entrainment in one sentence**, not more: they establish
+   availability, we ask about realization. Analogy: they measure "on the tip of the
+   tongue", we measure when it is said aloud. Our own numbers show the dissociation
+   (scoped QA: 7.0 nats availability but 1.4% surface intrusion; generative reading:
+   comparable availability, 81%).
+
+**Terminology**
+5. **over-realization** = the construct (the only term we coin); **intrusion** = the
+   measured event (continuous with the first paper, grounded in DRM); **base-space
+   leakage** = the theoretical description.
+6. **Benchmark name: OverReal** (previously Chekhov-Bench). The paper title carries the
+   metaphor; the artifact carries the construct.
+
+**Taxonomy**
+7. **Six families**, ordered by *decreasing explicitness of marking*. Families 5 and 6
+   were swapped from the first draft after noticing that relevance was never
+   space-builder licensed either — the original "families 1–5 are space builders" claim
+   was simply wrong.
+8. **Three tiers of licensing**: space builders (1–4), use–mention (5), pragmatic
+   relevance (6). Unity is claimed at the top level only — the input *contains*
+   something it does not *license* realizing.
+9. **Fauconnier as the single spine, with two extensions.** But calibrated: we do *not*
+   claim to repair mental-spaces theory, which was never meant to cover relevance
+   (Grice is canonical there). We claim only that space building does not exhaust the
+   licensing mechanisms for this construct.
+10. **Family 4 splits**: 4a occlusion (object behind a barrier, uses the core pool,
+    carries the aligned cross-family comparison) and 4b diegetic legibility (inscribed
+    information read by an in-scene observer — the showcase, but not pool-compatible).
+11. **Unit of realization = information made accessible to the audience**, not merely an
+    object being present. Without this, family 4 is not measurable.
+12. **Two failure modes**: binary (1, 4–6) vs marking (2, 3).
+13. **Section 3 is example-first.** Table 1 is "one entity, six failures" — unity is
+    shown, not argued. Theory is compressed to one sentence attached to the example that
+    motivates it. Table cells must be *real generations*, never invented.
+
+**Benchmark design**
+14. **S/P/A triples**, not pairs. `S = Sc + D(E)`, `P = Sc + E`, `A = Sc`. `P` prevents a
+    model that realizes nothing from scoring perfectly; `A` measures the coincidental
+    base rate *and* doubles as the compatibility filter for (entity, scenario) pairs.
+15. **Licence sensitivity** `Δ = P(realize|P) − P(realize|S)` as the headline metric —
+    the same paired effect size the mechanism analysis uses.
+16. **Entity and scenario are crossed random factors** with Latin-square counterbalancing,
+    not nested, so `(1|entity) + (1|scenario)` variance can be decomposed.
+17. **Core pool (~12) spanning all six families and both modalities**, plus family
+    extension pools (~18). The shared core is what makes cross-family and cross-modal
+    comparison free of entity confounds.
+18. **Family-specific entity:scenario ratios** — the load-bearing factor differs (4b
+    varies carriers, not contents, since the letter's wording does not change whether it
+    faces the camera). 60 items per cell → 720 combinations → 6,480 prompts.
+19. **Openness ladder: three levels in both modalities, as a designed ordinal factor.**
+    Not measured, therefore claims must be within-modality (slope inside each modality;
+    most-constrained image vs most-open text).
+20. **Evaluation protocol precedes the construction loop** in the text — the difficulty
+    loop cannot select items without a score.
+21. **Iterative difficulty construction** with difficulty labels; prober and evaluated
+    model sets disjoint; pre- and post-filter subsets both released.
+22. **T2I model: FLUX.1-dev** over SDXL, because family 5 needs legible text rendering.
+
+**Repository**
+23. Paper repo holds paper artifacts only; experiment material lives in the main repo
+    under `research/`. Experiment scripts are versioned (they were previously ignored
+    wholesale, though the paper's Reproducibility section names them).
+
+---
+
+## 3. Rejected alternatives
+
+| Rejected | Why |
+|---|---|
+| **"unlicensed realization"** as the construct name | "Unlicensed" reads as *copyright* in a multimodal paper — a dangerous ambiguity. |
+| **"over-generation" / "over-specification"** | Both are established NLG terms with different meanings (generate-and-rank / grammatical overacceptance; redundant attributes of a licensed referent). Must be explicitly distinguished in the paper. |
+| **Three parallel theoretical traditions** as the organizing structure | Reads eclectic — "they grabbed whatever theory fit". Replaced by one spine plus two extensions. |
+| **"The gun fired in the wrong direction"** discussion for family 4 | Unnecessary meta-commentary; replaced by a positive definition of the unit of realization. |
+| **Embedding-based openness measurement** (mean pairwise distance) | Sentence-embedding space and CLIP/DINO space are different metric spaces with different scale and geometry, and CLIP has a documented modality gap — "text openness 0.09" and "image openness 0.09" would not denote the same thing. |
+| **Making negation the headline** | Crowded (see §1). It stays as one family among six, with prior work cited. |
+| **Contrastive decoding as the mitigation** | Tested and *failed*: contrasting against a task-free amateur left summarization intrusion at 0.96 → 0.95. The amateur does not specifically elevate the distractor. Connectivity filtering works instead (97.5% → 1.7% on HotpotQA). |
+| **Attention-head causal localization** | Deferred — it is precisely the entrainment paper's strength, so doing it invites the overlap we are trying to avoid. |
+| **Nine-paragraph dataset section** | Consolidated to six; two pieces relocated (E-type-varying → taxonomy; openness measurement → setup) and the release description folded into Reproducibility. |
+
+---
+
+## 4. Open risks
+
+1. **Judge reliability for families 2 and 4b** — the two judgements that are not simple
+   presence checks. Pilot Q2. If the judge cannot do 4b geometry, the paper's headline
+   example is at risk.
+2. **Family 3 may be at ceiling in text** — pilot Q3. If so it becomes a modality
+   asymmetry finding rather than a full family.
+3. **Table 1's entity** — no entity is yet known to fail in all six families; elephant is
+   expected to be weak in 4a and 5. Pilot Q1.
+4. **Cross-modal openness confound** — image generation is intrinsically freer than
+   question answering. Handled by keeping claims within-modality; revisit if a stronger
+   claim is wanted.
+5. **Adversarial filtering bias** — items overfit to the probers. Mitigated by disjoint
+   prober/eval sets and by releasing both subsets.
+6. **Self-overlap with the first paper** if it is ever submitted separately. Current plan
+   is full absorption, which removes the problem.
+7. **Wording collision with T2I-ReasonBench**, which already uses "fail to suppress the
+   literal rendering" for idioms. Family 3 must cite it prominently and claim only the
+   unification.
