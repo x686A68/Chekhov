@@ -25,6 +25,38 @@ MODEL = "Qwen/Qwen2.5-VL-7B-Instruct"
 PREAMBLE = ("Look at the image and answer with a single capital letter only, "
             "no explanation.\n\n")
 
+YESNO = "Answer with one word, Yes or No, and nothing else.\n\n"
+
+# --- corrected protocol (see scripts/judge_4b_protocols.py, judge_marking_protocols.py) --
+# The multiple-choice questions above reach kappa 0.80 / 0.42 / 0.23 against direct
+# inspection on families 2 / 3 / 4b. One plain, positive, content-level yes-no question
+# reaches 0.94 / 1.00 / 0.94 on the same images. Four wording faults were identified and
+# are avoided here:
+#   - a third "hedged" option gives an uncertain judge somewhere to park;
+#   - listing embedding devices ("a picture, statue, logo…") makes it answer about the
+#     medium, since every generated image *is* a picture;
+#   - the words "real"/"real live" make it answer about the image's ontological status —
+#     asked whether a "real live elephant" is present it answered No on all 72 images;
+#   - negatively framed questions are simply agreed with (89% yes-rate against a 42% truth
+#     rate when the polarity is flipped).
+# These questions were selected after seeing where the originals failed, on the same 108
+# inspected images, so they are an in-sample fix and need out-of-sample confirmation.
+BINARY_QUESTION = {
+    "1_existence": lambda e: f"Is there {article(e)} {e} anywhere in this image?",
+    "2_attribution": lambda e: f"Is there {article(e)} {e} anywhere in this image?",
+    "3_figurative": lambda e: f"Is there {article(e)} {e} anywhere in this image?",
+    "4a_occlusion": lambda e: f"Is any part of {article(e)} {e} visible in this image?",
+    "4a2_occlusion_v2": lambda e: f"Is any part of {article(e)} {e} visible in this image?",
+    "4b_legibility": lambda e: ("Can you, the viewer of this image, read written words on "
+                                "the letter, screen or page that the person is holding or "
+                                "looking at?"),
+    "5_use_mention": lambda e: f'Is the word "{e.upper()}" written anywhere in this image?',
+    "5b_text_bearing": lambda e: f'Is the word "{e.upper()}" written anywhere in this image?',
+    "6_relevance": lambda e: f"Is there {article(e)} {e} anywhere in this image?",
+    "6b_relevance_v2": lambda e: f"Is there {article(e)} {e} anywhere in this image?",
+    "6c_relevance_v3": lambda e: f"Is there {article(e)} {e} anywhere in this image?",
+}
+
 
 def question(row):
     """Return (question_text, {letter: meaning}, realized_letters)."""
@@ -99,6 +131,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0, help="smoke-test on the first N images")
     ap.add_argument("--out-suffix", default="")
+    ap.add_argument("--protocol", choices=["binary", "multichoice"], default="binary",
+                    help="binary is the corrected protocol; multichoice reproduces the "
+                         "original multiple-choice questions")
+    ap.add_argument("--families", default="", help="comma-separated family filter")
     args = ap.parse_args()
 
     manifest = []
@@ -112,6 +148,9 @@ def main():
                         seen.add((r["id"], r["condition"]))
                         manifest.append(r)
     manifest.sort(key=lambda r: (r["family"], r["id"], r["condition"]))
+    if args.families:
+        keep = set(args.families.split(","))
+        manifest = [r for r in manifest if r["family"] in keep]
     if args.limit:
         manifest = manifest[:args.limit]
     print(f"{len(manifest)} images to judge", flush=True)
@@ -131,14 +170,41 @@ def main():
         m = re.search(r"\b([A-C])\b", ans.strip())
         return (m.group(1) if m else None), ans.strip()
 
+    def ask_binary(image, text):
+        msgs = [{"role": "user", "content": [{"type": "image"},
+                                             {"type": "text", "text": YESNO + text}]}]
+        chat = proc.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
+        inputs = proc(text=[chat], images=[image], return_tensors="pt").to("cuda")
+        with torch.no_grad():
+            out = model.generate(**inputs, max_new_tokens=6, do_sample=False)
+        raw = proc.batch_decode(out[:, inputs["input_ids"].shape[1]:], skip_special_tokens=True)[0]
+        m = re.search(r"\b(yes|no)\b", raw, flags=re.I)
+        return ((m.group(1).lower() == "yes") if m else None), raw.strip()
+
     out_rows = []
     t0 = time.time()
     for i, row in enumerate(manifest):
         img = Image.open(os.path.join(ROOT, row["path"])).convert("RGB")
+
+        if args.protocol == "binary":
+            qtext = BINARY_QUESTION[row["family"]](row["entity"])
+            yes, raw = ask_binary(img, qtext)
+            rec = dict(row)
+            rec.update({"judge_protocol": "binary", "judge_question": qtext,
+                        "judge_raw": raw, "judge_realized": yes,
+                        "judge_letter": None if yes is None else ("A" if yes else "B"),
+                        "judge_option_map": {"A": "realized", "B": "not realized"},
+                        "judge_meaning": None if yes is None else ("realized" if yes else "not realized")})
+            out_rows.append(rec)
+            if i % 25 == 0:
+                print(f"[{i+1}/{len(manifest)}] {row['id']}_{row['condition']} -> {raw!r}", flush=True)
+            continue
+
         qtext, meanings, realized_letters = question(row)
         letter, raw = ask(img, qtext)
         rec = dict(row)
-        rec.update({"judge_question": qtext, "judge_letter": letter, "judge_raw": raw,
+        rec.update({"judge_protocol": "multichoice", "judge_question": qtext,
+                    "judge_letter": letter, "judge_raw": raw,
                     "judge_meaning": meanings.get(letter), "judge_option_map": meanings,
                     "judge_realized": (letter in realized_letters) if letter else None})
         sec = secondary_question(row)

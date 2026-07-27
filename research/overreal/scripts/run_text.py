@@ -44,7 +44,7 @@ def main(keys):
 
     os.makedirs(RAW, exist_ok=True)
     items = load_items()
-    print(f"{len(items)} items, {len(items)*3} prompts per model", flush=True)
+    print(f"{len(items)} items, {sum(len(i['prompts']) for i in items)} prompts per model", flush=True)
 
     for key in keys:
         cfg = MODELS[key]
@@ -53,7 +53,9 @@ def main(keys):
 
         flat = []  # (item, condition, prompt_text)
         for it in items:
-            for cond in ("S", "P", "A"):
+            # families define their own condition sets (4a2 and 6b/6c split S into
+            # S_exp / S_imp), so take them from the item
+            for cond in it["prompts"]:
                 kw = {} if cfg["thinking"] is None else {"enable_thinking": cfg["thinking"]}
                 text = tok.apply_chat_template(
                     it["prompts"][cond], tokenize=False, add_generation_prompt=True, **kw

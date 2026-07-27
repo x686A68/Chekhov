@@ -1,9 +1,9 @@
 {
   "model": "qwen3-32b",
-  "n_prompts": 252,
-  "load_s": 68.5,
-  "gen_s": 6.5,
-  "s_per_prompt": 0.026,
+  "n_prompts": 816,
+  "load_s": 77.5,
+  "gen_s": 18.6,
+  "s_per_prompt": 0.023,
   "max_tokens": 300,
   "tp": 1,
   "gpu_mem_util": 0.85

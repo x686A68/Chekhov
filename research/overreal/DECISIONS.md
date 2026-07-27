@@ -205,6 +205,41 @@ Numbering continues from §2. Evidence for each is in `pilot/REPORT.md`.
     defeat the generator. The bias lands on item selection, where it is harder to detect
     later than a wrong headline number would be.
 
+## 3c. Decisions from the overnight extension (2026-07-27)
+
+31. **The VLM judge's failures were a question-design problem, not a model limit.** One
+    plain positive binary about depicted content scores families 2, 3, 4b, 4a2 and 5b at
+    kappa 0.94–1.00, against 0.23–0.80 for the multiple-choice form, with the last two
+    families out of sample. Four wording faults are documented in REPORT.md §4.3: a third
+    hedged option, listing embedding devices (every generated image *is* a picture), the
+    words "real"/"real live" (which make the judge answer about ontological status), and
+    negative framing (agreed with 89% of the time). The rule for every family-specific
+    judge: **one positive question about depicted content, plainest words, no options.**
+32. **Explicitness of marking is the strongest single factor found so far.** In text,
+    family 4a v2 goes from Δ ≈ 1.00 with an explicit perceptual marker ("where Tomas cannot
+    see it") to Δ ≈ 0.03 with only a spatial relation ("on the far side"), for all three
+    models. This reproduces the taxonomy's between-family ordering *inside* a family with
+    entity, scenario and task held constant, which is the strongest available evidence that
+    the ordering is real rather than stipulated. Build the ladder into every family.
+33. **Oblique realization is a third outcome and needs its own category.** The entity
+    appears as a depiction inside the scene — a child's drawing of a tiger, a calendar, a
+    mural, an anthropomorphic blend — on a carrier the scene independently licenses. It
+    occurs under P as well as under S (0.08–0.43), so it is not a suppression strategy but
+    how the model reconciles a mentioned entity with a scene it does not fit. Under
+    DECISIONS #11's definition it is a failure. It breaks the binary/marking dichotomy
+    (#12) and it is what the VLM judge kept reaching for when it answered "only a picture".
+34. **A text-to-image model has no context/request distinction, so format cues become
+    scene content.** Serialising family 6's conversation as a `User:`/`Assistant:`
+    transcript made FLUX draw comic strips — in the A condition too. The same content in
+    prose works. Relevance can be tested in the image modality, but only if nothing in the
+    prompt signals that the input is a transcript.
+35. **Per-token perplexity is not a naturalness measure.** It is dominated by the
+    predictability of the scenario phrase and is nearly blind to whether the licensing
+    device fits, ranking the pilot's most awkward figurative item among its most natural.
+    Naturalness stays a human-rated field on a sample until a conditional fit measure is
+    validated; it must not be wired into the P5 loop as a floor before then. Superseding
+    the automatic-filter half of #24.
+
 ---
 
 ## 4. Open risks

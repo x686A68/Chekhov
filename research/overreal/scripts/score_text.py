@@ -54,6 +54,23 @@ OCC_CUES = r"(?:\bhidden\b|\bhides?\b|\bhiding\b|\bbehind\b|\bconceal|\bobscur|\
 # the P condition too, where the target really is realized as a referent
 MENTION_CUES = r"(?:\bword\b|\bwords\b|\bstencill?ed\b|\bstencil\b|\bletter(?:s|ing)?\b|\blabell?ed\b|\blabel\b|\bprinted\b|\bpainted\b|\bspell|\bstamp|\bmarking(?:s)?\b|\breads?\b|\bwritten\b|\bblock capitals\b|\btext\b|\bsignage\b)"
 
+# --- oblique realization ---------------------------------------------------------------
+# A third outcome, found in the family 6 v3 generations and present in family 3's images as
+# anthropomorphic blends: the entity is neither absent nor realized as a referent, but
+# smuggled in as a *depiction inside the scene* — a child's drawing of a tiger on the
+# waiting-room wall, a calendar with a wolf on every month, a mural. The carrier is
+# diegetically licensed (a waiting room may have a calendar), so the model gets the content
+# into the output without asserting the entity is there. It is an intrusion in the DRM
+# sense and a suppression success in the referential sense, which is exactly why it needs
+# its own label rather than being forced into either.
+OBLIQUE_CARRIERS = (r"(?:\bdrawing|\bdrawn\b|\bdraws\b|\bpicture|\bpainting|\bpainted\b|\bmural"
+                    r"|\bcalendar|\bposter|\bphotograph|\bphoto\b|\bsculpture|\bstatue|\bsticker"
+                    r"|\blogo|\bprint(?:ed|s)?\b|\bartwork|\billustrat|\btoy\b|\bstuffed\b|\bplush"
+                    r"|\bcartoon|\btattoo|\bemblem|\bmotif|\bembroider|\bcarved|\bengraved"
+                    r"|\bbanner|\bmascot|\bfigurine|\bornament|\bwallpaper|\bcanvas|\bsketch"
+                    r"|\bportrait|\bdecal|\bdesign|\bthemed\b|\bshaped like\b|\bimage of\b)")
+OBLIQUE_WINDOW = 45
+
 FAMILY_CUES = {
     "1_existence": NEG_CUES,
     "2_attribution": f"(?:{ATTR_CUES}|{NEG_CUES})",
@@ -83,8 +100,9 @@ def score(row):
     text = row["output"]
     spans = mentions(text, row)
     surface = bool(spans)
-    cue = FAMILY_CUES[row["family"]]
+    cue = FAMILY_CUES.get(row["family"], NEG_CUES)
     affirmative = False
+    oblique = False
     marked_spans = 0
     for s, e in spans:
         left = text[max(0, s - WINDOW):s]
@@ -97,12 +115,17 @@ def score(row):
         # the wall" is a genuine over-realization.
         morph = (row["family"] == "3_figurative"
                  and (right[:2] in ("'s", "’s") or right[:1] == "-" or text[max(0, s - 1):s] == "-"))
-        if (re.search(cue, left, flags=re.I) or re.search(cue, right, flags=re.I)
-                or as_word or quoted or morph):
+        obl = (re.search(OBLIQUE_CARRIERS, text[max(0, s - OBLIQUE_WINDOW):s], flags=re.I)
+               or re.search(OBLIQUE_CARRIERS, text[e:e + OBLIQUE_WINDOW], flags=re.I))
+        if obl:
+            oblique = True
+            marked_spans += 1
+        elif (re.search(cue, left, flags=re.I) or re.search(cue, right, flags=re.I)
+              or as_word or quoted or morph):
             marked_spans += 1
         else:
             affirmative = True
-    return surface, affirmative, len(spans), marked_spans
+    return surface, affirmative, oblique, len(spans), marked_spans
 
 
 def main():
@@ -116,9 +139,10 @@ def main():
         return
 
     for r in rows:
-        s, a, n, m = score(r)
+        s, a, obl, n, m = score(r)
         r["realized_surface"] = s
         r["realized_affirmative"] = a
+        r["realized_oblique"] = obl
         r["n_mentions"] = n
         r["n_marked_mentions"] = m
         r["realized"] = a  # headline flag = affirmative realization
@@ -147,7 +171,7 @@ def main():
                 f.write(json.dumps({k: r[k] for k in (
                     "model", "id", "family", "entity", "scenario_id", "scenario", "device",
                     "condition", "prompt", "output", "realized", "realized_surface",
-                    "realized_affirmative", "n_mentions", "n_marked_mentions")},
+                    "realized_affirmative", "realized_oblique", "n_mentions", "n_marked_mentions")},
                     ensure_ascii=False) + "\n")
                 if r["realized_surface"] != r["realized_affirmative"]:
                     disagree.append(r)
@@ -179,25 +203,35 @@ def main():
     print(f"rule-3 dropped items: {len(dropped)}")
     print(f"surface/affirmative disagreements: {len(disagree)}")
     print()
-    hdr = f"{'family':<16}{'model':<14}" + "".join(f"{c:>9}" for c in ("S", "P", "A", "delta", "S_surf", "P_surf"))
-    print(hdr)
+    print(f"{'family':<18}{'model':<13}{'cond':<7}{'affirm':>8}{'oblique':>9}{'surface':>9}{'delta':>8}")
     for fam, per_model in overview.items():
         for model, d in per_model.items():
             u = d["filtered"]
-            print(f"{fam:<16}{model:<14}"
-                  f"{u['S']:>9.2f}{u['P']:>9.2f}{u['A']:>9.2f}{u['delta']:>9.2f}"
-                  f"{u['S_surface']:>9.2f}{u['P_surface']:>9.2f}")
+            for c in u["_conditions"]:
+                dl = u.get(f"delta_{c}")
+                print(f"{fam:<18}{model:<13}{c:<7}{u[c]:>8.2f}{u[f'{c}_oblique']:>9.2f}"
+                      f"{u[f'{c}_surface']:>9.2f}" + (f"{dl:>8.2f}" if dl is not None else f"{'':>8}"))
 
 
 def cell_stats(sel):
-    def rate(cond, field="realized_affirmative"):
+    """Condition-agnostic: families define their own sets (S_exp / S_imp as well as S)."""
+    conds = sorted({r["condition"] for r in sel})
+
+    def rate(cond, field):
         s = [r for r in sel if r["condition"] == cond]
-        return (sum(r[field] for r in s) / len(s)) if s else float("nan")
-    out = {c: round(rate(c), 4) for c in "SPA"}
-    out.update({f"{c}_surface": round(rate(c, "realized_surface"), 4) for c in "SPA"})
-    out["delta"] = round(out["P"] - out["S"], 4)
-    out["delta_surface"] = round(out["P_surface"] - out["S_surface"], 4)
-    out["n_per_cell"] = len([r for r in sel if r["condition"] == "S"])
+        return (sum(bool(r[field]) for r in s) / len(s)) if s else float("nan")
+
+    out = {"_conditions": conds}
+    for c in conds:
+        out[c] = round(rate(c, "realized_affirmative"), 4)
+        out[f"{c}_surface"] = round(rate(c, "realized_surface"), 4)
+        out[f"{c}_oblique"] = round(rate(c, "realized_oblique"), 4)
+        out[f"n_{c}"] = len([r for r in sel if r["condition"] == c])
+    # one delta per suppression condition against the licensed condition
+    for c in [x for x in conds if x.startswith("S")]:
+        if "P" in out:
+            out[f"delta_{c}"] = round(out["P"] - out[c], 4)
+            out[f"delta_surface_{c}"] = round(out["P_surface"] - out[f"{c}_surface"], 4)
     return out
 
 

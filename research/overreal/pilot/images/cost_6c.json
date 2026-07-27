@@ -1,0 +1,10 @@
+{
+  "model": "black-forest-labs/FLUX.1-dev",
+  "n_images": 127,
+  "load_s": 6.7,
+  "mean_s_per_image": 12.2,
+  "total_s": 1549.6,
+  "steps": 50,
+  "size": 1024,
+  "peak_vram_gb": 33.9
+}

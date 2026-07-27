@@ -46,12 +46,20 @@ def main():
     # with at most a couple of duplicated images (same seed, so byte-identical anyway).
     ap.add_argument("--manifest", default="manifest.jsonl")
     ap.add_argument("--reverse", action="store_true")
+    ap.add_argument("--families", default="", help="comma-separated family filter")
+    ap.add_argument("--limit-items", type=int, default=0,
+                    help="probe run: only the first N items of the selected families")
     args = ap.parse_args()
 
     import torch
     from diffusers import FluxPipeline
 
     items = load_items()
+    if args.families:
+        keep = set(args.families.split(","))
+        items = [it for it in items if it["family"] in keep]
+    if args.limit_items:
+        items = items[:args.limit_items]
     # Families may define their own condition set (4a2 splits S into S_exp / S_imp), so
     # take the conditions from each item rather than from a fixed S/P/A list.
     wanted = args.conditions.split(",") if "," in args.conditions else list(args.conditions)

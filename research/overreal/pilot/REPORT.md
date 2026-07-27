@@ -342,8 +342,15 @@ split that family 6 needs.
 
 ## 4. Q2 — can a VLM judge score families 2 and 4b?
 
-**Family 2: yes. Family 4b: no, under either protocol. Family 3, which was not on the
-list, fails the absolute protocol but is fully recovered by the paired one (§4.1).**
+**Short answer, after §4.3: yes, all three — but only once the questions are rewritten.
+The judge was never the problem; the question format was.** The multiple-choice protocol
+this pilot started with reaches kappa 0.80 / 0.42 / 0.23 on families 2 / 3 / 4b. A single
+plain binary question reaches **0.94 / 1.00 / 0.94** on exactly the same images.
+
+The sections below are kept in the order the work happened, because the wrong turns are
+the evidence for the diagnosis: §4 diagnoses the multiple-choice failure, §4.1 shows the
+paper's paired protocol only half-fixes it, and §4.2–4.3 find the four wording faults that
+caused all of it.
 
 All 36 images of families 2, 3 and 4b were inspected directly, blind to the judge's
 answers, using the same option set the judge saw.
@@ -449,16 +456,273 @@ this pilot backed into: absolute per-image judgement for the rate, with paired f
 choice as a validity check on the judge. That is worth a sentence in P2, which currently
 argues for pairing on reliability grounds alone.
 
-### 4.2 Remaining options for 4b
+### 4.2 Five protocols for 4b, and one that works
 
-What to try before giving up on automatic scoring, now that the failure mode is known:
-split every three-way question into binaries so the hedge option cannot absorb the
-uncertainty — for 4b, *"is any writing legible in this image?"* and only then *"which way
-does it face?"*; for 2 and 3, *"is there a real X in the scene?"* and only then *"is it
-inside a thought bubble / a picture frame?"*. Cropping to the carrier before asking may
-also help 4b. None of these was tested here.
+Five question forms were run over the same 36 hand-inspected family-4b images. All are
+reduced to the same decision — *the viewer can read the writing*, which is the
+over-realization — so the baseline is re-scored as a binary too and the numbers are
+comparable. Ground truth: the viewer can read it in 0.58 of the images.
+
+| variant | accuracy | kappa | says "readable" |
+|---|---|---|---|
+| v0 the original three-way question | 0.81 | 0.63 | 0.39 |
+| v1 two binaries: legible at all, then facing | 0.89 | 0.78 | 0.47 |
+| **v2 one binary: can *you* read the writing** | **0.97** | **0.94** | 0.56 |
+| v3 the same binary, polarity reversed | 0.69 | 0.30 | **0.89** |
+| v4 the three-way question, reasoning allowed first | 0.92 | 0.83 | 0.61 |
+
+The winning question is one sentence: *"Can you, the viewer of this image, read written
+words on the letter, screen or page that the person is holding or looking at?"*
+
+v3 is the diagnostic. It asks the identical question with the polarity flipped — *is the
+writing turned away from the camera, so that you cannot read it?* — and the judge answers
+**yes 89% of the time against a 42% truth rate**. It agrees with whatever the question
+presupposes. That single fact explains every anomaly in §4: the option-B over-use, the
+never-used option C, and the paired protocol's positional answering.
+
+### 4.3 The same fix on families 2 and 3, and four wording faults
+
+Repeating the exercise on the 72 inspected images of families 2 and 3 produced a cleaner
+result than expected: **the marking question is unnecessary**. Asking only *"Is there an
+elephant anywhere in this image?"* gives
+
+| family | multiple-choice kappa | plain presence question kappa |
+|---|---|---|
+| 2 attribution | 0.80 | **0.94** |
+| 3 figurative | 0.42 | **1.00** |
+
+FLUX never produced a marked realization in either family — no thought bubbles, no framed
+insets, no statues — so presence *is* the whole judgement, and adding a second question
+about embedding only creates room to go wrong. If a generator that does produce marked
+realizations is ever tested, the second question comes back; on this evidence it should be
+added only when the first question's failures show it is needed.
+
+Four faults were isolated, each with its own evidence, and they generalise beyond this
+benchmark:
+
+1. **A third "hedged" option gives an uncertain judge somewhere to park.** Removing it is
+   most of the gain in every family.
+2. **Listing the embedding devices makes the judge answer about the medium.** Asked whether
+   the tiger is "a picture, statue, logo, pattern, costume or shadow", it replied *Picture*
+   or *Statue* — not even yes or no — for 15 of 19 images containing a live animal. Every
+   generated image is a picture, so the option is always true under one reading.
+3. **The words "real" and "real live" make it answer about ontological status.** Asked
+   *"Is there a real live elephant standing in the scene in this image?"* it answered **No
+   on all 72 images**, including ones dominated by an elephant. There is indeed no real
+   live elephant: it is a picture of one.
+4. **Negatively framed questions are agreed with** (v3 above).
+
+The rule that survives all four: **ask one positive question about depicted content, in
+the plainest possible words, with no options and no hedge.**
+
+**This is an in-sample fix.** The questions were chosen after seeing where the originals
+failed, on the same 108 images used to score them. They are validated out-of-sample in
+§4.4 on images generated afterwards.
+
+`scripts/judge_images.py` now defaults to `--protocol binary`; the multiple-choice
+questions remain available as `--protocol multichoice` so both versions can be reported
+(GOAL.md rule 4).
 Until one works, families 3, 4b — and family 2 whenever a marked instance actually
 occurs — need human annotation.
+
+### 4.4 Out-of-sample validation of the corrected protocol
+
+The binary questions were chosen on families 2, 3 and 4b. Families 4a2 and 5b were built
+afterwards, and their images played no part in choosing any question. Re-judging everything
+under `--protocol binary` and comparing with direct inspection:
+
+| family | kappa | in or out of sample |
+|---|---|---|
+| 2 attribution | 0.94 | in |
+| 3 figurative | 1.00 | in |
+| 4b legibility | 0.94 | in |
+| **4a2 occlusion v2** | **0.955** | **out** |
+| **5b text-bearing** | **1.00** | **out** |
+
+The fix holds on families it was not tuned on. The Q2 answer is therefore: **a 7B open VLM
+scores every family in this pilot at kappa ≥ 0.94, provided the question is a single
+positive binary about depicted content.** What the pilot originally reported as a judge
+limitation was a prompt-engineering failure on my part.
+
+Image-modality rates under the corrected protocol, for the record:
+
+| family | S | S_exp | S_imp | P | A |
+|---|---|---|---|---|---|
+| 1 existence | 0.17 | | | 0.83 | 0.00 |
+| 2 attribution | 0.58 | | | 0.83 | 0.00 |
+| 3 figurative | 0.58 | | | 1.00 | 0.00 |
+| 4a occlusion (v1) | 1.00 | | | 0.92 | 0.00 |
+| 4a2 occlusion (v2) | | 0.83 | 0.75 | 1.00 | 0.00 |
+| 4b legibility | 0.75 | | | 0.92 | 0.00 |
+| 5 use-mention | 0.00 | | | 1.00 | 0.00 |
+| 5b text-bearing | 0.08 | | | 1.00 | 0.00 |
+| 6 relevance (v1) | 1.00 | | | 0.92 | 0.00 |
+
+---
+
+## 4.5 Overnight extension (2026-07-27)
+
+Four things were rebuilt or added after the first pass. Two produced results stronger than
+anything in the original pilot; one produced a clean negative; one is new taxonomy.
+
+### A. The explicitness ladder gives family 4a its largest effect — in text
+
+4a v2 splits S into a stated perceptual fact (S_exp, *"an elephant on the far side, where
+Tomas cannot see it"*) and a bare spatial relation (S_imp, *"an elephant on the far side"*).
+In text, over 12 items x 3 models:
+
+| model | S_exp | S_imp | P | A |
+|---|---|---|---|---|
+| llama-3.1-8b | 0.00 | **0.92** | 1.00 | 0.00 |
+| qwen3-8b | 0.17 | **1.00** | 1.00 | 0.00 |
+| qwen3-32b | 0.00 | **1.00** | 1.00 | 0.00 |
+
+Δ moves from ~1.00 under explicit marking to ~0.03 under implicit marking. One clause —
+*where Tomas cannot see it* — is the difference between near-perfect suppression and
+near-total failure, for all three models.
+
+This is the largest and best-separated effect in the pilot, and it is the same boundary
+§2 drew between the families: **what is marked lexically is respected; what has to be
+inferred from a spatial or perspectival relation is not.** It also converts the taxonomy's
+organising principle from a stipulation into a measurement — GOAL.md orders the six
+families "by how explicitly the input marks the suppression", and here that ordering is
+reproduced *inside* one family, where entity, scenario and task are held constant.
+
+In the image modality the same contrast runs the other way (S_exp 0.83, S_imp 0.67, §3.2),
+which is a difference of 2 items out of 12 and should be treated as noise until it is
+powered. The text effect is not noise.
+
+### B. Family 6: two rebuilds, one negative and one that works
+
+The pilot's family 6 marked the irrelevant mention with the words "Unrelated aside:",
+making a family defined by the *absence* of marking into a marked one. Two replacements
+were built, both 60 items x 4 conditions, both with the entity carried by an ordinary
+remark rather than a flagged one.
+
+**v2, transcript form** (`User: … Assistant: … User: By the way, …`) — **fails in the image
+modality, and the A condition is what caught it.** FLUX reads the transcript as a
+description of a comic strip and draws one: panels, speech balloons and garbled lettering,
+in A as much as in S, with the requested scene often missing entirely. The manipulation
+became the template. 54 images were generated before the run was stopped; they are kept as
+the evidence.
+
+**v3, prose form** (*"My cousin started a new job last month. She looks after an elephant —
+apparently it recognises her footsteps now. Anyway — a school gymnasium after the game."*)
+— **works.** The requested scene is rendered correctly, no comic-strip artefacts, and the
+A condition is clean.
+
+The lesson is narrow but worth recording: a text-to-image model has no context/request
+distinction, so any *format* cue in the prompt becomes scene content. Relevance can still
+be tested — the structure survives in prose — but not by showing the model a transcript.
+
+**In images, v3 turns a saturated cell into a measurable one** (60 items x 4 conditions,
+240 images, corrected binary protocol):
+
+| construction | S | S_exp | S_imp | P | A | Δ |
+|---|---|---|---|---|---|---|
+| v1 (marked, n=36) | **1.00** | | | 0.92 | 0.00 | **−0.08** |
+| v3 (prose, n=240) | | 0.55 | 0.60 | 0.82 | 0.00 | **+0.25** |
+
+v1 sat at the ceiling with a negative Δ and could not discriminate anything. v3 leaves
+headroom in both directions and produces a real licence-sensitivity number. Spot-checking
+the judge against images inspected by hand before the judge ran: 8 of 8 unambiguous cells
+agree; the one disagreement is an item where FLUX drew something between a wolf and a
+German Shepherd and the judge took the stricter reading — a stimulus ambiguity, not a
+judge error.
+
+Note P = 0.82, not 1.00: the model sometimes omits the entity even when the request names
+it. Family 6's P condition needs the same attention §2 flagged for family 2's.
+
+**In text, the better construction produces less over-realization, not more:**
+
+| construction | S | S_imp | S_exp | P |
+|---|---|---|---|---|
+| v1 (marked "Unrelated aside", n=12) | 0.25–0.33 | — | — | 0.83–1.00 |
+| v2 (transcript, n=60) | — | 0.00 | 0.00 | 0.63–0.88 |
+| v3 (prose, n=60) | — | 0.00–0.02 | 0.00 | 0.68–0.93 |
+
+**This is confounded and should not be read as "the template fixed it".** v1 and v3 differ
+in two ways at once: the marker, and the openness of the request. v1 asked for *a peaceful
+place*; v3 asks for *a school gymnasium after the game*, *a harbour at first light*. That
+is the openness ladder (P4) appearing as an uncontrolled variable. Openness has to be held
+fixed before the constructions can be compared — which is an argument for building the
+ladder in from the start rather than adding it later.
+
+### C. Oblique realization — a third outcome the taxonomy has no slot for
+
+The family 6 v3 text generations contain 10 surface hits under S_imp. Nine of them are not
+the entity:
+
+> A child's **drawing of a tiger** hangs on the wall
+> a faded **mural of a wolf** on the wall
+> a **calendar with a tiger** on each month
+> the distant howl of a **wolf on the calendar**
+> a hastily scrawled **elephant drawing**
+
+The entity is neither absent nor present as a referent. It is smuggled in as a **depiction
+inside the scene**, on a carrier the scene independently licenses — a waiting room may have
+a calendar. This is the same move as family 3's anthropomorphic blends (§3), and the same
+distinction that broke the VLM judge, which kept answering "it is only a picture" (§4.3).
+
+`scripts/score_text.py` now reports it as its own flag, `realized_oblique`, alongside
+surface and affirmative realization.
+
+**The control that makes it interesting: oblique realization happens under P too**, at
+0.08–0.43 across models in families 6b and 6c. When the request *licenses* the tiger, the
+model still often renders it as a poster. So obliqueness is not a suppression strategy —
+it is how the model reconciles a mentioned entity with a scene the entity does not fit.
+Under S it looks like leakage; under P it looks like compliance; the mechanism is the same.
+
+Three consequences:
+
+1. **It is an intrusion by the DRM measure and a success by the referential one.** The
+   paper cannot leave this to the annotator's judgement — DECISIONS.md #11 fixes the unit
+   of realization as *information made accessible to the audience*, and a drawing of a
+   tiger does make the tiger accessible. On that definition it is a failure.
+2. **It predicts where the binary/marking dichotomy breaks** (DECISIONS.md #12): a third
+   category is needed, and it is needed in at least families 3 and 6, in both modalities.
+3. **It is a confound for the P condition.** If P is satisfied obliquely, Δ understates
+   licence sensitivity, because the numerator is not measuring the same kind of realization
+   as the denominator.
+
+### D. Measuring naturalness: the obvious method does not work
+
+DECISIONS.md #24 calls for naturalness to be measured and reported next to difficulty.
+The obvious instrument is per-token negative log-likelihood under a base LM
+(`scripts/score_naturalness.py`, Qwen3-8B, no chat template). Two things were learned, both
+negative, and both worth recording so the next attempt does not repeat them.
+
+**First, the baseline matters more than the model.** Scoring S against the A condition
+measures length, not naturalness: per-token NLL falls as a sequence gets longer, and A is
+much shorter than S, so ten of eleven family cells came out "more natural than the
+scenario alone". The script now uses **P** as the baseline, which is length-matched to S by
+construction (rule 1), and reports token counts alongside so residual mismatch is visible.
+
+**Second, and more seriously: per-token perplexity does not measure what "natural" means
+here.** Ranking family 3's items by NLL:
+
+| item | NLL |
+|---|---|
+| *the auditor entering the office, as hungry as a wolf* — the awkward one | 4.99 (among the **most** natural) |
+| *the coach at halftime, as fierce as a tiger* — the idiomatic one | 5.64 (among the **least** natural) |
+
+The score is dominated by the predictability of the scenario phrase — every item using
+*the porter arriving at the inn* scores low and every item using *the coach at halftime*
+scores high — and is nearly blind to whether the vehicle fits the tenor, which is exactly
+the property that makes an item read as written by a person.
+
+What to try instead: a **conditional** measure that isolates the device from the scenario,
+e.g. log P(device | scenario) − log P(device | neutral prefix), a PMI-style fit score.
+That is one experiment, not a research programme, but it was not run here. Until something
+is validated against human judgement, naturalness should be a human-rated field on a
+sample rather than an automatic filter — and in particular it should **not** be wired into
+the P5 difficulty loop as a floor while the instrument is this weak.
+
+One incidental finding from the same run: in family 3 the S prompts are on average *more*
+natural than the P prompts (cost −1.28 nats/token, lengths matched). *As fierce as a tiger*
+is idiomatic; *standing beside a tiger* is not. So for the figurative family the
+suppression condition is the natural one and the licensed control is the odd one — the
+opposite of the usual worry, and a reason to check both conditions rather than only S.
 
 ---
 
@@ -543,9 +807,9 @@ is an upper bound.
 | 2 attribution | floor | 0.67 | **Go, image-only**, and note that the judge has never seen a marked instance to be tested on. |
 | 3 figurative | floor | 0.58 | **Go**, reframed as the modality asymmetry, with the anthropomorphic blend as a third scoring category. Score it with the paired protocol, not the absolute one. |
 | 4a occlusion | 0.39 | **0.83 / 0.67** | **Go — strongest cell**, using the v2 construction (§3.2); v1's stimulus is ambiguous and saturated, retire it. Largest model gradient in text. |
-| 4b legibility | 0.50 | **0.83** | **Go on the phenomenon, no-go on the scoring.** Needs a working protocol before it can be the headline. |
+| 4b legibility | 0.50 | **0.83** | **Go, both on the phenomenon and on the scoring** — the single binary reaches kappa 0.94 (§4.2). It can be the headline. |
 | 5 use-mention | floor | floor | **Hold — but the diagnosis has changed** (§3.1). Two constructions tried; the blocker is that FLUX writes no real words unprompted. Retry on a strong text-rendering generator before deciding. |
-| 6 relevance | 0.31 | **1.00** | **Go.** Consistent in text, saturated in images; fix the "wildlife park" leak in the neutral context first. |
+| 6 relevance | **floor** | **0.58** | **Go, on the v3 prose construction** (§4.5B). Text is at the floor once the items are natural, images give Δ = +0.25 with headroom. Another modality asymmetry, and the "wildlife park" leak is gone. |
 
 The two families the pilot recommends building on hardest — 4a and 6 — are the two that
 DECISIONS.md §1 marks as most open in the literature. The two that are crowded (1) or

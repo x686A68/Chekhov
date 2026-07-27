@@ -1,9 +1,9 @@
 {
   "model": "llama3.1-8b",
-  "n_prompts": 252,
-  "load_s": 56.8,
-  "gen_s": 2.5,
-  "s_per_prompt": 0.01,
+  "n_prompts": 816,
+  "load_s": 38.0,
+  "gen_s": 5.0,
+  "s_per_prompt": 0.006,
   "max_tokens": 300,
   "tp": 1,
   "gpu_mem_util": 0.85

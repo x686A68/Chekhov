@@ -1,5 +1,9 @@
 {
   "reason": "entity realized spontaneously under condition A (GOAL.md rule 3)",
-  "dropped": {},
-  "n_dropped": 0
+  "dropped": {
+    "5b_text_bearing/5b_text_bearing_00": [
+      "qwen3-8b"
+    ]
+  },
+  "n_dropped": 1
 }
