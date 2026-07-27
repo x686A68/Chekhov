@@ -1,0 +1,520 @@
+{
+  "1_existence": {
+    "llama3.1-8b": {
+      "unfiltered": {
+        "S": 0.0,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 0.0,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 1.0,
+        "delta_surface": 1.0,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.0,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 0.0,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 1.0,
+        "delta_surface": 1.0,
+        "n_per_cell": 12
+      }
+    },
+    "qwen3-32b": {
+      "unfiltered": {
+        "S": 0.0,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 0.0,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 1.0,
+        "delta_surface": 1.0,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.0,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 0.0,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 1.0,
+        "delta_surface": 1.0,
+        "n_per_cell": 12
+      }
+    },
+    "qwen3-8b": {
+      "unfiltered": {
+        "S": 0.0,
+        "P": 0.9167,
+        "A": 0.0,
+        "S_surface": 0.0833,
+        "P_surface": 0.9167,
+        "A_surface": 0.0,
+        "delta": 0.9167,
+        "delta_surface": 0.8334,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.0,
+        "P": 0.9167,
+        "A": 0.0,
+        "S_surface": 0.0833,
+        "P_surface": 0.9167,
+        "A_surface": 0.0,
+        "delta": 0.9167,
+        "delta_surface": 0.8334,
+        "n_per_cell": 12
+      }
+    }
+  },
+  "2_attribution": {
+    "llama3.1-8b": {
+      "unfiltered": {
+        "S": 0.0,
+        "P": 0.0833,
+        "A": 0.0,
+        "S_surface": 0.0,
+        "P_surface": 0.0833,
+        "A_surface": 0.0,
+        "delta": 0.0833,
+        "delta_surface": 0.0833,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.0,
+        "P": 0.0833,
+        "A": 0.0,
+        "S_surface": 0.0,
+        "P_surface": 0.0833,
+        "A_surface": 0.0,
+        "delta": 0.0833,
+        "delta_surface": 0.0833,
+        "n_per_cell": 12
+      }
+    },
+    "qwen3-32b": {
+      "unfiltered": {
+        "S": 0.0,
+        "P": 0.9167,
+        "A": 0.0,
+        "S_surface": 0.3333,
+        "P_surface": 0.9167,
+        "A_surface": 0.0,
+        "delta": 0.9167,
+        "delta_surface": 0.5834,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.0,
+        "P": 0.9167,
+        "A": 0.0,
+        "S_surface": 0.3333,
+        "P_surface": 0.9167,
+        "A_surface": 0.0,
+        "delta": 0.9167,
+        "delta_surface": 0.5834,
+        "n_per_cell": 12
+      }
+    },
+    "qwen3-8b": {
+      "unfiltered": {
+        "S": 0.0,
+        "P": 0.5833,
+        "A": 0.0,
+        "S_surface": 0.25,
+        "P_surface": 0.5833,
+        "A_surface": 0.0,
+        "delta": 0.5833,
+        "delta_surface": 0.3333,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.0,
+        "P": 0.5833,
+        "A": 0.0,
+        "S_surface": 0.25,
+        "P_surface": 0.5833,
+        "A_surface": 0.0,
+        "delta": 0.5833,
+        "delta_surface": 0.3333,
+        "n_per_cell": 12
+      }
+    }
+  },
+  "3_figurative": {
+    "llama3.1-8b": {
+      "unfiltered": {
+        "S": 0.0,
+        "P": 0.5,
+        "A": 0.0,
+        "S_surface": 0.25,
+        "P_surface": 0.6667,
+        "A_surface": 0.0,
+        "delta": 0.5,
+        "delta_surface": 0.4167,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.0,
+        "P": 0.5,
+        "A": 0.0,
+        "S_surface": 0.25,
+        "P_surface": 0.6667,
+        "A_surface": 0.0,
+        "delta": 0.5,
+        "delta_surface": 0.4167,
+        "n_per_cell": 12
+      }
+    },
+    "qwen3-32b": {
+      "unfiltered": {
+        "S": 0.0,
+        "P": 0.8333,
+        "A": 0.0,
+        "S_surface": 0.4167,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 0.8333,
+        "delta_surface": 0.5833,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.0,
+        "P": 0.8333,
+        "A": 0.0,
+        "S_surface": 0.4167,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 0.8333,
+        "delta_surface": 0.5833,
+        "n_per_cell": 12
+      }
+    },
+    "qwen3-8b": {
+      "unfiltered": {
+        "S": 0.0,
+        "P": 0.8333,
+        "A": 0.0,
+        "S_surface": 0.1667,
+        "P_surface": 0.9167,
+        "A_surface": 0.0,
+        "delta": 0.8333,
+        "delta_surface": 0.75,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.0,
+        "P": 0.8333,
+        "A": 0.0,
+        "S_surface": 0.1667,
+        "P_surface": 0.9167,
+        "A_surface": 0.0,
+        "delta": 0.8333,
+        "delta_surface": 0.75,
+        "n_per_cell": 12
+      }
+    }
+  },
+  "4a_occlusion": {
+    "llama3.1-8b": {
+      "unfiltered": {
+        "S": 0.0,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 0.0833,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 1.0,
+        "delta_surface": 0.9167,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.0,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 0.0833,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 1.0,
+        "delta_surface": 0.9167,
+        "n_per_cell": 12
+      }
+    },
+    "qwen3-32b": {
+      "unfiltered": {
+        "S": 0.1667,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 0.75,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 0.8333,
+        "delta_surface": 0.25,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.1667,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 0.75,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 0.8333,
+        "delta_surface": 0.25,
+        "n_per_cell": 12
+      }
+    },
+    "qwen3-8b": {
+      "unfiltered": {
+        "S": 1.0,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 1.0,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 0.0,
+        "delta_surface": 0.0,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 1.0,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 1.0,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 0.0,
+        "delta_surface": 0.0,
+        "n_per_cell": 12
+      }
+    }
+  },
+  "4b_legibility": {
+    "llama3.1-8b": {
+      "unfiltered": {
+        "S": 0.1667,
+        "P": 0.6667,
+        "A": 0.0,
+        "S_surface": 0.1667,
+        "P_surface": 0.8333,
+        "A_surface": 0.0,
+        "delta": 0.5,
+        "delta_surface": 0.6666,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.1667,
+        "P": 0.6667,
+        "A": 0.0,
+        "S_surface": 0.1667,
+        "P_surface": 0.8333,
+        "A_surface": 0.0,
+        "delta": 0.5,
+        "delta_surface": 0.6666,
+        "n_per_cell": 12
+      }
+    },
+    "qwen3-32b": {
+      "unfiltered": {
+        "S": 0.8333,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 0.8333,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 0.1667,
+        "delta_surface": 0.1667,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.8333,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 0.8333,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 0.1667,
+        "delta_surface": 0.1667,
+        "n_per_cell": 12
+      }
+    },
+    "qwen3-8b": {
+      "unfiltered": {
+        "S": 0.5,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 0.5833,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 0.5,
+        "delta_surface": 0.4167,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.5,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 0.5833,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 0.5,
+        "delta_surface": 0.4167,
+        "n_per_cell": 12
+      }
+    }
+  },
+  "5_use_mention": {
+    "llama3.1-8b": {
+      "unfiltered": {
+        "S": 0.0,
+        "P": 0.8333,
+        "A": 0.0,
+        "S_surface": 1.0,
+        "P_surface": 0.9167,
+        "A_surface": 0.0,
+        "delta": 0.8333,
+        "delta_surface": -0.0833,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.0,
+        "P": 0.8333,
+        "A": 0.0,
+        "S_surface": 1.0,
+        "P_surface": 0.9167,
+        "A_surface": 0.0,
+        "delta": 0.8333,
+        "delta_surface": -0.0833,
+        "n_per_cell": 12
+      }
+    },
+    "qwen3-32b": {
+      "unfiltered": {
+        "S": 0.0,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 1.0,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 1.0,
+        "delta_surface": 0.0,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.0,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 1.0,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 1.0,
+        "delta_surface": 0.0,
+        "n_per_cell": 12
+      }
+    },
+    "qwen3-8b": {
+      "unfiltered": {
+        "S": 0.0,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 1.0,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 1.0,
+        "delta_surface": 0.0,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.0,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 1.0,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 1.0,
+        "delta_surface": 0.0,
+        "n_per_cell": 12
+      }
+    }
+  },
+  "6_relevance": {
+    "llama3.1-8b": {
+      "unfiltered": {
+        "S": 0.25,
+        "P": 0.9167,
+        "A": 0.0,
+        "S_surface": 0.25,
+        "P_surface": 0.9167,
+        "A_surface": 0.0,
+        "delta": 0.6667,
+        "delta_surface": 0.6667,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.25,
+        "P": 0.9167,
+        "A": 0.0,
+        "S_surface": 0.25,
+        "P_surface": 0.9167,
+        "A_surface": 0.0,
+        "delta": 0.6667,
+        "delta_surface": 0.6667,
+        "n_per_cell": 12
+      }
+    },
+    "qwen3-32b": {
+      "unfiltered": {
+        "S": 0.3333,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 0.3333,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 0.6667,
+        "delta_surface": 0.6667,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.3333,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 0.3333,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 0.6667,
+        "delta_surface": 0.6667,
+        "n_per_cell": 12
+      }
+    },
+    "qwen3-8b": {
+      "unfiltered": {
+        "S": 0.3333,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 0.3333,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 0.6667,
+        "delta_surface": 0.6667,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.3333,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 0.3333,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 0.6667,
+        "delta_surface": 0.6667,
+        "n_per_cell": 12
+      }
+    }
+  }
+}

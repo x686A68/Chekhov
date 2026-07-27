@@ -1,0 +1,450 @@
+{
+  "2_attribution": {
+    "n_inspected": 36,
+    "raw_agreement": 0.8889,
+    "cohens_kappa": 0.8,
+    "judge_label_counts": {
+      "C": 18,
+      "A": 14,
+      "B": 4
+    },
+    "human_label_counts": {
+      "C": 18,
+      "A": 18
+    },
+    "disagreements": [
+      {
+        "id": "2_attribution_07",
+        "condition": "P",
+        "path": "pilot/images/2_attribution/2_attribution_07_P.png",
+        "judge": "B",
+        "judge_meaning": "marked",
+        "human": "A",
+        "human_meaning": "unmarked realization",
+        "note": ""
+      },
+      {
+        "id": "2_attribution_07",
+        "condition": "S",
+        "path": "pilot/images/2_attribution/2_attribution_07_S.png",
+        "judge": "B",
+        "judge_meaning": "marked",
+        "human": "A",
+        "human_meaning": "unmarked realization",
+        "note": "tiger fully realized in the container facing the boy"
+      },
+      {
+        "id": "2_attribution_10",
+        "condition": "P",
+        "path": "pilot/images/2_attribution/2_attribution_10_P.png",
+        "judge": "B",
+        "judge_meaning": "marked",
+        "human": "A",
+        "human_meaning": "unmarked realization",
+        "note": ""
+      },
+      {
+        "id": "2_attribution_10",
+        "condition": "S",
+        "path": "pilot/images/2_attribution/2_attribution_10_S.png",
+        "judge": "B",
+        "judge_meaning": "marked",
+        "human": "A",
+        "human_meaning": "unmarked realization",
+        "note": "dark canid fully realized inside the container"
+      }
+    ]
+  },
+  "3_figurative": {
+    "n_inspected": 36,
+    "raw_agreement": 0.5833,
+    "cohens_kappa": 0.42,
+    "judge_label_counts": {
+      "C": 17,
+      "B": 15,
+      "A": 4
+    },
+    "human_label_counts": {
+      "C": 17,
+      "A": 19
+    },
+    "disagreements": [
+      {
+        "id": "3_figurative_00",
+        "condition": "P",
+        "path": "pilot/images/3_figurative/3_figurative_00_P.png",
+        "judge": "B",
+        "judge_meaning": "marked",
+        "human": "A",
+        "human_meaning": "unmarked realization",
+        "note": ""
+      },
+      {
+        "id": "3_figurative_00",
+        "condition": "S",
+        "path": "pilot/images/3_figurative/3_figurative_00_S.png",
+        "judge": "B",
+        "judge_meaning": "marked",
+        "human": "A",
+        "human_meaning": "unmarked realization",
+        "note": "literal elephant walking down the street beside the porter"
+      },
+      {
+        "id": "3_figurative_02",
+        "condition": "P",
+        "path": "pilot/images/3_figurative/3_figurative_02_P.png",
+        "judge": "B",
+        "judge_meaning": "marked",
+        "human": "A",
+        "human_meaning": "unmarked realization",
+        "note": ""
+      },
+      {
+        "id": "3_figurative_02",
+        "condition": "S",
+        "path": "pilot/images/3_figurative/3_figurative_02_S.png",
+        "judge": "B",
+        "judge_meaning": "marked",
+        "human": "A",
+        "human_meaning": "unmarked realization",
+        "note": "literal elephant filling the office corridor"
+      },
+      {
+        "id": "3_figurative_04",
+        "condition": "P",
+        "path": "pilot/images/3_figurative/3_figurative_04_P.png",
+        "judge": "B",
+        "judge_meaning": "marked",
+        "human": "A",
+        "human_meaning": "unmarked realization",
+        "note": ""
+      },
+      {
+        "id": "3_figurative_05",
+        "condition": "P",
+        "path": "pilot/images/3_figurative/3_figurative_05_P.png",
+        "judge": "B",
+        "judge_meaning": "marked",
+        "human": "A",
+        "human_meaning": "unmarked realization",
+        "note": ""
+      },
+      {
+        "id": "3_figurative_05",
+        "condition": "S",
+        "path": "pilot/images/3_figurative/3_figurative_05_S.png",
+        "judge": "B",
+        "judge_meaning": "marked",
+        "human": "A",
+        "human_meaning": "unmarked realization",
+        "note": "large snake on the office corridor floor"
+      },
+      {
+        "id": "3_figurative_06",
+        "condition": "P",
+        "path": "pilot/images/3_figurative/3_figurative_06_P.png",
+        "judge": "B",
+        "judge_meaning": "marked",
+        "human": "A",
+        "human_meaning": "unmarked realization",
+        "note": ""
+      },
+      {
+        "id": "3_figurative_06",
+        "condition": "S",
+        "path": "pilot/images/3_figurative/3_figurative_06_S.png",
+        "judge": "B",
+        "judge_meaning": "marked",
+        "human": "A",
+        "human_meaning": "unmarked realization",
+        "note": "anthropomorphic tiger-headed man: the vehicle is fused into the tenor"
+      },
+      {
+        "id": "3_figurative_07",
+        "condition": "P",
+        "path": "pilot/images/3_figurative/3_figurative_07_P.png",
+        "judge": "B",
+        "judge_meaning": "marked",
+        "human": "A",
+        "human_meaning": "unmarked realization",
+        "note": ""
+      },
+      {
+        "id": "3_figurative_08",
+        "condition": "P",
+        "path": "pilot/images/3_figurative/3_figurative_08_P.png",
+        "judge": "B",
+        "judge_meaning": "marked",
+        "human": "A",
+        "human_meaning": "unmarked realization",
+        "note": ""
+      },
+      {
+        "id": "3_figurative_08",
+        "condition": "S",
+        "path": "pilot/images/3_figurative/3_figurative_08_S.png",
+        "judge": "B",
+        "judge_meaning": "marked",
+        "human": "A",
+        "human_meaning": "unmarked realization",
+        "note": "tiger-headed man in a suit - anthropomorphic blend"
+      },
+      {
+        "id": "3_figurative_09",
+        "condition": "P",
+        "path": "pilot/images/3_figurative/3_figurative_09_P.png",
+        "judge": "B",
+        "judge_meaning": "marked",
+        "human": "A",
+        "human_meaning": "unmarked realization",
+        "note": ""
+      },
+      {
+        "id": "3_figurative_11",
+        "condition": "P",
+        "path": "pilot/images/3_figurative/3_figurative_11_P.png",
+        "judge": "B",
+        "judge_meaning": "marked",
+        "human": "A",
+        "human_meaning": "unmarked realization",
+        "note": ""
+      },
+      {
+        "id": "3_figurative_11",
+        "condition": "S",
+        "path": "pilot/images/3_figurative/3_figurative_11_S.png",
+        "judge": "B",
+        "judge_meaning": "marked",
+        "human": "A",
+        "human_meaning": "unmarked realization",
+        "note": "wolf-headed man in a suit - anthropomorphic blend"
+      }
+    ]
+  },
+  "4b_legibility": {
+    "n_inspected": 36,
+    "raw_agreement": 0.4167,
+    "cohens_kappa": 0.2286,
+    "judge_label_counts": {
+      "B": 22,
+      "A": 14
+    },
+    "human_label_counts": {
+      "C": 14,
+      "A": 21,
+      "B": 1
+    },
+    "disagreements": [
+      {
+        "id": "4b_legibility_00",
+        "condition": "A",
+        "path": "pilot/images/4b_legibility/4b_legibility_00_A.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "C",
+        "human_meaning": "no text",
+        "note": ""
+      },
+      {
+        "id": "4b_legibility_01",
+        "condition": "A",
+        "path": "pilot/images/4b_legibility/4b_legibility_01_A.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "C",
+        "human_meaning": "no text",
+        "note": ""
+      },
+      {
+        "id": "4b_legibility_01",
+        "condition": "S",
+        "path": "pilot/images/4b_legibility/4b_legibility_01_S.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "A",
+        "human_meaning": "faces camera",
+        "note": "line-drawing style; message rendered small but oriented to the viewer"
+      },
+      {
+        "id": "4b_legibility_02",
+        "condition": "A",
+        "path": "pilot/images/4b_legibility/4b_legibility_02_A.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "C",
+        "human_meaning": "no text",
+        "note": ""
+      },
+      {
+        "id": "4b_legibility_03",
+        "condition": "A",
+        "path": "pilot/images/4b_legibility/4b_legibility_03_A.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "C",
+        "human_meaning": "no text",
+        "note": ""
+      },
+      {
+        "id": "4b_legibility_03",
+        "condition": "S",
+        "path": "pilot/images/4b_legibility/4b_legibility_03_S.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "A",
+        "human_meaning": "faces camera",
+        "note": "phone screen small but angled to the viewer, text faintly legible"
+      },
+      {
+        "id": "4b_legibility_04",
+        "condition": "A",
+        "path": "pilot/images/4b_legibility/4b_legibility_04_A.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "C",
+        "human_meaning": "no text",
+        "note": ""
+      },
+      {
+        "id": "4b_legibility_04",
+        "condition": "S",
+        "path": "pilot/images/4b_legibility/4b_legibility_04_S.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "A",
+        "human_meaning": "faces camera",
+        "note": "phone screen turned to the camera, message readable"
+      },
+      {
+        "id": "4b_legibility_05",
+        "condition": "A",
+        "path": "pilot/images/4b_legibility/4b_legibility_05_A.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "C",
+        "human_meaning": "no text",
+        "note": ""
+      },
+      {
+        "id": "4b_legibility_05",
+        "condition": "P",
+        "path": "pilot/images/4b_legibility/4b_legibility_05_P.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "A",
+        "human_meaning": "faces camera",
+        "note": ""
+      },
+      {
+        "id": "4b_legibility_06",
+        "condition": "A",
+        "path": "pilot/images/4b_legibility/4b_legibility_06_A.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "C",
+        "human_meaning": "no text",
+        "note": ""
+      },
+      {
+        "id": "4b_legibility_06",
+        "condition": "P",
+        "path": "pilot/images/4b_legibility/4b_legibility_06_P.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "A",
+        "human_meaning": "faces camera",
+        "note": ""
+      },
+      {
+        "id": "4b_legibility_06",
+        "condition": "S",
+        "path": "pilot/images/4b_legibility/4b_legibility_06_S.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "A",
+        "human_meaning": "faces camera",
+        "note": "laptop screen faces the camera while she types side-on - geometrically impossible"
+      },
+      {
+        "id": "4b_legibility_07",
+        "condition": "A",
+        "path": "pilot/images/4b_legibility/4b_legibility_07_A.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "C",
+        "human_meaning": "no text",
+        "note": ""
+      },
+      {
+        "id": "4b_legibility_08",
+        "condition": "A",
+        "path": "pilot/images/4b_legibility/4b_legibility_08_A.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "C",
+        "human_meaning": "no text",
+        "note": ""
+      },
+      {
+        "id": "4b_legibility_08",
+        "condition": "P",
+        "path": "pilot/images/4b_legibility/4b_legibility_08_P.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "C",
+        "human_meaning": "no text",
+        "note": "P failed: screen angled away, nothing readable"
+      },
+      {
+        "id": "4b_legibility_08",
+        "condition": "S",
+        "path": "pilot/images/4b_legibility/4b_legibility_08_S.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "A",
+        "human_meaning": "faces camera",
+        "note": "laptop screen faces the camera with flight 402 at nine"
+      },
+      {
+        "id": "4b_legibility_09",
+        "condition": "A",
+        "path": "pilot/images/4b_legibility/4b_legibility_09_A.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "C",
+        "human_meaning": "no text",
+        "note": ""
+      },
+      {
+        "id": "4b_legibility_10",
+        "condition": "A",
+        "path": "pilot/images/4b_legibility/4b_legibility_10_A.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "C",
+        "human_meaning": "no text",
+        "note": ""
+      },
+      {
+        "id": "4b_legibility_11",
+        "condition": "A",
+        "path": "pilot/images/4b_legibility/4b_legibility_11_A.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "C",
+        "human_meaning": "no text",
+        "note": ""
+      },
+      {
+        "id": "4b_legibility_11",
+        "condition": "S",
+        "path": "pilot/images/4b_legibility/4b_legibility_11_S.png",
+        "judge": "B",
+        "judge_meaning": "faces the reader",
+        "human": "C",
+        "human_meaning": "no text",
+        "note": "she is writing; no legible message rendered"
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+# Track the pilot code, the stimuli and the scored results; ignore heavy generated
+# artefacts and the local environment.
+.venv/
+logs/
+pilot/images/**/*.png
+pilot/images/sheets/

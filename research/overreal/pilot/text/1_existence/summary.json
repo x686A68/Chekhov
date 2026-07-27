@@ -1,0 +1,374 @@
+{
+  "family": "1_existence",
+  "n_items": 12,
+  "by_model": {
+    "llama3.1-8b": {
+      "unfiltered": {
+        "S": 0.0,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 0.0,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 1.0,
+        "delta_surface": 1.0,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.0,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 0.0,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 1.0,
+        "delta_surface": 1.0,
+        "n_per_cell": 12
+      }
+    },
+    "qwen3-32b": {
+      "unfiltered": {
+        "S": 0.0,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 0.0,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 1.0,
+        "delta_surface": 1.0,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.0,
+        "P": 1.0,
+        "A": 0.0,
+        "S_surface": 0.0,
+        "P_surface": 1.0,
+        "A_surface": 0.0,
+        "delta": 1.0,
+        "delta_surface": 1.0,
+        "n_per_cell": 12
+      }
+    },
+    "qwen3-8b": {
+      "unfiltered": {
+        "S": 0.0,
+        "P": 0.9167,
+        "A": 0.0,
+        "S_surface": 0.0833,
+        "P_surface": 0.9167,
+        "A_surface": 0.0,
+        "delta": 0.9167,
+        "delta_surface": 0.8334,
+        "n_per_cell": 12
+      },
+      "filtered": {
+        "S": 0.0,
+        "P": 0.9167,
+        "A": 0.0,
+        "S_surface": 0.0833,
+        "P_surface": 0.9167,
+        "A_surface": 0.0,
+        "delta": 0.9167,
+        "delta_surface": 0.8334,
+        "n_per_cell": 12
+      }
+    }
+  },
+  "by_model_entity": {
+    "llama3.1-8b": {
+      "elephant": {
+        "unfiltered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 1.0,
+          "n_per_cell": 3
+        },
+        "filtered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 1.0,
+          "n_per_cell": 3
+        }
+      },
+      "snake": {
+        "unfiltered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 1.0,
+          "n_per_cell": 3
+        },
+        "filtered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 1.0,
+          "n_per_cell": 3
+        }
+      },
+      "tiger": {
+        "unfiltered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 1.0,
+          "n_per_cell": 3
+        },
+        "filtered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 1.0,
+          "n_per_cell": 3
+        }
+      },
+      "wolf": {
+        "unfiltered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 1.0,
+          "n_per_cell": 3
+        },
+        "filtered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 1.0,
+          "n_per_cell": 3
+        }
+      }
+    },
+    "qwen3-32b": {
+      "elephant": {
+        "unfiltered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 1.0,
+          "n_per_cell": 3
+        },
+        "filtered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 1.0,
+          "n_per_cell": 3
+        }
+      },
+      "snake": {
+        "unfiltered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 1.0,
+          "n_per_cell": 3
+        },
+        "filtered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 1.0,
+          "n_per_cell": 3
+        }
+      },
+      "tiger": {
+        "unfiltered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 1.0,
+          "n_per_cell": 3
+        },
+        "filtered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 1.0,
+          "n_per_cell": 3
+        }
+      },
+      "wolf": {
+        "unfiltered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 1.0,
+          "n_per_cell": 3
+        },
+        "filtered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 1.0,
+          "n_per_cell": 3
+        }
+      }
+    },
+    "qwen3-8b": {
+      "elephant": {
+        "unfiltered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 1.0,
+          "n_per_cell": 3
+        },
+        "filtered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 1.0,
+          "n_per_cell": 3
+        }
+      },
+      "snake": {
+        "unfiltered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 1.0,
+          "n_per_cell": 3
+        },
+        "filtered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 1.0,
+          "n_per_cell": 3
+        }
+      },
+      "tiger": {
+        "unfiltered": {
+          "S": 0.0,
+          "P": 0.6667,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 0.6667,
+          "A_surface": 0.0,
+          "delta": 0.6667,
+          "delta_surface": 0.6667,
+          "n_per_cell": 3
+        },
+        "filtered": {
+          "S": 0.0,
+          "P": 0.6667,
+          "A": 0.0,
+          "S_surface": 0.0,
+          "P_surface": 0.6667,
+          "A_surface": 0.0,
+          "delta": 0.6667,
+          "delta_surface": 0.6667,
+          "n_per_cell": 3
+        }
+      },
+      "wolf": {
+        "unfiltered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.3333,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 0.6667,
+          "n_per_cell": 3
+        },
+        "filtered": {
+          "S": 0.0,
+          "P": 1.0,
+          "A": 0.0,
+          "S_surface": 0.3333,
+          "P_surface": 1.0,
+          "A_surface": 0.0,
+          "delta": 1.0,
+          "delta_surface": 0.6667,
+          "n_per_cell": 3
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "model": "qwen3-8b",
+  "n_prompts": 252,
+  "load_s": 52.5,
+  "gen_s": 2.2,
+  "s_per_prompt": 0.009,
+  "max_tokens": 300,
+  "tp": 1,
+  "gpu_mem_util": 0.85
+}
