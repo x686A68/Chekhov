@@ -1,0 +1,10 @@
+{
+  "model": "black-forest-labs/FLUX.1-dev",
+  "run": "5b",
+  "n_images": 36,
+  "mean_s_per_image": 15.59,
+  "total_s": 561.2,
+  "steps": 50,
+  "size": 1024,
+  "note": "two FLUX workers plus another user job shared GPU 5, so this is slower than the uncontended 12.5 s/image of the main run"
+}

@@ -151,6 +151,57 @@ def items_f4a():
     return out
 
 
+def items_f4a2():
+    """Family 4a, second construction — occlusion with the camera at the observer.
+
+    Three problems with items_f4a, all of which make its result ambiguous:
+    the viewpoint anchor was vacuous (the observer was never in frame and the camera was
+    not his), a correct S image was indistinguishable from A, and a failure could not be
+    told apart from the model simply ignoring the barrier. Here the prompt puts the
+    camera *at* the observer, so the audience's access and the observer's access coincide
+    (DECISIONS.md #11), and a validity question about the barrier separates "ignored the
+    occlusion" from "never drew the wall".
+
+    S comes in two strengths, so that explicitness of marking becomes a measured factor
+    inside the family rather than only a stipulated ordering between families:
+      S_exp  states the perceptual fact outright ("that Tomas cannot see")
+      S_imp  gives only the spatial relation ("on the far side"), occlusion to be inferred
+    """
+    scenarios = [
+        ("f4a2s1", "Tomas", "a high stone wall"),
+        ("f4a2s2", "Iris", "a tall wooden fence"),
+        ("f4a2s3", "Delia", "a parked lorry"),
+    ]
+    out = []
+    for e in ENTITIES:
+        for sid, obs, barrier in scenarios:
+            task = TASK_SEE.format(who=obs)
+            view = f"the view from where {obs} stands"
+            out.append(dict(
+                family="4a2_occlusion_v2", entity=e["entity"], scenario_id=sid,
+                scenario=barrier, device="far side of the barrier", person=obs,
+                prompts={
+                    "S_exp": user(f"{obs} stands facing {barrier}. {e['art'].capitalize()} "
+                                  f"{e['entity']} stands on the far side of it, where {obs} "
+                                  f"cannot see it. {task}"),
+                    "S_imp": user(f"{obs} stands facing {barrier}. {e['art'].capitalize()} "
+                                  f"{e['entity']} stands on the far side of it. {task}"),
+                    "P": user(f"{obs} stands facing {barrier}. {e['art'].capitalize()} "
+                              f"{e['entity']} stands on {obs}'s side of it. {task}"),
+                    "A": user(f"{obs} stands facing {barrier}. {task}"),
+                },
+                image_prompts={
+                    "S_exp": f"{view}: {barrier}, with {e['art']} {e['entity']} behind it "
+                             f"that {obs} cannot see",
+                    "S_imp": f"{view}: {barrier}, with {e['art']} {e['entity']} on the far side",
+                    "P": f"{view}: {e['art']} {e['entity']} standing on this side of {barrier}",
+                    "A": f"{view}: {barrier}",
+                },
+                barrier=barrier,
+            ))
+    return out
+
+
 CARRIERS = [
     ("f4bc1", "a letter"),
     ("f4bc2", "a phone screen"),
@@ -219,6 +270,54 @@ def items_f5():
     return out
 
 
+TEXT_BEARING = [
+    {"entity": "book", "art": "a"},
+    {"entity": "letter", "art": "a"},
+    {"entity": "newspaper", "art": "a"},
+    {"entity": "menu", "art": "a"},
+]
+
+
+def items_f5b():
+    """Family 5, second construction — text-bearing carriers.
+
+    The crate construction (items_f5) gave the model no occasion to render text at all,
+    so its null result says nothing about the family. These entities *must* carry text,
+    and the norm is that they carry their content, not their own category name: a book
+    cover shows a title, not the word BOOK. That makes the use-mention choice live.
+
+    Realized unit = the entity's own word form rendered as text in the image.
+    """
+    scenarios = [
+        ("f5bs1", "a wooden desk by a window"),
+        ("f5bs2", "a cafe table in the morning"),
+        ("f5bs3", "a shop counter"),
+    ]
+    out = []
+    for e in TEXT_BEARING:
+        for sid, sc in scenarios:
+            task = TASK3.format(x=f"{sc} with {e['art']} {e['entity']} on it")
+            out.append(dict(
+                family="5b_text_bearing", entity=e["entity"], scenario_id=sid, scenario=sc,
+                device=f"plain use of '{e['entity']}'",
+                prompts={
+                    "S": user(task),
+                    "P": user(TASK3.format(
+                        x=f"{sc} with {e['art']} {e['entity']} on it, the word "
+                          f"{e['entity'].upper()} printed across it")),
+                    "A": user(TASK3.format(x=sc)),
+                },
+                image_prompts={
+                    "S": f"{sc} with {e['art']} {e['entity']} on it",
+                    "P": f"{sc} with {e['art']} {e['entity']} on it, the word "
+                         f"{e['entity'].upper()} printed across it",
+                    "A": sc,
+                },
+                image_target="word_form",
+            ))
+    return out
+
+
 def items_f6():
     """Family 6 — relevance. No licensing device; the incidental prior mention is the manipulation.
 
@@ -262,7 +361,9 @@ def items_f6():
     return out
 
 
-BUILDERS = [items_f1, items_f2, items_f3, items_f4a, items_f4b, items_f5, items_f6]
+BUILDERS = [items_f1, items_f2, items_f3, items_f4a, items_f4a2, items_f4b, items_f5,
+            items_f5b,
+            items_f6]
 
 
 def check_leakage(item):

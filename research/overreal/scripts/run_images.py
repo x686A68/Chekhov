@@ -52,7 +52,11 @@ def main():
     from diffusers import FluxPipeline
 
     items = load_items()
-    todo = [(it, c) for it in items for c in args.conditions]
+    # Families may define their own condition set (4a2 splits S into S_exp / S_imp), so
+    # take the conditions from each item rather than from a fixed S/P/A list.
+    wanted = args.conditions.split(",") if "," in args.conditions else list(args.conditions)
+    todo = [(it, c) for it in items for c in it["image_prompts"]
+            if c in wanted or c not in ("S", "P", "A")]
     print(f"{len(items)} items x {len(args.conditions)} conditions = {len(todo)} images", flush=True)
 
     t0 = time.time()
@@ -118,7 +122,9 @@ def main():
         "total_s": round(sum(times), 1), "steps": args.steps, "size": args.size,
         "peak_vram_gb": round(torch.cuda.max_memory_allocated() / 2**30, 1),
     }
-    with open(os.path.join(OUT, "cost.json"), "w") as f:
+    cost_name = "cost.json" if args.manifest == "manifest.jsonl" else \
+        "cost_" + args.manifest.replace("manifest_", "").replace(".jsonl", "") + ".json"
+    with open(os.path.join(OUT, cost_name), "w") as f:
         json.dump(cost, f, indent=2)
     print("COST", json.dumps(cost), flush=True)
 

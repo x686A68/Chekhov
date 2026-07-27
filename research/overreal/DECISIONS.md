@@ -134,6 +134,79 @@ source of our word "intrusion") · ANLI / Dynabench / AFLite (adversarial constr
 
 ---
 
+## 3b. Decisions taken during the pilot (2026-07-26)
+
+Numbering continues from §2. Evidence for each is in `pilot/REPORT.md`.
+
+24. **Naturalness is a first-class constraint, traded against difficulty explicitly.**
+    The pilot's family-3 items were built by *full* crossing of 4 entities x 3 scenarios,
+    which is exactly what #16 warned against ("full crossing is impossible because many
+    combinations are unnatural"). It produced items like *the auditor entering the office,
+    as hungry as a wolf* — hard because they are odd, not because the phenomenon is hard.
+    An item that no user would write is weak evidence whatever it shows. Three consequences:
+    - **Return to Latin-square counterbalancing** (#16) rather than exhaustive crossing.
+      The cost is that entity and scenario variance are no longer fully separable; the
+      gain is that every item is defensible.
+    - **Measure naturalness and report it beside difficulty**, so the trade-off is visible
+      rather than buried in construction. Adversarial benchmarks rarely report it, so
+      reporting it is both a small contribution and the cheapest defence against the
+      obvious reviewer objection.
+    - **Give the P5 difficulty loop a naturalness floor.** The loop mutates items until
+      probers stop failing — every mutation step pushes toward the unnatural. Without a
+      floor it converges on prompts models cannot parse rather than prompts models should
+      handle and do not. Candidates below the floor are discarded, not kept as hard items.
+
+    Pilot items are kept as-is for now; higher-quality natural items are to be added
+    alongside them rather than replacing them.
+
+25. **The shared core pool is not required across all families.** #17 justified it as
+    protection against entity confounds, but the pilot found essentially no entity
+    variance: all four candidates failed exactly the same two of six families in text.
+    Paying for a confound that is not there costs the families their expressiveness.
+    Keep a *small* core pool to serve Table 1 and the 4a aligned comparison; let the other
+    families use pools chosen for what they actually test. #10 already conceded this for 4b.
+
+26. **Family 5 needs text-bearing carriers and a generator that writes real words.**
+    Two constructions returned 0.00. The crate ("a crate of elephants") gave the model no
+    occasion to render text at all. Text-bearing carriers (book, letter, newspaper) do
+    force text — a cover shows a title, not the word BOOK — but FLUX.1-dev answers with
+    pseudo-text: blank sheets, unreadable page texture, garbled mastheads. It makes no
+    lexical commitment, so the use-mention choice never arises. The blocker is the
+    generator, not the family. Retry on a strong text-rendering model (Qwen-Image,
+    Apache-2.0, local) before deciding the cell is dead.
+
+27. **Family 6's S condition must be genuinely incidental.** The pilot marked the
+    irrelevant mention with the words "Unrelated aside:", which turns a family defined by
+    the *absence* of marking into a marked one. The correct form is a real stretch of
+    unrelated conversation followed by a "by the way" request. In text this is a
+    multi-turn setup; T2I has no conversation, so the image side needs either a
+    conversational image generator or an honest note that the modality cannot host the
+    family as specified.
+
+28. **Explicitness of marking becomes a within-family factor (implicit / explicit).**
+    The taxonomy's own ordering is by "how explicitly the input marks the suppression",
+    which is currently stipulated between families. Building an implicit/explicit contrast
+    inside each family makes that ordering measurable, and gives family 6 the
+    implicit/explicit noise split it needs. First evidence (4a v2, n=12): explicit marking
+    failed *more* than implicit (0.83 vs 0.67), the ironic-process direction — a hypothesis
+    to design for, far too small to claim.
+
+29. **Family 4a's construction is replaced.** v1 put the camera nowhere in particular, made
+    a correctly suppressed S image identical to A, and could not distinguish "ignored the
+    occlusion" from "never drew the barrier". v2 puts the camera at the observer, so the
+    audience's access and the observer's access coincide (#11), and adds a barrier-validity
+    question. v1 saturated at 1.00 with a negative delta; v2 leaves headroom and grades the
+    failure.
+
+30. **The VLM judge belongs to the construction loop, not to final evaluation.** Its
+    reliability failures (families 3 and 4b) are therefore less costly than they look, but
+    not free: a judge that *understates* over-realization reads failing items as passing,
+    so the difficulty loop selects for items that confuse the judge rather than items that
+    defeat the generator. The bias lands on item selection, where it is harder to detect
+    later than a wrong headline number would be.
+
+---
+
 ## 4. Open risks
 
 1. **Judge reliability for families 2 and 4b** — the two judgements that are not simple

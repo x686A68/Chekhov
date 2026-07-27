@@ -271,6 +271,73 @@ matching rather than exact match.
    animal-bearing location at all. This did not distort the reported numbers — the judge
    asks about the specific entity — but at benchmark scale it would.
 
+### 3.1 Family 5 retested with text-bearing carriers
+
+The crate construction gave FLUX no reason to render text at all, so its null result was
+about the stimulus, not the family. Retested with entities that *must* carry text — book,
+letter, newspaper, menu — where the norm is that the object shows its content, not its own
+category name (a cover shows a title, not the word BOOK). 12 items x S/P/A, all 36 images
+inspected by hand.
+
+| condition | word form rendered |
+|---|---|
+| S (`a wooden desk by a window with a book on it`) | **1/12** (and that one marginal: a handwritten card headed "Letter") |
+| P (`…the word BOOK printed across it`) | 12/12 |
+| A (scenario only) | 0/12 |
+
+Δ ≈ +0.92 — the same verdict as the crate version, **but for a different and more
+informative reason.** The carriers did force text to be rendered; what they did not force
+is a *lexical commitment*. FLUX writes pseudo-text: blank sheets for two of the three
+letters, unreadable grey page texture for the books, garbled mastheads for the newspapers
+(`Tnark Times`, `The Keltic Arples`), garbled headings for the menus (`NERU KME`, `Serus`).
+It neither writes BOOK nor writes a title. The P condition proves the capability is there —
+told which word to print, it prints it cleanly.
+
+So the image-side use–mention failure needs a generator that **spontaneously writes real
+words**. FLUX.1-dev does not, at any prompt form tried here, which makes it the wrong
+instrument for family 5 rather than family 5 being the wrong family. A model with much
+stronger text rendering (Qwen-Image is Apache-2.0 and runs locally) is the thing to try
+before writing this cell off. Note the near-miss: `NERU KME` is a few characters from MENU,
+so the pull toward the category word may be there, below the model's rendering fidelity.
+
+### 3.2 Family 4a rebuilt, with an explicitness ladder
+
+The first 4a construction was ambiguous in three ways: the viewpoint anchor was vacuous
+(the observer was never in frame and the camera was not his), a correctly suppressed S
+image was indistinguishable from A, and a failure could not be told apart from the model
+simply ignoring the barrier. v2 puts the camera *at* the observer, and splits S into two
+strengths of marking:
+
+- **S_exp** — states the perceptual fact: `the view from where Tomas stands: a high stone wall, with an elephant behind it that Tomas cannot see`
+- **S_imp** — gives only the spatial relation: `…with an elephant on the far side`
+
+| condition | entity visible | Δ |
+|---|---|---|
+| S_exp | **0.83** (10/12) | +0.17 |
+| S_imp | **0.67** (8/12) | +0.33 |
+| P | 1.00 | |
+| A | 0.00 | |
+
+**The construction is better.** v1 sat at 1.00 with Δ = −0.17, saturated and uninformative;
+v2 leaves headroom and grades the failure — an elephant filling the archway is not the same
+as a wolf's head on a distant tower, and v1 could not tell them apart. The observer is now
+in frame in most images, the barrier is drawn in all of them (so "ignored the occlusion" is
+now separable from "never drew the wall"), and A is clean at 0.00.
+
+**A direction worth testing, not a finding: explicit marking failed *more* than implicit.**
+Saying "that Tomas cannot see" made the animal more likely to appear, and more prominent.
+That is the ironic-process / white-bear pattern, and DECISIONS.md §1 already notes that the
+white-bear analogy is taken in the negation literature. But the difference is 10 items
+against 8, n = 12 — squarely inside noise. It is a hypothesis the explicitness ladder should
+be designed to test across families, not a result.
+
+**Generalisation worth keeping.** The implicit/explicit contrast is a within-family version
+of the ordering the whole taxonomy rests on — GOAL.md orders the six families "by how
+explicitly the input marks the suppression". Building that contrast into every family turns
+a stipulated ordering into a measured one, which is a cheap way to make the taxonomy
+load-bearing rather than descriptive. It also gives the dataset the implicit/explicit noise
+split that family 6 needs.
+
 ---
 
 ## 4. Q2 — can a VLM judge score families 2 and 4b?
@@ -317,6 +384,18 @@ all. Family 4b adds a second, separate defect: **the judge never once used optio
 ("no legible writing"), while inspection used it 14 times — it always commits to a
 facing direction, even for a dark laptop lid or a page with nothing written on it. Those
 14 forced answers are two-thirds of its disagreements.
+
+**How much this costs depends on what the judge is for, and it is not the final scorer.**
+The VLM judge's place in the design is inside the construction loop (`overrealization.tex`
+P5): it scores candidate items so the difficulty loop can select and mutate them. Final
+evaluation is a separate question, and the benchmark's released numbers rest on annotated
+subsets with reported agreement, not on this judge. That downgrades the severity below what
+§4's numbers suggest on their own — but it does not make it free, and the consequence is a
+different one. A judge that systematically *understates* over-realization will read genuinely
+failing items as passing, so the loop will keep mutating items that are already hard enough
+and will select for items that confuse the judge rather than items that defeat the generator.
+The bias lands on item selection instead of on the headline rate, which is harder to notice
+later.
 
 Consequences, in order of how much they cost:
 
@@ -436,9 +515,23 @@ is an upper bound.
    recorded with notes in `pilot/images/inspection.jsonl`: a red serpentine cartoon
    creature scored as "not a snake", a phone screen with text too small to be sure of, and
    the anthropomorphic blends, which I scored as realizations.
-7. **One T2I model, one prompt form per family.** Every image-side negative — family 5
-   above all — is a statement about FLUX.1-dev at 50 steps with this phrasing, not about
-   the family.
+7. **One T2I model.** Every image-side negative is a statement about FLUX.1-dev at 50
+   steps, not about the family. Family 5 makes this concrete: two different constructions
+   both returned 0.00, and the reason turned out to be a property of the generator's text
+   rendering (§3.1), not of the stimulus or the family.
+8. **Two families were rebuilt mid-pilot** (4a and 5) after their first constructions were
+   found to be ambiguous or inert. Their v2 numbers come from 12 items each, inspected by
+   one rater, and have not been replicated. The v1 numbers are kept in the repository
+   rather than deleted, per GOAL.md rule 4.
+9. **`Iris` renders as an iris flower** in the 4a v2 items as well as family 2. Every
+   scenario that uses that name is contaminated; the name must be replaced before any of
+   these items are reused.
+10. **Many items are not natural English.** Family 3 was built by full crossing, against
+    DECISIONS.md #16's explicit warning, so 12 items include *the auditor entering the
+    office, as hungry as a wolf* and *the coach at halftime, as slippery as a snake*.
+    Roughly a third of them read as idiomatic. Items that are hard because they are odd
+    are weak evidence, and the P5 difficulty loop will make this worse unless naturalness
+    is a floor inside it. See DECISIONS.md #24.
 
 ---
 
@@ -449,9 +542,9 @@ is an upper bound.
 | 1 existence | floor | 0.17 | **Go, image-only.** Crowded literature (DECISIONS.md §1); the text side adds nothing at this difficulty. |
 | 2 attribution | floor | 0.67 | **Go, image-only**, and note that the judge has never seen a marked instance to be tested on. |
 | 3 figurative | floor | 0.58 | **Go**, reframed as the modality asymmetry, with the anthropomorphic blend as a third scoring category. Score it with the paired protocol, not the absolute one. |
-| 4a occlusion | 0.39 | **1.00** | **Go — strongest cell.** Works in both modalities, Δ = 0 in images, largest model gradient in text. |
+| 4a occlusion | 0.39 | **0.83 / 0.67** | **Go — strongest cell**, using the v2 construction (§3.2); v1's stimulus is ambiguous and saturated, retire it. Largest model gradient in text. |
 | 4b legibility | 0.50 | **0.83** | **Go on the phenomenon, no-go on the scoring.** Needs a working protocol before it can be the headline. |
-| 5 use-mention | floor | floor | **Hold.** Not observed in either modality; retry with other constructions before deciding. |
+| 5 use-mention | floor | floor | **Hold — but the diagnosis has changed** (§3.1). Two constructions tried; the blocker is that FLUX writes no real words unprompted. Retry on a strong text-rendering generator before deciding. |
 | 6 relevance | 0.31 | **1.00** | **Go.** Consistent in text, saturated in images; fix the "wildlife park" leak in the neutral context first. |
 
 The two families the pilot recommends building on hardest — 4a and 6 — are the two that
