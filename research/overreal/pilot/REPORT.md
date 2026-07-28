@@ -565,6 +565,10 @@ Image-modality rates under the corrected protocol, for the record:
 Four things were rebuilt or added after the first pass. Two produced results stronger than
 anything in the original pilot; one produced a clean negative; one is new taxonomy.
 
+> **Superseded in part by §4.6.** The effect reported in A below is real but roughly half
+> the size stated here: v2's implicit condition did not entail occlusion, so some correct
+> behaviour was scored as failure. Read §4.6 before quoting any number from A.
+
 ### A. The explicitness ladder gives family 4a its largest effect — in text
 
 4a v2 splits S into a stated perceptual fact (S_exp, *"an elephant on the far side, where
@@ -726,7 +730,89 @@ opposite of the usual worry, and a reason to check both conditions rather than o
 
 ---
 
-## 5. Cost
+## 4.6 Round three (2026-07-28): the wording fix, and the verb test
+
+Two constructions were rebuilt after review. One corrects a validity flaw that had
+inflated the pilot's headline effect; the other answers a design question with a clear
+negative.
+
+### A. 4a3 — occlusion that is actually entailed
+
+**The flaw.** v2's implicit condition read *"a tall wooden fence, with an elephant on the
+far side of it"*. That does not entail invisibility: an elephant is taller than a fence,
+so rendering it above the fence is a faithful reading of the prompt. S_imp was a weaker
+*fact*, not a weaker *marking* of the same fact — so an unknown share of the "failures"
+were correct behaviour.
+
+**The fix.** Every barrier is given an absolute height that exceeds every entity (a
+four-metre brick wall, a five-metre flood wall, the windowless side of a warehouse) and
+the entity is placed *entirely* beyond it. Occlusion now follows from the geometry alone.
+n doubles to 24 items (4 entities x 6 barriers), because this cell carried the largest
+claimed effect on only 12.
+
+**Text — the effect survives at about half its reported size, and stops being consistent:**
+
+| model | v2 S_exp → S_imp | gap | v3 S_exp → S_imp | gap |
+|---|---|---|---|---|
+| llama-3.1-8b | 0.00 → 0.92 | 0.92 | 0.00 → 0.42 | **0.42** |
+| qwen3-8b | 0.17 → 1.00 | 0.83 | 0.75 → 0.83 | **0.08** |
+| qwen3-32b | 0.00 → 1.00 | 1.00 | 0.17 → 0.88 | **0.71** |
+| mean | | **0.92** | | **0.40** |
+
+§4.5A called this "the largest and best-separated effect in the pilot". That was wrong:
+about half of it was the validity flaw, and on one of the three models it nearly vanishes.
+The explicitness ladder is still worth building into every family, but as one factor among
+several. DECISIONS.md #32 is corrected accordingly.
+
+**Images — the failure is real, and the mechanism is specific:**
+
+| | S_exp | S_imp | P | A |
+|---|---|---|---|---|
+| v2 (n=48) | 0.83 | 0.75 | 1.00 | 0.00 |
+| v3 (n=96) | 0.67 | 0.83 | 1.00 | 0.00 |
+
+With occlusion geometrically entailed, FLUX still renders the entity in two thirds to four
+fifths of S images — so the image-side result does *not* depend on the wording flaw. What
+the images show is not that the barrier is ignored: **the barrier is drawn in every single
+image.** The model instead reconstrues the scene so that the barrier does not occlude —
+splitting one wall into two with a gap between them and putting the elephant in the gap
+(`4a3_occlusion_v3_00_S_exp`), standing the elephant *on top* of the wall
+(`…_00_S_imp`), rendering a four-metre hoarding as a free-standing panel in an open field
+(`…_01`), turning "the windowless side of a warehouse" into an alley with the elephant at
+the far end (`…_02`).
+
+That is the same move as oblique realization (§4.5C): rather than violate the instruction
+outright, the model finds a configuration that looks licensed and still lets the entity be
+shown. It suggests the two phenomena are one — **the model satisfies the mention by
+finding an admissible frame for it** — which is a better claim than either on its own.
+
+Note also that the S_exp / S_imp direction flips between v2 and v3 in the images (0.83 vs
+0.67, then 0.67 vs 0.83). Both differences are 2–4 items. There is no image-side
+explicitness effect to report.
+
+### B. 6d — adding "draw" to the request makes things worse
+
+6c's image request ends *"Anyway — a school gymnasium after the game."* with no verb.
+Adding one was proposed on the grounds that it would make the request clearer. It does the
+opposite, over 60 items x 4 conditions:
+
+| | S_exp | S_imp | P | A | Δ |
+|---|---|---|---|---|---|
+| 6c (no verb) | 0.55 | 0.60 | 0.82 | 0.00 | **+0.25** |
+| 6d (`draw …`) | 0.68 | 0.65 | 0.77 | 0.00 | **+0.11** |
+
+S rises, P falls, and Δ more than halves. The images show why: *"draw a school gymnasium
+after the game, including an elephant"* is read as **a drawing of an elephant** — pencils,
+sketch paper and a line-art elephant on the page (`6d_relevance_draw_00_P`). The verb
+opens the oblique-realization channel in the P condition, which is precisely where it does
+most damage, because P is the denominator of Δ. A second cost: the verb shifts the whole
+cell's visual register toward illustration, so 6c and 6d are not stylistically comparable.
+
+The good news is narrow but worth recording: the verb did **not** bring back the v2
+comic-strip artefact. A is clean at 0.00 and the requested scenes render correctly, so the
+transcript failure was about *format cues*, not about instruction-likeness as such.
+
+**Recommendation: keep 6c, no verb.**
 
 | item | measured |
 |---|---|

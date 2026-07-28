@@ -215,12 +215,20 @@ Numbering continues from §2. Evidence for each is in `pilot/REPORT.md`.
     words "real"/"real live" (which make the judge answer about ontological status), and
     negative framing (agreed with 89% of the time). The rule for every family-specific
     judge: **one positive question about depicted content, plainest words, no options.**
-32. **Explicitness of marking is the strongest single factor found so far.** In text,
-    family 4a v2 goes from Δ ≈ 1.00 with an explicit perceptual marker ("where Tomas cannot
-    see it") to Δ ≈ 0.03 with only a spatial relation ("on the far side"), for all three
-    models. This reproduces the taxonomy's between-family ordering *inside* a family with
-    entity, scenario and task held constant, which is the strongest available evidence that
-    the ordering is real rather than stipulated. Build the ladder into every family.
+32. **Explicitness of marking has a real but moderate effect — the first estimate was
+    inflated by a validity flaw.** ~~In text, family 4a v2 goes from Δ ≈ 1.00 with an
+    explicit perceptual marker to Δ ≈ 0.03 with only a spatial relation, for all three
+    models; the strongest single factor found so far.~~ **Corrected 2026-07-28:** v2's
+    implicit condition said the entity was "on the far side" of "a tall wooden fence",
+    which does not entail invisibility — an elephant is taller than a fence, so drawing it
+    above the fence is a faithful reading, not a failure. S_imp was therefore a weaker
+    *fact*, not a weaker *marking* of the same fact, and much of the gap was legitimate
+    behaviour scored as failure. v3 gives every barrier an absolute height that exceeds
+    every entity and places the entity "entirely" beyond it, so occlusion follows from the
+    geometry alone. The S_imp − S_exp gap in text falls from 0.92 to **0.40** on average
+    and stops being consistent across models (0.42 / 0.08 / 0.71 for llama-3.1-8b /
+    qwen3-8b / qwen3-32b). Still worth building the ladder into every family, but as one
+    factor among several, not as the headline. n = 24 items x 3 models.
 33. **Oblique realization is a third outcome and needs its own category.** The entity
     appears as a depiction inside the scene — a child's drawing of a tiger, a calendar, a
     mural, an anthropomorphic blend — on a carrier the scene independently licenses. It
@@ -233,6 +241,14 @@ Numbering continues from §2. Evidence for each is in `pilot/REPORT.md`.
     transcript made FLUX draw comic strips — in the A condition too. The same content in
     prose works. Relevance can be tested in the image modality, but only if nothing in the
     prompt signals that the input is a transcript.
+35b. **Oblique realization is a human-annotation category only.** It stays in the
+    annotation scheme and in the released labels, but it is not scored automatically:
+    telling "a child's drawing of a tiger" from "a tiger" reliably enough for a machine
+    judge is harder than the rest of the protocol put together, and a bad detector would
+    contaminate every family's headline rate. The regex flag in `score_text.py` is a
+    reporting aid for reading generations, not a scorer. Revisit only if a human-annotated
+    subset shows the category is frequent enough to change conclusions.
+
 35. **Per-token perplexity is not a naturalness measure.** It is dominated by the
     predictability of the scenario phrase and is nearly blind to whether the licensing
     device fits, ranking the pilot's most awkward figurative item among its most natural.

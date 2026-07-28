@@ -55,6 +55,8 @@ BINARY_QUESTION = {
     "6_relevance": lambda e: f"Is there {article(e)} {e} anywhere in this image?",
     "6b_relevance_v2": lambda e: f"Is there {article(e)} {e} anywhere in this image?",
     "6c_relevance_v3": lambda e: f"Is there {article(e)} {e} anywhere in this image?",
+    "4a3_occlusion_v3": lambda e: f"Is any part of {article(e)} {e} visible in this image?",
+    "6d_relevance_draw": lambda e: f"Is there {article(e)} {e} anywhere in this image?",
 }
 
 

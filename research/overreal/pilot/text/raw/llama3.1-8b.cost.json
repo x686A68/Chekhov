@@ -1,8 +1,8 @@
 {
   "model": "llama3.1-8b",
-  "n_prompts": 816,
-  "load_s": 38.0,
-  "gen_s": 5.0,
+  "n_prompts": 912,
+  "load_s": 33.7,
+  "gen_s": 5.4,
   "s_per_prompt": 0.006,
   "max_tokens": 300,
   "tp": 1,

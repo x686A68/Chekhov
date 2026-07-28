@@ -43,7 +43,9 @@ def main(keys):
     from transformers import AutoTokenizer
 
     os.makedirs(RAW, exist_ok=True)
-    items = load_items()
+    # some cells are image-only (6d varies the image request only, so its text prompts
+    # would be identical to 6c's and rerunning them would just duplicate the data)
+    items = [it for it in load_items() if "prompts" in it]
     print(f"{len(items)} items, {sum(len(i['prompts']) for i in items)} prompts per model", flush=True)
 
     for key in keys:

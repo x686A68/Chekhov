@@ -1,8 +1,8 @@
 {
   "model": "qwen3-8b",
-  "n_prompts": 816,
-  "load_s": 34.4,
-  "gen_s": 4.0,
+  "n_prompts": 912,
+  "load_s": 36.2,
+  "gen_s": 4.4,
   "s_per_prompt": 0.005,
   "max_tokens": 300,
   "tp": 1,
