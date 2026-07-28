@@ -79,6 +79,16 @@ FAMILY_CUES = {
     "4b_legibility": f"(?:{OCC_CUES}|{NEG_CUES}|\\bcannot (?:read|make out)\\b|\\bcan't (?:read|make out)\\b|\\bunable to\\b|\\billegible\\b|\\bunreadable\\b|\\bfaces? away\\b|\\bturned away\\b|\\bangled away\\b)",
     "5_use_mention": f"(?:{MENTION_CUES}|{NEG_CUES})",
     "6_relevance": NEG_CUES,
+    # Rebuilt cells must be registered here explicitly. They were not, and the
+    # dict.get fallback to NEG_CUES silently scored the occlusion rebuilds without any
+    # occlusion cues, so "but she cannot see the elephant" — a correct suppression —
+    # counted as a failure and 4a2/4a3's text rates were inflated.
+    "4a2_occlusion_v2": f"(?:{OCC_CUES}|{NEG_CUES})",
+    "4a3_occlusion_v3": f"(?:{OCC_CUES}|{NEG_CUES})",
+    "5b_text_bearing": f"(?:{MENTION_CUES}|{NEG_CUES})",
+    "6b_relevance_v2": NEG_CUES,
+    "6c_relevance_v3": NEG_CUES,
+    "6d_relevance_draw": NEG_CUES,
 }
 
 
@@ -100,7 +110,10 @@ def score(row):
     text = row["output"]
     spans = mentions(text, row)
     surface = bool(spans)
-    cue = FAMILY_CUES.get(row["family"], NEG_CUES)
+    # Deliberately not .get() with a fallback: an unregistered family used to be scored
+    # with negation cues only, which silently counted correct suppressions as failures
+    # for two whole cells. Failing loudly is the point.
+    cue = FAMILY_CUES[row["family"]]
     affirmative = False
     oblique = False
     marked_spans = 0

@@ -577,13 +577,19 @@ In text, over 12 items x 3 models:
 
 | model | S_exp | S_imp | P | A |
 |---|---|---|---|---|
-| llama-3.1-8b | 0.00 | **0.92** | 1.00 | 0.00 |
-| qwen3-8b | 0.17 | **1.00** | 1.00 | 0.00 |
-| qwen3-32b | 0.00 | **1.00** | 1.00 | 0.00 |
+| llama-3.1-8b | 0.00 | 0.42 | 1.00 | 0.00 |
+| qwen3-8b | 0.00 | 0.33 | 1.00 | 0.00 |
+| qwen3-32b | 0.00 | 0.67 | 1.00 | 0.00 |
 
-Δ moves from ~1.00 under explicit marking to ~0.03 under implicit marking. One clause —
-*where Tomas cannot see it* — is the difference between near-perfect suppression and
-near-total failure, for all three models.
+(Corrected 2026-07-29 — the figures first written here were 0.92 / 1.00 / 1.00 for S_imp.
+`score_text.py` looked its scope cues up by family name with a fallback, and the rebuilt
+cells were never registered, so 4a2 and 4a3 were scored with negation cues only and no
+occlusion cues at all. *"but she cannot see the elephant"* — a correct suppression —
+counted as a failure. The scorer now raises on an unregistered family instead of falling
+back.)
+
+One clause — *where Tomas cannot see it* — still separates near-perfect suppression from
+partial failure, but the gap is 0.47 on average, not the ~0.97 first reported.
 
 This is the largest and best-separated effect in the pilot, and it is the same boundary
 §2 drew between the families: **what is marked lexically is respected; what has to be
@@ -754,13 +760,19 @@ claimed effect on only 12.
 
 | model | v2 S_exp → S_imp | gap | v3 S_exp → S_imp | gap |
 |---|---|---|---|---|
-| llama-3.1-8b | 0.00 → 0.92 | 0.92 | 0.00 → 0.42 | **0.42** |
-| qwen3-8b | 0.17 → 1.00 | 0.83 | 0.75 → 0.83 | **0.08** |
-| qwen3-32b | 0.00 → 1.00 | 1.00 | 0.17 → 0.88 | **0.71** |
-| mean | | **0.92** | | **0.40** |
+| llama-3.1-8b | 0.00 → 0.42 | 0.42 | 0.00 → 0.21 | **0.21** |
+| qwen3-8b | 0.00 → 0.33 | 0.33 | 0.21 → 0.25 | **0.04** |
+| qwen3-32b | 0.00 → 0.67 | 0.67 | 0.00 → 0.17 | **0.17** |
+| mean | | **0.47** | | **0.14** |
 
-§4.5A called this "the largest and best-separated effect in the pilot". That was wrong:
-about half of it was the validity flaw, and on one of the three models it nearly vanishes.
+Two corrections, not one. The wording flaw is real and cuts the gap by about two thirds.
+On top of that, every number first written into this section was inflated by the scorer
+bug described above: the rebuilt cells were scored without occlusion cues, so correct
+suppressions counted as failures. The figures in this table are the corrected ones.
+
+§4.5A called this "the largest and best-separated effect in the pilot". It is neither: the
+mean gap is 0.14 after the wording fix, and on qwen3-8b it is 0.04. Text-side occlusion
+over-realization is also much rarer than reported — S_imp runs at 0.17–0.25, not 0.71.
 The explicitness ladder is still worth building into every family, but as one factor among
 several. DECISIONS.md #32 is corrected accordingly.
 

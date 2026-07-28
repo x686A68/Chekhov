@@ -256,6 +256,72 @@ Numbering continues from §2. Evidence for each is in `pilot/REPORT.md`.
     validated; it must not be wired into the P5 loop as a floor before then. Superseding
     the automatic-filter half of #24.
 
+## 3d. Scope decision: T2I-only, generation plus detection (2026-07-29)
+
+36. **The benchmark is text-to-image only.** The pilot settles this on evidence: in text,
+    four of the six families sit at exactly 0.00 — existence-canceling, attribution,
+    figurative and use-mention — and family 6 falls to 0.01 once its items are natural.
+    Only 4a (0.21) and 4b (0.50) produce failures. A cell at the floor cannot support a
+    difficulty loop, cannot rank models and cannot show progress, so two thirds of a
+    cross-modal benchmark would be dead weight. The measurement instruments are asymmetric
+    too: the image-side judge protocol reaches kappa 0.94–1.00 with out-of-sample
+    confirmation (#31), while the text-side scope scorer produced wrong numbers three
+    times in one session and has never been validated. Dropping text removes the only
+    unvalidated instrument.
+
+37. **Text survives as a control, not as half the benchmark.** ~36 items per family, run
+    only to establish the modality asymmetry — identical stimuli, 0.00 in text against
+    0.58 in images for family 3 — reported in one section with one table. No openness
+    ladder, no difficulty loop, no released text subset. Measuring an asymmetry costs a
+    fraction of what building a modality costs.
+
+38. **The mechanism half is dropped.** This reverses the merge rationale in #1, which
+    argued that the taxonomy alone "would have been descriptive with no mechanism" and
+    that the first paper's mechanism explained the cross-modal pattern. All of that
+    analysis — the entrainment comparison, the 7.0 nats availability against 1.4% surface
+    intrusion, connectivity filtering at 97.5% → 1.7% — is text-side and goes with it.
+    The replacement for it is #39: the paper stops being a taxonomy plus a mechanism and
+    becomes a taxonomy plus a second task.
+
+39. **The benchmark has two halves: generation and detection.** Generation is the current
+    S/P/A design. Detection presents a suppression prompt together with a candidate image
+    and asks whether the image over-realizes. The pilot is the argument for including it:
+    the same VLM moved from kappa 0.23 to 0.94 on the same images purely from how the
+    question was worded (#31), so whether a model can recognise over-realization is an
+    open problem in its own right, not a solved preliminary.
+
+40. **Detection items are constructed so that most labels do not depend on judging the
+    generator.** Circularity enters in three places and is handled separately:
+    - *Labels from a VLM judge* would test detectors against a detector. *Labels are
+      human only.* The pilot is the precedent: hand inspection exposed the judge, not the
+      reverse.
+    - *Condition used as label* is simply wrong, not merely circular: an S image may be a
+      correct suppression and a P image may have omitted the entity.
+    - *Single-generator items* let a detector win by recognising one model's style.
+
+    The construction that removes the first two: **pair prompts with images across
+    conditions**, exploiting the shared seed that already makes S, P and A near-identical
+    in composition.
+
+    | item | label | where the label comes from |
+    |---|---|---|
+    | S prompt + **P image** | over-realizes | construction — the image was generated from an explicit request for E |
+    | S prompt + **A image** | does not | construction — measured base rate is 0.00 |
+    | S prompt + **S image** | either | **human annotation required** |
+
+    The first two classes are large, free and carry certain labels without anyone judging
+    whether the generator erred. The third is the naturally-occurring distribution and is
+    the only part needing annotation. Reporting them separately gives a
+    construction-guaranteed core plus a natural-distribution set. The A-condition base
+    rate of 0.00 measured in the pilot is what licenses A images as certain negatives.
+
+41. **Two controls are load-bearing for the detection half; without them it does not
+    stand.** Run the detector (a) with the prompt withheld and (b) with a mismatched
+    prompt. If either scores above chance, the items leak — the detector is reading
+    generator style or prompt length artefacts rather than the licensing relation. Also
+    required: at least two generators, and the evaluated detector must not be the model
+    whose labels were used anywhere in construction.
+
 ---
 
 ## 4. Open risks
