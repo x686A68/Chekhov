@@ -33,15 +33,23 @@ remain unclaimed; the periphery has grown. New must-cites and their separations:
 | | what it is | separation |
 |---|---|---|
 | **T2I-CoReBench** (ICLR'26, Kwai) | 12 dimensions of composition + reasoning, 1,080 prompts, 13.5K checklist questions | **Verified against the paper, not a search summary**: their checklists pair each prompt with "independent yes/no questions *(with the correct answer always 'Yes')*". The unidirectionality is structural — a checklist whose correct answer is always Yes cannot record an over-realization even in principle. Our positioning sentence is therefore not "they didn't go in this direction" but "their scoring mechanism cannot express the question". |
-| **DIVA** (2026) | literal vs idiomatic renderings of noun compounds, sense-controlled | Closest new neighbour for family 3. It studies which sense gets depicted; we study suppression failure under a licensing device, and family 3's claim stays "one family in a unified taxonomy", not a figurative-specific contribution. |
-| **Ghost-100** (2026) | VLM hallucination benchmark with negative-ground-truth-by-construction (object-absence, text-illegibility) | Convergent with our construction-guaranteed Det labels — cite it for the trick. Task differs: it probes a VLM's fabrication when questioned about an image; there is no generation prompt and no licensing relation. |
+| **DIVA** (2026, in arXiv 2604.17354) | literal vs idiomatic image pairs for noun compounds, sense-controlled iconographic renderings | **Verified against the paper**: recognition-side, not generation. The evaluated models (SigLIP 2, InternVL3, Qwen2.5-VL, GPT-5, Claude 4.5) judge image–text fit; no T2I model is evaluated, the images are stimuli. It belongs in the IRFL bucket — the recognition dual of family 3 — so the generation-side collision is weaker than first logged. **Bonus for the Det half**: their "Literal Superiority Bias" (VLMs privilege the literal visual reading) predicts a detector failure mode on family 3 — cite it there, as support rather than threat. |
+| **Ghost-100** (2026, in arXiv 2604.18803) | VLM hallucination benchmark, 800 synthetic images with negative-ground-truth-by-construction (object-absence, text-illegibility, time-reading) | **Verified against the paper**: the label is a property of the image alone. Their five prompts per image vary only *tone* ("holding the image and task identity fixed … so that tone is isolated as the sole independent variable") — the ground truth never changes with the prompt. Ours is the complement: the label is a property of the (prompt, image) *pair*, and the same image genuinely flips label under a different prompt. Cite for the construction-guarantee trick; the licensing-relative moat stands. |
 | **EvalMuse-40K** (AAAI'25) | 40K image-text pairs, 1M fine-grained human labels, meta-evaluates alignment evaluators (FGA-BLIP2, PN-VQA) | The precedent for "benchmark the judges". It measures generic alignment; our Det task measures violation of a licensing relation — the same image flips label under a different prompt, which generic alignment cannot express. |
 | R2I-Bench, Harvard multi-task (32 tasks) | reasoning-driven T2I suites, both containing negation cells | Family 1 is even more crowded than at the last check. No change to the stance: one family among six, cite and move on. |
 
 **The Det moat, stated precisely:** not "evaluating judges" (EvalMuse), not
 "construction-guaranteed labels" (Ghost-100), but *licensing-relative* detection — the
 label is a property of the (prompt, image) pair, not of the image. That is what the
-prompt-withheld control tests, and no existing benchmark has it.
+prompt-withheld control tests, and no existing benchmark has it. All three paper-level
+verifications (CoReBench's always-Yes checklists, Ghost-100's image-only labels, DIVA's
+recognition-side task) landed on the same side, so the moat survived contact with the
+sources, not just with search snippets.
+
+Adjacent VLM-hallucination work for the Det related-work bucket (all VQA-side, image-only
+labels, no licensing relation): NOPE (arXiv 2310.05338), DO-Bench (2604.22822), GHOST
+(2509.25178 — *induces* hallucination in MLLMs via generated images, the inverse
+direction).
 
 **Term check:** "over-realization" / "overrealization" — still unused in the T2I/LM
 literature as of 2026-07.
