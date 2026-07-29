@@ -4,8 +4,10 @@ Design decisions, their rationale, rejected alternatives, and the literature map
 Kept because none of this survives in the paper source: `overrealization.tex` records
 *what* to write, not *why it was chosen* or *what was ruled out*.
 
-Companion files: `GOAL.md` (pilot spec), `../../Chekhov_paper_ACL/overrealization.tex`
-(paper skeleton with per-paragraph `\todo` plans).
+Companion files: `EXPERIMENT.md` (the core experimental design — what to execute),
+`GOAL.md` (the pilot spec, now history), `pilot/REPORT.md` (the pilot's evidence),
+`../../Chekhov_paper_ACL/overrealization.tex` (paper skeleton with per-paragraph `\todo`
+plans).
 
 ---
 
