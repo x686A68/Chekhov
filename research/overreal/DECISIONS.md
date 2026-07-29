@@ -25,6 +25,29 @@ would collide.
 | **5. Use–mention** | 🟢 open on the generation side | The recognition-side dual is well studied: typographic attacks — Goh et al. 2021 multimodal neurons, [Reading Isn't Believing](https://arxiv.org/pdf/2103.10480), [multi-image setting](https://arxiv.org/pdf/2502.08193) (NAACL 2025). Text-rendering work (TextDiffuser, [glyph-enhanced](https://arxiv.org/pdf/2403.16422)) treats legibility as the goal and never asks why the word is there. |
 | **6. Relevance** | 🟢 ours, but with a close neighbour | [Contextual entrainment](https://arxiv.org/abs/2606.24077) (Liu & Chu 2026) is the closest prior work overall — it establishes the representation-level availability effect in closed QA. Also Shi et al. 2023 (GSM-IC), GSM-DC, [PI-LLM](https://arxiv.org/abs/2506.08184), Sinclair et al. 2022 structural priming. |
 
+### 1b. Collision re-check after the T2I rescope (2026-07-29)
+
+Re-searched after deciding on T2I-only with a detection half. The construct and family 4
+remain unclaimed; the periphery has grown. New must-cites and their separations:
+
+| | what it is | separation |
+|---|---|---|
+| **T2I-CoReBench** (ICLR'26, Kwai) | 12 dimensions of composition + reasoning, 1,080 prompts, 13.5K checklist questions | Every checklist question asks whether an *intended* element is present. There is no suppression construct anywhere in it — which is exactly our positioning sentence: existing evaluation asks "did what should appear appear", we ask "did what should not". |
+| **DIVA** (2026) | literal vs idiomatic renderings of noun compounds, sense-controlled | Closest new neighbour for family 3. It studies which sense gets depicted; we study suppression failure under a licensing device, and family 3's claim stays "one family in a unified taxonomy", not a figurative-specific contribution. |
+| **Ghost-100** (2026) | VLM hallucination benchmark with negative-ground-truth-by-construction (object-absence, text-illegibility) | Convergent with our construction-guaranteed Det labels — cite it for the trick. Task differs: it probes a VLM's fabrication when questioned about an image; there is no generation prompt and no licensing relation. |
+| **EvalMuse-40K** (AAAI'25) | 40K image-text pairs, 1M fine-grained human labels, meta-evaluates alignment evaluators (FGA-BLIP2, PN-VQA) | The precedent for "benchmark the judges". It measures generic alignment; our Det task measures violation of a licensing relation — the same image flips label under a different prompt, which generic alignment cannot express. |
+| R2I-Bench, Harvard multi-task (32 tasks) | reasoning-driven T2I suites, both containing negation cells | Family 1 is even more crowded than at the last check. No change to the stance: one family among six, cite and move on. |
+
+**The Det moat, stated precisely:** not "evaluating judges" (EvalMuse), not
+"construction-guaranteed labels" (Ghost-100), but *licensing-relative* detection — the
+label is a property of the (prompt, image) pair, not of the image. That is what the
+prompt-withheld control tests, and no existing benchmark has it.
+
+**Term check:** "over-realization" / "overrealization" — still unused in the T2I/LM
+literature as of 2026-07.
+
+---
+
 **Adjacent, opposite direction — must be distinguished explicitly in Related Work:**
 POPE / CHAIR measure a VLM describing objects *absent from an image*; we measure
 input-mentioned content wrongly realized in output.

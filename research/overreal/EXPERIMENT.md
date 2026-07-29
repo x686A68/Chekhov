@@ -202,9 +202,28 @@ schedule risk for no unique capability.
 
 ---
 
+### 5.1 Commercial models for Phase 2 (researched 2026-07-29)
+
+Probers stay local — a commercial prober would make the difficulty loop non-reproducible
+(silent version upgrades), expensive (the loop iterates), and uncontrollable (no seed
+guarantees). Commercial models appear **only** as Det image sources, and can never be
+Table-A rows: their rates have no shelf life across silent updates, and the evaluated
+pipeline calls no APIs.
+
+| choice | model | why |
+|---|---|---|
+| ✅ | GPT Image 1.5 (OpenAI) | top of the human-preference Elo; strongest text rendering, so it also exercises family 5 |
+| ✅ | Imagen 4 / Nano Banana 2 (Google) | elite tier, second lineage |
+| ✅ | Seedream 4.5 / 5.0 Pro (ByteDance) | third lineage; alignment- and text-focused, incl. multilingual text |
+| optional | Ideogram v3 | text-rendering specialist, targeted family-5 addition |
+| ❌ | FLUX pro | same lineage as an eval generator; its style would leak between Gen and Det |
+| ❌ | Midjourney V8.1 | no official API — dataset construction would not be reproducible |
+
+Three lineages is the point: a detector cannot win Det by recognising one house style.
+
 ## 6. Open decisions
 
-1. **Which commercial T2I models** for Phase 2, and the budget for them.
+1. ~~Which commercial T2I models for Phase 2~~ — settled above; remaining: the API budget.
 2. **Annotator plan** for the Det natural set and the Gen certification subset: how many
    annotators, and the target inter-annotator agreement. The pilot has *no* multi-annotator
    data, so nothing here is calibrated yet.
