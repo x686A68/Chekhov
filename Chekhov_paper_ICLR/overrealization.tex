@@ -1,0 +1,633 @@
+% ICLR version, converted from the ACL ARR manuscript (Chekhov_paper_ACL/overrealization.tex).
+% NOTE: the ICLR 2027 style files (iclr2027.zip) were not yet published at conversion
+% time (2026-07-29); this uses the ICLR 2026 style files, which historically differ
+% from year to year only in the year string. When iclr2027_conference.{sty,bst} are
+% released at https://github.com/ICLR/Master-Template, drop them in and update the
+% two \usepackage / \bibliographystyle lines below.
+\documentclass{article}
+\usepackage{iclr2026_conference,times}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{inconsolata}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{todonotes}   % writing plan; remove \todo notes before submission
+
+\title{When Chekhov's Gun Fires: Generation and Detection of\\Over-Realization in Text-to-Image Models}
+
+% ICLR submissions are double blind: the author block below is hidden (replaced by
+% "Anonymous authors") as long as \iclrfinalcopy remains commented out.
+\author{The Chekhov Autonomous Research Pipeline \\
+  \texttt{research/runs/20260724\_chekhovs-gun} \\}
+
+%\iclrfinalcopy % Uncomment for camera-ready version, but NOT for submission.
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+% TODO(final): write last, after results are in.
+% Skeleton of the arc:
+% (1) Construct: content mentioned in the input is often *realized* in the output
+%     even when the context does not warrant it -- over-realization.
+% (2) Taxonomy: six families in three tiers of licensing -- space builders (1-4),
+%     the use--mention distinction (5), and pragmatic relevance (6).
+% (3) Dataset: paired minimal-difference items with positive controls, text-to-image.
+% (4) Two tasks, not one: GENERATION (does the model suppress?) and DETECTION (can a
+%     model tell, given the prompt, whether an image over-realized?).
+% (5) Findings: which families fail; and that detection is not the easy half --
+%     the same judge moves from kappa 0.23 to 0.94 on identical images on wording alone.
+% (6) The text control: on identical stimuli four of six families never fail in text
+%     and fail readily in images, which is what makes T2I the right setting.
+\emph{Placeholder abstract.}
+\emph{This manuscript was generated autonomously by an AI research pipeline; see the AI Use Statement.}
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+\todo[inline]{\textbf{P1 --- Hook: the \emph{dramatic} framing, and why real inputs are
+not dramatic.} Open with Chekhov's principle: a gun hung on the wall in act one must
+fire in act three. Note that this is a principle about \emph{deliberate dramatic
+setup}---the gun is a plant, placed by an author who intends it to pay off. Then the
+turn: real user inputs are not dramatic. A passing remark, an ordinary topic shift, a
+figure of speech, or a passage the retriever happened to return is not a plant and is
+not foreshadowing. Yet generative models treat these incidental mentions as if they
+were dramatic setups, and duly discharge them. Land this on Figure~\ref{fig:teaser}
+(user will supply): (a) figurative---``a singer whose voice was like silk'' yields silk
+fabric in the scene; (b) perspectival---``Anna reads a letter that says `I'm sorry'\,''
+yields a letter lying flat to the camera, legible to the viewer but not to Anna.
+Each with its paired control. Close the paragraph on the normative claim: faithful
+generation frequently requires leaving the gun hanging.}
+
+\todo[inline]{\textbf{P2 --- The construct: over-realization.} A mention is not a
+licence to realize. Define \emph{over-realization}: content that appears in the input
+but should not be realized in the output. The unifying observation is that
+suppression is licensed by a range of devices, of which negation is only one---attitude
+predicates, figurative frames, viewpoint frames, the use--mention distinction and plain
+topical relevance all do the same work.
+Introduce \emph{space builders} here, and be explicit that this is Fauconnier's
+established term from Mental Spaces theory, not one we coin (the only term we coin is
+\emph{over-realization}): a space builder opens a space distinct from the discourse
+base space, and entities living in a non-base space should not be realized at base
+level. State that this lets us treat a set of superficially unrelated defect classes as one
+phenomenon with one measurement design.}
+
+\todo[inline]{\textbf{P3 --- Position against prior work} (one short paragraph; detail
+belongs in Section~\ref{sec:related}). Two gaps. (i) Existing work is concentrated on
+\emph{negation} (NEG-TTOI, NEGATE, SpaceVLM, TNG-CLIP in vision; IFEval forbidden words
+and NegE/Modality errors in text), with the remaining operators treated---if at
+all---as separate defects with separate fixes, so nothing is comparable across them.
+(ii) The recognition side is treated as solved: existing benchmarks assume a judge and
+evaluate generators, whereas we find that judging over-realization is itself unreliable
+enough to be worth measuring, and make it the second task.
+Then \emph{one sentence} on contextual entrainment \citep{liu2026entrainment}: it
+establishes that context-mentioned content is internally primed---probability-elevated
+in the model's representations---and we take that as given; our question is the
+complementary one of when that priming is actually \emph{realized} in output. Useful
+framing if a sentence is needed: entrainment measures ``the word is on the tip of the
+tongue''; we measure when it is said aloud. Keep this to one or two sentences so the
+opening does not read as building on someone else's foundation.}
+
+\todo[inline]{\textbf{P4 --- Why text-to-image, and why two tasks.} Two moves to make
+here, both settled by the pilot and both needing one short paragraph.
+
+\emph{Setting.} The benchmark is text-to-image. Justify it with the control rather than
+by assertion: run in text, four of the six families never fail at all---negation,
+attribution, figurative and use--mention sit at exactly $0.00$ across three models---while
+the same stimuli fail readily as image prompts. What is marked \emph{lexically} is
+respected; what has to be inferred from a viewpoint or a relevance relation is not, and
+only the image modality exercises the second kind at scale. The text runs stay in the
+paper as a control that establishes this asymmetry (\S\ref{sec:experiments}), not as half
+a benchmark.
+
+\emph{Two tasks.} Generation asks whether a model suppresses. Detection asks whether a
+model can tell, given the prompt, that an image over-realized. Motivate the second from
+our own experience rather than from principle: the same 7B judge moved from
+$\kappa=0.23$ to $\kappa=0.94$ on identical images purely from how the question was
+worded, so recognising over-realization is an open problem, not a solved preliminary that
+can be delegated to an off-the-shelf judge.}
+
+\todo[inline]{\textbf{P5--P6 --- deferred until experiments are complete.} P5: what we
+find, with concrete numbers---family-wise ranking, where detection succeeds and fails,
+and the text control. P6: the contributions and the data release statement.}
+
+\begin{figure}[t]
+\centering
+\fbox{\parbox[c][3.2cm][c]{0.8\textwidth}{\centering\emph{Teaser figure ---
+to be supplied by the author.}\\[2pt]\footnotesize (a) figurative: ``voice like silk''
+$\rightarrow$ silk appears;\\ (b) perspectival: the letter faces the camera, not Anna.\\
+Each with its paired control.}}
+\caption{Two over-realization failures. In both cases the mention is incidental rather
+than a dramatic plant, yet the model discharges it.}
+\label{fig:teaser}
+\end{figure}
+
+\section{Related Work}
+\label{sec:related}
+% Planned content (~0.75 page). Four paragraphs, each ending in an explicit contrast.
+% (1) Compositional / faithfulness evaluation of generation:
+%     T2I-CompBench(++), TIFA, VQAScore, Commonsense-T2I (closest methodology:
+%     paired adversarial prompts + MLLM judge), PhyBench, VBench-2.0.
+% (2) Single-family prior work -- we adopt rather than claim these:
+%     negation (NEG-TTOI, NEGATE, SpaceVLM, TNG-CLIP; IFEval forbidden words in text;
+%     NegE/Modality/Tense errors in summarization taxonomies);
+%     figurative (IRFL, T2I-ReasonBench idiom interpretation, SemEval-2025 ADMIRE,
+%     I Spy a Metaphor, ViPE).
+% (3) Adjacent but different in direction -- MUST be crisp:
+%     POPE/CHAIR = the reverse direction (a VLM describing objects absent from an
+%       image); we study input-mentioned content wrongly realized in output.
+%     Theory-of-mind benchmarks (ToMi, FANToM, BigToM, OpenToM, Hi-ToM) test whether a
+%       model can *reason about* beliefs; we test whether a model *suppresses*
+%       embedded content when generating. Different task, different failure.
+%     Typographic attacks (Goh et al. 2021 multimodal neurons; "Reading Isn't
+%       Believing"; NAACL 2025 multi-image) are the DUAL of our family 5 (use--mention) and make a
+%       good contrast: in recognition, text written in an image overrides what is
+%       depicted ("reads first, looks later"); in generation, the word is rendered
+%       instead of its referent. Text-rendering work (TextDiffuser, glyph-enhanced
+%       generation) treats legibility as the goal and does not ask why the word is
+%       there at all.
+% (4) Theoretical sources: Fauconnier mental spaces / space builders; Genette
+%     focalization and diegesis; Lakoff \& Johnson conceptual metaphor; Kaup's
+%     two-step simulation of negation; Grice's maxim of relation.
+\emph{Placeholder.}
+
+\section{Construct and Taxonomy}
+\label{sec:taxonomy}
+
+\paragraph{Over-realization.}
+We use \emph{over-realization} to denote content that is mentioned in the input but
+should not be realized in the output. The term is deliberately placed within the
+classical generation pipeline of \emph{content selection} followed by \emph{linguistic
+realization}: an over-realization is content that should have been filtered during
+selection but nonetheless reaches the surface. It is distinct from
+\emph{over-specification} in referring expression generation (redundant attributes of
+an already licensed referent), from \emph{overgeneration} (a generate-and-rank
+technique, or a grammar accepting ill-formed strings), and from
+\emph{over-literalization}, which we treat as one subtype within the figurative family.
+We reserve \emph{intrusion} for the measured event (the mentioned content appearing in
+the output) and \emph{base-space leakage} for the theoretical description below.
+
+\todo[inline]{\textbf{The running example: one entity, six failures} --- and make this,
+not the theory, carry the section. Present Table~\ref{tab:taxonomy} early and walk
+through it: a single entity instantiated across all six families, so that the reader
+sees the unity of the construct by demonstration rather than by argument. If the same
+entity in the same kind of scenario can fail in six different ways, ``these are one
+phenomenon'' needs no defending. This is also literally an instance of the benchmark's
+core-pool design (Section~\ref{sec:dataset}), so the theoretical claim and the dataset
+construction are the same move. \textbf{All six cells must be real generations from our
+own runs, never invented} --- an example a reviewer cannot reproduce would discredit the
+paper --- and which entity survives all six families is an empirical question to settle
+in the pilot before this table is finalized.}
+
+\todo[inline]{\textbf{Theory, compressed and attached to the examples.} Do not teach the
+frameworks in the abstract; attach one sentence of theory to the example that motivates
+it, so the citation reads as backing rather than as a lesson. For families 1--4, on the
+negation row: in ``a room with no elephant'' the negation opens a space in which the
+elephant exists, while the base space---what the picture should show---contains none;
+\citet{fauconnier1994mental} calls such operators \emph{space builders}, and families
+1--4 differ only in which space builder is used (negation and modality, attitude
+predicates, figurative frames, viewpoint frames). Then two short extensions, each one
+sentence: family 5 is licensed not by a space but by the use--mention distinction, since
+the input contains a word form while licensing only its denotation; family 6 carries no
+marker at all and is licensed pragmatically, by relation. \textbf{Calibrate the claim
+carefully}: do not say that mental-spaces theory is incomplete or that we repair it---it
+was never intended to cover relevance, for which Grice is canonical. Say instead that
+\emph{for this construct}, space building is the dominant licensing mechanism but does
+not exhaust them, and that we identify two further mechanisms. Cite Quine and Grice for
+the extensions; the contribution we claim is the unification, not the discovery of those
+mechanisms. Close by predicting what unification entails: if these really are one
+phenomenon they should share a failure profile and respond to the same modulators, which
+Section~\ref{sec:experiments} tests---so the taxonomy is load-bearing rather than
+decorative. \textbf{Do not promise a representational mechanism here}: the
+availability-versus-expression analysis was cut with the text half, and a prediction the
+paper does not test is worse than no prediction.}
+
+\todo[inline]{\textbf{$E$ is a different kind of thing in each family} (short, and
+mostly carried by Table~\ref{tab:taxonomy}, which shows it rather than states it: the
+same elephant is an object in family 1, a believed object in 2, a metaphor vehicle in 3,
+occluded content in 4, a word form in 5, a topic in 6). Two consequences are worth one
+sentence each. It is why the judges must be family-specific---detectors for objects, OCR
+for word forms, structured geometric questions for viewpoint---which pre-empts the
+question of why we do not use one uniform metric. And it splits family 4 in two:
+\textbf{4a occlusion}, where $E$ is an object behind a barrier and can therefore use the
+core pool and carry the aligned cross-family comparison, and \textbf{4b diegetic
+legibility}, where $E$ is inscribed information read by an in-scene observer. 4b is the
+most striking sub-type but cannot use the object pool, so it is a showcase rather than
+part of the aligned comparison; note also that in 4b the content hardly matters---whether
+the letter says ``I'm sorry'' or ``the meeting is at noon'' does not change whether it
+faces the camera---so 4b varies the carrier (letter, phone screen, book, sign, chart)
+instead.}
+
+\todo[inline]{\textbf{What counts as realized, and two failure modes} (short, and
+measurement-facing, since it determines the judges). The unit of realization is
+\emph{information made accessible to the audience}, not merely an object being present:
+this is what makes the perspectival family measurable, since the letter's content
+belongs to Anna's viewpoint space and rendering it legible to the camera moves it into
+the audience's. Then the two modes: families 1 and 4--6 are \emph{binary}---the question
+is whether the content appears at all---while families 2 and 3 are \emph{marking}
+failures, where the content may legitimately appear but only as explicitly embedded (a
+thought bubble, or a hedge such as ``she believed''), and the failure is the loss of that
+marker.}
+
+\todo[inline]{\textbf{Why a linguistic account licenses an image benchmark} (still
+needed: the taxonomy is built from linguistic devices but the benchmark scores pictures,
+and a reviewer will ask why that is legitimate). The reason is simple and should be
+stated plainly: \emph{the input is language in both cases}. A text prompt and an image prompt are
+both linguistic, and mental-spaces theory is a theory of meaning construction from
+linguistic input, so the licensing analysis is identical on the input side; only the
+notion of realization differs on the output side, which the definition above supplies.
+Note the precedent so this does not look like a stretch: cognitive-linguistic frameworks
+have been extended to visual media for decades, notably in work on pictorial and
+multimodal metaphor \citep{forceville1996pictorial}, where conceptual blending is used
+directly for image analysis. \textbf{Then concede two genuine asymmetries}, here and
+again in the Limitations. (i) Family 5 is not symmetric: in an image, any rendered
+prompt glyph is unmistakably the signifier being realized, whereas a text output
+consists of word forms throughout, so the text side is restricted to narrower cases such
+as unfilled template slots and instruction echo. (ii) Family 2's marking is
+grammaticalized in text (hedges and attribution verbs, precise and near-obligatory) but
+merely conventional in images (thought bubbles, dream haze, framed insets---optional and
+genre-bound), so marking judgements are cleaner in text and this is why the human
+agreement numbers for that family will differ by modality.}
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{p{2.1cm} p{1.8cm} p{4.9cm} p{4.0cm}}
+\toprule
+Family & Cue & Prompt ($S$, verbatim from the pilot) & Observed failure \\
+\midrule
+\textbf{1. Existence-canceling} & \emph{no, without}
+ & ``a hotel lobby at midnight with \textbf{no} elephant in it''
+ & An elephant stands in the lobby doorway \\
+\addlinespace
+\textbf{2. Attribution} & \emph{believes, thinks}
+ & ``Maya at the ridge, \textbf{believing} that there is an elephant at the ridge''
+ & An actual elephant on the ridge, unmarked \\
+\addlinespace
+\textbf{3. Figurative} & \emph{like, as \ldots\ as}
+ & ``the porter arriving at the inn, \textbf{as heavy as} an elephant''
+ & A literal elephant walks beside the porter \\
+\addlinespace
+\textbf{4a. Perspectival: occlusion} & \emph{on the far side, cannot see}
+ & ``the view from where Tomas stands: a four-metre brick wall, with an elephant
+   \textbf{entirely on the far side} of it''
+ & The wall is split in two and the elephant shown in the gap \\
+\addlinespace
+\textbf{4b. Perspectival: legibility} & \emph{viewpoint frame}
+ & ``Anna sits at the table \textbf{reading} a letter that says `I'm sorry'\,''
+ & The letter faces the camera, legible to the viewer, not to Anna \\
+\addlinespace
+\textbf{5. Use--mention} & \emph{semiotic level}
+ & ``a warehouse with a crate \textbf{of elephants}''
+ & Predicted: the crate stamped \textsc{elephant}. Not observed on the piloted
+   generator$^{\dagger}$ \\
+\addlinespace
+\textbf{6. Relevance} & \emph{none: pragmatic}
+ & ``My cousin \ldots\ looks after an elephant \ldots\ \textbf{Anyway} --- a school
+   gymnasium after the game.''
+ & An elephant stands on the basketball court \\
+\bottomrule
+\end{tabular}
+\caption{One entity, six failures, from real generations. Every prompt is a verbatim
+$S$-condition stimulus from the pilot and every failure was observed (FLUX.1-dev), except
+family 5$^{\dagger}$, where the piloted generator commits to no word form at all and the
+predicted typographic failure did not occur; the cell awaits a generator with real text
+rendering. The families are ordered by how explicitly the input cues the suppression:
+families 1--4 carry an overt \emph{space builder} \citep{fauconnier1994mental}; family 5
+turns on the use--mention distinction; family 6 carries no cue and must be inferred
+pragmatically. Family 4 splits: 4a uses the shared entity pool and carries the aligned
+cross-family comparison; 4b realizes \emph{information} rather than an object, uses a
+carrier pool, and is the showcase. Definitions of each family are given in the running
+text; this table's job is only to show that one entity fails six different ways.}
+\label{tab:taxonomy}
+\end{table}
+
+\section{OverReal}
+\label{sec:dataset}
+
+\todo[inline]{\textbf{P1 --- Item structure: the S/P/A triple.} Every item is built
+from a \emph{scenario} $Sc$ (the carrier situation), an \emph{entity} $E$ (the content
+that may be over-realized) and the family's \emph{licensing device} $D$; the three
+conditions are the same $(Sc,E)$ pair assembled the same ways, which is the clearest way
+to make the design legible: $S = Sc + D(E)$ (``a room with no elephant''),
+$P = Sc + E$ (``a room with an elephant''), $A = Sc$ (``a room''). $S$ is issued at two
+strengths of cue --- explicit ($S_{\mathrm{exp}}$, the suppression stated) and implicit
+($S_{\mathrm{imp}}$, the suppression left to inference) --- making explicitness a
+measured within-family factor rather than only the ordering between families. $S$ asks whether the
+model suppresses, $P$ whether it can still realize the same entity when licensed, $A$
+what the coincidental base rate is. Say why $P$ is indispensable: without it a
+degenerate model that realizes nothing scores perfectly. Define the headline metric
+here---\emph{licence sensitivity} $\Delta = P(\text{realize}\mid P) -
+P(\text{realize}\mid S)$, in $[-1,1]$, where 1 is perfect discrimination and 0 means the
+device is ignored---and note it is the same paired effect size used throughout, so the
+generation and detection halves share one quantity.}
+
+\todo[inline]{\textbf{P1b --- The second task: detection.} Present it as a peer of
+generation, not an appendix. Given a suppression prompt $S$ and a candidate image, decide
+whether the image over-realizes $E$. Motivate it with the reliability result rather than
+in the abstract: a 7B open VLM scored the \emph{same} images at $\kappa=0.23$ under a
+three-way question and $\kappa=0.94$ under one plain binary, so the ability to recognise
+over-realization is a capability to be measured, not a preliminary to be assumed.
+
+The construction is what makes this non-circular, and it should be stated explicitly
+because a reviewer will ask. Labels must not come from a model judge---that tests
+detectors against a detector---and must not come from the generating condition either,
+since an $S$ image may be a correct suppression and a $P$ image may have omitted $E$
+altogether. Instead, \emph{pair prompts with images across conditions}, using the shared
+seed that already makes $S$, $P$ and $A$ near-identical in composition:
+(i)~$S$ prompt $+$ $P$ image $\rightarrow$ \textbf{positive}, labelled by construction ---
+the image was generated from an explicit request for $E$;
+(ii)~$S$ prompt $+$ $A$ image $\rightarrow$ \textbf{negative}, labelled by construction,
+licensed by the measured base rate of $A$;
+(iii)~$S$ prompt $+$ $S$ image $\rightarrow$ \textbf{human annotation}, the naturally
+occurring distribution.
+
+The first two classes are large and carry certain labels without anyone judging whether
+the generator erred; only the third needs annotation. Report the
+construction-guaranteed core and the human-annotated natural set separately---they
+measure different things and averaging them hides that.}
+
+\todo[inline]{\textbf{P1c --- Two controls the detection half cannot be published
+without.} Run every detector twice more: once with the prompt withheld, once with a
+\emph{mismatched} prompt. Above-chance performance in either condition means the items
+leak---the detector is reading generator style, prompt length or composition artefacts
+rather than the licensing relation---and the affected cells are void. Also state that
+candidates come from at least two generators, so that recognising one model's style is
+not a winning strategy, and that no evaluated detector may be a model whose labels were
+used anywhere in construction.}
+
+\todo[inline]{\textbf{P2 --- Evaluation protocol: how ``realized'' is decided.} This has
+to come before the construction loop, which cannot select difficult items without a
+score. Because $E$ is a different kind of thing in each family, the judges are
+family-specific and should be presented as such rather than apologised for: presence for
+families 1, 3, 4a and 6; the rendered word form for family 5; geometry---can the in-scene
+observer perceive the depicted information---for family 4b.
+
+\textbf{Report the protocol finding as a finding, because it is one.} Our first protocol
+used multiple-choice questions with a third ``hedged'' option and reached
+$\kappa=0.80/0.42/0.23$ against hand annotation on families 2, 3 and 4b. Replacing each
+with a single positive binary question about depicted content reached
+$\kappa=0.94/1.00/0.94$ on the same images, and $0.955$ and $1.00$ on two families
+constructed afterwards and therefore out of sample. Four wording faults account for the
+gap and are worth a short list, since they generalise beyond this benchmark: a third
+hedged option gives an uncertain judge somewhere to park; listing the embedding devices
+(``a picture, a statue, a logo\ldots'') makes the judge answer about the \emph{medium},
+because every generated image is a picture; the words ``real''/``real live'' make it
+answer about ontological status---asked whether a ``real live elephant'' was present it
+answered \emph{no} on all 72 images, several dominated by an elephant; and negatively
+framed questions are simply agreed with, at an 89\% yes-rate against a 42\% truth rate.
+
+Note also that \emph{paired forced choice}, which we had planned as the primary protocol
+on reliability grounds, cannot serve as one here: it measures discriminability rather
+than realization, and it degenerates exactly where the phenomenon is, since an
+over-realized $S$ output is genuinely indistinguishable from its $P$ counterpart. In our
+pilot 7--9 of 12 pairs per family carried no information for this reason. Use absolute
+per-image judgement for the rate, and paired forced choice only as a validity check on
+the judge.}
+
+\todo[inline]{\textbf{P3 --- Composition: crossed entities and scenarios.} Entity and
+scenario are \emph{crossed random factors}, not nested: each entity appears in several
+scenarios and each scenario hosts several entities, assigned by Latin-square
+counterbalancing so no $(E,Sc)$ pair repeats. Nesting would confound the two---a failure
+could be a sticky entity or a permissive scenario---while full crossing is impossible
+because many combinations are unnatural. The payoff is that the analysis can fit
+\texttt{failure \textasciitilde{} family $\times$ openness + (1|entity) + (1|scenario)}
+and separate entity from scenario variance, which most benchmarks cannot do. The design
+presupposes that $E$ would not arise in $Sc$ unprompted, so the $A$ condition is run
+first and any pair whose base rate exceeds a threshold is dropped---$A$ therefore serves
+triple duty: validity check, pair filter, and the source of certain negatives for the
+detection half. Entities come from a \emph{small core pool} instantiated across the
+families that carry the aligned comparison, plus family-specific pools chosen for what
+each family actually tests. \textbf{Do not force one pool on every family}: the pilot
+found essentially no entity variance---four candidate entities failed exactly the same
+families---so a shared pool buys protection against a confound that is not there, while
+costing each family the entities that make it expressive. Family 5 in particular needs
+carriers that must bear text, and 4b needs carriers rather than contents. Because the
+load-bearing factor differs by family, the entity-to-scenario ratio is family-specific:
+20 conversations $\times$ 3 entities for relevance, where whether a mention reads as
+incidental depends on the surrounding talk and not on which animal was named, and 20
+carriers $\times$ 3 contents for 4b. Sixty items per family cell gives 360 combinations
+and, with four conditions at three openness levels, 4{,}320 generation prompts; give
+Commonsense-T2I ($\approx$150 pairs) and T2I-CompBench (8{,}000 prompts) as scale
+reference points. Scenarios are stratified over domain, the syntactic position of the
+licensing device, and low prior compatibility between $E$ and $Sc$; they are seeded from
+real corpora and completed by hand where a stratum is thin.}
+
+\todo[inline]{\textbf{P3b --- Naturalness is a reported property, not a filter.} State
+that items are rated for naturalness on a human-annotated sample and that the rating is
+reported next to difficulty, so the trade-off is visible rather than buried in
+construction. Two things to be explicit about. (i) An item that is hard because it is odd
+is weak evidence: our own first figurative items were built by exhaustive crossing and
+produced strings like \emph{``the auditor entering the office, as hungry as a wolf''},
+which no user would write. (ii) We tried and rejected the obvious automatic instrument:
+per-token perplexity under a base LM is dominated by the predictability of the scenario
+phrase and ranked our most awkward figurative item among the most natural, so it is not a
+naturalness measure and must not be used as a floor inside the difficulty loop. Say
+plainly that this is why naturalness is human-rated here.}
+
+\todo[inline]{\textbf{P4 --- The openness ladder.} Each item is issued at three
+openness levels: L1 a fully specified scene prompt (subject, setting, composition,
+style), L2 a conventional prompt, L3 a sparse creative prompt. Openness is a designed ordinal factor, not a measured quantity---L1 through L3
+are constructed to be increasingly free, and we do not assign them calibrated
+values---so the claims it supports are within-modality ones: whether failure rises with
+openness inside each modality, and whether the most constrained image setting already
+exceeds the most open text setting.}
+
+\todo[inline]{\textbf{P5 --- Construction as a difficulty loop.} A first pass of
+templated items will not be challenging, so construction runs model-in-the-loop, with
+precedent in adversarial dataset building \citep{nie2020anli,kiela2021dynabench,%
+lebras2020aflite}. Each round: generate candidates, run a set of \emph{prober} models,
+then mutate the items every prober passes (strengthen the marker, lengthen the distance,
+choose a more tempting entity), inspect the items every prober fails---usually
+construction bugs, such as an entity that turns out to be plausible in the scenario---and
+keep the discriminative middle; two or three rounds. Every item ships with
+\texttt{difficulty}, the fraction of probers that fail it, which supports reporting by
+stratum and keeps the benchmark useful as models improve. State the bias plainly:
+adversarial filtering overfits items to the probers, so prober and evaluated model sets
+are disjoint (probe with one family, evaluate with another, and cross-validate by
+swapping), and the pre- and post-filter subsets are released separately so the effect of
+filtering is visible.}
+
+\todo[inline]{\textbf{P6 --- Validation.} Automatic checks: no target string may occur
+in the $P$ or $A$ context or in any instruction, and $S$ and $P$ are matched for length
+and framing. Human checks on a stratified subset: that suppression is genuinely required
+(contestable for families 2, 3 and 4) and judge--human agreement reported \emph{per
+family and per modality}, since presence checks are reliable while the marking judgement
+in family 2 and the geometric judgement in 4b are not---and, as noted in
+Section~\ref{sec:taxonomy}, marking is grammaticalized in text but only conventional in
+images, so agreement should be expected to differ by modality. Conclusions for those
+families are only as strong as the agreement reported here.}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lccc}
+\toprule
+Family & Items & Gen prompts & Det items \\
+\midrule
+1. Existence-canceling & --- & --- & --- \\
+2. Attribution         & --- & --- & --- \\
+3. Figurative          & --- & --- & --- \\
+4a. Perspectival (occlusion) & --- & --- & --- \\
+4b. Perspectival (legibility) & --- & --- & --- \\
+5. Use--mention        & --- & --- & --- \\
+6. Relevance           & --- & --- & --- \\
+\midrule
+Total & --- & --- & --- \\
+\bottomrule
+\end{tabular}
+\caption{OverReal statistics (placeholder). Items are scenario--entity
+combinations; each contributes four conditions ($S_{\mathrm{imp}}$, $S_{\mathrm{exp}}$,
+$P$, $A$) at three openness levels. Det items pair $S$ prompts with cross-condition
+images (\S\ref{sec:dataset}).}
+\label{tab:datastats}
+\end{table}
+
+\section{Experiments and Analysis}
+\label{sec:experiments}
+
+\subsection{Setup}
+% Planned: generators (>= 2 open T2I models; FLUX.1-dev piloted, plus one with strong
+% text rendering for family 5), detectors for the detection half, family-specific
+% binary judges validated against human annotation, and licence sensitivity from S/P.
+
+\todo[inline]{\textbf{On openness.} The three openness levels are a designed factor
+rather than a measured one, so claims stay within the modality: failure rises with
+openness across L1--L3. The cross-modal calibration problem that used to live here is
+gone with the cross-modal design; what remains in the Limitations is that the levels are
+constructed rather than calibrated.}
+
+\subsection{Main results: which families fail}
+% Planned: Table 3 = failure rate by family x generator x openness.
+% Pilot expectation: perspectival (4a, 4b) and relevance are the weakest; use-mention
+% did not reproduce on FLUX at all and needs a strong text-rendering generator.
+\emph{Placeholder.}
+
+\subsection{Detection: can a model recognise over-realization?}
+% Planned: accuracy on the construction-guaranteed core and on the human-annotated
+% natural set, reported separately; the prompt-withheld and mismatched-prompt controls
+% reported alongside every number, not in an appendix.
+\todo[inline]{\textbf{What this subsection must not do.} Do not report a single pooled
+accuracy. The construction-guaranteed items and the human-annotated $S$ items measure
+different things: the first asks whether a detector can relate a prompt to an image at
+all, the second whether it can do so on the distribution the generator actually
+produces. Report both, and report the two leakage controls beside them---any cell where
+the prompt-withheld or mismatched-prompt condition beats chance is void and should be
+printed as void rather than quietly dropped.}
+
+\subsection{The text control: why this is a text-to-image benchmark}
+\todo[inline]{\textbf{One subsection, one table, no more.} Run the same items as text
+prompts on open LLMs and show the asymmetry that motivates the setting: four of the six
+families never fail in text---negation, attribution, figurative and use--mention at
+$0.00$---while the same content fails readily as image prompts. Only the perspectival
+families and relevance produce text failures at all. State the generalisation plainly:
+suppression that is marked \emph{lexically} is respected, suppression that must be
+inferred from a viewpoint or a relevance relation is not. Then two caveats that must not
+be omitted. (i) The text figures are for one item difficulty; these are single-clause
+items with the device in the same sentence as the entity, and the adversarial
+construction loop was never run on the text side. (ii) Scope-aware scoring is essential
+and easy to get wrong---a plain string match rates the figurative family at up to $0.42$
+when its true literal-realization rate is $0.00$, because ``like a tiger'' contains
+``tiger''. Any figurative result scored without scope will manufacture an effect that is
+not there.}
+
+\section{Conclusion}
+\label{sec:conclusion}
+\emph{Placeholder.}
+
+% ICLR note: unlike ACL ARR, a Limitations section is NOT exempt from the page limit.
+% It is kept in the main text for now; move (parts of) it to the appendix if the
+% 9-page budget gets tight.
+\section*{Limitations}
+\label{sec:limitations}
+\paragraph{Language.} All stimuli are in English. Space builders are realized very
+differently across languages---tense and aspect are morphologically marked in some
+languages and absent in others, evidentiality is grammaticalized in some but lexical in
+English, and negation scope varies---so neither the failure rates nor their ordering
+across families should be assumed to transfer. A multilingual instantiation is the most
+important extension of this work.
+
+\paragraph{Model coverage.} We evaluate open-weight models only, so we cannot speak to
+proprietary systems, and our image models span a limited range of architectures.
+
+\paragraph{Judge reliability, and its sensitivity to question form.} Every automatic
+judgement here is reliable only in the form we validated it in. The same 7B VLM scored
+identical images at $\kappa=0.23$ and $\kappa=0.94$ depending on the wording of the
+question, so our numbers should be read as properties of a (model, question) pair rather
+than of the model. We report human agreement on a stratified subset for every family, and
+release the exact question text; a re-implementation that rewords the questions is not
+running our protocol.
+
+\paragraph{Oblique realization.} We label, but do not automatically score, cases where
+the content enters as a depiction the scene independently licenses---a drawing of a tiger
+on a waiting-room wall, a calendar, an anthropomorphic blend. These are intrusions by our
+definition of realization (information made accessible to the audience) and successes by
+a narrower referential reading. Reliably separating ``a picture of a tiger'' from ``a
+tiger'' proved harder than the rest of the protocol combined, so the category is
+human-annotated and reported, not folded into the headline rate.
+
+\paragraph{Detection labels.} Most detection items are labelled by construction rather
+than by annotation, which is what keeps the task non-circular, but it also means their
+difficulty is not matched to the naturally occurring distribution. The human-annotated
+subset is the one that speaks to real difficulty, and it is smaller.
+
+\paragraph{Stimulus naturalness.} Items are constructed from templates in order to
+support minimal-difference pairing; naturally occurring contexts may differ in
+distribution.
+
+\paragraph{Scope.} The benchmark is text-to-image; video is covered only as a case study
+(Appendix). We characterise \emph{when} over-realization happens and \emph{whether} it can
+be detected, and offer no representational account of \emph{why}: the availability-versus-
+expression analysis lives in the text modality, which we retain only as a control.
+
+\paragraph{Text is a control, at one difficulty.} The asymmetry that motivates the T2I
+setting---four of six families never failing in text---is established on single-clause
+items with the licensing device in the same sentence as the entity, and the adversarial
+construction loop was never run on the text side. It supports ``these families are solved
+in text at this difficulty'', not ``these families are solved in text''.
+
+% ICLR 2027: optional, at the end of the main text before references; does not count
+% toward the page limit; at most 1 page.
+\section*{Ethics Statement}
+% Planned: synthetic stimuli, no personal data; the failure studied is a faithfulness
+% risk rather than a safety hazard; mitigation-oriented rather than attack-oriented.
+\emph{Placeholder.}
+
+% ICLR 2027: recommended, paragraph-long, at the end of the main text before
+% references; does not count toward the page limit. Reference (do not restate) the
+% parts of the paper/appendix that support reproduction: released items and exact
+% judge question text, generator/judge model identities, construction-loop protocol.
+\section*{Reproducibility Statement}
+\emph{Placeholder.}
+
+% ICLR 2027: REQUIRED (see the ICLR AI Policy for Authors); does not count toward the
+% page limit. This replaces the ACL "Disclosure" section.
+\section*{AI Use Statement}
+\label{sec:disclosure}
+This manuscript---including its hypotheses, experimental design, code, analysis,
+figures, and text---was generated autonomously by an AI research pipeline operating
+without human-written experimental code and without external model APIs. Human
+involvement was limited to specifying the research direction and compute constraints.
+
+\nocite{*}  % skeleton stage: list all available references
+\bibliography{references}
+\bibliographystyle{iclr2026_conference}
+
+\appendix
+
+\section{Video Case Study}
+\label{app:video}
+\emph{Placeholder.}
+
+\section{Full Prompts and Annotation Guidelines}
+\label{app:prompts}
+\emph{Placeholder.}
+
+\end{document}
