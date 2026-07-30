@@ -365,19 +365,12 @@ Numbering continues from §2. Evidence for each is in `pilot/REPORT.md`.
     removing a real degree of freedom from the construct.
 
 43. **Whatever style the model picks, the result must match human expectation for that
-    style — so the judge runs in two steps.** First classify the rendering style, then
-    apply the family criterion conditioned on it. Family 3 is where this bites: an
-    elephant in a photorealistic image of the porter is unacceptable, while the same
-    elephant as a faded shape in the background of a poster-style image is a legitimate
-    depiction of the comparison. A single style-blind question cannot separate these.
-
-    **Cost, stated up front.** Every extra step in a judging chain has cost agreement in
-    the pilot; the style classifier is a second thing that can be wrong, and its errors
-    propagate. So: report kappa for the style step separately from kappa for the family
-    step, and certify both against human annotation. If the style step cannot be made
-    reliable, the fallback is human-only scoring for the affected family — not a silent
-    retreat to style-blind binary scoring, which would count legitimate stylised
-    depictions as failures.
+    style.** An elephant in a photorealistic image of the porter is unacceptable; the
+    same elephant as a faded shape in the background of a poster-style image is a
+    legitimate depiction of the comparison. This is a property of the construct, not a
+    prescription for how to judge it — how the judge is built is settled in Phase 3, and
+    the criterion must not be quietly narrowed to a style-blind check, which would count
+    legitimate stylised depictions as failures.
 
     Applies to families 2 and 3 (the marking families), where the acceptable form of
     realization is style-dependent. Families 1, 4 and 5 are unaffected: their criteria

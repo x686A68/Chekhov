@@ -229,10 +229,11 @@ Three lineages is the point: a detector cannot win Det by recognising one house 
    data, so nothing here is calibrated yet.
 3. **Core pool composition** — which entities stay shared, which families get their own
    (DECISIONS.md #25 settled the principle, not the list).
-4. **Two-step judging for the marking families** (DECISIONS.md #42--43): style is not
-   fixed in the prompt, so families 2 and 3 need a style classifier before the family
-   criterion. Report and certify $\kappa$ for both steps separately; a family whose style
-   step is unreliable goes to human-only scoring, never to style-blind binary scoring.
+4. **How to judge the marking families** (DECISIONS.md #42--43): style is not fixed in
+   the prompt, so for families 2 and 3 what counts as acceptable depends on the style the
+   model chose. The scoring protocol has to respect that; whether it does so with a
+   separate style step or in one question is open, and either way it must not collapse to
+   a style-blind check.
 5. **The κ threshold** below which a family is reported as human-only. Proposed 0.80,
    should be pre-registered before the runs.
 6. **Venue**, which affects length and format: NeurIPS D&B fits a two-task benchmark best,
