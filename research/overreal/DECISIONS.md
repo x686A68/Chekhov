@@ -355,6 +355,34 @@ Numbering continues from §2. Evidence for each is in `pilot/REPORT.md`.
     required: at least two generators, and the evaluated detector must not be the model
     whose labels were used anywhere in construction.
 
+## 3e. Style is free, and judgement is conditional on it (2026-07-30)
+
+42. **We do not fix the rendering style in the prompt.** The generator's choice of
+    photorealistic vs stylised is itself one of the ambiguities a user leaves open, and
+    constraining it ("a photograph of...") would make the benchmark measure a narrower
+    task than the one users actually pose. Rejected alternative: pin the style to turn
+    every family back into a clean binary. It buys judge reliability at the cost of
+    removing a real degree of freedom from the construct.
+
+43. **Whatever style the model picks, the result must match human expectation for that
+    style — so the judge runs in two steps.** First classify the rendering style, then
+    apply the family criterion conditioned on it. Family 3 is where this bites: an
+    elephant in a photorealistic image of the porter is unacceptable, while the same
+    elephant as a faded shape in the background of a poster-style image is a legitimate
+    depiction of the comparison. A single style-blind question cannot separate these.
+
+    **Cost, stated up front.** Every extra step in a judging chain has cost agreement in
+    the pilot; the style classifier is a second thing that can be wrong, and its errors
+    propagate. So: report kappa for the style step separately from kappa for the family
+    step, and certify both against human annotation. If the style step cannot be made
+    reliable, the fallback is human-only scoring for the affected family — not a silent
+    retreat to style-blind binary scoring, which would count legitimate stylised
+    depictions as failures.
+
+    Applies to families 2 and 3 (the marking families), where the acceptable form of
+    realization is style-dependent. Families 1, 4 and 5 are unaffected: their criteria
+    hold in any style.
+
 ---
 
 ## 4. Open risks
