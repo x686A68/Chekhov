@@ -376,6 +376,27 @@ Numbering continues from §2. Evidence for each is in `pilot/REPORT.md`.
     realization is style-dependent. Families 1, 4 and 5 are unaffected: their criteria
     hold in any style.
 
+## 3f. Family 1 is built from NegBench pairs, not sentences (2026-08-14)
+
+44. **Family 1 S-prompts are rule-built from NegBench's (scene, absent-object) pairs**
+    (`COCO_val_retrieval.csv`: COCO val2017 captions + LLM-proposed, detector-verified
+    absent objects), with our own trailing negation templates on the family's cue words.
+    NegBench's own negated captions are discarded — retrieval register, not prompt
+    register. Plausibility is a controlled 50/50 factor: the plausible bin inherits
+    NegBench's related-but-absent validation; the implausible bin re-pairs scenes with
+    zero-co-occurrence COCO-80 classes (our pairing, their vocabulary). Candidates
+    (500) are trimmed to the final set by the same human pass all six families get, so
+    construction method differs across families only in where candidates come from.
+    Full writeup: `dataset/family1/DESIGN.md`; builder:
+    `scripts/build_family1_negbench.py` (deterministic, seed 20260814).
+
+    Rejected alternatives: (a) using NegBench sentences directly — wrong register, and
+    the negated object would need parsing back out; (b) running NegBench's construction
+    pipeline on a larger caption pool — capacity is capped at ~200 items per family, so
+    the released pairs more than suffice; (c) hand-collecting like families 2–4 — the
+    family is included for completeness, not novelty (paper §3), and inheriting the
+    standard benchmark's materials makes that positioning literal.
+
 ---
 
 ## 4. Open risks

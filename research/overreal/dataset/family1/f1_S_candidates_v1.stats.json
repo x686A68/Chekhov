@@ -1,0 +1,62 @@
+{
+  "seed": 20260814,
+  "n_items": 500,
+  "plausible": 250,
+  "implausible": 250,
+  "templates": {
+    "T2": 105,
+    "T4": 113,
+    "T1": 107,
+    "T3": 86,
+    "T5": 89
+  },
+  "cues": {
+    "without": 194,
+    "no": 306
+  },
+  "distinct_targets": 75,
+  "top_targets": [
+    [
+      "sink",
+      11
+    ],
+    [
+      "sheep",
+      11
+    ],
+    [
+      "giraffe",
+      11
+    ],
+    [
+      "zebra",
+      11
+    ],
+    [
+      "horse",
+      11
+    ],
+    [
+      "traffic light",
+      11
+    ],
+    [
+      "boat",
+      11
+    ],
+    [
+      "sports ball",
+      11
+    ],
+    [
+      "bus",
+      11
+    ],
+    [
+      "bowl",
+      11
+    ]
+  ],
+  "mean_prompt_words": 15.1,
+  "distinct_images": 500
+}
