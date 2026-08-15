@@ -1,9 +1,12 @@
 # GOAL.md — OverReal pilot
 
-Task specification for the pilot study that precedes building the OverReal benchmark.
-Written to be run on a fresh machine. **Read `Chekhov_paper_ACL/overrealization.tex` first** (the paper submodule) — it is the
-paper skeleton, and its `\todo[inline]` blocks contain the full design rationale.
-Section 3 defines the construct and Table 1; Section 4 defines the benchmark.
+Task specification for the pilot study that preceded building the OverReal benchmark.
+**Status: the pilot has run** (results in `pilot/REPORT.md`; answers to Q1–Q3 noted
+inline below). The paper — `Chekhov_paper_ICLR/overrealization.tex`, the submodule — is
+now the authority on the construct and the taxonomy, and `EXPERIMENT.md` on the
+benchmark design; this file is kept as the pilot's spec, with its facts corrected to
+match the paper. Section 3 of the paper defines the construct and Table 1; Section 4
+defines the benchmark.
 
 ---
 
@@ -14,22 +17,33 @@ realized in the output. A mention is not a licence to realize. The name comes fr
 Chekhov's principle (a gun on the wall in act one must fire in act three) — except that
 real user inputs are not dramatic setups, and models discharge them anyway.
 
-Six **families**, ordered by how explicitly the input marks the suppression:
+Six **families**, ordered by how explicitly the input marks the suppression (numbering
+per the paper §3.2; the pilot ran under an older scheme — see the note below the table):
 
 | # | Family | Licensing device | Example (image) | Failure |
 |---|---|---|---|---|
-| 1 | Existence-canceling | *no, without, if, might* | "a room with **no** elephant" | elephant present |
-| 2 | Attribution | *believes, claims, dreamed* | "Maya **thought** the boulder was an elephant" | a real elephant, unmarked |
-| 3 | Figurative | *like, as,* idiom | "a man **as heavy as an elephant**" | an elephant beside him |
-| 4a | Perspectival (occlusion) | *behind, offscreen* | "an elephant **behind the high wall**" | elephant fully visible |
-| 4b | Perspectival (legibility) | viewpoint frame | "Anna reads a letter saying 'I'm sorry'" | letter faces the camera, not Anna |
-| 5 | Use–mention | semiotic level | "a crate of **elephants**" | crate stamped with the word ELEPHANT |
-| 6 | Relevance | none (pragmatic) | [earlier mention of an elephant] "draw something relaxing" | elephant appears |
+| 1 | Existence-canceling | *no, without, never* | "a hotel lobby with **no** elephant in it" | elephant present |
+| 2 | Attribution | *believes, thinks, remembers, dreams* | "Maya at the ridge, **believing** there is an elephant at the ridge" | a real elephant, unmarked |
+| 3 | Figurative | *like, as … as, resembles, -like* | "the porter, **as heavy as** an elephant" | a literal elephant beside him |
+| 4 | Perspectival | *behind, on the far side, cannot see*; viewpoint frame | "an elephant **entirely on the far side** of a four-metre wall"; "Anna reads a letter saying 'I'm sorry'" | elephant shown anyway; letter faces the camera, not Anna |
+| 5 | Relevance | none (pragmatic) | [earlier talk of an elephant] "**Anyway** — a school gymnasium after the game" | elephant on the court |
+| 6 | Other | — | residual class for over-realization that fits none of 1–5 | — |
 
-Families 1–4 are licensed by *space builders* (Fauconnier, Mental Spaces); 5 by the
-use–mention distinction; 6 by Gricean relevance. Families 1 and 4–6 are **binary**
-(should it appear at all); families 2 and 3 are **marking** failures (it may appear, but
-only as explicitly embedded — a thought bubble, or a hedge like "she believed").
+Families 1–4 are licensed by *space builders* (Fauconnier, Mental Spaces); family 5 lies
+outside mental-spaces theory and is licensed by Gricean relevance; family 6 is a
+residual class, not a construction. Family 4 contains two kinds of item — **occlusion**
+(an entity behind a barrier; the pilot's 4a) and **legibility** (inscribed content that
+the in-scene observer, not the camera, has access to; the pilot's 4b). Families 1 and 5
+are **binary** (should it appear at all); families 2 and 3 are **marking** failures (it
+may appear, but only as explicitly embedded — a thought bubble, or a stylized shape);
+family 4 is **geometric** (may appear only as the viewpoint licenses).
+
+**Changes from the pilot's numbering.** The pilot used 4a/4b as separate cells, 5 =
+use–mention, 6 = relevance. Use–mention never reproduced on the piloted generator
+(0.00 for every entity in both modalities — FLUX writes pseudo-text and makes no
+lexical commitment; REPORT §1, DECISIONS.md #26) and left the taxonomy; relevance
+renumbered 6 → 5, and "other" was added as 6. Pilot artifacts (`pilot/`, REPORT.md,
+DECISIONS.md) still use the old numbering.
 
 **Item structure.** Every item is a scenario `Sc`, an entity `E`, and the family's
 licensing device `D`, assembled three ways:
@@ -41,6 +55,9 @@ A (absent)      = Sc          "a room"                       → measures coinci
 ```
 
 `P` is essential: without it, a model that realizes nothing scores perfectly.
+(Since the pilot, the design issues `S` at two cue strengths — explicit `S_exp`, the
+suppression stated, and implicit `S_imp`, left to inference — making explicitness a
+measured within-family factor; see EXPERIMENT.md §1.1.)
 Headline metric — **licence sensitivity**:
 
 ```
@@ -55,33 +72,50 @@ Headline metric — **licence sensitivity**:
 
 Three blocking questions. Everything else is secondary.
 
-**Q1 — Which entity fails in all six families?**
-Table 1 of the paper is "one entity, six failures", and its cells are currently invented
-placeholders. They must be replaced with **verbatim real generations**. Elephant is the
-current candidate but is expected to be weak in 4a and 5. Test 3–4 candidate entities
-across all six families and report which one (if any) fails in all six. If none does,
-say so — the table may need two entities.
+**Q1 — Which entity fails in all families?**
+Table 1 of the paper is "one entity, N failures", and its cells must be **verbatim real
+generations**, not invented placeholders. Test 3–4 candidate entities across all
+families and report which one (if any) fails everywhere. If none does, say so — the
+table may need two entities.
 
-**Q2 — Can a VLM judge score families 2 and 4b reliably?**
-These are the two families whose judgement is not a simple presence check.
+> *Answered (REPORT §1): no entity failed all six of the pilot's families — elephant
+> and tiger each failed 5 of 6, blocked only by use–mention, which was 0.00 for every
+> entity in both modalities. Use–mention subsequently left the taxonomy, and the
+> paper's Table 1 is now "one entity, five failures", filled with verbatim FLUX.1-dev
+> generations.*
+
+**Q2 — Can a VLM judge score family 2 and family 4's legibility items reliably?**
+These are the two judgements that are not a simple presence check.
 - Family 2 asks: is the snake rendered *as an actual object in the scene*, or as
   *explicitly embedded* (thought bubble, dream haze, framed inset)?
-- Family 4b asks: could the person in the image actually perceive the depicted
-  information — i.e. is the letter angled toward the reader or flat to the camera?
+- The legibility items ask: could the person in the image actually perceive the
+  depicted information — i.e. is the letter angled toward the reader or flat to the
+  camera?
 
 Generate images, have the VLM judge answer the structured question, then **inspect the
 images directly** and record where the judge disagrees with what is visibly the case.
-If the judge cannot do 4b geometry, that family needs a different protocol (or
-human-only scoring), and the paper's headline example is at risk.
+If the judge cannot do the legibility geometry, those items need a different protocol
+(or human-only scoring), and the paper's headline example is at risk.
+
+> *Answered (REPORT §4): reliability is a property of the question wording, not of the
+> model — the same 7B judge moved from κ = 0.23–0.80 (multiple choice with a hedged
+> option) to κ = 0.94–1.00 (single positive binary) on the same images. This became
+> the paper's protocol finding and the motivation for the detection task.*
 
 **Q3 — Is family 3 at ceiling in text?**
 LLMs handle idioms well, so the figurative family may show no measurable effect in text.
 If so, that is a legitimate finding (a modality asymmetry), but it changes whether
 family 3 gets a full treatment or a footnote.
 
+> *Answered (REPORT §2; DECISIONS.md #36–37): yes — and not only family 3. Four of the
+> pilot's six families sat at exactly 0.00 in text (family 3: 0.00 in text against
+> 0.58 in images). The benchmark became text-to-image only; text survives as a
+> ~36-item-per-family control that establishes the modality asymmetry.*
+
 Secondary, but record them: per-item wall-clock and VRAM cost (to correct the projected
-6,480-prompt budget); and whether FLUX renders text legibly enough for OCR to score
-family 5.
+6,480-prompt budget); and whether FLUX renders text legibly enough for the items that
+must bear text. *(Answer: no — FLUX writes pseudo-text; Qwen-Image is the retry
+candidate. DECISIONS.md #26.)*
 
 ---
 
@@ -95,7 +129,7 @@ were permitted — confirm the constraint on the new machine before launching.*
 | Role | Model | Notes |
 |---|---|---|
 | Text generation | `Qwen/Qwen3-8B`, `Qwen/Qwen3-32B`, `meta-llama/Llama-3.1-8B-Instruct` | disable thinking mode; greedy decoding |
-| Text-to-image | `black-forest-labs/FLUX.1-dev` | chosen over SDXL for legible text rendering, which family 5 needs |
+| Text-to-image | `black-forest-labs/FLUX.1-dev` | chosen over SDXL for legible text rendering, which the text-bearing items need (pilot verdict: still pseudo-text; DECISIONS.md #26) |
 | VLM judge | `Qwen/Qwen2.5-VL-7B-Instruct` | structured yes/no and multiple-choice questions |
 | Embeddings (optional) | `BAAI/bge-large-en-v1.5` | semantic-intrusion checks |
 
@@ -110,13 +144,14 @@ been a standing constraint of the whole project and the paper claims it.
 
 ### Phase 0 — text pilot (no downloads needed if the text models are cached)
 
-For each of the six families, hand-write **10 items** with all three conditions, using
-2–3 candidate core entities. Run all three text models, greedy decoding.
+For each family (the pilot's six, including the since-dropped use–mention), hand-write
+**10 items** with all three conditions, using 2–3 candidate core entities. Run all three text models, greedy decoding.
 
-Scoring: entity string match (word-form normalized) for families 1, 3, 4a, 6; presence
-of the attribution phrase for family 2; literal template slot / instruction echo for
-family 5; for family 4 text, whether the narration reports something outside the
-focalizing character's access.
+Scoring (current numbering): entity string match (word-form normalized) for families 1,
+3 and 5, and for family 4's occlusion items; presence of the attribution phrase for
+family 2; for family 4 in text, whether the narration reports something outside the
+focalizing character's access. (The pilot additionally scored the now-dropped
+use–mention family by literal template slot / instruction echo.)
 
 Report per family: realization rate under S, under P, under A, and `Δ`.
 
@@ -131,8 +166,8 @@ two modalities are comparable. Save every image with its prompt and condition.
 
 ### Phase 3 — judge reliability
 
-Run the VLM judge on all Phase 2 images. For families 2 and 4b, additionally inspect
-every image directly and record agreement with the judge. Report agreement per family.
+Run the VLM judge on all Phase 2 images. For family 2 and family 4's legibility items,
+additionally inspect every image directly and record agreement with the judge. Report agreement per family.
 
 *This is a first-pass sanity check, not a substitute for human annotation — the real
 benchmark still needs annotated subsets with reported inter-annotator agreement.*
@@ -151,8 +186,8 @@ pilot/
   images/<family>/<item>_<cond>.png  every generated image
   images/<family>/results.jsonl      judge verdicts + direct-inspection verdicts
   judge_agreement.json               per-family agreement between judge and inspection
-  table1_candidates.md               verbatim generations for the six Table 1 cells,
-                                     per candidate entity
+  table1_candidates.md               verbatim generations for the Table 1 cells
+                                     (five in the current taxonomy), per candidate entity
   REPORT.md                          answers to Q1/Q2/Q3, cost measurements,
                                      and a go/no-go recommendation per family
 ```
