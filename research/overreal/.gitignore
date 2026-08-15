@@ -4,3 +4,5 @@
 logs/
 pilot/images/**/*.png
 pilot/images/sheets/
+dataset/**/images/**/*.png
+dataset/**/images/**/*.jpg
