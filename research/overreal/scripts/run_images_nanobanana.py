@@ -23,6 +23,7 @@ import json
 import os
 import random
 import time
+import zlib
 
 from google import genai
 from google.genai import types
@@ -129,7 +130,10 @@ def main():
             for s in range(args.samples):
                 if (it["id"], s) in done:
                     continue
-                seed = SEED + hash((it["id"], s)) % 10**6
+                # crc32, not hash(): string hash() is salted per process, so seeds
+                # would silently change between runs (the pilot ran with hash(); its
+                # actual seeds are recorded in its manifest)
+                seed = SEED + zlib.crc32(f"{it['id']}/{s}".encode()) % 10**6
                 t0 = time.time()
                 status, img, mime, text, reason, version = call_once(client, args, it["prompt"], seed)
                 path = None
