@@ -1,0 +1,50 @@
+{"key": "f1_nb_200_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Dog in blue shirt on a rug by bookshelves; only shelves, ladder and rug, no couch."}
+{"key": "f1_nb_200_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Terrier in striped shirt on a rug in front of bookcases; no seating furniture at all."}
+{"key": "f1_nb_201_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Dining table with coffee bean sack and donut box; no elephant anywhere, framed art is abstract."}
+{"key": "f1_nb_201_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Kitchen table with coffee sack and donut box; background shows appliances and plants only."}
+{"key": "f1_nb_202_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Single Holstein cow on an empty beach; no horse in the frame."}
+{"key": "f1_nb_202_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Single Holstein cow on sand with dunes behind; no horse present."}
+{"key": "f1_nb_203_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Open doughnut box on a wooden counter with mug and fork; no toothbrush anywhere."}
+{"key": "f1_nb_203_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Doughnut box on table with mug, fork and napkin; no toothbrush."}
+{"key": "f1_nb_204_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Open-plan kitchen with pineapples on the island; no bear, real or depicted."}
+{"key": "f1_nb_204_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Navy kitchen with pineapples in a bowl; no bear anywhere in frame."}
+{"key": "f1_nb_205_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two giraffes in savanna grass; only trees and shrubs behind, no zebra."}
+{"key": "f1_nb_205_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two giraffes in tall grass with hills behind; no zebra visible."}
+{"key": "f1_nb_206_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Red living room with black leather couch and armchair; wall art is abstract, no airplane."}
+{"key": "f1_nb_206_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Red room with two black couches and gallery wall of abstract prints; no airplane."}
+{"key": "f1_nb_207_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Four cows walking at the waterline on a beach; nothing man-made, no handbag."}
+{"key": "f1_nb_207_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Four cows on wet sand by the surf; empty beach, no handbag."}
+{"key": "f1_nb_208_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Golden retriever with a soccer ball on a pitch; distant blurred figures carry nothing identifiable as a racket."}
+{"key": "f1_nb_208_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Dog resting chin on a soccer ball; only goals and trees behind, no tennis racket."}
+{"key": "f1_nb_209_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Pepperoni pizza on an oven rack, control panel above; no train."}
+{"key": "f1_nb_209_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Pizza on a pulled-out oven rack in a kitchen; no train anywhere."}
+{"key": "f1_nb_210_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Waxwing eating a berry above an empty lake; water surface has no boat."}
+{"key": "f1_nb_210_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Robin on a holly branch in woodland; no water and no boat."}
+{"key": "f1_nb_211_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Gold-framed rural landscape painting over a dresser; painted village has no fire hydrant."}
+{"key": "f1_nb_211_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Gold-framed cottage-lane painting on a plain wall; no fire hydrant painted or real."}
+{"key": "f1_nb_212_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat curled in a green bowl on a table; interior scene with no airplane."}
+{"key": "f1_nb_212_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat asleep in a green bowl in a cottage room; no airplane anywhere."}
+{"key": "f1_nb_213_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Dense Hanoi traffic with bus, cars and motorbikes; poles carry street lamps and shop signs, no signal head I can identify at normal scale."}
+{"key": "f1_nb_213_s1", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "London high street with bus, cars, motorcycle; a dark object on a right-hand pavement pole is too indistinct to call a traffic light without zooming."}
+{"key": "f1_nb_214_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Jersey cow lying in shaded vegetation by a fence; no sheep in the field beyond."}
+{"key": "f1_nb_214_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Brown-and-white cow resting under trees; pasture beyond the fence is empty of sheep."}
+{"key": "f1_nb_215_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two black cattle on a grassy summit over a valley; no horse in the landscape."}
+{"key": "f1_nb_215_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two black cows on a hilltop above dale fields; no horse visible."}
+{"key": "f1_nb_216_s0", "realized": true, "confidence": "medium", "depiction_only": false, "evidence": "Donut boxes on a cafe table; through the top-right window a blue-and-yellow diamond kite is flying above the trees."}
+{"key": "f1_nb_216_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Donut boxes on a cafe table by the window; street outside is empty, no kite."}
+{"key": "f1_nb_217_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Three stacked microwaves on a butcher-block counter; counter run and window area show no sink."}
+{"key": "f1_nb_217_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Three stacked microwaves in a tiled kitchen; coffee maker and toaster on the counter, no sink visible."}
+{"key": "f1_nb_218_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Golden retriever in a bandanna on a Volvo trunk; autumn roadside only, no bear."}
+{"key": "f1_nb_218_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Golden retriever on a Subaru trunk in the mountains; no bear anywhere."}
+{"key": "f1_nb_219_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Ginger cat in a pirate hat in a cardboard box by a fireplace; books and rope only, no laptop."}
+{"key": "f1_nb_219_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Tabby in a pirate hat in a box beside a trunk and rope; no laptop in the room."}
+{"key": "f1_nb_220_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Antique doll and open books on a quilted bed; no orange fruit anywhere."}
+{"key": "f1_nb_220_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Rag doll and open book on a bed; nightstand holds only a glass of water, no orange."}
+{"key": "f1_nb_221_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Blue city bus in a Georgian street; poles carry ornate street lamps only, no traffic light."}
+{"key": "f1_nb_221_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Yellow-green city bus on a high street; roadside poles hold lamps and signs, nothing I can identify as a traffic signal."}
+{"key": "f1_nb_222_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Table of assorted quiches with herbs and plates; no teddy bear."}
+{"key": "f1_nb_222_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Five quiches on a wooden table; no teddy bear anywhere."}
+{"key": "f1_nb_223_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Ginger cat on a toilet in a blue-tiled bathroom; only a soap bar and snake plant, no apple."}
+{"key": "f1_nb_223_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Tabby on a toilet in a white bathroom; toiletries and a fern, no apple."}
+{"key": "f1_nb_224_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "White toilet and bathtub in a tiled bathroom; no washbasin in frame."}
+{"key": "f1_nb_224_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Toilet, bath and towel rail in a white bathroom; no sink visible."}

@@ -1,0 +1,50 @@
+{"key": "f1_nb_425_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Tabby cat under a knit blanket on a bed; nightstand has a lamp, plant and books, no pizza."}
+{"key": "f1_nb_425_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat under a plaid blanket on a bed; nightstand has lamp, plant, book and a glass, no pizza."}
+{"key": "f1_nb_426_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat on a gray cabinet in a living room; framed botanical prints on the wall, no traffic light."}
+{"key": "f1_nb_426_s1", "realized": true, "confidence": "high", "depiction_only": true, "evidence": "Framed photograph at the top right of the wall clearly shows a red/amber/green traffic light."}
+{"key": "f1_nb_427_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bedroom with a storage box on the bed; through the window only parked cars on a suburban street, no bus."}
+{"key": "f1_nb_427_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bedroom with a book and mug on the bed; window looks onto a garden, no bus."}
+{"key": "f1_nb_428_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cream bathroom with toilet, vanity, round mirror and glass shower; no bicycle anywhere."}
+{"key": "f1_nb_428_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cream bathroom with toilet, vanity, framed mirror and walk-in shower; no bicycle anywhere."}
+{"key": "f1_nb_429_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat on a green Jeep hood; further down the street only an SUV and two cars, no bus."}
+{"key": "f1_nb_429_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Orange cat on a Jeep hood; two parked sedans behind it, no bus."}
+{"key": "f1_nb_430_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Takeout box of omelet, tomato, sausage and toast with a coffee mug and fork/knife; no tennis racket."}
+{"key": "f1_nb_430_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Wooden box breakfast in a cafe with diners behind; no tennis racket."}
+{"key": "f1_nb_431_s0", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "Dogs asleep on a bed; a small indistinct blurred object on the dresser at the top left could be a stack of books but cannot be identified at normal scale."}
+{"key": "f1_nb_431_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Six dogs on a bed; nightstand holds a lamp, glass, mug and digital clock, no book."}
+{"key": "f1_nb_432_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Beef sandwich with slaw and pickles; only a fork and a knife on the table, no spoon."}
+{"key": "f1_nb_432_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Beef sandwich plate with slaw and pickles; only a wooden-handled fork, no spoon."}
+{"key": "f1_nb_433_s0", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "Herds of zebra and wildebeest at a waterhole; one small pale dappled animal on the far bank is ambiguous and cannot be resolved as a giraffe at normal scale."}
+{"key": "f1_nb_433_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Waterhole scene populated only by zebras and wildebeest; no giraffe on the plain or horizon."}
+{"key": "f1_nb_434_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Garden table with cut and whole oranges, juice and a basket of oranges; no apple."}
+{"key": "f1_nb_434_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Outdoor table with sliced oranges and a bowl of whole oranges; no apple."}
+{"key": "f1_nb_435_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Chocolate dessert halved on a white plate with a fork; cafe table behind, no suitcase."}
+{"key": "f1_nb_435_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Halved chocolate-raspberry dessert on a plate with knife and fork; no suitcase."}
+{"key": "f1_nb_436_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Black cat on a lit mechanical keyboard at a desk; monitor, mug and notepad present but no computer mouse (only a round coaster at right)."}
+{"key": "f1_nb_436_s1", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "Black cat on a keyboard; small dark blobs at the right edge and bottom-left corner are too blurred/cropped to identify as a mouse."}
+{"key": "f1_nb_437_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Galley kitchen with gas range, farmhouse sink and fridge; no snowboard."}
+{"key": "f1_nb_437_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cream kitchen with stove, sink and stainless fridge; no snowboard."}
+{"key": "f1_nb_438_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Slice of chocolate cake on a white plate with a fork; no tennis racket."}
+{"key": "f1_nb_438_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Carrot cake slice on a plate in a cafe; no tennis racket."}
+{"key": "f1_nb_439_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Graffitied brick building with a green door; bicycles, posters and parked cars on the street, no wine glass."}
+{"key": "f1_nb_439_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Graffitied brick corner with a green door and a bicycle at left; no wine glass."}
+{"key": "f1_nb_440_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Puppy shredding toilet paper by a toilet; the round white objects are toilet rolls, not donuts."}
+{"key": "f1_nb_440_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Dog pulling toilet paper in a tiled bathroom; only paper rolls and cotton balls, no donut."}
+{"key": "f1_nb_441_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bowl of beef, pasta and greens soup with a spoon and water glass; no stop sign."}
+{"key": "f1_nb_441_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bowl of beef and bowtie pasta soup on a table with bread and water; no stop sign."}
+{"key": "f1_nb_442_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Traffic light over a rural road; only a single dark sedan approaching, no bus."}
+{"key": "f1_nb_442_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Suspended traffic light over an empty country road; no vehicles at all, no bus."}
+{"key": "f1_nb_443_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bare room with a toilet and exposed pipe; a galvanized bucket sits beside it but there is no sink."}
+{"key": "f1_nb_443_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Blue-tiled stall with only a toilet, pipe, brush and paper holder; no sink."}
+{"key": "f1_nb_444_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Airport runway with landing and parked airliners plus service trucks; no wine glass."}
+{"key": "f1_nb_444_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Aerial airport view with jets taking off and at gates; no wine glass."}
+{"key": "f1_nb_445_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Plate of chicken and vegetables beside a laptop, mug and mouse; no snowboard."}
+{"key": "f1_nb_445_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Salmon plate next to a laptop and bookshelf desk setup; no snowboard."}
+{"key": "f1_nb_446_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Wooden crate of mixed fruit resting directly on a rough stone wall outdoors; no table."}
+{"key": "f1_nb_446_s1", "realized": true, "confidence": "medium", "depiction_only": false, "evidence": "The wooden fruit bowl sits on a rustic weathered wooden table top that fills the lower third of the frame."}
+{"key": "f1_nb_447_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Decorated elephant on a dirt track with scrub and trees behind; no bench."}
+{"key": "f1_nb_447_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Decorated elephant on a savanna track; only bushes and grass around, no bench."}
+{"key": "f1_nb_448_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bowl of sliced sausage and vegetables on a kitchen table by a garden window; no traffic light."}
+{"key": "f1_nb_448_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Sausage and vegetable bowl on a wooden dining table; no traffic light."}
+{"key": "f1_nb_449_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Living room with white rug and black furniture; the coffee table holds only decorative bowls and books, no cup."}
+{"key": "f1_nb_449_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Living room with white rug and black sofa; coffee table has books, a vase, a candle jar and small stacked plates, no cup."}

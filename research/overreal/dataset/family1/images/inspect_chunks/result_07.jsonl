@@ -1,0 +1,50 @@
+{"key": "f1_nb_175_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Zoo enclosure with zebras and giraffes; no clock anywhere on fences, posts or background."}
+{"key": "f1_nb_175_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Zoo yard with giraffes, zebras, trough and stone shed; no clock visible."}
+{"key": "f1_nb_176_s0", "realized": true, "confidence": "low", "depiction_only": false, "evidence": "Aerial view of a highway interchange with a tiny dark car on the road left of center; too small to be certain."}
+{"key": "f1_nb_176_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Airliner over green farmland with an empty country road; no discernible car at normal scale."}
+{"key": "f1_nb_177_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Horse and border collie in a grassy pasture; no donut."}
+{"key": "f1_nb_177_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Horse and dog in a fenced meadow; no donut anywhere."}
+{"key": "f1_nb_178_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Plate of sliced bread on a wooden table with butter, glass and potted succulent; no elephant."}
+{"key": "f1_nb_178_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "White plate of sliced roast chicken with herbs; no elephant."}
+{"key": "f1_nb_179_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bowl of broccoli-ham pasta salad on a kitchen table; no bicycle."}
+{"key": "f1_nb_179_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bowl of pasta salad with a chair in the background; no bicycle."}
+{"key": "f1_nb_180_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Pothos cutting in a wall-mounted glass water vase; no soil pot anywhere, only a framed botanical line drawing on the wall."}
+{"key": "f1_nb_180_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Only a wall-mounted glass vase of pothos in water against a bare white wall; no potted plant."}
+{"key": "f1_nb_181_s0", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "City street with hydrant and parked cars; a small red blur in the trees mid-block is too indistinct to identify as a traffic light."}
+{"key": "f1_nb_181_s1", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "Main-street scene with hydrant, parked Subaru and cyclist; distant poles carry nothing clearly readable as a traffic light."}
+{"key": "f1_nb_182_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Half an orange on a white plate with a spoon and napkin; no remote control."}
+{"key": "f1_nb_182_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Orange slice on a white plate by a window; no remote control."}
+{"key": "f1_nb_183_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Desk has monitor, keyboard, laptop, mug and pen cup; both hands on the keyboard and no computer mouse visible."}
+{"key": "f1_nb_183_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Night desk with monitor, backlit keyboard and notepad; no computer mouse on the desk."}
+{"key": "f1_nb_184_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Little-league batter at the plate with spectators and trees behind; no bus."}
+{"key": "f1_nb_184_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Baseball field with dugout and houses on the hillside; no bus."}
+{"key": "f1_nb_185_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Motorcycle-based trike outside a repair shop; only tires and tools, no donut."}
+{"key": "f1_nb_185_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Rat-trike parked by a garage and barn; no donut."}
+{"key": "f1_nb_186_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Tabby cat lying on a laptop keyboard on a desk; no skateboard."}
+{"key": "f1_nb_186_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat on a laptop in a book-lined room; no skateboard."}
+{"key": "f1_nb_187_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cast-iron skillet of broccoli, peppers and sausage on a gas stove; no bus."}
+{"key": "f1_nb_187_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Skillet of sausage and vegetables on a stove with a cutting board behind; no bus."}
+{"key": "f1_nb_188_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Deli sandwich on a Styrofoam clamshell on a park picnic table; no boat."}
+{"key": "f1_nb_188_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Roast beef sandwich on a takeout box at an outdoor table; no boat."}
+{"key": "f1_nb_189_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Pack of dogs running in an open meadow; no couch."}
+{"key": "f1_nb_189_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Dogs playing in a grassy park; no couch."}
+{"key": "f1_nb_190_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Garden table with book, folded umbrella, phone, keys and mug; the book cover shows a coastline, no airplane."}
+{"key": "f1_nb_190_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Patio table with open book, umbrella, mug and glasses; no airplane in the sky or elsewhere."}
+{"key": "f1_nb_191_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Kitchen table with two sandwiches and a lattice cherry pie; no snowboard."}
+{"key": "f1_nb_191_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Picnic table with sandwiches and a lattice pie in a garden; no snowboard."}
+{"key": "f1_nb_192_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Meadow with deer, hares, fox, badger and birds; no handbag."}
+{"key": "f1_nb_192_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Deer herd, boar, hares and birds in a hillside meadow; no handbag."}
+{"key": "f1_nb_193_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Gothic clock tower with a gargoyle against blue sky; no sports ball."}
+{"key": "f1_nb_193_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Clock tower with giant gargoyle over a pedestrian square; no sports ball."}
+{"key": "f1_nb_194_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Stilt cabin and canoe on a bayou; no toilet fixture visible."}
+{"key": "f1_nb_194_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Swamp cabin with a small outhouse shed beside it, but no toilet fixture itself is visible."}
+{"key": "f1_nb_195_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Island-themed birthday cake with fondant palms, hut, boats and human figures; no cat."}
+{"key": "f1_nb_195_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Tropical birthday cake at a party table; fondant figures include a turtle but no cat."}
+{"key": "f1_nb_196_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Grey Labrador sitting on a striped sofa in a living room; no tennis racket."}
+{"key": "f1_nb_196_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Blue-dyed dog on a striped couch; no tennis racket anywhere in the room."}
+{"key": "f1_nb_197_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two bear cubs wrestling in a shallow stream; no sports ball."}
+{"key": "f1_nb_197_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two bear cubs play-fighting in a mountain river; no sports ball."}
+{"key": "f1_nb_198_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cafe table with a tray of sandwiches, chips, salt shaker and iced tea; no stop sign."}
+{"key": "f1_nb_198_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Tray with two sandwich plates, salt shaker and iced tea in a busy cafe; no stop sign."}
+{"key": "f1_nb_199_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Collie driving a flock of sheep across Highland pasture; sky and hills are empty of birds."}
+{"key": "f1_nb_199_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Collie herding sheep in a walled dale; no bird in the sky or on the ground."}

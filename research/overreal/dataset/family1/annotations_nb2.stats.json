@@ -1,0 +1,96 @@
+{
+  "n_images": 1000,
+  "n_realized": 25,
+  "rate": 0.025,
+  "by_bin": {
+    "implausible": {
+      "n": 500,
+      "realized": 3,
+      "rate": 0.006
+    },
+    "plausible": {
+      "n": 500,
+      "realized": 22,
+      "rate": 0.044
+    }
+  },
+  "n_items": 500,
+  "items_with_any_realization": 22,
+  "items_with_both_samples_realized": 3,
+  "realized_by_target": [
+    [
+      "keyboard",
+      4
+    ],
+    [
+      "spoon",
+      3
+    ],
+    [
+      "cup",
+      3
+    ],
+    [
+      "backpack",
+      2
+    ],
+    [
+      "dining table",
+      2
+    ],
+    [
+      "book",
+      1
+    ],
+    [
+      "toilet",
+      1
+    ],
+    [
+      "bottle",
+      1
+    ],
+    [
+      "car",
+      1
+    ],
+    [
+      "kite",
+      1
+    ],
+    [
+      "mouse",
+      1
+    ],
+    [
+      "bowl",
+      1
+    ],
+    [
+      "sheep",
+      1
+    ],
+    [
+      "chair",
+      1
+    ],
+    [
+      "wine glass",
+      1
+    ],
+    [
+      "traffic light",
+      1
+    ]
+  ],
+  "confidence_of_realized": {
+    "high": 6,
+    "medium": 16,
+    "low": 3
+  },
+  "depiction_only": 2,
+  "low_confidence_negatives": 28,
+  "missing_keys": [],
+  "extra_keys": [],
+  "duplicate_keys": []
+}

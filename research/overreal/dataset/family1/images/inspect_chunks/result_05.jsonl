@@ -1,0 +1,50 @@
+{"key": "f1_nb_125_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Night street corner with signs, houses, parked cars and a fire hydrant; no refrigerator."}
+{"key": "f1_nb_125_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Night sidewalk with street signs, lamp post, trash bin and parked cars; no refrigerator."}
+{"key": "f1_nb_126_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Savanna full of zebras; distant specks are more zebras, no giraffe."}
+{"key": "f1_nb_126_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Herd of zebras on plains with acacia trees; no giraffe."}
+{"key": "f1_nb_127_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Desk with laptop, plush alpaca and teddy bear, mug and keyboard; no horse."}
+{"key": "f1_nb_127_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Desk with laptop, teddy bear, plush fox and toy mouse; no horse."}
+{"key": "f1_nb_128_s0", "realized": true, "confidence": "medium", "depiction_only": false, "evidence": "Blurred glass bottle with a narrow neck stands on the background table at upper right."}
+{"key": "f1_nb_128_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Plate of pizza held over a table with a drinking glass and napkin; blurred cafe background shows no bottle."}
+{"key": "f1_nb_129_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Busy city intersection with traffic lights, buses and street signs; no bowl."}
+{"key": "f1_nb_129_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Downtown crossing with stop signs, bus, taxis and pedestrians; no bowl."}
+{"key": "f1_nb_130_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Beige living room with blue sofa, purple accents, vases and books; no sheep."}
+{"key": "f1_nb_130_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Living room with blue sofa, armchairs, potted plant and rug; no sheep."}
+{"key": "f1_nb_131_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Stuffed animals on a couch; the wall shelf holds a candle, plants and a photo frame but no books."}
+{"key": "f1_nb_131_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Plush toys on a sofa; the shelf unit behind holds teapots, jars and photo frames, no books."}
+{"key": "f1_nb_132_s0", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "Banana and lidded food container on a counter; a blurred round metal item sits in the background dish rack but is too indistinct to call a bowl."}
+{"key": "f1_nb_132_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Banana and lidded container; background has a lidded sugar canister, potted basil and wooden spoon, no bowl."}
+{"key": "f1_nb_133_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Farmers market vegetable baskets and chalkboard signs; no fork."}
+{"key": "f1_nb_133_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Market stall of vegetable baskets with price signs; no fork."}
+{"key": "f1_nb_134_s0", "realized": true, "confidence": "medium", "depiction_only": false, "evidence": "The laptop's own built-in keyboard is fully visible under the typing hand; no separate standalone keyboard."}
+{"key": "f1_nb_134_s1", "realized": true, "confidence": "medium", "depiction_only": false, "evidence": "The Sony laptop's integrated keyboard is clearly visible; no separate standalone keyboard."}
+{"key": "f1_nb_135_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Hillside pasture filled with sheep and lambs; no cow."}
+{"key": "f1_nb_135_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Large flock of sheep on green hillside pasture; no cow."}
+{"key": "f1_nb_136_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Open white laptop whose base is a blank featureless surface with no keys at all."}
+{"key": "f1_nb_136_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Open white laptop with a completely keyless blank base; no keyboard anywhere on the desk."}
+{"key": "f1_nb_137_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bowl of vegetable soup on a table with mugs, pepper mill and window onto a garden; no car."}
+{"key": "f1_nb_137_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bowl of soup on a rustic table with spoon and glass; no car."}
+{"key": "f1_nb_138_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Holstein cow and calf in a field; distant white specks are sheep, no dog."}
+{"key": "f1_nb_138_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Hereford cow and calf in a pasture with fence and hedgerow; no dog."}
+{"key": "f1_nb_139_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "ICE train at a covered platform with travelers and suitcases; no sports ball."}
+{"key": "f1_nb_139_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Red high-speed train at a station hall with commuters and rolling luggage; no sports ball."}
+{"key": "f1_nb_140_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Friends eating pizza off flat metal trays with beer mugs and pitchers; no bowl."}
+{"key": "f1_nb_140_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Outdoor table with pizza boxes, a flat metal pizza tray, plates and glasses; no bowl."}
+{"key": "f1_nb_141_s0", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "Man eating a sandwich at a picnic table; metal utensil caddies on this and a background table hold something too indistinct at normal scale to identify as a fork."}
+{"key": "f1_nb_141_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Man eating pho with chopsticks and a spoon; no fork on any visible table."}
+{"key": "f1_nb_142_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Herd of moose crossing snow in a boreal forest; no horse."}
+{"key": "f1_nb_142_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Moose walking through deep snow below snowy peaks; no horse."}
+{"key": "f1_nb_143_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Kitchen oven with an overflowing bake, spice jars and towels; no truck."}
+{"key": "f1_nb_143_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Close view of an open oven with a bubbling casserole; no truck."}
+{"key": "f1_nb_144_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Zebras grazing on open savanna; no giraffe."}
+{"key": "f1_nb_144_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Zebras grazing in dry grassland with acacias; no giraffe."}
+{"key": "f1_nb_145_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two cats with a wooden stool, bench, bookshelf and plants; no couch."}
+{"key": "f1_nb_145_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two cats by a wooden stool on a rug with a bookshelf behind; no couch."}
+{"key": "f1_nb_146_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Poster-covered bedroom with desk, turntable, guitar and bed; the round objects are vinyl records, no frisbee."}
+{"key": "f1_nb_146_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Poster-covered bedroom; the black disc on the floor is a vinyl record, not a frisbee."}
+{"key": "f1_nb_147_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Adult and baby elephant on a savanna track; no bench."}
+{"key": "f1_nb_147_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Elephant and calf walking a dirt road across grassland; no bench."}
+{"key": "f1_nb_148_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Banana split in a glass dish on a diner table with a spoon; no baseball bat."}
+{"key": "f1_nb_148_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Banana split with spoons in an ice cream parlor; no baseball bat."}
+{"key": "f1_nb_149_s0", "realized": true, "confidence": "low", "depiction_only": false, "evidence": "A blurred pedestrian walking on the path at right appears to carry a dark backpack on his shoulders; small in frame."}
+{"key": "f1_nb_149_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Bronze couple on a park bench; the few distant pedestrians carry nothing identifiable as a backpack."}

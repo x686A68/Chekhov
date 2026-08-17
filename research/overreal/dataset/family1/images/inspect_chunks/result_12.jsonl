@@ -1,0 +1,50 @@
+{"key": "f1_nb_300_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Waterfront promenade with Ferris wheel, boats and pedestrians; no baseball bat anywhere."}
+{"key": "f1_nb_300_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Lakeside Ferris wheel with food stand and walkers; no baseball bat visible."}
+{"key": "f1_nb_301_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Dim bedroom with laptop, mug, bed and framed prints; no cow present."}
+{"key": "f1_nb_301_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Dark study with laptop, lamp and posters; no cow present."}
+{"key": "f1_nb_302_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Dusk Thames scene with Big Ben, bridge and Ferris wheel; no sports ball anywhere."}
+{"key": "f1_nb_302_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Daytime Westminster Bridge with buses and London Eye; no sports ball visible."}
+{"key": "f1_nb_303_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Boy asleep on a rug with head on a sneaker; only a dresser and chair, no bed."}
+{"key": "f1_nb_303_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Man asleep on wooden floor on a shoe with backpacks and sleeping mats; no bed in the room."}
+{"key": "f1_nb_304_s0", "realized": true, "confidence": "medium", "depiction_only": false, "evidence": "A clear drinking glass (COCO cup) of water sits on the table at top center behind the plate."}
+{"key": "f1_nb_304_s1", "realized": true, "confidence": "medium", "depiction_only": false, "evidence": "A clear tumbler of water (COCO cup) stands on the table behind the bowl."}
+{"key": "f1_nb_305_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Two people in armchairs with Wii remotes; mugs on the coffee table but no spoon seen."}
+{"key": "f1_nb_305_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Living room Wii bowling scene; snack bowls, glasses and a remote on the table but no spoon."}
+{"key": "f1_nb_306_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Long dining table with plates, glasses and bottles; visible cutlery is forks and knives only."}
+{"key": "f1_nb_306_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Pub table with drinks and dishes; place settings show forks and knives, no spoon."}
+{"key": "f1_nb_307_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Indoor snack table with crackers, veg, nuts and dip; no traffic light in the room."}
+{"key": "f1_nb_307_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Kitchen table snack spread by a window; no traffic light anywhere."}
+{"key": "f1_nb_308_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two people in a grassy field flying a kite; neither carries a handbag and none on the ground."}
+{"key": "f1_nb_308_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Couple flying a kite on a coastal meadow; no handbag visible."}
+{"key": "f1_nb_309_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Kitchen counter with blender, oil bottle, glass and cutting board; only counters and cabinets, no dining table."}
+{"key": "f1_nb_309_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Blender and cutting board on a kitchen island; no dining table in the frame."}
+{"key": "f1_nb_310_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Teddy bears playing pond hockey outdoors by a cabin; no tv anywhere."}
+{"key": "f1_nb_310_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Indoor rink with stuffed-animal hockey players; upper right holds an arena scoreboard/clock, not a tv."}
+{"key": "f1_nb_311_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Kitchen counter with a real banana and a banana-shaped paper towel; no surfboard."}
+{"key": "f1_nb_311_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Banana and folded paper-towel banana on a counter; no surfboard present."}
+{"key": "f1_nb_312_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Dog in a bicycle basket on a cobbled street; no broccoli in the scene."}
+{"key": "f1_nb_312_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Dog in bike basket on a park path with blanket and bowl; no broccoli."}
+{"key": "f1_nb_313_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Robin on a garden table with banana peels and a bowl; no sports ball."}
+{"key": "f1_nb_313_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Black-and-orange bird on a picnic table with banana peels; no sports ball."}
+{"key": "f1_nb_314_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Park bench under a shady tree beside a gravel path; no carrot."}
+{"key": "f1_nb_314_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Weathered bench under a tree in a garden; no carrot present."}
+{"key": "f1_nb_315_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "All-white bathroom with toilet, sink and glass shower; no frisbee."}
+{"key": "f1_nb_315_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "White bathroom with vanity, toilet and walk-in shower; no frisbee."}
+{"key": "f1_nb_316_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Dark-blue kitchen seen through a doorway; no people and no tie."}
+{"key": "f1_nb_316_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Kitchen viewed through a wood-framed pass-through opening; no tie present."}
+{"key": "f1_nb_317_s0", "realized": true, "confidence": "medium", "depiction_only": false, "evidence": "A shallow ceramic bowl sits on the open shelf beside the cookbooks above the counter."}
+{"key": "f1_nb_317_s1", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "Kitchen through an arched doorway; open shelves hold stacked white dishes too indistinct at normal scale to confirm any bowl."}
+{"key": "f1_nb_318_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Lemon tree with two yellow lemons in a garden; only citrus, no apple."}
+{"key": "f1_nb_318_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Leafy lemon tree with two lemons; no apple anywhere."}
+{"key": "f1_nb_319_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bathroom with glass shower, wood vanity and toilet; framed art is a botanical print, no bird."}
+{"key": "f1_nb_319_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bathroom with corner glass shower and vanity; framed art is an abstract landscape, no bird."}
+{"key": "f1_nb_320_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Sandwiches on a cafe window ledge facing a cobbled street; no boat."}
+{"key": "f1_nb_320_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bakery window sandwich display with street beyond; no boat."}
+{"key": "f1_nb_321_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Living room with grand piano and framed art; no sheep, including in the pictures."}
+{"key": "f1_nb_321_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Living room with black grand piano, sofa and fireplace; no sheep."}
+{"key": "f1_nb_322_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Heron on a rock in a wooded river; no traffic light."}
+{"key": "f1_nb_322_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Egret on a midstream rock in a forest river; no traffic light."}
+{"key": "f1_nb_323_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Doughnut on a plate with a price card in a cafe; no surfboard."}
+{"key": "f1_nb_323_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Doughnut, price list and coffee cup on a cafe table; no surfboard."}
+{"key": "f1_nb_324_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Stuffed animals seated on a rug in a playroom; baskets and shelves only, no bench."}
+{"key": "f1_nb_324_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Teddy bears and plush toys on a rug by bookshelves; no bench."}

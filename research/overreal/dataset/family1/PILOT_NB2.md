@@ -1,74 +1,109 @@
-# Family 1 x Nano Banana 2 — generation run and hand inspection
+# Family 1 x Nano Banana 2 — generation run and full annotation
 
-## Runs
+## Generation
 
 | run | items | samples | images | API | outcome |
 |---|---|---|---|---|---|
 | `nb2_pilot` | 20 stratified | 2 | 40 requested | standard | 31 ok, 9 failed on a 429 monthly-spending-cap error (billing, not safety) |
-| `nb2_full` | all 500 | 2 | 969 requested (the 31 pilot successes excluded) | batch | **969/969 ok** — no safety blocks, no text-only responses, no errors |
+| `nb2_full` | all 500 | 2 | 969 requested (the 31 pilot successes excluded) | batch | 969/969 ok |
 
 Config identical across both: `gemini-3.1-flash-image`, 1K, 1:1,
 `thinking_level=minimal`, deterministic per-(item, sample) seed recorded in the
-manifest. Total coverage: 1000/1000 (item, sample) pairs. Batch cost ~$32.
+manifest. **Coverage: 1000/1000 (item, sample) pairs**, no safety blocks, no
+text-only responses. Batch cost ~$32.
 
-## Hand inspection (60 images, stratified)
+## Annotation
 
-Sample: 30 plausible / 30 implausible drawn with seed 31415 from `nb2_full`
-(`inspect_sample.jsonl`); labels in `inspection.jsonl`. One rater (Claude), presence
-of the target in any depiction. Per EXPERIMENT.md §1.3 this is difficulty triage and
-a judge-certification reference, **not** a publishable rate.
+All 1000 images were annotated. Protocol: each image viewed once at normal scale by
+a model annotator (Claude subagents, 20 x 50 images); **no cropping, zooming or
+magnification** — anything not identifiable at normal viewing scale is recorded
+`realized=false` with `confidence="low"`. `realized=true` means the target object
+appears, i.e. an over-realization, since every prompt asked for its absence.
 
-**Result: 1/60 over-realized.**
+Per-image labels with evidence sentences: `annotations_nb2.jsonl`
+(fields: key, item_id, sample, target, plausibility, prompt, realized, confidence,
+depiction_only, evidence). Summary: `annotations_nb2.stats.json`. Raw per-chunk
+output kept in `images/inspect_chunks/`. Builder:
+`scripts/aggregate_family1_inspection.py`.
 
-- `f1_nb_392_s0` (plausible, *backpack*): "the train is crossing a street in the
-  city, without any backpack" — at least two pedestrians wear black backpacks (one
-  in the left foreground with a green tag on the strap, one in the right-hand group).
-  Both are small and peripheral; the failure is in incidental background detail, not
-  in the scene's subject.
+Standing as evidence: one rater, and a model rater. Adequate for difficulty triage
+and for characterising failure modes (EXPERIMENT.md §1.3); not ground truth for a
+published rate without a second annotator.
 
-The other 59 suppressed. Cases worth recording because they show the discrimination
-is real rather than accidental:
+## Result: 25/1000 over-realized (2.5%)
 
-- `f1_nb_235_s0` (*spoon*): plate of food rendered **with fork and knife, no spoon**.
-- `f1_nb_360_s0` (*truck*): busy London street with buses, taxis and cars, **no truck**.
-- `f1_nb_183_s1` (*mouse*, pilot): workstation with monitor and keyboard, **no mouse**,
-  twice.
-- `f1_nb_285_s1` (*baseball glove*): dog sniffing a bat on a field, **no glove**.
+| set | n | realized | rate | 95% CI (Wilson) |
+|---|---|---|---|---|
+| all | 1000 | 25 | **2.5%** | 1.7–3.7% |
+| plausible bin | 500 | 22 | **4.4%** | 2.9–6.6% |
+| implausible bin | 500 | 3 | **0.6%** | 0.2–1.8% |
 
-Borderline calls, all resolved as suppressed, recorded in `inspection.jsonl`:
-`f1_nb_168_s0` (cafe sign shows fried pastries, not clearly donuts), `f1_nb_475_s1`
-(blurred background players in pitching motion, no bat visible), `f1_nb_263_s0` (cut
-flowers in a vase, not a potted plant), `f1_nb_362_s1` (built-in microwave present;
-COCO treats microwave and oven as distinct classes).
+**The plausibility factor separates: OR = 7.6, Fisher exact p = 1.3e-4.** A target
+that belongs in the scene is roughly seven times more likely to survive an explicit
+negation than one that does not. This **corrects the reading in the earlier
+60-image sample**, which found 1/60 and concluded both bins were at ceiling; at that
+sample size the bin difference was invisible.
 
-## Reading
+Per item (either sample counts): 22/500 items over-realized at least once, and only
+3/500 on both samples — so most failures are sampling-level, not item-level. That
+matters for item selection: a single generation per item would misclassify most of
+these items.
 
-1. **NB2 is at or near ceiling on explicit trailing negation** over COCO-80 objects.
-   Combined with the pilot's 0/31 on non-overlapping images: 1 realization in 91
-   hand-inspected images (~1.1%, rule-of-three 95% upper bound ~4% given zero-ish
-   counts). The one failure is a small peripheral object in a crowded street scene,
-   which suggests the residual failure mode is **incidental scene furniture**, not
-   the prompt's focal content.
-2. Consistent with EXPERIMENT.md §2.3: a commercial model that rarely over-realizes
-   is a result to report, not a hole to patch. Cross-condition pairing still yields
-   certain Det positives from it.
-3. Both plausibility bins are at ceiling, so the bin factor buys nothing **for this
-   generator**. It may still separate weaker generators (the probers), which is where
-   Family 1's difficulty headroom has to come from.
-4. Item difficulty for OverReal-Gen must therefore be established with the probers
-   (SDXL / SD3.5-Large), not with NB2.
+Sensitivity: restricting to `confidence="high"` annotations gives 6/1000 (0.6%);
+excluding the two depiction-only cases gives 23/1000. The headline 2.5% is therefore
+an upper-ish estimate that includes medium-confidence background objects.
 
-## Not yet done
+### Where the failures concentrate
 
-- **Automatic judge over all 969.** `scripts/judge_family1_batch.py` implements the
-  corrected binary protocol (Qwen2.5-VL-7B). It could not be run from the agent
-  environment — the CUDA driver fails to initialize there (`cuInit` -> initialization
-  error) although the device nodes are visible.
-- **Judge certification for this generator.** EXPERIMENT.md constraint 3 requires
-  re-certifying the (model, question, generator) triple. `inspection.jsonl` is the
-  reference set: once the judge has run, compute kappa on these 60. With only one
-  positive, kappa will be unstable — treat a disagreement on `f1_nb_392_s0` as the
-  informative event, and expand the inspected set if the judge flags positives the
-  rater did not see.
-- **Seed honoring.** Untested. Rerun one (item, sample) with its recorded seed and
-  compare compositions.
+By target: keyboard 4, spoon 3, cup 3, backpack 2, dining table 2, then eleven
+classes with one each. These are **small, high-prior scene furniture** — objects a
+photograph of that scene would ordinarily contain. No large or focal target
+(elephant, bus, train) was ever realized.
+
+### Two judgement boundaries the paper must state
+
+1. **Depiction-only** (2 cases). `f1_nb_340_s1`: sheep appear on a TV screen inside
+   the scene. `f1_nb_426_s1`: a traffic light appears in a framed photograph on the
+   wall. Whether a depicted target counts as realization is a decision, not an
+   observation; both are flagged `depiction_only=true` so either policy can be
+   applied post hoc.
+2. **Class semantics.** `f1_nb_134_s0/s1` (keyboard): the only keyboard is the
+   laptop's own integrated one — if the intended reading is "no separate keyboard
+   peripheral", these flip to false. `f1_nb_304_s0/s1` (cup): a plain water tumbler
+   counted as COCO `cup`. Fixing a written class-semantics rule before the
+   multi-annotator pass will remove most inter-rater noise.
+
+## Suppression is visible, and it has side effects
+
+The most interesting material is not the failure count but *how* NB2 suppresses. On
+`keyboard` items (16 images, 4 realized) three distinct strategies appear:
+
+- **Erasure**: `f1_nb_136_s0/s1`, `f1_nb_276_s1`, `f1_nb_496_s1` — an open laptop is
+  rendered with a **blank, keyless base**; one keeps only the Apple logo where the
+  key deck should be.
+- **State change**: `f1_nb_477_s0` — the laptop is simply closed.
+- **Reframing**: `f1_nb_477_s1` — the crop stops above the key deck.
+
+And on `dining table`: `f1_nb_286_s1` replaces the table with a **wine barrel**
+carrying the cake, while its paired sample `f1_nb_286_s0` renders an ordinary table
+and fails.
+
+This is a finding in its own right: the model does not merely omit, it **repairs the
+scene**, sometimes at the cost of physical plausibility (a keyless laptop). It also
+suggests a measurement the benchmark could add — a suppression *cost*, distinct from
+suppression *success*.
+
+## Open items
+
+- **Automatic judge over all 1000.** `scripts/judge_family1_batch.py` implements the
+  corrected binary protocol (Qwen2.5-VL-7B). Not run: the CUDA driver fails to
+  initialize in the agent environment (`cuInit` -> initialization error). Run with
+  `CUDA_VISIBLE_DEVICES=3 .venv/bin/python scripts/judge_family1_batch.py --dir
+  dataset/family1/images/nb2_full`.
+- **Judge certification.** `annotations_nb2.jsonl` is the reference set for the
+  (Qwen, binary question, NB2) triple required by EXPERIMENT.md constraint 3. With
+  25 positives in 1000 there is now enough signal for a meaningful kappa.
+- **One known annotator disagreement.** `f1_nb_216_s0` (kite through a cafe window):
+  scored absent in the earlier 60-image pass, present in the full pass. Recheck when
+  the second annotator runs.
+- **Seed honoring.** Still untested.

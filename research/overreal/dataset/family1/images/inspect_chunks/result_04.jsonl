@@ -1,0 +1,50 @@
+{"key": "f1_nb_100_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Salad plate on a wooden table by a window; only cutlery, glass, potted plant and chairs, no surfboard."}
+{"key": "f1_nb_100_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Salad plate in a kitchen scene with bowl, oil bottle and cutlery; no surfboard anywhere."}
+{"key": "f1_nb_101_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bathroom with vessel sink on wood shelf, toilet and shower; no oven present."}
+{"key": "f1_nb_101_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bathroom vanity with vessel sink, mirror and shower; no oven present."}
+{"key": "f1_nb_102_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two phones on a cafe table; street visible through window shows no stop sign."}
+{"key": "f1_nb_102_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two phones on a dining table; window shows a suburban house and lawn, no stop sign."}
+{"key": "f1_nb_103_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Pizza on a plate in a restaurant; only a fork and knife on the napkin, no toothbrush."}
+{"key": "f1_nb_103_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Pizza on a plate with fork, knife and a small wooden spoon in a cheese bowl; no toothbrush."}
+{"key": "f1_nb_104_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Grey and white cat beside a laptop on a desk with mug, notebook and bookshelf; no hot dog food item."}
+{"key": "f1_nb_104_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat next to a laptop with coffee mug and plants; no hot dog food item anywhere."}
+{"key": "f1_nb_105_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Double-sink bathroom with mirrors, towels and shower; no horse or horse imagery."}
+{"key": "f1_nb_105_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bathroom with double vanity, mirrors, tub and shower; no horse present."}
+{"key": "f1_nb_106_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Interior bathroom with toilet, sink, mirror and shower; no truck and no exterior street view."}
+{"key": "f1_nb_106_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bathroom with toilet, basin and mirror; frosted window shows no vehicles, no truck."}
+{"key": "f1_nb_107_s0", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "Plate of orange peel slices; a blurred background bowl holds indistinct pale chunks too out of focus to identify as apple."}
+{"key": "f1_nb_107_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Plate of curled orange peels with fork, glass and empty bowl; no apple."}
+{"key": "f1_nb_108_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Man in suit with beer bottle in a pedestrian alley with cafe seating; no car in the frame."}
+{"key": "f1_nb_108_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Man in suit with a beer glass in a pub courtyard with picnic tables; no car visible."}
+{"key": "f1_nb_109_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Elephant leaning on a metal pole in open savanna; only scrub, distant elephants and trees, no bench."}
+{"key": "f1_nb_109_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Elephant against a pole beside a dirt track in savanna; no bench anywhere."}
+{"key": "f1_nb_110_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Muddy dirt-bike parked on a rocky track; no mouse (animal or computer peripheral)."}
+{"key": "f1_nb_110_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Motorcycle on a rural dirt road; no mouse of either kind."}
+{"key": "f1_nb_111_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Derelict bathroom with debris, bottles and rags; no computer keyboard among the rubble."}
+{"key": "f1_nb_111_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Ruined bathroom with broken wood, pipes and tub; no keyboard present."}
+{"key": "f1_nb_112_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Plate of soba noodles with broccoli, scallions and sesame; no carrot."}
+{"key": "f1_nb_112_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Plate of fusilli with broccoli and herbs; no carrot present."}
+{"key": "f1_nb_113_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Flag-painted fire hydrant on a suburban sidewalk with cars and houses; no microwave."}
+{"key": "f1_nb_113_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Flag-painted hydrant on a residential street; only cars, houses and trees, no microwave."}
+{"key": "f1_nb_114_s0", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "Child biting pizza; blurred background place settings contain indistinct cutlery that cannot be identified as a knife at normal scale."}
+{"key": "f1_nb_114_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Child eating pizza at a family table; background plates and glasses show no identifiable knife."}
+{"key": "f1_nb_115_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Old TV with rabbit ears before a bookshelf; side table, plant and basket only, no couch."}
+{"key": "f1_nb_115_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "TV with antenna on a chest in front of bookshelves; only a wooden chair at right, no couch."}
+{"key": "f1_nb_116_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bowl of vegetables and platter of fruit on a kitchen table; basket, wooden spoon and herbs only, no baseball glove."}
+{"key": "f1_nb_116_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two bowls of produce on a kitchen table with cutting board and knife; no baseball glove."}
+{"key": "f1_nb_117_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Half-eaten burger with fries in a pub interior; no fire hydrant, and the street through the window shows none."}
+{"key": "f1_nb_117_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Burger and fries on a plate in a restaurant booth; no fire hydrant anywhere."}
+{"key": "f1_nb_118_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two giraffes browsing an acacia in daytime savanna; empty blue sky and no bird visible."}
+{"key": "f1_nb_118_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two giraffes at an acacia at sunset; no bird in the tree or sky."}
+{"key": "f1_nb_119_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Airliner taxiing on a snowy runway; only airport buildings and ground vehicles, no keyboard."}
+{"key": "f1_nb_119_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Airliner on a snow-covered runway; no keyboard anywhere in the scene."}
+{"key": "f1_nb_120_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Elevated subway over a busy city street; traffic is cars, taxis and box trucks, no bus identifiable."}
+{"key": "f1_nb_120_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Elevated L train above a downtown street with cars, a taxi and a motorcycle; no bus visible."}
+{"key": "f1_nb_121_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Teddy bears at a picnic blanket in a park; all plush toys are bears, no giraffe."}
+{"key": "f1_nb_121_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Four teddy bears around a picnic spread; no giraffe toy or animal."}
+{"key": "f1_nb_122_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Overhead mezze table with plates, bowls, cups and napkins; only spoons visible, no fork."}
+{"key": "f1_nb_122_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Dinner table with many dishes; cutlery visible is knives, spoons and tongs, no fork."}
+{"key": "f1_nb_123_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Pile of nuts with bowls of fruit on a kitchen table; no cat."}
+{"key": "f1_nb_123_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Nuts and assorted fruit on a rustic table; no cat anywhere."}
+{"key": "f1_nb_124_s0", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "Green and white bus on a city street; pedestrians carry shoulder bags and shopping bags, and any bag on the distant walkers is too small to identify as a backpack."}
+{"key": "f1_nb_124_s1", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "Green and white bus at a crosswalk; pedestrians carry totes, shopping bags and a briefcase, no clearly identifiable backpack."}

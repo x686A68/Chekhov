@@ -1,0 +1,50 @@
+{"key": "f1_nb_400_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Airport apron with jetliner, tugs and service trucks; no chairs anywhere."}
+{"key": "f1_nb_400_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Runway scene with A380, jet bridges and fuel trucks; no chairs visible."}
+{"key": "f1_nb_401_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Pigeon at outdoor cafe table; only bowls, spoon, glass and benches, no keyboard."}
+{"key": "f1_nb_401_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Pigeon eating bread bowl on cafe terrace; no keyboard in frame."}
+{"key": "f1_nb_402_s0", "realized": true, "confidence": "medium", "depiction_only": false, "evidence": "A seated official in navy at right courtside sits on a dark folding chair."}
+{"key": "f1_nb_402_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Tennis court with standing spectators behind the fence; no chair distinguishable."}
+{"key": "f1_nb_403_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Harbor with boats and surfboard racks; only boat biminis/canopies, no umbrella."}
+{"key": "f1_nb_403_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Marina scene; distant waterfront has awnings, but no umbrella identifiable at normal scale."}
+{"key": "f1_nb_404_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Mountain goat on a rock with alpine peaks; no cow anywhere."}
+{"key": "f1_nb_404_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Goat on a ridge above forested valleys; no cow present."}
+{"key": "f1_nb_405_s0", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "Aerial farmland below the Cessna has a few specks on the road, too tiny to identify as trucks at normal scale."}
+{"key": "f1_nb_405_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Cessna over farmland; roads are empty, no truck visible."}
+{"key": "f1_nb_406_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Station platform with suitcase, duffel and carrier bag; no giraffe."}
+{"key": "f1_nb_406_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Station concourse with luggage and commuters; no giraffe."}
+{"key": "f1_nb_407_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Tabby cat on a wooden window ledge; no bed in the scene."}
+{"key": "f1_nb_407_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat on window sill with a potted succulent; no bed."}
+{"key": "f1_nb_408_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Market table with green and red banana bunches; only wooden crates behind, no bowl."}
+{"key": "f1_nb_408_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Banana bunches on a rustic table; background holds a utensil crock and jug, no bowl."}
+{"key": "f1_nb_409_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Fruit bowl on a kitchen counter; no bed in the scene."}
+{"key": "f1_nb_409_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Kitchen table with fruit bowl and basket; no bed."}
+{"key": "f1_nb_410_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Dog in a pink jacket on a woodland trail; no couch."}
+{"key": "f1_nb_410_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Leashed dog on a park path by a pond; no couch."}
+{"key": "f1_nb_411_s0", "realized": true, "confidence": "medium", "depiction_only": false, "evidence": "A stemmed glass with lime and mint sits centre-right among the drinks, reading as a wine/stemware glass."}
+{"key": "f1_nb_411_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Mezze tray with mug, straight tumblers and a ginger beer bottle; no stemmed wine glass."}
+{"key": "f1_nb_412_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Row of pantry products on a white counter; background shows cabinets only, no refrigerator."}
+{"key": "f1_nb_412_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Products on a white sill/counter with utensil pot and basil; no refrigerator."}
+{"key": "f1_nb_413_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Lone giraffe browsing on savanna; no zebra anywhere in the plain."}
+{"key": "f1_nb_413_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Giraffe grazing alone on open grassland; no zebra visible."}
+{"key": "f1_nb_414_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Pub table with burger and fries; no boat anywhere, including wall pictures."}
+{"key": "f1_nb_414_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Restaurant interior with sandwich basket; no boat in frame or on the walls."}
+{"key": "f1_nb_415_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Herd in a village pasture is all cattle (Holstein and Hereford types); no sheep."}
+{"key": "f1_nb_415_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Cattle grazing near an English village; distant animals are also cows, no sheep."}
+{"key": "f1_nb_416_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Rainy backyard barbecue with burgers, sausages and salads on the table; no pizza."}
+{"key": "f1_nb_416_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Picnic table holds burgers, hot dog buns and salad bowls; no pizza."}
+{"key": "f1_nb_417_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Sparrow on a chain link fence beside a field; no boat."}
+{"key": "f1_nb_417_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Robin on a fence rail with meadow behind; no boat."}
+{"key": "f1_nb_418_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Kitchen table bowl of broccoli and green apples; no parking meter."}
+{"key": "f1_nb_418_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bowl of broccoli and apples on a kitchen table; no parking meter."}
+{"key": "f1_nb_419_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Three bears in a mountain meadow; no sports ball in the grass."}
+{"key": "f1_nb_419_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Three bears on a hillside meadow; no ball anywhere."}
+{"key": "f1_nb_420_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Toaster and scattered spoons on a kitchen counter; no cow."}
+{"key": "f1_nb_420_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Toaster ringed by spoons in a kitchen; no cow, including on jars or packaging."}
+{"key": "f1_nb_421_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Blue plate of stew and mash on a dining table; no snowboard."}
+{"key": "f1_nb_421_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Blue plate of beef stew in a pub interior; no snowboard."}
+{"key": "f1_nb_422_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Club sandwich and fries on a cafe table; no baseball bat."}
+{"key": "f1_nb_422_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Sandwich plate with fries and ketchup; no baseball bat in the restaurant background."}
+{"key": "f1_nb_423_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Carrot cake on a red plate; background shows an armchair and bookshelf, no bed."}
+{"key": "f1_nb_423_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cake slices on a red plate in a kitchen; a wooden chair is behind but no bed."}
+{"key": "f1_nb_424_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Man and boy with a canoe at a forest lake; no truck."}
+{"key": "f1_nb_424_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Man and child with a canoe at a dock; no truck anywhere."}

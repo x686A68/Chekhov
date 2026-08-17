@@ -1,0 +1,50 @@
+{"key": "f1_nb_225_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Decorated beer glass on a pub table with bokeh string lights; no plant in a pot anywhere."}
+{"key": "f1_nb_225_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Painted glass on a windowsill with fairy lights, saucer and spoon; no potted plant."}
+{"key": "f1_nb_226_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat scratching on a rug; sofa, coffee table, books and a monstera plant, but no bowl."}
+{"key": "f1_nb_226_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Cat on rug with couch, coffee table, books and a potted fern; nothing bowl-shaped visible."}
+{"key": "f1_nb_227_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Black cat on a standalone mechanical keyboard; separate mouse, mug, lamp and bookshelf, no laptop."}
+{"key": "f1_nb_227_s1", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "Cat on a wired keyboard; a pale slab at the left edge is too cropped/indistinct to identify as a laptop, and the dark screen at top-left reads as a monitor."}
+{"key": "f1_nb_228_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Watering can of purple flowers on a windowsill with a book and succulent; no skateboard."}
+{"key": "f1_nb_228_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Galvanized watering can with flowers on a garden table with a trowel; no skateboard."}
+{"key": "f1_nb_229_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Surfer riding a wave with cliffs behind; open water only, no chair."}
+{"key": "f1_nb_229_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Surfer carving a wave off a rocky coast; nothing chair-like in frame."}
+{"key": "f1_nb_230_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Zebra herd on dry savanna grass; only zebras, trees and sky, no bird discernible at normal scale."}
+{"key": "f1_nb_230_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Zebras grazing under a clear blue sky; no bird visible in sky or grass."}
+{"key": "f1_nb_231_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Pita with lettuce and tomato on a board with a knife and salad bowl; no baseball bat."}
+{"key": "f1_nb_231_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Pita salad plate on a kitchen table with forks and a bowl; no baseball bat."}
+{"key": "f1_nb_232_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two dogs asleep on a bed in a bedroom; framed photos and a plant, no airplane."}
+{"key": "f1_nb_232_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Golden retriever on a bed; bedroom interior with lamp and photos, no airplane."}
+{"key": "f1_nb_233_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Group of goats on straw in a barn; only goats, no dog."}
+{"key": "f1_nb_233_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Herd of goats in a straw-floored barn; no dog among them."}
+{"key": "f1_nb_234_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Twin beds pushed together; nightstands hold a lamp, clock, carafe and basket, no book."}
+{"key": "f1_nb_234_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Made bed with white bedding; nightstands hold lamp, glass and clock, no book anywhere."}
+{"key": "f1_nb_235_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Dinner plate with only a fork and a knife beside it; no spoon."}
+{"key": "f1_nb_235_s1", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "Platter with fork and knife on the napkin; a blurred utensil in a diner's hand in the background is too indistinct to call a spoon."}
+{"key": "f1_nb_236_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Adventure motorcycle beside a green tent in a valley; camp chair and gear but no bicycle."}
+{"key": "f1_nb_236_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "BMW motorcycle next to a Vango tent in an alpine meadow; no bicycle."}
+{"key": "f1_nb_237_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Large zebra herd on green savanna; no bird visible among the animals or in the sky."}
+{"key": "f1_nb_237_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Zebras grazing across a grass plain; nothing bird-like discernible at normal scale."}
+{"key": "f1_nb_238_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two twin beds in a green bedroom; lamp, books and a mug on the nightstand but no fork."}
+{"key": "f1_nb_238_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Twin beds in a blue bedroom with lamp, glass and books; no fork."}
+{"key": "f1_nb_239_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat asleep on an old trunk in a hallway with coats and boots; no cake."}
+{"key": "f1_nb_239_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat sleeping on a sticker-covered suitcase by a bed; no cake in the room."}
+{"key": "f1_nb_240_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Microwave on a wooden shelf with a jug, herbs and a potted basil; no necktie."}
+{"key": "f1_nb_240_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Black microwave on a shelf with basil, pepper mill and sugar bowl; no tie."}
+{"key": "f1_nb_241_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Glass table crowded with potted plants in a sunroom; no kite."}
+{"key": "f1_nb_241_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Glass dining table of houseplants in a living room; no kite anywhere."}
+{"key": "f1_nb_242_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Large salad plate with tomatoes, cucumber, walnuts and feta; no apple."}
+{"key": "f1_nb_242_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Salad bowl with avocado, tomato and a lemon wedge; no apple."}
+{"key": "f1_nb_243_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Wooden deck and patio with chairs, umbrella and planters; no bear."}
+{"key": "f1_nb_243_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Backyard deck with dining set and Adirondack chairs around a fire pit; no bear."}
+{"key": "f1_nb_244_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Broccoli-cheese bake in a foil pan on a table with a bowl and pepper mill; no fork."}
+{"key": "f1_nb_244_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Foil pan casserole with a glass, bowl and salt shaker nearby; no fork."}
+{"key": "f1_nb_245_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Ginger-and-white cat before a floor mirror in a living room; no pizza."}
+{"key": "f1_nb_245_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat facing an arched mirror by a bookcase; no pizza in the room or reflection."}
+{"key": "f1_nb_246_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Girl flying a kite with a boy seated on the grass; no handbag."}
+{"key": "f1_nb_246_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two children running with a kite in a meadow; neither carries a bag."}
+{"key": "f1_nb_247_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Pizza on a white plate with beer, shakers and cutlery; no surfboard."}
+{"key": "f1_nb_247_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Pizza on a plate in a restaurant with diners behind; no surfboard on walls or floor."}
+{"key": "f1_nb_248_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Brown bear sitting in a shallow pool in a zoo enclosure; no ball in the water or on the banks."}
+{"key": "f1_nb_248_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Brown bear lounging at the water's edge with visitors on a viewing deck; no sports ball."}
+{"key": "f1_nb_249_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Line of zebras crossing a sandy track; only zebras and scrub, no giraffe."}
+{"key": "f1_nb_249_s1", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "Zebras walking a sandy trail across the plain; a faint tan speck near distant trees is too small to identify as a giraffe."}

@@ -1,0 +1,50 @@
+{"key": "f1_nb_350_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Apple orchard with red-green apples on trees and ground; no oranges."}
+{"key": "f1_nb_350_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Apple orchard, all fruit is red apples; no oranges."}
+{"key": "f1_nb_351_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Plate with club sandwich and rigatoni on a wooden table; no tennis racket."}
+{"key": "f1_nb_351_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Sandwich and rigatoni bolognese with wine glass; no tennis racket."}
+{"key": "f1_nb_352_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Street corner with Main St / 4th Ave signs, bus and cars; no clock anywhere."}
+{"key": "f1_nb_352_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Elm St / Main St green signs over a street; no clock visible."}
+{"key": "f1_nb_353_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Times Square sign pole with many street signs and billboards; no clock face visible."}
+{"key": "f1_nb_353_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Midtown Manhattan sign stack with taxis and traffic lights; no clock visible."}
+{"key": "f1_nb_354_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Decorated dining table with salmon plate, wine and flowers; no stop sign."}
+{"key": "f1_nb_354_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Candlelit table with chicken dinner and hydrangeas; no stop sign."}
+{"key": "f1_nb_355_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Pizza pan and bicycle-shaped cutter on a table; no bed in the room."}
+{"key": "f1_nb_355_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Kitchen table with pizza and red bicycle cutter; no bed."}
+{"key": "f1_nb_356_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Green traffic light under a railway bridge on a wet street; no bowl."}
+{"key": "f1_nb_356_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Green traffic light under a concrete overpass with traffic; no bowl."}
+{"key": "f1_nb_357_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Red semi truck at the Biltmore/Short Coxe intersection; no banana (an 'Orange Peel' theater sign only)."}
+{"key": "f1_nb_357_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Blue semi truck crossing the intersection; no banana anywhere."}
+{"key": "f1_nb_358_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Diptych of living room and kitchen/dining room; no bear or teddy bear."}
+{"key": "f1_nb_358_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two framed prints of a living room and kitchen; no bear."}
+{"key": "f1_nb_359_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "WorldWays airliner on the runway, wide airport view; no cell phone visible."}
+{"key": "f1_nb_359_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Global Air 777 on the runway; no cell phone visible."}
+{"key": "f1_nb_360_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "London direction signs over a street of cars, taxis and double-decker buses; no truck."}
+{"key": "f1_nb_360_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Two green guide signs over dense traffic of cars, taxis, buses and a motorcycle; no vehicle reads as a truck at normal scale."}
+{"key": "f1_nb_361_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Man with a protest sign beside red London buses; no backpack on him or the other pedestrians."}
+{"key": "f1_nb_361_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Protester with a climate sign beside London buses; no backpack on any pedestrian."}
+{"key": "f1_nb_362_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Built-in microwave in navy cabinetry; no oven (microwave is not an oven)."}
+{"key": "f1_nb_362_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Built-in stainless microwave in pale cabinetry; no oven visible."}
+{"key": "f1_nb_363_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Single Holstein cow in a tall-grass field; no sheep in the pasture or background."}
+{"key": "f1_nb_363_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "One cow in a meadow with hedges and fence; no sheep."}
+{"key": "f1_nb_364_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Parking meter on a harbour wall with a fishing boat; no spoon."}
+{"key": "f1_nb_364_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Rusty parking meter on a beach with a trawler offshore; no spoon."}
+{"key": "f1_nb_365_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Tan bathroom with pedestal sink, toilet and tub; framed print is a field, no cow."}
+{"key": "f1_nb_365_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Tan bathroom with toilet and tub; no cow anywhere."}
+{"key": "f1_nb_366_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Living room with large abstract painting and bookshelf; no remote on tables or shelves."}
+{"key": "f1_nb_366_s1", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "Living room with painting, bookshelf and sofa; a small dark object on the side-table books is too indistinct to identify as a remote at normal scale."}
+{"key": "f1_nb_367_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "White tiled bathroom with toilet and pedestal sink; no truck."}
+{"key": "f1_nb_367_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "White tiled bathroom, toilet and sink; no truck."}
+{"key": "f1_nb_368_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Car park of hatchbacks in front of a stone hall with clock tower; every vehicle is a car."}
+{"key": "f1_nb_368_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Parking lot in front of a stone house, all passenger cars; no truck."}
+{"key": "f1_nb_369_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Kitchen island with a white farmhouse sink; no toilet."}
+{"key": "f1_nb_369_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Kitchen island with butler sink, range and fridge; no toilet."}
+{"key": "f1_nb_370_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cow moose and calf in dense brush; no horse."}
+{"key": "f1_nb_370_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Adult moose and calf on a forest trail; no horse."}
+{"key": "f1_nb_371_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Wooden desk with three laptops, two computer mice and a keyboard; no frisbee."}
+{"key": "f1_nb_371_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Desk with laptop, monitor, second laptop, keyboard and mice; no frisbee."}
+{"key": "f1_nb_372_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Chicken with mushrooms, broccoli and parsley; no carrot on the plate or table."}
+{"key": "f1_nb_372_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Chicken marsala with mushrooms and broccoli; no carrot."}
+{"key": "f1_nb_373_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Three plates of shrimp noodles/stir-fry with tea; no pizza."}
+{"key": "f1_nb_373_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Shrimp, vegetables, noodles and tea pots on a wooden table; no pizza."}
+{"key": "f1_nb_374_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Memorial bench with flower urns in a garden; no carrot."}
+{"key": "f1_nb_374_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Weathered memorial bench with two flower jugs; no carrot."}

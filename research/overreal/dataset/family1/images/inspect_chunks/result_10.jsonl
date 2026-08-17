@@ -1,0 +1,50 @@
+{"key": "f1_nb_250_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Urban intersection with traffic lights, cars and pedestrians; no bowl anywhere."}
+{"key": "f1_nb_250_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "City street with traffic lights and traffic; no bowl visible."}
+{"key": "f1_nb_251_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Shorn sheep beside a wool pile in a farmyard; no tennis racket present."}
+{"key": "f1_nb_251_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Shorn sheep with wool pile on sacking; no tennis racket present."}
+{"key": "f1_nb_252_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Long communal dinner table; diners hold glasses and cutlery, no phone visible."}
+{"key": "f1_nb_252_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Crowded trattoria table with food and wine; no cell phone seen."}
+{"key": "f1_nb_253_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Horse grazing in pasture with a train on the line behind; no banana."}
+{"key": "f1_nb_253_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Horse grazing in a fenced field with freight train behind; no banana."}
+{"key": "f1_nb_254_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Home desk with monitor, keyboard, mouse, headphones; no motorcycle."}
+{"key": "f1_nb_254_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Desk with monitor showing code, keyboard and mug; no motorcycle anywhere."}
+{"key": "f1_nb_255_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat asleep on striped bedspread in a bedroom; no kite."}
+{"key": "f1_nb_255_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Ginger cat on striped bedding; bedroom contains no kite."}
+{"key": "f1_nb_256_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Hotel room with two beds; nightstand holds a remote and clock, no book."}
+{"key": "f1_nb_256_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Two-bed hotel room; nightstand has a clock, bottle and a loose notepad, no book."}
+{"key": "f1_nb_257_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Teddy bear on bed with beers on nightstand; books present but no knife."}
+{"key": "f1_nb_257_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Teddy bear and beer bottles; a bottle opener lies on the table, not a knife."}
+{"key": "f1_nb_258_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Wooden bench overlooking a marina full of boats; no carrot."}
+{"key": "f1_nb_258_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Wooden bench above a harbour of moored boats; no carrot."}
+{"key": "f1_nb_259_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bento box of sushi and vegetables on a table; no tennis racket."}
+{"key": "f1_nb_259_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bento with sushi, edamame and salad; no tennis racket."}
+{"key": "f1_nb_260_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Plate of sliced steak and roasted broccoli; no carrot on plate or table."}
+{"key": "f1_nb_260_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Beef and broccoli with rice; no carrot present."}
+{"key": "f1_nb_261_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat on a sofa arm watching a TV showing birds; no traffic light."}
+{"key": "f1_nb_261_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat on rug beside TV showing a bird; no traffic light in the room or screen."}
+{"key": "f1_nb_262_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat with a dead bird in rough grass outdoors; no pizza."}
+{"key": "f1_nb_262_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Long-haired cat over a dead bird on a garden path; no pizza."}
+{"key": "f1_nb_263_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Wilting cut flowers in a clear glass vase; no potted plant anywhere."}
+{"key": "f1_nb_263_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Wilting bouquet in a glass vase on a windowsill; no potted plant."}
+{"key": "f1_nb_264_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Old ornaments (lantern, bell, cherub, bird figurine) on cobbles; no boat."}
+{"key": "f1_nb_264_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Vintage baubles on the floor of a ruined building; no boat."}
+{"key": "f1_nb_265_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Bed surrounded by liquor and soda bottles; only bottles, no cup or mug clearly visible."}
+{"key": "f1_nb_265_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Bedroom floor covered with coloured bottles; no cup among them."}
+{"key": "f1_nb_266_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Donut, coffee cup and ornate napkin holder in a cafe; no elephant."}
+{"key": "f1_nb_266_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Donut and coffee with napkin holders; no elephant in scene or decor."}
+{"key": "f1_nb_267_s0", "realized": true, "confidence": "high", "depiction_only": false, "evidence": "A white mug sits on the open shelf at upper right beside stacked bowls."}
+{"key": "f1_nb_267_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Black fridge reflecting a kitchen; kettle, coffee maker and fruit bowl visible but no cup."}
+{"key": "f1_nb_268_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Pub sign with a clock mounted beside it on a village street; no bottle."}
+{"key": "f1_nb_268_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Wooden town-square sign with a round clock; no bottle."}
+{"key": "f1_nb_269_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bathroom with toilet, vessel sink, mirror and toilet paper; no hot dog."}
+{"key": "f1_nb_269_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bathroom with toilet, sink, mirror, toilet paper; no hot dog."}
+{"key": "f1_nb_270_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Snowy crosswalk with pedestrians; the street is empty of vehicles."}
+{"key": "f1_nb_270_s1", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "Slushy street with pedestrians; a few indistinct dark shapes far down the road are too small to identify as cars."}
+{"key": "f1_nb_271_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Platter of donuts, muffins and danishes in a cafe; no toilet."}
+{"key": "f1_nb_271_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Plate of assorted pastries in a bakery; no toilet."}
+{"key": "f1_nb_272_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cars and a school bus waiting at a rail crossing for a freight train; no sink."}
+{"key": "f1_nb_272_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "School bus and cars stopped at a rail crossing with a BNSF freight train; no sink."}
+{"key": "f1_nb_273_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Cat sits on the mousepad in front of monitors; only a coaster and a round puck on the desk, no computer mouse."}
+{"key": "f1_nb_273_s1", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "Cat by desk with keyboard and empty mousepad; a small dark object at the right edge is too indistinct to call a mouse."}
+{"key": "f1_nb_274_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two giraffes on open savanna; no bird on them or in the sky."}
+{"key": "f1_nb_274_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two giraffes in grassland under a cloudy sky; no bird visible."}

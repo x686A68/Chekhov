@@ -1,0 +1,50 @@
+{"key": "f1_nb_325_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Polar bear on coastal rocks; only sea, cliffs and snow, no racket."}
+{"key": "f1_nb_325_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Polar bear on wet rocks by the surf; no tennis racket anywhere."}
+{"key": "f1_nb_326_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Carrots and a spoon on a wooden kitchen table; no bench visible."}
+{"key": "f1_nb_326_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Carrots and spoon on a farmhouse counter; no bench in frame."}
+{"key": "f1_nb_327_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two bear cubs wrestling on a limb in green forest; no ball."}
+{"key": "f1_nb_327_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two cubs playing on a mossy branch; no sports ball present."}
+{"key": "f1_nb_328_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Sheep grazing by a wood edge with a gate and fence; no handbag."}
+{"key": "f1_nb_328_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Flock grazing beside conifers and a stone wall; no handbag."}
+{"key": "f1_nb_329_s0", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "Brown bear climbing onto rocks; a tiny reddish smudge on the far right shoreline is too small/indistinct to identify as a boat at normal scale."}
+{"key": "f1_nb_329_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bear stepping out of water onto rocks; only driftwood logs on the shore, no boat."}
+{"key": "f1_nb_330_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bathroom with toilet and seashells; potted succulent and towels only, no orange."}
+{"key": "f1_nb_330_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Toilet with seashells on the lid; shelf holds a plant, jar and towels, no orange."}
+{"key": "f1_nb_331_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Boston Terrier on a couch beside brown sneakers; no food anywhere."}
+{"key": "f1_nb_331_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Terrier chewing a leather shoe on a couch; no sandwich in the room."}
+{"key": "f1_nb_332_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Kitchen table and counter clutter; a black-and-white striped woven wall hanging is textile, not a zebra, and framed art is too small to read."}
+{"key": "f1_nb_332_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Kitchen counter and table with books, fruit and utensils; no zebra."}
+{"key": "f1_nb_333_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Kitchen counter with stainless sink and faucet; no toilet."}
+{"key": "f1_nb_333_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Clean kitchen sink and counter run; no toilet visible."}
+{"key": "f1_nb_334_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Hot dog and mac-and-cheese on a plate; cutlery, glass and napkin only, no glove."}
+{"key": "f1_nb_334_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Plated hot dog and macaroni on a wooden table; no baseball glove."}
+{"key": "f1_nb_335_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Glass bowl of orange and strawberry pieces in a kitchen; no fire hydrant."}
+{"key": "f1_nb_335_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Fruit bowl on a table with mug and jug; no fire hydrant."}
+{"key": "f1_nb_336_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Tabby cat on a bed; nightstand holds books and a glass, no apple."}
+{"key": "f1_nb_336_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Ginger cat curled on a bed; nightstand has only a tissue box, no apple."}
+{"key": "f1_nb_337_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Hanging pub sign painted with a lantern; cottage and garden behind, no zebra."}
+{"key": "f1_nb_337_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Pub sign shows a painted owl with a beer; no zebra anywhere."}
+{"key": "f1_nb_338_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Dog asleep on a couch; console table holds baskets, tray and candle, no books visible."}
+{"key": "f1_nb_338_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Golden retriever on a couch; coffee table has remotes and a plant, no books seen."}
+{"key": "f1_nb_339_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Tabby cat sitting on garden grass; no laptop."}
+{"key": "f1_nb_339_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat in a wildflower meadow; no laptop present."}
+{"key": "f1_nb_340_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Woman in an armchair facing a TV showing forest/mountain footage; no sheep."}
+{"key": "f1_nb_340_s1", "realized": true, "confidence": "medium", "depiction_only": true, "evidence": "The TV screen shows a pastoral scene with a flock of white sheep behind the actors, so sheep appear only as on-screen content."}
+{"key": "f1_nb_341_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Plate of sliced banana, cookies and a spoon on a table; no toilet."}
+{"key": "f1_nb_341_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Banana slices and cookies on a plate in a kitchen; no toilet."}
+{"key": "f1_nb_342_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Yellow subway train on a bridge over the river; boats and skyline only, no remote."}
+{"key": "f1_nb_342_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "R train crossing the Manhattan Bridge; no remote control anywhere."}
+{"key": "f1_nb_343_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Butterflies on a plate of lemons on a garden table; no suitcase."}
+{"key": "f1_nb_343_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Lemons and butterflies on a patio table; garden background, no suitcase."}
+{"key": "f1_nb_344_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Red tour bus on a busy London street; taxis, cars and pedestrians only, no motorcycle spotted."}
+{"key": "f1_nb_344_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Big Bus tour bus with taxis, a van and cars; no motorcycle visible."}
+{"key": "f1_nb_345_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Three mustard-topped hot dogs on a dark plate with beer and cutlery; no toothbrush."}
+{"key": "f1_nb_345_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Hot dogs on a dark plate with a mustard bottle and fork; no toothbrush."}
+{"key": "f1_nb_346_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Shelf with blue-and-white vase, art, candle and black cloth; the leaning framed print shows a striped zebra-like animal, not a bear."}
+{"key": "f1_nb_346_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Shelf with flowers in a blue-and-white vase, books and black cloth; no bear."}
+{"key": "f1_nb_347_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "White stove by a garden window; no motorcycle."}
+{"key": "f1_nb_347_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "White range next to a window with potted plants; no motorcycle."}
+{"key": "f1_nb_348_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bench and lamp post in an open field; no mouse (animal or peripheral)."}
+{"key": "f1_nb_348_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bench beside a lamp post in a meadow; no mouse of either kind."}
+{"key": "f1_nb_349_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Airliners on taxiways with terminal and tower behind; no sink."}
+{"key": "f1_nb_349_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Delta and British Airways jets on airport pavement; no sink."}

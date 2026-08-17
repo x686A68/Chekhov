@@ -1,0 +1,50 @@
+{"key": "f1_nb_050_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Street scene with parking meter, cars, cafe and bookstore storefronts; no oven anywhere."}
+{"key": "f1_nb_050_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Sidewalk with digital parking meter and parked cars; no oven visible."}
+{"key": "f1_nb_051_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Plaza with metal umbrella sculpture, trees and pedestrians; no broccoli."}
+{"key": "f1_nb_051_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Stained-glass umbrella sculpture in a European square; no broccoli."}
+{"key": "f1_nb_052_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bowl of vegetable rice soup with spoon on wooden table; no baseball glove."}
+{"key": "f1_nb_052_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Bowl of vegetable barley soup with spoon; no baseball glove in frame."}
+{"key": "f1_nb_053_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Teddy bear and fabric fish on a wooden table with picture books behind; no spoon."}
+{"key": "f1_nb_053_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Teddy bear and plush fish on a table in a nursery; no spoon anywhere."}
+{"key": "f1_nb_054_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Man and orange cat asleep on a bed; only dressers and a nightstand, no chair."}
+{"key": "f1_nb_054_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Night bedroom with man and tabby cat on bed; dresser and basket present, no chair."}
+{"key": "f1_nb_055_s0", "realized": true, "confidence": "medium", "depiction_only": false, "evidence": "A small wooden spoon sits in the little wooden salt cellar at bottom-right of the beer-garden table."}
+{"key": "f1_nb_055_s1", "realized": true, "confidence": "medium", "depiction_only": false, "evidence": "The place setting on the left plate holds a fork plus a rounded-bowl utensil that reads as a spoon."}
+{"key": "f1_nb_056_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Kitten on an open laptop on a wood floor; coffee table, books, mouse and sofa but no tv."}
+{"key": "f1_nb_056_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Kitten on a laptop keyboard in a living room with couch, bookshelf and plant; no tv."}
+{"key": "f1_nb_057_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Urban intersection with traffic light, street signs, taxi and pedestrians; no sink."}
+{"key": "f1_nb_057_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Street corner with traffic lights and Maple/Oak signs; no sink anywhere."}
+{"key": "f1_nb_058_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Flowers in a jar beside a teapot on a table by a garden window; no sheep."}
+{"key": "f1_nb_058_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Vase of flowers and floral teapot on a windowsill overlooking a garden; no sheep."}
+{"key": "f1_nb_059_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cafe tray with latte and croissant; window shows a street and brick houses but no bus."}
+{"key": "f1_nb_059_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Coffee and croissant on a tray inside a cafe; no bus in the frame."}
+{"key": "f1_nb_060_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Stainless-steel kitchen with range, fridge and microwave; no zebra or zebra imagery."}
+{"key": "f1_nb_060_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Kitchen with stainless range, dishwasher and fridge; no zebra."}
+{"key": "f1_nb_061_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Red fire hydrant on a sidewalk beside hedges with street traffic behind; no bowl."}
+{"key": "f1_nb_061_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Fire hydrant amid sidewalk shrubs with a bus and cafe in the background; no bowl."}
+{"key": "f1_nb_062_s0", "realized": true, "confidence": "low", "depiction_only": false, "evidence": "Blurred white porcelain fixture at the far left behind the vanity reads as a toilet, but it is out of focus and hard to identify without magnifying."}
+{"key": "f1_nb_062_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Kitten in a bathroom sink with a green brush; only vanity, mirror and window visible, no toilet."}
+{"key": "f1_nb_063_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Desk with laptop, notebook and pen; bookshelf and framed art behind but no tv."}
+{"key": "f1_nb_063_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Home desk with laptop, notebook, pen and mug; artwork and corkboard on wall, no tv."}
+{"key": "f1_nb_064_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Stainless toaster on a marble counter; bread board, mug and sink area only, no microwave."}
+{"key": "f1_nb_064_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Toaster on a white kitchen counter with shelves and canisters; no microwave."}
+{"key": "f1_nb_065_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Kitten wrapped in a knit blanket on a couch; side table holds a mug and book, no orange fruit."}
+{"key": "f1_nb_065_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat under a grey knit blanket on a bed; no orange fruit in the scene."}
+{"key": "f1_nb_066_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Calico cat on a car roof on a night street; parked cars and streetlights only, no microwave."}
+{"key": "f1_nb_066_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Calico cat on a car roof in a suburban street at night; no microwave."}
+{"key": "f1_nb_067_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Agip service station with Vespas, a Fiat 500 and a cafe kiosk; no microwave."}
+{"key": "f1_nb_067_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Row of Vespas and a red Fiat on a cobbled Italian street with fuel signs; no microwave."}
+{"key": "f1_nb_068_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Giraffe and zebra on open savanna; no tv."}
+{"key": "f1_nb_068_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Giraffe and zebra standing in bushland; no tv."}
+{"key": "f1_nb_069_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two plates of sandwiches with fries on a cafe table; diners and chairs behind, no toilet."}
+{"key": "f1_nb_069_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Two sandwich plates on a wooden table in a brick-walled cafe; no toilet."}
+{"key": "f1_nb_070_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Desert-and-vegetable photo collage with a 'NO WINE' label; no wine glass in any panel."}
+{"key": "f1_nb_070_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Scattered polaroids of deserts and produce on wood; no wine glass anywhere."}
+{"key": "f1_nb_071_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Desk with mechanical keyboard, mouse and an external monitor on an arm; no laptop."}
+{"key": "f1_nb_071_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Keyboard and mouse on a wooden desk under a Dell desktop monitor; no laptop."}
+{"key": "f1_nb_072_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Black motorcycle parked in a grassy meadow; no bicycle."}
+{"key": "f1_nb_072_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Green vintage motorcycle in a wildflower field; no bicycle."}
+{"key": "f1_nb_073_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Grey cat on the hood of a black Mercedes in a driveway; no truck."}
+{"key": "f1_nb_073_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat on a black BMW hood on a residential street; other parked vehicles are all cars, no truck."}
+{"key": "f1_nb_074_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Open MacBook on a wooden desk with mug, notebook and glasses; no toothbrush."}
+{"key": "f1_nb_074_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "MacBook Pro on a desk with mouse, mug and notebook; no toothbrush."}

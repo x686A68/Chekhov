@@ -1,0 +1,50 @@
+{"key": "f1_nb_275_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Hillside house with bedroom and lounge visible; only forest, ferns and garden outside, no sheep."}
+{"key": "f1_nb_275_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Interior of cabin with bed, sofa and wood stove; view through windows shows only trees and hills."}
+{"key": "f1_nb_276_s0", "realized": true, "confidence": "high", "depiction_only": false, "evidence": "The open laptop's black key keyboard fills the lower deck of the machine in the foreground."}
+{"key": "f1_nb_276_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Laptop's lower deck is a blank silver surface with no keys at all; no separate keyboard on the desk."}
+{"key": "f1_nb_277_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Open suitcase and backpack on a railway platform with people and benches; no giraffe."}
+{"key": "f1_nb_277_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Suitcase and backpack on a bedroom floor; wall photos and lamp only, no giraffe."}
+{"key": "f1_nb_278_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Giraffes on savanna with distant zebras and elephants; no bird distinguishable at normal scale."}
+{"key": "f1_nb_278_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Five giraffes in a dry park enclosure under empty blue sky; no birds visible."}
+{"key": "f1_nb_279_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "AVENUE ROAD sign on a pole with houses and parked cars; no clock anywhere."}
+{"key": "f1_nb_279_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "W ELM STREET sign on a utility pole; street, houses and cars only, no clock."}
+{"key": "f1_nb_280_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Tabby cat looking up at a wall oven in a wooden kitchen; no boat anywhere."}
+{"key": "f1_nb_280_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat seated on kitchen tiles facing a Bosch wall oven; no boat, not even in pictures."}
+{"key": "f1_nb_281_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Teddy bear and alphabet blocks on a rug; shelf holds books, dolls and baskets, no tv."}
+{"key": "f1_nb_281_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Teddy bear with wooden blocks in a living room with bookcase and armchair; no tv screen."}
+{"key": "f1_nb_282_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Barred rooster at the surf line; empty horizon over the ocean, no boat."}
+{"key": "f1_nb_282_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Rooster on a wide beach with headland and driftwood; no boat on the water or shore."}
+{"key": "f1_nb_283_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Necktie-wearing cat on a bed; nightstand holds a lamp, books and framed photo, no laptop."}
+{"key": "f1_nb_283_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cat in a tie on floral bedding; nightstand has books and a mug only, no laptop."}
+{"key": "f1_nb_284_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Styrofoam container with roast beef, mash, stuffing, broccoli, green beans and peas; no carrot."}
+{"key": "f1_nb_284_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Container with hummus, kebabs, rice, potatoes and red/green peppers; no piece identifiable as carrot at normal scale."}
+{"key": "f1_nb_285_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Golden retriever sniffing a bat at home plate; empty bleachers and fence, no glove."}
+{"key": "f1_nb_285_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Dog with a Louisville Slugger by the dugout; the dugout bench is bare, no baseball glove."}
+{"key": "f1_nb_286_s0", "realized": true, "confidence": "medium", "depiction_only": false, "evidence": "The tiered cake stands on a rustic four-legged wooden table in the centre foreground."}
+{"key": "f1_nb_286_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cake sits on a wine barrel on gravel; no table anywhere in the garden scene."}
+{"key": "f1_nb_287_s0", "realized": false, "confidence": "low", "depiction_only": false, "evidence": "Foreground has a plate, glasses, mug and a wooden pepper mill; a dark blurred bottle-like shape on the far background table is too indistinct to identify at normal scale."}
+{"key": "f1_nb_287_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Restaurant table with plate, cutlery and a water glass; background shows a wine glass and pepper mill but no clear bottle."}
+{"key": "f1_nb_288_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Golden retriever with a remote under its paw on a rug; sofas, coffee table and bookshelf only, no bird."}
+{"key": "f1_nb_288_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Dog asleep beside a remote on a Persian rug; living room contains no bird."}
+{"key": "f1_nb_289_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "LNER train at York platform with passengers and luggage; no spoon."}
+{"key": "f1_nb_289_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "DB train at a platform with waiting passengers and a station clock; no spoon."}
+{"key": "f1_nb_290_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Cottage kitchen with a stoneware jug of tulips on a wooden table; no tennis racket."}
+{"key": "f1_nb_290_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Glass vase of tulips on a kitchen table with cookbook and mug; no tennis racket."}
+{"key": "f1_nb_291_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Fluffy dog by a park trail sign among hydrangeas and lavender; no broccoli."}
+{"key": "f1_nb_291_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Golden puppy beside a wooden trail sign in woodland; only grass and shrubs, no broccoli."}
+{"key": "f1_nb_292_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Teddy bear in front of labelled moving boxes in a garage with pegboard tools; no fire hydrant."}
+{"key": "f1_nb_292_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Teddy bear against stacked storage boxes in a brick basement; no fire hydrant."}
+{"key": "f1_nb_293_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Hillside pasture filled with sheep; distant animals are all sheep-shaped, no cow identifiable."}
+{"key": "f1_nb_293_s1", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Dales field of grazing sheep with stone barn; no cow among the flock at normal scale."}
+{"key": "f1_nb_294_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Teddy bear holding a toothbrush on a shelf in a playroom with books and toys; no toilet."}
+{"key": "f1_nb_294_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Stuffed bunny with a toothbrush on a dresser in a child's bedroom; no toilet."}
+{"key": "f1_nb_295_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Man working under an open car hood with a ginger cat on the fender; garage interior shows no microwave."}
+{"key": "f1_nb_295_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Tabby cat perched on the raised bonnet of a blue car on a driveway; no microwave."}
+{"key": "f1_nb_296_s0", "realized": true, "confidence": "medium", "depiction_only": false, "evidence": "A grey rounded computer mouse sits on the lego desktop just to the right of the laptop, among the minifigures."}
+{"key": "f1_nb_296_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Laptop on a lego desk with pen pot and a phone in a lego stand; no computer mouse or animal."}
+{"key": "f1_nb_297_s0", "realized": false, "confidence": "medium", "depiction_only": false, "evidence": "Salmon plate with a fork on the napkin and a spoon-like utensil at the plate edge; no knife blade visible."}
+{"key": "f1_nb_297_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Chicken plate with only a fork and a spoon laid on the napkin; no knife."}
+{"key": "f1_nb_298_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Sprinkled doughnut in a glass clip-top jar on a kitchen counter; no traffic light."}
+{"key": "f1_nb_298_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Glazed doughnut inside a lidded glass dish on a wooden table; no traffic light."}
+{"key": "f1_nb_299_s0", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Polar bear splashing among coloured plastic balls in an arctic bay; no baseball glove."}
+{"key": "f1_nb_299_s1", "realized": false, "confidence": "high", "depiction_only": false, "evidence": "Polar bear batting coloured balls in glacial water; no baseball glove anywhere."}
