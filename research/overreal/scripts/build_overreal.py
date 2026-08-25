@@ -220,6 +220,16 @@ def main():
                              parsed[original_idx][0].name,
                              f"{len(hits)} candidates, lowest number chosen")
 
+            # item-level exclusion: if the Gemini original itself was overridden
+            # to "integrated", the whole item is dropped from analysis
+            if original_idx is not None:
+                _, _, _, o_l2, o_agree, _ = parsed[original_idx]
+                if o_agree is False and o_l2 == "integrated":
+                    parsed = [(p, raw, l1, l2, ag, False)
+                              for p, raw, l1, l2, ag, _ in parsed]
+                    flag("item_excluded", fam_lc, src_dir.name, "",
+                         "original overridden to integrated; all images excluded")
+
             # pass 2: copy + emit records
             for seq, (p, _, label_1, label_2, agreement, included) in enumerate(parsed):
                 ext = ".jpg" if p.suffix.lower() == ".jpeg" else p.suffix.lower()
