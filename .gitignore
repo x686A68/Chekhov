@@ -21,3 +21,6 @@ __pycache__/
 
 # OverReal dataset pulled from Google Drive (images + index sheets, ~2GB) — not versioned
 data/
+
+# API keys — never commit
+.env
