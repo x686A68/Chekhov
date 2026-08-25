@@ -245,8 +245,8 @@ def main():
                     "annotator": annotator,
                     "prompt": meta.get("prompt"),
                     "target": meta.get("target"),
-                    "label_1": label_1,
-                    "label_2": label_2,
+                    "label_1": [label_1] if label_1 else [],
+                    "label_2": [label_2] if label_2 else [],
                     "agreement": agreement,
                     "included": included,
                     "generator": ("gemini-2.5-flash-image" if seq == original_idx
