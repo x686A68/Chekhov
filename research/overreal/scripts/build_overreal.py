@@ -249,7 +249,8 @@ def main():
                     "label_2": label_2,
                     "agreement": agreement,
                     "included": included,
-                    "is_original": seq == original_idx,
+                    "generator": ("gemini-2.5-flash-image" if seq == original_idx
+                                  else "augmented"),
                     "raw_path": str(p.relative_to(RAW.parent)),
                 })
 
@@ -276,7 +277,8 @@ Load with: `datasets.load_dataset("imagefolder", data_dir=".")`.
 - labels: disruptive / silent / integrated / withheld
 - `label_1` first annotator, `label_2` adjudicated final label (override wins),
   `agreement` whether annotator 2 said ok, `included=False` -> drop from analysis,
-  `is_original` file referenced by the Index "Original" column (Gemini original)
+  `generator` gemini-2.5-flash-image for the Gemini original (the file the
+  Index "Original" column references), augmented for all derived images
 - see `audit_log.csv` for every judgment call made during conversion
 """, encoding="utf-8")
 
