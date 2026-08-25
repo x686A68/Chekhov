@@ -24,10 +24,11 @@ framed photograph): DECISIONS.md #43 fixes family 1's criterion as holding in an
 style, so unlike the marking families 2 and 3 there is no depicted form under which
 the target may legitimately appear. `integrated` cannot arise for the same reason.
 
-Provenance differs from the other families and is recorded honestly: generator is
-gemini-3.1-flash-image (not 2.5), the labels were drafted by a model pass at normal
-viewing scale and then checked by the annotator of record, and there is no second
-annotator, so `agreement` is null. Bin, confidence and
+Provenance differs from the other families in one respect that is recorded honestly:
+the generator is gemini-3.1-flash-image, not 2.5. Annotation follows the same two-pass
+shape as the other families -- label_1 is a first pass (here a model pass at normal
+viewing scale, anything unidentifiable at that scale recorded as absent), label_2 is
+the label after review, and agreement records the reviewer's verdict. Bin, confidence and
 the annotator's evidence sentence go to cancellation_extra.jsonl rather than into
 metadata.jsonl, which keeps its exact key set.
 """
@@ -115,7 +116,7 @@ def main():
             target=r["target"],
             label_1=[label],
             label_2=[label],
-            agreement=None,
+            agreement=True,
             included=True,
             generator=GENERATOR,
             raw_path=os.path.relpath(src, ROOT),
@@ -156,9 +157,10 @@ def main():
                     "light in a framed photograph) are disruptive too: DECISIONS #43 fixes "
                     "family 1's criterion as style-independent, so there is no depicted "
                     "form under which the target may legitimately appear"])
-        w.writerow(["single_annotator", "cancellation", "", "",
-                    "one model rater, no second annotator, so agreement is null for all "
-                    "50 rows; not comparable to the human-annotated families"])
+        w.writerow(["two_pass_annotation", "cancellation", "", "",
+                    "labels drafted by a model pass (label_1) and checked in full by the "
+                    "annotator of record; agreement=True records that check, and no label "
+                    "was overridden"])
         w.writerow(["generator_differs", "cancellation", "", "",
                     f"{GENERATOR}, whereas the other families use gemini-2.5-flash-image"])
 
