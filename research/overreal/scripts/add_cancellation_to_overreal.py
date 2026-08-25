@@ -12,12 +12,17 @@ one included; s0 if both samples failed), plus 28 correctly-suppressed items cho
 the split comes out balanced 25/25 across the plausible / implausible bins.
 
 Label mapping onto the shared outcome vocabulary (paper 2.2):
-  realized=False -> withheld   target left out, picture coherent
-  realized=True  -> silent     target slips in as background or detail while the
-                               picture still holds together
-No cancellation failure is `disruptive`: none of the 25 realizations breaks the scene
-(they are all incidental scene furniture). `integrated` cannot arise here — family 1
-gives the target no status under which it may legitimately be shown.
+  realized=False -> withheld     target left out, picture coherent
+  realized=True  -> disruptive   the target is present although the prompt cancelled
+                                 its existence, so the picture contradicts the prompt
+
+Family 1 admits no other failure label. `silent` requires the realization to leave the
+picture consistent with what was asked; under an explicit "no X" device any X at all
+puts the image in contradiction with its prompt, however incidental the object is.
+That includes the two depiction-only cases (sheep on a TV screen, a traffic light in a
+framed photograph): DECISIONS.md #43 fixes family 1's criterion as holding in any
+style, so unlike the marking families 2 and 3 there is no depicted form under which
+the target may legitimately appear. `integrated` cannot arise for the same reason.
 
 Provenance differs from the other families and is recorded honestly: generator is
 gemini-3.1-flash-image (not 2.5), annotation is one model rater at normal viewing
@@ -96,7 +101,7 @@ def main():
         os.makedirs(os.path.join(IMG_DIR, pid))
         rel = f"images/cancellation/{pid}/image_000{ext}"
         shutil.copy2(src, os.path.join(DS, rel))
-        label = "silent" if r["realized"] else "withheld"
+        label = "disruptive" if r["realized"] else "withheld"
         run = "nb2_full" if "nb2_full" in src else "nb2_pilot"
         meta_rows.append(dict(
             file_name=rel,
@@ -140,19 +145,25 @@ def main():
                     f"the plausible/implausible bins 25/25"])
         w.writerow(["label_mapping", "cancellation", "", "",
                     "binary presence annotation mapped to the shared vocabulary: "
-                    "realized -> silent, suppressed -> withheld"])
+                    "realized -> disruptive, suppressed -> withheld"])
         w.writerow(["label_judgment", "cancellation", "", "",
-                    "no cancellation failure labelled disruptive: every realization is "
-                    "incidental scene furniture and leaves the picture coherent"])
+                    "every realization is disruptive: under an explicit 'no X' device the "
+                    "presence of X contradicts the prompt itself, however incidental the "
+                    "object is, so silent cannot arise in this family"])
+        w.writerow(["label_judgment", "cancellation", "", "",
+                    "the two depiction-only realizations (sheep on a TV screen, traffic "
+                    "light in a framed photograph) are disruptive too: DECISIONS #43 fixes "
+                    "family 1's criterion as style-independent, so there is no depicted "
+                    "form under which the target may legitimately appear"])
         w.writerow(["single_annotator", "cancellation", "", "",
                     "one model rater, no second annotator, so agreement is null for all "
                     "50 rows; not comparable to the human-annotated families"])
         w.writerow(["generator_differs", "cancellation", "", "",
                     f"{GENERATOR}, whereas the other families use gemini-2.5-flash-image"])
 
-    n_sil = sum(1 for r in meta_rows if r["label_2"] == ["silent"])
+    n_dis = sum(1 for r in meta_rows if r["label_2"] == ["disruptive"])
     print(f"wrote {len(meta_rows)} items -> {IMG_DIR}")
-    print(f"  silent {n_sil}  withheld {len(meta_rows) - n_sil}")
+    print(f"  disruptive {n_dis}  withheld {len(meta_rows) - n_dis}")
     print(f"  plausible {sum(1 for r in extra_rows if r['plausibility'] == 'plausible')}"
           f"  implausible {sum(1 for r in extra_rows if r['plausibility'] == 'implausible')}")
 
