@@ -15,10 +15,10 @@ Image filename convention: <label1>__<label2>.<ext>
   Special case: "disruptive_silent.png" is a typo for "disruptive__silent".
 
 Output: data/overreal_v1/
-  images/<family>/<0001>/<000>.<ext>   (family-scoped numeric item ids,
+  images/<family>/prompt_0001/image_000.<ext>   (family-scoped numeric item ids,
                                         assigned in Index row order)
   metadata.jsonl                        one record per image
-  anomalies.csv                         everything that needed a judgment call
+  audit_log.csv                         everything that needed a judgment call
   README.md
 """
 
@@ -143,9 +143,9 @@ def main():
         for iid, key in enumerate(ordered, start=1):
             src_dir = disk[key]
             meta = index.get(key, {})
-            item_id = f"{fam_lc}/{iid:04d}"
+            item_id = f"{fam_lc}/prompt_{iid:04d}"
             annotator = src_dir.name.split("_")[0].capitalize()
-            dst_dir = OUT / "images" / fam_lc / f"{iid:04d}"
+            dst_dir = OUT / "images" / fam_lc / f"prompt_{iid:04d}"
             dst_dir.mkdir(parents=True)
 
             files = sorted(p for p in src_dir.iterdir()
@@ -223,12 +223,12 @@ def main():
             # pass 2: copy + emit records
             for seq, (p, _, label_1, label_2, agreement, included) in enumerate(parsed):
                 ext = ".jpg" if p.suffix.lower() == ".jpeg" else p.suffix.lower()
-                rel = f"images/{fam_lc}/{iid:04d}/{seq:03d}{ext}"
+                rel = f"images/{fam_lc}/prompt_{iid:04d}/image_{seq:03d}{ext}"
                 shutil.copy2(p, OUT / rel)
 
                 records.append({
                     "file_name": rel,
-                    "image_id": f"{item_id}/{seq:03d}",
+                    "image_id": f"{item_id}/image_{seq:03d}",
                     "family": fam_lc,
                     "item_id": item_id,
                     "source_folder": src_dir.name,
@@ -247,7 +247,7 @@ def main():
         for r in records:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
 
-    with open(OUT / "anomalies.csv", "w", newline="", encoding="utf-8") as f:
+    with open(OUT / "audit_log.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=["type", "family", "folder", "file", "detail"])
         w.writeheader()
         w.writerows(anomalies)
@@ -267,7 +267,7 @@ Load with: `datasets.load_dataset("imagefolder", data_dir=".")`.
 - `label_1` first annotator, `label_2` adjudicated final label (override wins),
   `agreement` whether annotator 2 said ok, `included=False` -> drop from analysis,
   `is_original` file referenced by the Index "Original" column (Gemini original)
-- see `anomalies.csv` for every judgment call made during conversion
+- see `audit_log.csv` for every judgment call made during conversion
 """, encoding="utf-8")
 
     print(f"records: {len(records)}  included: {n_inc}  "
