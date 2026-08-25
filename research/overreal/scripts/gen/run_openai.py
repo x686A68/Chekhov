@@ -47,24 +47,32 @@ def main():
     exp_done = ({r["item_id"] for r in read_jsonl(EXPANDED) if r["expander"] == "dalle3"}
                 if EXPANDED.exists() else set())
 
-    n_done = 0
+    n_done, consec_fail = 0, 0
     for item_id, family, prompt, sample in jobs:
         t0 = time.time()
         kwargs = dict(model=model_id, prompt=prompt, n=1, size="1024x1024")
-        if args.model == "gpt-image":
-            kwargs["quality"] = "medium"
-        else:
-            kwargs.update(quality="standard", response_format="b64_json")
+        kwargs["quality"] = "medium" if args.model == "gpt-image" else "standard"
         try:
             rsp = client.images.generate(**kwargs)
+            datum = rsp.data[0]
+            if getattr(datum, "b64_json", None):
+                raw = base64.b64decode(datum.b64_json)
+            else:                                   # dall-e-3 returns a URL now
+                import requests
+                r = requests.get(datum.url, timeout=120)
+                r.raise_for_status()
+                raw = r.content
         except Exception as e:  # noqa: BLE001 — log and move on; rerun picks it up
             print(f"[FAIL] {item_id} s{sample}: {type(e).__name__}: {str(e)[:200]}",
                   flush=True)
+            consec_fail += 1
+            if consec_fail >= 5:
+                raise SystemExit("5 consecutive failures — aborting run")
             continue
-        datum = rsp.data[0]
+        consec_fail = 0
         out = image_path(args.model, COND, item_id, sample)
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_bytes(base64.b64decode(datum.b64_json))
+        out.write_bytes(raw)
         revised = getattr(datum, "revised_prompt", None)
         append_jsonl(manifest_path(args.model, COND), {
             "item_id": item_id, "family": family, "model": args.model,
