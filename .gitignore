@@ -18,3 +18,6 @@ research/runs/**/*.log
 
 __pycache__/
 *.pyc
+
+# OverReal dataset pulled from Google Drive (images + index sheets, ~2GB) — not versioned
+data/
