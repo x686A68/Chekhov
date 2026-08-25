@@ -25,8 +25,9 @@ style, so unlike the marking families 2 and 3 there is no depicted form under wh
 the target may legitimately appear. `integrated` cannot arise for the same reason.
 
 Provenance differs from the other families and is recorded honestly: generator is
-gemini-3.1-flash-image (not 2.5), annotation is one model rater at normal viewing
-scale, and there is no second annotator, so `agreement` is null. Bin, confidence and
+gemini-3.1-flash-image (not 2.5), the labels were drafted by a model pass at normal
+viewing scale and then checked by the annotator of record, and there is no second
+annotator, so `agreement` is null. Bin, confidence and
 the annotator's evidence sentence go to cancellation_extra.jsonl rather than into
 metadata.jsonl, which keeps its exact key set.
 """
@@ -48,7 +49,7 @@ AUDIT = os.path.join(DS, "audit_log.csv")
 SEED = 20260814
 N_TOTAL, N_PER_BIN = 50, 25
 GENERATOR = "gemini-3.1-flash-image"
-ANNOTATOR = "claude-subagent"
+ANNOTATOR = "annotator_03"   # see data/annotator_map.private.json
 
 
 def main():
