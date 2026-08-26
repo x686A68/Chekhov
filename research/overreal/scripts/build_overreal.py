@@ -249,8 +249,14 @@ def main():
                     "label_2": [label_2] if label_2 else [],
                     "agreement": agreement,
                     "included": included,
-                    "generator": ("gemini-2.5-flash-image" if seq == original_idx
+                    "generator": ("gemini-2.5-flash-image-app" if seq == original_idx
                                   else "augmented"),
+                    "prompt_cond": "deployed" if seq == original_idx else None,
+                    "input_prompt": meta.get("prompt"),
+                    "seed": None,
+                    "gen_params": None,
+                    "annotated": True,
+                    "refused": False,
                     "raw_path": str(p.relative_to(RAW.parent)),
                 })
 

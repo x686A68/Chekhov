@@ -49,7 +49,7 @@ EXTRA = os.path.join(DS, "cancellation_extra.jsonl")
 AUDIT = os.path.join(DS, "audit_log.csv")
 SEED = 20260814
 N_TOTAL, N_PER_BIN = 50, 25
-GENERATOR = "gemini-3.1-flash-image"
+GENERATOR = "gemini-3.1-flash-image-api"
 ANNOTATOR = "annotator_03"   # see data/annotator_map.private.json
 
 
@@ -119,6 +119,12 @@ def main():
             agreement=True,
             included=True,
             generator=GENERATOR,
+            prompt_cond="deployed",
+            input_prompt=r["prompt"],
+            seed=r["sample"],
+            gen_params=None,
+            annotated=True,
+            refused=False,
             raw_path=os.path.relpath(src, ROOT),
         ))
         extra_rows.append(dict(
