@@ -5,23 +5,27 @@ nobody ever sees another person's labels. Annotators open a personal link
 (?annotator=Name&key=secret); keys live in the ANNOTATOR_KEYS Space secret.
 
 Dynamic assignment, at request time:
-  1. never an image the requester already labeled, never one with 2 labels
-  2. prefer images that already have exactly one label (by someone else)
-  3. otherwise a fresh image; random tie-break; a soft 10-minute hold keeps
-     two people off the same fresh image when alternatives exist
+  tier 1: phase-1 images (raw/deployed) with one existing label (not mine)
+  tier 2: fresh phase-1 images
+  tiers 3-4: the same for phase-2 (qwen/ideogram) images
+  random tie-break; a soft 10-minute hold keeps two people off the same
+  fresh image when alternatives exist.
+
+"Previous" steps back through the annotator's own history with their labels
+prefilled; submitting there overwrites (the import step takes the latest
+record per (image, annotator)).
 
 Results append to a per-session JSONL under ann_data/ and a CommitScheduler
 pushes them to the private annotations dataset every 2 minutes. On startup
-all previous shards are pulled, so restarts lose nothing.
+all previous shards are replayed in timestamp order, so restarts lose nothing.
 """
 import json
 import os
 import random
 import time
+import urllib.parse
 import uuid
 from pathlib import Path
-
-import urllib.parse
 
 import gradio as gr
 from PIL import Image
@@ -40,17 +44,22 @@ for line in open(tasks_path, encoding="utf-8"):
     r = json.loads(line)
     TASKS[r["image_id"]] = r
 
-# rebuild state from every shard previously committed
-state = {}   # image_id -> {annotator: [labels]}
+# replay every previously committed shard in timestamp order
+state = {}     # image_id -> {annotator: [labels]}
+history = {}   # annotator -> [image_id] in first-annotation order
+records = []
 try:
     snap = snapshot_download(ANN_REPO, repo_type="dataset", token=TOKEN,
                              allow_patterns=["*.jsonl"])
     for f in sorted(Path(snap).rglob("*.jsonl")):
-        for line in open(f, encoding="utf-8"):
-            r = json.loads(line)
-            state.setdefault(r["image_id"], {})[r["annotator"]] = r["labels"]
+        records += [json.loads(l) for l in open(f, encoding="utf-8") if l.strip()]
 except Exception as e:  # noqa: BLE001 — empty repo on first boot
     print("no previous annotations:", e)
+for r in sorted(records, key=lambda r: r.get("ts", "")):
+    state.setdefault(r["image_id"], {})[r["annotator"]] = r["labels"]
+    h = history.setdefault(r["annotator"], [])
+    if r["image_id"] not in h:
+        h.append(r["image_id"])
 
 ann_dir = Path("ann_data")
 ann_dir.mkdir(exist_ok=True)
@@ -59,14 +68,6 @@ scheduler = CommitScheduler(repo_id=ANN_REPO, repo_type="dataset",
                             folder_path=ann_dir, every=2, token=TOKEN)
 
 holds = {}  # image_id -> (annotator, ts)
-
-
-def is_phase1(iid):
-    """image_id: <fam>/prompt_NNNN/gen_<model>_<cond>_s<seed>; phase 1 = raw/deployed."""
-    tail = iid.rsplit("/", 1)[-1].removeprefix("gen_")
-    cond = tail.rsplit("_s", 1)[0].rsplit("_", 1)[-1]
-    return cond in ("raw", "deployed")
-
 
 GUIDE = """
 ### Label guide
@@ -94,6 +95,14 @@ You may select two labels, but **please prefer a single label** — pick two onl
 when the case is genuinely ambiguous.
 """
 
+
+def is_phase1(iid):
+    """image_id: <fam>/prompt_NNNN/gen_<model>_<cond>_s<seed>; phase 1 = raw/deployed."""
+    tail = iid.rsplit("/", 1)[-1].removeprefix("gen_")
+    cond = tail.rsplit("_s", 1)[0].rsplit("_", 1)[-1]
+    return cond in ("raw", "deployed")
+
+
 def auth(qs, request: gr.Request = None):
     q = {k: v[0] for k, v in urllib.parse.parse_qs((qs or "").lstrip("?")).items()}
     if not q and request is not None:
@@ -103,11 +112,19 @@ def auth(qs, request: gr.Request = None):
 
 
 def progress_text(name):
-    mine = sum(1 for a in state.values() if name in a)
+    mine = len(history.get(name, []))
     filled = sum(min(len(a), 2) for a in state.values())
-    goal = f" 🎉 goal reached — thank you!" if mine >= GOAL else ""
+    goal = " 🎉 goal reached — thank you!" if mine >= GOAL else ""
     return (f"**{name}** — you: **{mine} / {GOAL}**{goal} · "
             f"overall: {filled}/{2 * len(TASKS)}")
+
+
+def load_image(iid):
+    path = hf_hub_download(IMG_REPO, TASKS[iid]["file"],
+                           repo_type="dataset", token=TOKEN)
+    img = Image.open(path)
+    img.load()
+    return img
 
 
 def pick(name):
@@ -123,16 +140,13 @@ def pick(name):
         p1 = is_phase1(iid)
         tiers[(0 if p1 else 2) + (0 if len(anns) == 1 else 1)].append(iid)
     pool = next((t for k in range(4) if (t := tiers[k])), [])
-    if not pool:  # everything held or done: retry ignoring holds
+    if not pool:
         pool = [i for i in TASKS
                 if name not in state.get(i, {}) and len(state.get(i, {})) < 2]
     random.shuffle(pool)
     for iid in pool[:20]:  # image may not be uploaded yet — skip and try next
         try:
-            path = hf_hub_download(IMG_REPO, TASKS[iid]["file"],
-                                   repo_type="dataset", token=TOKEN)
-            img = Image.open(path)
-            img.load()
+            img = load_image(iid)
             holds[iid] = (name, now)
             return iid, img
         except Exception:  # noqa: BLE001
@@ -140,19 +154,38 @@ def pick(name):
     return None, None
 
 
+def render(iid, img, name, pos, prefill):
+    t = TASKS[iid]
+    note = f"  ·  *reviewing {pos} back — submitting overwrites*" if pos else ""
+    return (gr.update(visible=True), gr.update(visible=False),
+            img, f"**Prompt:** {t['prompt']}", f"**Target:** {t['target']}",
+            progress_text(name) + note, prefill, iid, pos)
+
+
 def serve(qs, request: gr.Request):
     name = auth(qs, request)
     if not name:
         return (gr.update(visible=False), gr.update(visible=True),
-                None, "", "", "", [], "")
-    iid, path = pick(name)
+                None, "", "", "", [], "", 0)
+    iid, img = pick(name)
     if iid is None:
         return (gr.update(visible=True), gr.update(visible=False),
-                None, "", "", progress_text(name) + " — no tasks left, thank you!", [], "")
-    t = TASKS[iid]
-    return (gr.update(visible=True), gr.update(visible=False),
-            path, f"**Prompt:** {t['prompt']}", f"**Target:** {t['target']}",
-            progress_text(name), [], iid)
+                None, "", "", progress_text(name) + " — no tasks left, thank you!",
+                [], "", 0)
+    return render(iid, img, name, 0, [])
+
+
+def previous(pos, qs, request: gr.Request):
+    name = auth(qs, request)
+    if not name:
+        return serve(qs, request)
+    h = history.get(name, [])
+    if pos >= len(h):
+        gr.Warning("No earlier annotation.")
+        return tuple(gr.skip() for _ in range(9))
+    pos += 1
+    iid = h[-pos]
+    return render(iid, load_image(iid), name, pos, state[iid][name])
 
 
 def cap_two(labels):
@@ -165,13 +198,16 @@ def submit(labels, iid, qs, request: gr.Request):
         return serve(qs, request)
     if not labels:
         gr.Warning("Pick at least one label.")
-        return tuple(gr.skip() for _ in range(8))
+        return tuple(gr.skip() for _ in range(9))
     rec = {"image_id": iid, "annotator": name, "labels": labels,
            "ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
     with scheduler.lock:
         with open(out_file, "a", encoding="utf-8") as f:
             f.write(json.dumps(rec, ensure_ascii=False) + "\n")
     state.setdefault(iid, {})[name] = labels
+    h = history.setdefault(name, [])
+    if iid not in h:
+        h.append(iid)
     holds.pop(iid, None)
     return serve(qs, request)
 
@@ -186,19 +222,24 @@ with gr.Blocks(title="OverReal annotation") as demo:
         prompt_md = gr.Markdown()
         target_md = gr.Markdown()
         labels_in = gr.CheckboxGroup(LABELS, label="Labels (pick 1–2)")
-        submit_btn = gr.Button("Submit & next", variant="primary")
-        skip_btn = gr.Button("Skip (come back later)")
+        with gr.Row():
+            prev_btn = gr.Button("← Previous")
+            submit_btn = gr.Button("Submit & next", variant="primary")
+            skip_btn = gr.Button("Skip (come back later)")
     with gr.Column(visible=True) as denied:
         gr.Markdown("### Invalid or missing link\nPlease use your personal "
                     "annotation link, or contact Jiahao.")
 
     iid_state = gr.State("")
+    pos_state = gr.State(0)
     qs_box = gr.Textbox(visible=False)
-    outs = [main, denied, img, prompt_md, target_md, prog, labels_in, iid_state]
+    outs = [main, denied, img, prompt_md, target_md, prog, labels_in,
+            iid_state, pos_state]
     demo.load(None, None, qs_box, js="() => window.location.search")
     qs_box.change(serve, qs_box, outs)
     labels_in.change(cap_two, labels_in, labels_in)
     submit_btn.click(submit, [labels_in, iid_state, qs_box], outs)
+    prev_btn.click(previous, [pos_state, qs_box], outs)
     skip_btn.click(serve, qs_box, outs)
 
 demo.launch(ssr_mode=False, show_error=True)
