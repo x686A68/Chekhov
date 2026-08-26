@@ -30,6 +30,7 @@ from huggingface_hub import CommitScheduler, hf_hub_download, snapshot_download
 IMG_REPO = "huangjh16/overreal-annotation-images"
 ANN_REPO = "huangjh16/overreal-annotations"
 LABELS = ["disruptive", "silent", "integrated", "withheld", "other"]
+GOAL = 500
 TOKEN = os.environ["HF_TOKEN"]
 KEYS = json.loads(os.environ["ANNOTATOR_KEYS"])  # {name: secret}
 
@@ -58,6 +59,13 @@ scheduler = CommitScheduler(repo_id=ANN_REPO, repo_type="dataset",
                             folder_path=ann_dir, every=2, token=TOKEN)
 
 holds = {}  # image_id -> (annotator, ts)
+
+
+def is_phase1(iid):
+    """image_id: <fam>/prompt_NNNN/gen_<model>_<cond>_s<seed>; phase 1 = raw/deployed."""
+    tail = iid.rsplit("/", 1)[-1].removeprefix("gen_")
+    cond = tail.rsplit("_s", 1)[0].rsplit("_", 1)[-1]
+    return cond in ("raw", "deployed")
 
 
 GUIDE = """
@@ -97,12 +105,14 @@ def auth(qs, request: gr.Request = None):
 def progress_text(name):
     mine = sum(1 for a in state.values() if name in a)
     filled = sum(min(len(a), 2) for a in state.values())
-    return f"**{name}** — you: {mine} · overall: {filled}/{2 * len(TASKS)}"
+    goal = f" 🎉 goal reached — thank you!" if mine >= GOAL else ""
+    return (f"**{name}** — you: **{mine} / {GOAL}**{goal} · "
+            f"overall: {filled}/{2 * len(TASKS)}")
 
 
 def pick(name):
     now = time.time()
-    fresh, half = [], []
+    tiers = {k: [] for k in range(4)}   # p1-half > p1-fresh > p2-half > p2-fresh
     for iid in TASKS:
         anns = state.get(iid, {})
         if name in anns or len(anns) >= 2:
@@ -110,8 +120,9 @@ def pick(name):
         h = holds.get(iid)
         if h and h[0] != name and now - h[1] < 600:
             continue
-        (half if len(anns) == 1 else fresh).append(iid)
-    pool = half or fresh
+        p1 = is_phase1(iid)
+        tiers[(0 if p1 else 2) + (0 if len(anns) == 1 else 1)].append(iid)
+    pool = next((t for k in range(4) if (t := tiers[k])), [])
     if not pool:  # everything held or done: retry ignoring holds
         pool = [i for i in TASKS
                 if name not in state.get(i, {}) and len(state.get(i, {})) < 2]
