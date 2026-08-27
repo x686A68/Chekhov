@@ -11,8 +11,10 @@ Dynamic assignment, at request time:
   random tie-break; a soft 10-minute hold keeps two people off the same
   fresh image when alternatives exist.
 
-"Previous" steps back through the annotator's own history with their labels
-prefilled; submitting there overwrites (the import step takes the latest
+Revisiting: a searchable directory of the annotator's own records sits under
+the progress bar (newest first, refreshed after every submit); selecting an
+entry, pressing "⤒ Latest", or stepping "← Previous" reopens that image with
+labels prefilled, and submitting overwrites (the import step takes the latest
 record per (image, annotator)).
 
 Results append to a per-session JSONL under ann_data/ and a CommitScheduler
@@ -95,6 +97,8 @@ You may select two labels, but **please prefer a single label** — pick two onl
 when the case is genuinely ambiguous.
 """
 
+N_OUT = 10  # components updated by every navigation handler
+
 
 def is_phase1(iid):
     """image_id: <fam>/prompt_NNNN/gen_<model>_<cond>_s<seed>; phase 1 = raw/deployed."""
@@ -117,6 +121,16 @@ def progress_text(name):
     goal = " 🎉 goal reached — thank you!" if mine >= GOAL else ""
     return (f"**{name}** — you: **{mine} / {GOAL}**{goal} · "
             f"overall: {filled}/{2 * len(TASKS)}")
+
+
+def hist_update(name):
+    h = history.get(name, [])
+    choices = []
+    for iid in reversed(h):                      # newest first
+        labels = ",".join(state.get(iid, {}).get(name, []))
+        choices.append(f"{iid} · [{labels}] · {TASKS[iid]['prompt'][:70]}")
+    return gr.update(choices=choices, value=None,
+                     label=f"Your {len(h)} annotations — click to revisit, type to search")
 
 
 def load_image(iid):
@@ -159,63 +173,54 @@ def render(iid, img, name, pos, prefill):
     note = f"  ·  *reviewing {pos} back — submitting overwrites*" if pos else ""
     return (gr.update(visible=True), gr.update(visible=False),
             img, f"**Prompt:** {t['prompt']}", f"**Target:** {t['target']}",
-            progress_text(name) + note, prefill, iid, pos)
+            progress_text(name) + note, prefill, iid, pos, hist_update(name))
 
 
 def serve(qs, request: gr.Request):
     name = auth(qs, request)
     if not name:
         return (gr.update(visible=False), gr.update(visible=True),
-                None, "", "", "", [], "", 0)
+                None, "", "", "", [], "", 0, gr.update())
     iid, img = pick(name)
     if iid is None:
         return (gr.update(visible=True), gr.update(visible=False),
                 None, "", "", progress_text(name) + " — no tasks left, thank you!",
-                [], "", 0)
+                [], "", 0, hist_update(name))
     return render(iid, img, name, 0, [])
+
+
+def revisit(name, pos):
+    h = history.get(name, [])
+    if not h or pos > len(h):
+        gr.Warning("No earlier annotation.")
+        return tuple(gr.skip() for _ in range(N_OUT))
+    iid = h[-pos]
+    return render(iid, load_image(iid), name, pos, state[iid][name])
 
 
 def previous(pos, qs, request: gr.Request):
     name = auth(qs, request)
     if not name:
         return serve(qs, request)
-    h = history.get(name, [])
-    if pos >= len(h):
-        gr.Warning("No earlier annotation.")
-        return tuple(gr.skip() for _ in range(9))
-    pos += 1
-    iid = h[-pos]
-    return render(iid, load_image(iid), name, pos, state[iid][name])
+    return revisit(name, pos + 1)
 
 
-def show_history(qs, request: gr.Request):
+def latest(qs, request: gr.Request):
     name = auth(qs, request)
     if not name:
-        return gr.update(visible=False)
-    h = history.get(name, [])
-    if not h:
-        gr.Warning("No annotations yet.")
-        return gr.update(visible=False)
-    choices = []
-    for iid in reversed(h):                      # newest first
-        labels = ",".join(state.get(iid, {}).get(name, []))
-        prompt = TASKS[iid]["prompt"][:70]
-        choices.append(f"{iid} · [{labels}] · {prompt}")
-    return gr.update(choices=choices, value=None, visible=True,
-                     label=f"Your annotations ({len(h)}) — click to revisit")
+        return serve(qs, request)
+    return revisit(name, 1)
 
 
 def goto(sel, qs, request: gr.Request):
     name = auth(qs, request)
     if not name or not sel:
-        return tuple(gr.skip() for _ in range(10))
+        return tuple(gr.skip() for _ in range(N_OUT))
     iid = sel.split(" · ")[0]
     h = history.get(name, [])
     if iid not in h:
-        return tuple(gr.skip() for _ in range(10))
-    pos = len(h) - h.index(iid)
-    out = render(iid, load_image(iid), name, pos, state[iid][name])
-    return out + (gr.update(visible=False, value=None),)
+        return tuple(gr.skip() for _ in range(N_OUT))
+    return revisit(name, len(h) - h.index(iid))
 
 
 def cap_two(labels):
@@ -228,7 +233,7 @@ def submit(labels, iid, qs, request: gr.Request):
         return serve(qs, request)
     if not labels:
         gr.Warning("Pick at least one label.")
-        return tuple(gr.skip() for _ in range(9))
+        return tuple(gr.skip() for _ in range(N_OUT))
     rec = {"image_id": iid, "annotator": name, "labels": labels,
            "ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
     with scheduler.lock:
@@ -245,6 +250,9 @@ def submit(labels, iid, qs, request: gr.Request):
 with gr.Blocks(title="OverReal annotation") as demo:
     with gr.Column(visible=False) as main:
         prog = gr.Markdown()
+        hist_dd = gr.Dropdown(choices=[], visible=True, interactive=True,
+                              filterable=True,
+                              label="Your annotations — click to revisit, type to search")
         with gr.Accordion("Label guide — read me first", open=True):
             gr.Markdown(GUIDE)
         img = gr.Image(type="pil", height=560, interactive=False,
@@ -254,11 +262,9 @@ with gr.Blocks(title="OverReal annotation") as demo:
         labels_in = gr.CheckboxGroup(LABELS, label="Labels (pick 1–2)")
         with gr.Row():
             prev_btn = gr.Button("← Previous")
+            latest_btn = gr.Button("⤒ Latest annotated")
             submit_btn = gr.Button("Submit & next", variant="primary")
             skip_btn = gr.Button("Skip (come back later)")
-            hist_btn = gr.Button("My annotations ↩")
-        hist_dd = gr.Dropdown(choices=[], visible=False, interactive=True,
-                              filterable=True)
     with gr.Column(visible=True) as denied:
         gr.Markdown("### Invalid or missing link\nPlease use your personal "
                     "annotation link, or contact Jiahao.")
@@ -267,14 +273,14 @@ with gr.Blocks(title="OverReal annotation") as demo:
     pos_state = gr.State(0)
     qs_box = gr.Textbox(visible=False)
     outs = [main, denied, img, prompt_md, target_md, prog, labels_in,
-            iid_state, pos_state]
+            iid_state, pos_state, hist_dd]
     demo.load(None, None, qs_box, js="() => window.location.search")
     qs_box.change(serve, qs_box, outs)
     labels_in.change(cap_two, labels_in, labels_in)
     submit_btn.click(submit, [labels_in, iid_state, qs_box], outs)
     prev_btn.click(previous, [pos_state, qs_box], outs)
+    latest_btn.click(latest, qs_box, outs)
     skip_btn.click(serve, qs_box, outs)
-    hist_btn.click(show_history, qs_box, hist_dd)
-    hist_dd.input(goto, [hist_dd, qs_box], outs + [hist_dd])
+    hist_dd.input(goto, [hist_dd, qs_box], outs)
 
 demo.launch(ssr_mode=False, show_error=True)
