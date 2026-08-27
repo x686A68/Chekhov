@@ -205,13 +205,6 @@ def previous(pos, qs, request: gr.Request):
     return revisit(name, pos + 1)
 
 
-def latest(qs, request: gr.Request):
-    name = auth(qs, request)
-    if not name:
-        return serve(qs, request)
-    return revisit(name, 1)
-
-
 def goto(sel, qs, request: gr.Request):
     name = auth(qs, request)
     if not name or not sel:
@@ -264,9 +257,8 @@ with gr.Blocks(title="OverReal annotation") as demo:
         labels_in = gr.CheckboxGroup(LABELS, label="Labels (pick 1–2)")
         with gr.Row():
             prev_btn = gr.Button("← Previous")
-            latest_btn = gr.Button("⤒ Latest annotated")
             submit_btn = gr.Button("Submit & next", variant="primary")
-            skip_btn = gr.Button("Skip (come back later)")
+            skip_btn = gr.Button("→ Resume / Skip")
     with gr.Column(visible=True) as denied:
         gr.Markdown("### Invalid or missing link\nPlease use your personal "
                     "annotation link, or contact Jiahao.")
@@ -281,7 +273,6 @@ with gr.Blocks(title="OverReal annotation") as demo:
     labels_in.change(cap_two, labels_in, labels_in)
     submit_btn.click(submit, [labels_in, iid_state, qs_box], outs)
     prev_btn.click(previous, [pos_state, qs_box], outs)
-    latest_btn.click(latest, qs_box, outs)
     skip_btn.click(serve, qs_box, outs)
     hist_dd.input(goto, [hist_dd, qs_box], outs)
 
