@@ -124,11 +124,11 @@ def progress_text(name):
 
 
 def hist_update(name):
+    # entries show only the ordinal and the prompt: image ids would leak the
+    # generator/condition and labels would prime the revisit
     h = history.get(name, [])
-    choices = []
-    for iid in reversed(h):                      # newest first
-        labels = ",".join(state.get(iid, {}).get(name, []))
-        choices.append(f"{iid} · [{labels}] · {TASKS[iid]['prompt'][:70]}")
+    choices = [f"#{n} · {TASKS[iid]['prompt'][:80]}"
+               for n, iid in sorted(enumerate(h, 1), reverse=True)]
     return gr.update(choices=choices, value=None,
                      label=f"Your {len(h)} annotations — click to revisit, type to search")
 
@@ -216,11 +216,13 @@ def goto(sel, qs, request: gr.Request):
     name = auth(qs, request)
     if not name or not sel:
         return tuple(gr.skip() for _ in range(N_OUT))
-    iid = sel.split(" · ")[0]
     h = history.get(name, [])
-    if iid not in h:
+    try:
+        n = int(sel.split(" · ")[0].lstrip("#"))
+        assert 1 <= n <= len(h)
+    except (ValueError, AssertionError):
         return tuple(gr.skip() for _ in range(N_OUT))
-    return revisit(name, len(h) - h.index(iid))
+    return revisit(name, len(h) - n + 1)
 
 
 def cap_two(labels):
