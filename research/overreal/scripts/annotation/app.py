@@ -188,6 +188,36 @@ def previous(pos, qs, request: gr.Request):
     return render(iid, load_image(iid), name, pos, state[iid][name])
 
 
+def show_history(qs, request: gr.Request):
+    name = auth(qs, request)
+    if not name:
+        return gr.update(visible=False)
+    h = history.get(name, [])
+    if not h:
+        gr.Warning("No annotations yet.")
+        return gr.update(visible=False)
+    choices = []
+    for iid in reversed(h):                      # newest first
+        labels = ",".join(state.get(iid, {}).get(name, []))
+        prompt = TASKS[iid]["prompt"][:70]
+        choices.append(f"{iid} · [{labels}] · {prompt}")
+    return gr.update(choices=choices, value=None, visible=True,
+                     label=f"Your annotations ({len(h)}) — click to revisit")
+
+
+def goto(sel, qs, request: gr.Request):
+    name = auth(qs, request)
+    if not name or not sel:
+        return tuple(gr.skip() for _ in range(10))
+    iid = sel.split(" · ")[0]
+    h = history.get(name, [])
+    if iid not in h:
+        return tuple(gr.skip() for _ in range(10))
+    pos = len(h) - h.index(iid)
+    out = render(iid, load_image(iid), name, pos, state[iid][name])
+    return out + (gr.update(visible=False, value=None),)
+
+
 def cap_two(labels):
     return labels[-2:] if len(labels) > 2 else labels
 
@@ -226,6 +256,9 @@ with gr.Blocks(title="OverReal annotation") as demo:
             prev_btn = gr.Button("← Previous")
             submit_btn = gr.Button("Submit & next", variant="primary")
             skip_btn = gr.Button("Skip (come back later)")
+            hist_btn = gr.Button("My annotations ↩")
+        hist_dd = gr.Dropdown(choices=[], visible=False, interactive=True,
+                              filterable=True)
     with gr.Column(visible=True) as denied:
         gr.Markdown("### Invalid or missing link\nPlease use your personal "
                     "annotation link, or contact Jiahao.")
@@ -241,5 +274,7 @@ with gr.Blocks(title="OverReal annotation") as demo:
     submit_btn.click(submit, [labels_in, iid_state, qs_box], outs)
     prev_btn.click(previous, [pos_state, qs_box], outs)
     skip_btn.click(serve, qs_box, outs)
+    hist_btn.click(show_history, qs_box, hist_dd)
+    hist_dd.input(goto, [hist_dd, qs_box], outs + [hist_dd])
 
 demo.launch(ssr_mode=False, show_error=True)
