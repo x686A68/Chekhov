@@ -97,16 +97,21 @@ def main():
     with open(OUT, "a", encoding="utf-8") as f:
         for n, r in enumerate(todo, 1):
             path, prompt = meta[r["image_id"]]
-            t0 = time.time()
-            score, model, err = judge_once(path, prompt)
-            if score is None:
+            while True:
+                t0 = time.time()
+                score, model, err = judge_once(path, prompt)
+                if score is not None:
+                    break
+                if err and ("limit" in str(err).lower() or "rate" in str(err).lower()):
+                    print("usage limit, retrying this image in 15 min", flush=True)
+                    time.sleep(900)
+                    continue
                 fails += 1
                 print(f"[FAIL] {r['image_id']}: {err}", flush=True)
-                if err and ("limit" in str(err).lower() or "rate" in str(err).lower()):
-                    print("usage limit suspected, sleeping 15 min", flush=True)
-                    time.sleep(900)
-                elif fails >= 8:
+                if fails >= 8:
                     raise SystemExit("8 failures, aborting for inspection")
+                break
+            if score is None:
                 continue
             fails = 0
             f.write(json.dumps({"image_id": r["image_id"], "score": score,
