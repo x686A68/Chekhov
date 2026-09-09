@@ -71,6 +71,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--pilot", action="store_true")
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--shard", default="0/1", help="i/n worker sharding")
     args = ap.parse_args()
 
     meta = {}
@@ -85,6 +86,8 @@ def main():
     if OUT.exists():
         done = {json.loads(l)["image_id"] for l in open(OUT, encoding="utf-8")}
     todo = [r for r in rows if r["image_id"] not in done]
+    i, nsh = map(int, args.shard.split("/"))
+    todo = [r for k, r in enumerate(todo) if k % nsh == i]
     if args.limit:
         todo = todo[:args.limit]
     print(f"LJ: {len(todo)} images to judge ({len(done)} done)", flush=True)
