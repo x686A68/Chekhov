@@ -58,6 +58,21 @@ def main():
                     acc[key].append(r["score"])
         means[metric] = {k: sum(v) / len(v) for k, v in acc.items()}
 
+    # LJ = per-image mean of the two judges; cell mean over images both judged
+    lj_by_img = collections.defaultdict(dict)
+    for name, fn in (("opus", "lj_subscription"), ("gpt", "lj_gpt")):
+        f = DS / "metrics" / f"{fn}.jsonl"
+        if f.exists():
+            for line in open(f, encoding="utf-8"):
+                r = json.loads(line)
+                lj_by_img[r["image_id"]][name] = r["score"]
+    acc = collections.defaultdict(list)
+    for iid, d in lj_by_img.items():
+        key = meta.get(iid)
+        if key and len(d) == 2:
+            acc[key].append((d["opus"] + d["gpt"]) / 2)
+    means["lj"] = {k: sum(v) / len(v) for k, v in acc.items() if len(v) >= 10}
+
     # block (b): outcome rates from the gold split
     import collections as _c
     gold = _c.defaultdict(list)
@@ -80,18 +95,21 @@ def main():
             if label is None:
                 continue
             for fi, fam in enumerate(FAMS):
+                ncols = len(ncol_types) + 1
                 for ci, ct in enumerate(ncol_types):
-                    grid[(ri, fi * (len(ncol_types) + 1) + ci)] = getval(gen, fam, ct)
+                    grid[(ri, fi * ncols + ci)] = getval(gen, fam, ct)
+                grid[(ri, fi * ncols + len(ncol_types))] = getval(gen, fam, "_extra")
             ri += 1
         return grid
 
-    def render_block(getval, col_types, fmts, minimize):
+    def render_block(getval, col_types, fmts, minimize, extra_fmt=None):
         grid = build_grid(getval, col_types)
-        ncols = len(col_types) + 1  # + trailing placeholder column
+        ncols = len(col_types) + 1  # + trailing extra column
         best = {}
         for fi in range(len(FAMS)):
-            for ci, ct in enumerate(col_types):
+            for ci in range(ncols):
                 col = fi * ncols + ci
+                ct = col_types[ci] if ci < len(col_types) else "_extra"
                 vals = [(v, r) for (r, c), v in grid.items() if c == col and v is not None]
                 if vals:
                     pick = min(vals) if ct in minimize else max(vals)
@@ -114,14 +132,16 @@ def main():
                         if best.get(col) == ri:
                             out = "\\textbf{" + out + "}"
                         cells.append(out)
-                cells.append("---")
+                ev = grid.get((ri, fi * ncols + len(col_types)))
+                cells.append(fmt_num(extra_fmt, ev) if (ev is not None and extra_fmt) else "---")
             lines.append(label + "& " + " & ".join(cells) + " \\\\")
             ri += 1
         return "\n".join(lines)
 
     block_a = render_block(
-        lambda g, f, m: means[m].get((g, f)),
-        [m for m, _ in METRICS], [f for _, f in METRICS], minimize=set())
+        lambda g, f, m: means["lj" if m == "_extra" else m].get((g, f)),
+        [m for m, _ in METRICS], [f for _, f in METRICS], minimize=set(),
+        extra_fmt="{:.1f}")
     block_b = render_block(
         lambda g, f, o: rates.get((g, f), {}).get(o),
         OUTS, ["{:.2f}"] * 4, minimize={"disruptive", "silent"})
