@@ -90,14 +90,31 @@ def run_hpsv2(todo, emit):
         emit(iid, float(s[0]))
 
 
+def run_vqascore(todo, emit):
+    # runs from the dedicated "vqascore" conda env (t2v-metrics pins an
+    # older transformers API than the main env carries)
+    import t2v_metrics
+    model = t2v_metrics.VQAScore(model="clip-flan-t5-xxl")
+    B = 8
+    for i in range(0, len(todo), B):
+        batch = todo[i:i + B]
+        scores = model(images=[p for _, p, _ in batch],
+                       texts=[t for _, _, t in batch])
+        for (iid, _, _), s_ in zip(batch, scores.diagonal().tolist()
+                                   if scores.ndim == 2 else scores.tolist()):
+            emit(iid, float(s_))
+
+
 RUNNERS = {"clipscore": run_clipscore, "pickscore": run_pickscore,
-           "hpsv2": run_hpsv2}
+           "hpsv2": run_hpsv2, "vqascore": run_vqascore}
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--metric", required=True, choices=list(RUNNERS))
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--sample", action="store_true",
+                    help="restrict to eval_sample.jsonl")
     args = ap.parse_args()
 
     OUT_DIR.mkdir(exist_ok=True)
@@ -106,6 +123,10 @@ def main():
     if out_path.exists():
         done = {json.loads(l)["image_id"] for l in open(out_path, encoding="utf-8")}
     rows = [r for r in load_rows() if r[0] not in done]
+    if args.sample:
+        keep = {json.loads(l)["image_id"]
+                for l in open(DS / "eval_sample.jsonl", encoding="utf-8")}
+        rows = [r for r in rows if r[0] in keep]
     if args.limit:
         rows = rows[:args.limit]
     print(f"{args.metric}: {len(rows)} images to score ({len(done)} done)", flush=True)
