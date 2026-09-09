@@ -94,7 +94,7 @@ def run_vqascore(todo, emit):
     # runs from the dedicated "vqascore" conda env (t2v-metrics pins an
     # older transformers API than the main env carries)
     import t2v_metrics
-    model = t2v_metrics.VQAScore(model="clip-flan-t5-xxl")
+    model = t2v_metrics.VQAScore(model="clip-flant5-xxl")
     B = 8
     for i in range(0, len(todo), B):
         batch = todo[i:i + B]

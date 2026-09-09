@@ -38,21 +38,29 @@ def main():
     n_done, consec_fail = 0, 0
     for item_id, family, prompt in jobs:
         t0 = time.time()
-        try:
-            rsp = client.models.generate_content(
-                model=args.model_id,
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    response_modalities=["TEXT", "IMAGE"]))
-            blobs = [p.inline_data.data for p in rsp.candidates[0].content.parts
-                     if getattr(p, "inline_data", None)]
-            if not blobs:
-                raise RuntimeError("no image part in response")
-        except Exception as e:  # noqa: BLE001 — log and move on; rerun picks it up
-            print(f"[FAIL] {item_id}: {type(e).__name__}: {str(e)[:200]}", flush=True)
+        blobs, last_err = [], None
+        for attempt in range(3):
+            try:
+                rsp = client.models.generate_content(
+                    model=args.model_id,
+                    contents=prompt,
+                    config=types.GenerateContentConfig(
+                        response_modalities=["TEXT", "IMAGE"]))
+                parts = rsp.candidates[0].content.parts or []
+                blobs = [p.inline_data.data for p in parts
+                         if getattr(p, "inline_data", None)]
+                if blobs:
+                    break
+                texts = " ".join(p.text for p in parts if getattr(p, "text", None))
+                last_err = f"no image; model said: {texts[:150]!r}"
+            except Exception as e:  # noqa: BLE001
+                last_err = f"{type(e).__name__}: {str(e)[:150]}"
+            time.sleep(2)
+        if not blobs:
+            print(f"[FAIL] {item_id}: {last_err}", flush=True)
             consec_fail += 1
-            if consec_fail >= 5:
-                raise SystemExit("5 consecutive failures — aborting run")
+            if consec_fail >= 10:
+                raise SystemExit("10 consecutive failures — aborting run")
             continue
         consec_fail = 0
         out = image_path("nanobanana", COND, item_id, 0)

@@ -41,7 +41,8 @@ def main():
         args.model, torch_dtype=torch.bfloat16, device_map="auto")
 
     system = official_system_prompt()
-    done = {r["item_id"] for r in read_jsonl(EXPANDED)} if EXPANDED.exists() else set()
+    done = ({r["item_id"] for r in read_jsonl(EXPANDED) if r["expander"] == "qwen"}
+            if EXPANDED.exists() else set())
     todo = [(i, f, p) for i, f, p in load_prompts("raw") if i not in done]
     print(f"{len(todo)} prompts to expand ({len(done)} already done)")
 
