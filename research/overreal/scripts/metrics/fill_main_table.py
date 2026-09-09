@@ -1,4 +1,9 @@
-"""Fill block (a) of the main-results table with computed metric means.
+"""Fill blocks (a) and (b) of the main-results table.
+
+Block (a): mean conventional metrics per generator x family (raw/deployed).
+Block (b): outcome rates from the Det gold split; a cell needs >= 10 gold
+images, otherwise ---. The best value per column is bolded (min for
+D.O./S.O./b, max elsewhere).
 
 Cells: mean metric over a generator's raw/deployed images of one family
 (the population matching block (b)'s outcome rows). CS/PS/HP come from the
@@ -53,29 +58,85 @@ def main():
                     acc[key].append(r["score"])
         means[metric] = {k: sum(v) / len(v) for k, v in acc.items()}
 
-    lines = []
-    for label, gen in ROWS:
-        if label is None:
-            lines.append("\\midrule")
-            continue
-        cells = []
-        for fam in FAMS:
-            for metric, fmt in METRICS:
-                v = means[metric].get((gen, fam))
-                cells.append(fmt_num(fmt, v) if v is not None else "---")
-            cells.append("---")   # LJ
-        lines.append(label + "& " + " & ".join(cells) + " \\\\")
-    block = "\n".join(lines)
+    # block (b): outcome rates from the gold split
+    import collections as _c
+    gold = _c.defaultdict(list)
+    for line in open(DS / "det_split.jsonl", encoding="utf-8"):
+        r = json.loads(line)
+        if r["split"] == "gold" and r["image_id"] in meta:
+            gold[meta[r["image_id"]]].append(set(r["gold_labels"]))
+    OUTS = ["disruptive", "silent", "integrated", "withheld"]
+    rates = {}
+    for key, labels in gold.items():
+        n = len(labels)
+        if n >= 10:
+            rates[key] = {o: sum(o in ls for ls in labels) / n for o in OUTS}
+
+    def build_grid(getval, ncol_types):
+        # grid[(row_idx, col_idx)] = float value or None
+        grid = {}
+        ri = 0
+        for label, gen in ROWS:
+            if label is None:
+                continue
+            for fi, fam in enumerate(FAMS):
+                for ci, ct in enumerate(ncol_types):
+                    grid[(ri, fi * (len(ncol_types) + 1) + ci)] = getval(gen, fam, ct)
+            ri += 1
+        return grid
+
+    def render_block(getval, col_types, fmts, minimize):
+        grid = build_grid(getval, col_types)
+        ncols = len(col_types) + 1  # + trailing placeholder column
+        best = {}
+        for fi in range(len(FAMS)):
+            for ci, ct in enumerate(col_types):
+                col = fi * ncols + ci
+                vals = [(v, r) for (r, c), v in grid.items() if c == col and v is not None]
+                if vals:
+                    pick = min(vals) if ct in minimize else max(vals)
+                    best[col] = pick[1]
+        lines = []
+        ri = 0
+        for label, gen in ROWS:
+            if label is None:
+                lines.append("\\midrule")
+                continue
+            cells = []
+            for fi, fam in enumerate(FAMS):
+                for ci, ct in enumerate(col_types):
+                    col = fi * ncols + ci
+                    v = grid.get((ri, col))
+                    if v is None:
+                        cells.append("---")
+                    else:
+                        out = fmt_num(fmts[ci], v)
+                        if best.get(col) == ri:
+                            out = "\\textbf{" + out + "}"
+                        cells.append(out)
+                cells.append("---")
+            lines.append(label + "& " + " & ".join(cells) + " \\\\")
+            ri += 1
+        return "\n".join(lines)
+
+    block_a = render_block(
+        lambda g, f, m: means[m].get((g, f)),
+        [m for m, _ in METRICS], [f for _, f in METRICS], minimize=set())
+    block_b = render_block(
+        lambda g, f, o: rates.get((g, f), {}).get(o),
+        OUTS, ["{:.2f}"] * 4, minimize={"disruptive", "silent"})
 
     s = open(TEX, encoding="utf-8").read()
-    marker = "\\multicolumn{21}{l}{\\emph{(a) Conventional evaluation}} \\\\\n"
-    i = s.index(marker) + len(marker)
-    i = s.index("\\midrule", i) + len("\\midrule")   # after the CS/VQ/... subheader
-    j = s.index("\\midrule\n\\multicolumn{21}{l}{\\emph{(b)", i)
-    s = s[:i] + "\n" + block + "\n" + s[j:]
+    for name, block in (("(a) Conventional evaluation", block_a),
+                        ("(b) Over-realization evaluation", block_b)):
+        marker = "\\multicolumn{21}{l}{\\emph{" + name + "}} \\\\\n"
+        i = s.index(marker) + len(marker)
+        i = s.index("\\midrule", i) + len("\\midrule")
+        j = s.index("\\bottomrule" if "(b)" in name else
+                    "\\midrule\n\\multicolumn{21}{l}{\\emph{(b)", i)
+        s = s[:i] + "\n" + block + "\n" + s[j:]
     open(TEX, "w", encoding="utf-8").write(s)
-    n = sum(1 for m, _ in METRICS for _ in means[m])
-    print(f"filled block (a); populated cells from {', '.join(m for m,_ in METRICS if means[m])}")
+    print("filled blocks (a) and (b) with bolded column bests")
 
 
 if __name__ == "__main__":
