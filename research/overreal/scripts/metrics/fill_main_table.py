@@ -132,8 +132,15 @@ def main():
                         if best.get(col) == ri:
                             out = "\\textbf{" + out + "}"
                         cells.append(out)
-                ev = grid.get((ri, fi * ncols + len(col_types)))
-                cells.append(fmt_num(extra_fmt, ev) if (ev is not None and extra_fmt) else "---")
+                ecol = fi * ncols + len(col_types)
+                ev = grid.get((ri, ecol))
+                if ev is not None and extra_fmt:
+                    out = fmt_num(extra_fmt, ev)
+                    if best.get(ecol) == ri:
+                        out = "\\textbf{" + out + "}"
+                    cells.append(out)
+                else:
+                    cells.append("---")
             lines.append(label + "& " + " & ".join(cells) + " \\\\")
             ri += 1
         return "\n".join(lines)
