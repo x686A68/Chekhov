@@ -1,8 +1,11 @@
 """Fill blocks (a) and (b) of the main-results table.
 
 Block (a): mean conventional metrics per generator x family (raw/deployed).
-Block (b): outcome rates from the Det gold split; a cell needs >= 10 gold
-images, otherwise ---. The best value per column is bolded (min for
+Block (b): outcome rates, by default from the Det gold split; with
+--outcomes auto --auto-file <jsonl> from an automatic-annotation run over the
+eval sample (scripts/autoannot). A cell needs >= 10 labelled images,
+otherwise ---. Rates are over all labelled images of the cell, so they need
+not sum to 1 (the "other" label is in the denominator). The best value per column is bolded (min for
 D.O./S.O./b, max elsewhere).
 
 Cells: mean metric over a generator's raw/deployed images of one family
@@ -10,6 +13,7 @@ Cells: mean metric over a generator's raw/deployed images of one family
 full runs; VQ from the eval sample when present; LJ stays --- until the
 judge exists. Formats: CS 0.00, VQ 0.00, PS 0.0, HP 0.000.
 """
+import argparse
 import json
 import collections
 from pathlib import Path
@@ -38,6 +42,10 @@ def fmt_num(fmt, v):
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--outcomes", choices=["gold", "auto"], default="gold")
+    ap.add_argument("--auto-file", default="")
+    args = ap.parse_args()
     meta = {}
     for line in open(DS / "metadata.jsonl", encoding="utf-8"):
         r = json.loads(line)
@@ -76,10 +84,21 @@ def main():
     # block (b): outcome rates from the gold split
     import collections as _c
     gold = _c.defaultdict(list)
-    for line in open(DS / "det_split.jsonl", encoding="utf-8"):
-        r = json.loads(line)
-        if r["split"] == "gold" and r["image_id"] in meta:
-            gold[meta[r["image_id"]]].append(set(r["gold_labels"]))
+    if args.outcomes == "gold":
+        for line in open(DS / "det_split.jsonl", encoding="utf-8"):
+            r = json.loads(line)
+            if r["split"] == "gold" and r["image_id"] in meta:
+                gold[meta[r["image_id"]]].append(set(r["gold_labels"]))
+    else:
+        import sys
+        sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "autoannot"))
+        from common import derive_label  # noqa: E402
+        sample = {json.loads(l)["image_id"] for l in open(DS / "eval_sample.jsonl", encoding="utf-8")}
+        for line in open(args.auto_file, encoding="utf-8"):
+            r = json.loads(line)
+            lab = derive_label(r["answers"], r["questions"])
+            if lab and r["image_id"] in meta and r["image_id"] in sample:
+                gold[meta[r["image_id"]]].append({lab})
     OUTS = ["disruptive", "silent", "integrated", "withheld"]
     rates = {}
     for key, labels in gold.items():
