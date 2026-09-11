@@ -97,3 +97,21 @@ Files: `final__claude-opus-5-api.jsonl` (test), `final__claude-opus-5-api__sampl
 (eval_sample + amb), `final__gpt-52-2025-12-11.jsonl` (test),
 `final__gpt-52-2025-12-11__sample.jsonl` (eval_sample + amb).
 Spend: Opus test split about 6 USD; GPT test split about 4.9M input tokens.
+
+## Full-sample runs (2026-09-11)
+
+Both annotators cover the eval sample plus the ambiguous split (7,432 images;
+3 rows of the sample have no image file). Table 2 block (b) is filled from
+the Opus run (`fill_main_table.py --outcomes auto`). Opus spend: about 90 USD
+for the sample, 6 USD for the test split.
+
+Opus vs GPT agreement on the sample (four labels / coarse):
+
+| family | n | agree | kappa4 | kappa2 |
+|---|---|---|---|---|
+| cancellation | 1,700 | 95% | 0.87 | 0.87 |
+| attribution | 1,788 | 79% | 0.69 | 0.81 |
+| figurative | 2,034 | 78% | 0.64 | 0.65 |
+| perspectival | 1,908 | 63% | 0.31 | 0.65 |
+
+"other" fires on 0 to 0.7% of images under Opus and 0.4 to 2.9% under GPT.
