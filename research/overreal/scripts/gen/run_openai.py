@@ -23,7 +23,7 @@ from common import (EXPANDED, append_jsonl, done_keys, image_path,
 
 MODEL_IDS = {"gpt-image": "gpt-image-1.5", "dalle3": "dall-e-3"}
 N_SAMPLES = {"gpt-image": 2, "dalle3": 2}
-COND = "deployed"
+COND = "deployed"       # default; --cond notarget runs the target-removed prompts
 
 
 def main():
@@ -31,14 +31,17 @@ def main():
     ap.add_argument("--model", required=True, choices=list(MODEL_IDS))
     ap.add_argument("--model-id", default=None, help="override the API model id")
     ap.add_argument("--limit", type=int, default=0, help="stop after N images")
+    ap.add_argument("--cond", choices=["deployed", "notarget"], default="deployed")
     args = ap.parse_args()
+    global COND
+    COND = args.cond
 
     load_env()
     from openai import OpenAI
     client = OpenAI()
     model_id = args.model_id or MODEL_IDS[args.model]
 
-    prompts = load_prompts("raw")
+    prompts = load_prompts("raw" if COND == "deployed" else COND)
     done = done_keys(args.model, COND)
     jobs = [(i, f, p, s) for i, f, p in prompts
             for s in range(N_SAMPLES[args.model]) if (i, s) not in done]

@@ -24,12 +24,15 @@ SPEED = "BALANCED"
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--cond", choices=["deployed", "notarget"], default="deployed")
     args = ap.parse_args()
+    global COND
+    COND = args.cond
 
     load_env()
     headers = {"Api-Key": os.environ["IDEOGRAM_API_KEY"]}
 
-    prompts = load_prompts("raw")
+    prompts = load_prompts("raw" if COND == "deployed" else COND)
     done = done_keys("ideogram", COND)
     jobs = [(i, f, p) for i, f, p in prompts if (i, 0) not in done]
     print(f"ideogram: {len(jobs)} images to go ({len(done)} done)")
@@ -64,7 +67,7 @@ def main():
             "sec": round(time.time() - t0, 1),
             "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         })
-        if magic and item_id not in exp_done:
+        if magic and item_id not in exp_done and COND == "deployed":
             append_jsonl(EXPANDED, {
                 "item_id": item_id, "family": family, "expander": "ideogram",
                 "expander_model": f"ideogram-v3 magic_prompt ({SPEED})",

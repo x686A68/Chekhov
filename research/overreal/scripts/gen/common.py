@@ -3,6 +3,8 @@
 Layout under data/generation/:
   prompts.jsonl           one line per item: item_id, family, prompt, target
   expanded_prompts.jsonl  one line per (item, expander): text + provenance
+  notarget_prompts.jsonl  one line per item: the prompt with the target removed
+                          (build_notarget.py); cond "notarget" reads it
   images/<model>/<cond>/<family>_<nnnn>__s<seed>.png
   manifests/<model>_<cond>.jsonl   one line per saved image
 """
@@ -15,9 +17,10 @@ DATASET = ROOT / "data" / "overreal_v1"
 GEN = ROOT / "data" / "generation"
 PROMPTS = GEN / "prompts.jsonl"
 EXPANDED = GEN / "expanded_prompts.jsonl"
+NOTARGET = GEN / "notarget_prompts.jsonl"
 
 SEEDS = [0, 1]          # two images per prompt
-CONDS = ["raw", "qwen", "dalle3", "ideogram"]
+CONDS = ["raw", "qwen", "dalle3", "ideogram", "notarget"]
 
 
 def load_env():
@@ -49,6 +52,8 @@ def load_prompts(cond):
     """
     if cond == "raw":
         return [(r["item_id"], r["family"], r["prompt"]) for r in read_jsonl(PROMPTS)]
+    if cond == "notarget":
+        return [(r["item_id"], r["family"], r["text"]) for r in read_jsonl(NOTARGET)]
     rows = [r for r in read_jsonl(EXPANDED) if r["expander"] == cond]
     fam = {r["item_id"]: r["family"] for r in read_jsonl(PROMPTS)}
     return [(r["item_id"], fam[r["item_id"]], r["text"]) for r in rows]

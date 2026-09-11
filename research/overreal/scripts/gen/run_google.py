@@ -23,14 +23,17 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--model-id", default=MODEL_ID)
+    ap.add_argument("--cond", choices=["deployed", "notarget"], default="deployed")
     args = ap.parse_args()
+    global COND
+    COND = args.cond
 
     load_env()
     from google import genai
     from google.genai import types
     client = genai.Client(api_key=os.environ["GOOGLE_API_KEY"])
 
-    prompts = load_prompts("raw")
+    prompts = load_prompts("raw" if COND == "deployed" else COND)
     done = done_keys("nanobanana", COND)
     jobs = [(i, f, p) for i, f, p in prompts if (i, 0) not in done]
     print(f"nanobanana ({args.model_id}): {len(jobs)} images to go ({len(done)} done)")
