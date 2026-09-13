@@ -45,6 +45,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--outcomes", choices=["gold", "auto"], default="gold")
     ap.add_argument("--auto-file", default="")
+    ap.add_argument("--b-file", default="", help="presence run over the target-removed "
+                    "images (scripts/autoannot, --protocol presence --manifests); fills b")
     args = ap.parse_args()
     meta = {}
     for line in open(DS / "metadata.jsonl", encoding="utf-8"):
@@ -105,6 +107,30 @@ def main():
         n = len(labels)
         if n >= 10:
             rates[key] = {o: sum(o in ls for ls in labels) / n for o in OUTS}
+
+    # base rate b: share of target-removed images in which the target appears
+    GEN_NAMES = {"flux": "flux.1-dev", "sd35m": "sd3.5-medium", "sd35l": "sd3.5-large",
+                 "gpt-image": "gpt-image-1.5", "nanobanana": "gemini-2.5-flash-image-api",
+                 "ideogram": "ideogram-v3", "qwen-image": "qwen-image", "omnigen2": "omnigen2"}
+    brate = {}
+    if args.b_file:
+        import sys
+        sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "autoannot"))
+        from common import derive_label  # noqa: E402
+        fam_of = {}
+        for line in open(ROOT / "data" / "generation" / "prompts.jsonl", encoding="utf-8"):
+            r = json.loads(line)
+            fam_of[r["item_id"]] = r["family"]
+        hits = _c.defaultdict(list)
+        for line in open(args.b_file, encoding="utf-8"):
+            r = json.loads(line)
+            lab = derive_label(r["answers"], r["questions"])
+            if lab not in ("present", "absent"):
+                continue
+            _, model, _cond, name = r["image_id"].split("/")
+            fam, num = name.split("__")[0].rsplit("_", 1)
+            hits[(GEN_NAMES.get(model, model), fam)].append(lab == "present")
+        brate = {k: sum(v) / len(v) for k, v in hits.items() if len(v) >= 10}
 
     def build_grid(getval, ncol_types):
         # grid[(row_idx, col_idx)] = float value or None
@@ -169,8 +195,9 @@ def main():
         [m for m, _ in METRICS], [f for _, f in METRICS], minimize=set(),
         extra_fmt="{:.1f}")
     block_b = render_block(
-        lambda g, f, o: rates.get((g, f), {}).get(o),
-        OUTS, ["{:.2f}"] * 4, minimize={"disruptive", "silent"})
+        lambda g, f, o: brate.get((g, f)) if o == "_extra" else rates.get((g, f), {}).get(o),
+        OUTS, ["{:.2f}"] * 4, minimize={"disruptive", "silent", "_extra"},
+        extra_fmt="{:.2f}" if brate else None)
 
     s = open(TEX, encoding="utf-8").read()
     for name, block in (("(a) Conventional evaluation", block_a),

@@ -115,3 +115,21 @@ Opus vs GPT agreement on the sample (four labels / coarse):
 | perspectival | 1,908 | 63% | 0.31 | 0.65 |
 
 "other" fires on 0 to 0.7% of images under Opus and 0.4 to 2.9% under GPT.
+
+## Base realization rate b (2026-09-13)
+
+Prompts with the target removed: `data/generation/notarget_prompts.jsonl`
+(GPT-5.2 rewrite; placeholder "something / someone / some place / some words"
+for attribution and perspectival, the figurative clause deleted, the
+existence-canceling template stripped; 54 leftovers such as "a large is
+printed" cleaned by rule afterwards and their images regenerated). Images:
+`data/generation/images/<model>/notarget/`, two seeds for the open models
+(1,096 each), commercial models on a seeded one-third of the items
+(`notarget_sample_items.txt`; GPT-Image two seeds). Presence judged with
+`--protocol presence` (the Q1 of `final` per family; text targets "can you
+read the words") by gpt-5.2-2025-12-11:
+`data/overreal_v1/auto/presence__gpt-52-2025-12-11__notarget.jsonl`, 6,185
+images. b per generator x family is the share judged present; filled into
+Table 2 with `fill_main_table.py --b-file`. Five attribution items have a
+person as target (friend, grandmother, ...), where the placeholder "someone"
+makes a person appear by design; excluding them moves b by at most 0.06.

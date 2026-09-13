@@ -24,6 +24,7 @@ def main():
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--model-id", default=MODEL_ID)
     ap.add_argument("--cond", choices=["deployed", "notarget"], default="deployed")
+    ap.add_argument("--items", default="", help="file of item_ids to restrict the run to")
     args = ap.parse_args()
     global COND
     COND = args.cond
@@ -34,6 +35,9 @@ def main():
     client = genai.Client(api_key=os.environ["GOOGLE_API_KEY"])
 
     prompts = load_prompts("raw" if COND == "deployed" else COND)
+    if args.items:
+        keep = set(open(args.items).read().split())
+        prompts = [p for p in prompts if p[0] in keep]
     done = done_keys("nanobanana", COND)
     jobs = [(i, f, p) for i, f, p in prompts if (i, 0) not in done]
     print(f"nanobanana ({args.model_id}): {len(jobs)} images to go ({len(done)} done)")

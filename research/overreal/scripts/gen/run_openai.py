@@ -32,6 +32,7 @@ def main():
     ap.add_argument("--model-id", default=None, help="override the API model id")
     ap.add_argument("--limit", type=int, default=0, help="stop after N images")
     ap.add_argument("--cond", choices=["deployed", "notarget"], default="deployed")
+    ap.add_argument("--items", default="", help="file of item_ids to restrict the run to")
     args = ap.parse_args()
     global COND
     COND = args.cond
@@ -42,6 +43,9 @@ def main():
     model_id = args.model_id or MODEL_IDS[args.model]
 
     prompts = load_prompts("raw" if COND == "deployed" else COND)
+    if args.items:
+        keep = set(open(args.items).read().split())
+        prompts = [p for p in prompts if p[0] in keep]
     done = done_keys(args.model, COND)
     jobs = [(i, f, p, s) for i, f, p in prompts
             for s in range(N_SAMPLES[args.model]) if (i, s) not in done]

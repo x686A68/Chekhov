@@ -44,7 +44,36 @@ def select_rows(which, meta):
 
 
 def image_path(meta, iid):
-    return str((Path(__file__).resolve().parents[4] / "data" / "overreal_v1" / meta[iid]["file_name"]))
+    fn = meta[iid]["file_name"]
+    if fn.startswith("/"):
+        return fn
+    return str((Path(__file__).resolve().parents[4] / "data" / "overreal_v1" / fn))
+
+
+def manifest_rows(pattern):
+    """Images from data/generation manifests (e.g. the target-removed runs):
+    a meta dict keyed by 'gen/<model>/<cond>/<basename>' with family, target
+    and the original (target-bearing) prompt, which the presence question
+    does not use but is kept for provenance."""
+    import glob
+    root = Path(__file__).resolve().parents[4]
+    prompts = {}
+    for line in open(root / "data" / "generation" / "prompts.jsonl", encoding="utf-8"):
+        r = json.loads(line)
+        prompts[r["item_id"]] = r
+    meta = {}
+    for f in sorted(glob.glob(str(root / "data" / "generation" / "manifests" / pattern))):
+        for line in open(f, encoding="utf-8"):
+            r = json.loads(line)
+            fn = root / "data" / r["file"]
+            if not fn.exists():
+                continue
+            iid = f"gen/{r['model']}/{r['cond']}/{fn.name}"
+            src = prompts[r["item_id"]]
+            meta[iid] = {"file_name": str(fn), "family": r["family"], "target": src["target"],
+                         "prompt": src["prompt"], "item_id": r["item_id"],
+                         "generator": r["model"], "prompt_cond": r["cond"]}
+    return meta
 
 
 # ------------------------------------------------------------------ backends
@@ -257,10 +286,15 @@ def main():
     ap.add_argument("--shard", default="0/1")
     ap.add_argument("--out", default="", help="override output path")
     ap.add_argument("--families", default="", help="comma-separated family filter")
+    ap.add_argument("--manifests", default="", help="generation manifest glob, e.g. '*_notarget.jsonl'")
     args = ap.parse_args()
 
-    meta = load_meta()
-    ids = select_rows(args.split, meta)
+    if args.manifests:
+        meta = manifest_rows(args.manifests)
+        ids = sorted(meta)
+    else:
+        meta = load_meta()
+        ids = select_rows(args.split, meta)
     if args.families:
         keep = set(args.families.split(","))
         ids = [i for i in ids if meta[i]["family"] in keep]

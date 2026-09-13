@@ -540,3 +540,25 @@ def model_slug(model):
 
 def run_path(protocol, model):
     return OUT_DIR / f"{protocol}__{model_slug(model)}.jsonl"
+
+def _presence(family, target, prompt):
+    """Single presence question for the base rate b: the Q1 of `final` for
+    each family, with the text-target variant asking whether the words can
+    be read anywhere (the `final` wording presupposes the carrier item,
+    which the target-removed prompt no longer names)."""
+    t = clean_target(target)
+    a = article(t)
+    if family == "perspectival" and is_text_target(target, prompt):
+        q = f'Can you read the words "{t}" anywhere in this image?'
+    elif family == "perspectival":
+        q = (f"Is there {a}{t} anywhere in this image, in any form, including as a "
+             f"print, picture, sticker, logo or drawing?")
+    elif family == "figurative":
+        q = (f"Is there {a}{t} anywhere in this image, in any form, including as a "
+             f"drawing, a logo, a costume, a shape, or written words?")
+    else:
+        q = f"Is there {a}{t} anywhere in this image?"
+    return {"start": "Q1", "nodes": {"Q1": {"q": q, "yes": "present", "no": "absent"}}}
+
+
+PROTOCOLS["presence"] = _presence

@@ -25,6 +25,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--cond", choices=["deployed", "notarget"], default="deployed")
+    ap.add_argument("--items", default="", help="file of item_ids to restrict the run to")
     args = ap.parse_args()
     global COND
     COND = args.cond
@@ -33,6 +34,9 @@ def main():
     headers = {"Api-Key": os.environ["IDEOGRAM_API_KEY"]}
 
     prompts = load_prompts("raw" if COND == "deployed" else COND)
+    if args.items:
+        keep = set(open(args.items).read().split())
+        prompts = [p for p in prompts if p[0] in keep]
     done = done_keys("ideogram", COND)
     jobs = [(i, f, p) for i, f, p in prompts if (i, 0) not in done]
     print(f"ideogram: {len(jobs)} images to go ({len(done)} done)")
