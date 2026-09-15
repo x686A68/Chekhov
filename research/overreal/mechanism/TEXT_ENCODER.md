@@ -29,19 +29,18 @@ sanity check (a probe that cannot tell A from S has a broken feature pipeline).
 
 ### Writing P
 
-- One rewrite per item by Claude Opus 5, minimal edit: replace the space-builder
-  construction with a plain presence construction, keep the target string
-  verbatim, keep everything else, length within 3 words of S.
+- One rewrite per item, **written by hand (no API calls; author rule
+  2026-09-15)**, minimal edit: replace the space-builder construction with a
+  plain presence construction, keep the target string verbatim, keep
+  everything else, length within 3 words of S.
 - Family recipes given in the instruction: cancellation "no X / without X" ->
   "an X / with an X"; mental-state "remembering / believing there is X" -> "next
   to X / with X in front of her"; figurative "as ADJ as X / like X" -> "next to
   X / with X beside him"; perspectival "X hidden behind / inside / facing away"
   -> "X in front of / on top of / facing the camera".
-- Automatic checks: target present verbatim; word count within tolerance; an
-  Opus yes/no check that the target is now an ordinary visible part of the
-  scene. Failures are rewritten once, then flagged for manual fix.
-- Manual review of every P for families 2 and 4 (the ones where the rewrite is
-  least mechanical), a 20% sample for families 1 and 3.
+- Automatic checks: target present verbatim; word count within tolerance.
+- Family 1 is run with the 50 cancellation items that exist in the generation
+  data (author decision 2026-09-15).
 
 ### Target spans
 
