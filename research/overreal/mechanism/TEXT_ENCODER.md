@@ -97,10 +97,9 @@ families as one phenomenon, so the probe should too. Families are weighted so
 that each contributes equally to the loss. Test accuracy is still reported
 **per family** (each family's held-out folds), plus pooled.
 
-Appendix checks: (a) per-family probes, to see whether any family separates
-better on its own than under the pooled probe, which would mean its cue lives
-on a different direction; (b) leave-one-family-out, the strict version of
-"same direction".
+No per-family probes and no leave-one-family-out setting: the pooled probe
+with per-family test accuracy is the whole result (author decision
+2026-09-15).
 
 Family sizes (S+P): cancellation 2x50 as generated (`prompts.jsonl` and every
 manifest hold 50 cancellation items, while Table 1 of the paper says 200; to
