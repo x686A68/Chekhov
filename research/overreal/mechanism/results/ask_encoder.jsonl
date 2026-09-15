@@ -1,0 +1,1090 @@
+{"item_id": "attribution/prompt_0001", "family": "attribution", "side": "S", "target": "tiger", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0001", "family": "attribution", "side": "P", "target": "tiger", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0002", "family": "attribution", "side": "S", "target": "calm, smooth water", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "attribution/prompt_0002", "family": "attribution", "side": "P", "target": "calm, smooth water", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0003", "family": "attribution", "side": "S", "target": "bicycle", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0003", "family": "attribution", "side": "P", "target": "bicycle", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0004", "family": "attribution", "side": "S", "target": "cabin", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0004", "family": "attribution", "side": "P", "target": "cabin", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0005", "family": "attribution", "side": "S", "target": "horse", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "attribution/prompt_0005", "family": "attribution", "side": "P", "target": "horse", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0006", "family": "attribution", "side": "S", "target": "friend", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0006", "family": "attribution", "side": "P", "target": "friend", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0007", "family": "attribution", "side": "S", "target": "bug", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0007", "family": "attribution", "side": "P", "target": "bug", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0009", "family": "attribution", "side": "S", "target": "robot", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0009", "family": "attribution", "side": "P", "target": "robot", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0013", "family": "attribution", "side": "S", "target": "balloon", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "attribution/prompt_0013", "family": "attribution", "side": "P", "target": "balloon", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0014", "family": "attribution", "side": "S", "target": "tiger", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0014", "family": "attribution", "side": "P", "target": "tiger", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0016", "family": "attribution", "side": "S", "target": "horse", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0016", "family": "attribution", "side": "P", "target": "horse", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0019", "family": "attribution", "side": "S", "target": "crow", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0019", "family": "attribution", "side": "P", "target": "crow", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0020", "family": "attribution", "side": "S", "target": "fox", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0020", "family": "attribution", "side": "P", "target": "fox", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0022", "family": "attribution", "side": "S", "target": "piano", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0022", "family": "attribution", "side": "P", "target": "piano", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0025", "family": "attribution", "side": "S", "target": "desk", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "attribution/prompt_0025", "family": "attribution", "side": "P", "target": "desk", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0026", "family": "attribution", "side": "S", "target": "trumpet", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0026", "family": "attribution", "side": "P", "target": "trumpet", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0027", "family": "attribution", "side": "S", "target": "grandmother", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0027", "family": "attribution", "side": "P", "target": "grandmother", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0028", "family": "attribution", "side": "S", "target": "pocket watch", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0028", "family": "attribution", "side": "P", "target": "pocket watch", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0029", "family": "attribution", "side": "S", "target": "basket", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "attribution/prompt_0029", "family": "attribution", "side": "P", "target": "basket", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0031", "family": "attribution", "side": "S", "target": "fishing rod", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0031", "family": "attribution", "side": "P", "target": "fishing rod", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0033", "family": "attribution", "side": "S", "target": "teacup", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "attribution/prompt_0033", "family": "attribution", "side": "P", "target": "teacup", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0034", "family": "attribution", "side": "S", "target": "lamp", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "attribution/prompt_0034", "family": "attribution", "side": "P", "target": "lamp", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0035", "family": "attribution", "side": "S", "target": "radio", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "attribution/prompt_0035", "family": "attribution", "side": "P", "target": "radio", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0038", "family": "attribution", "side": "S", "target": "robot", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0038", "family": "attribution", "side": "P", "target": "robot", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0039", "family": "attribution", "side": "S", "target": "birthday cale", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0039", "family": "attribution", "side": "P", "target": "birthday cale", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0040", "family": "attribution", "side": "S", "target": "kite", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0040", "family": "attribution", "side": "P", "target": "kite", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0041", "family": "attribution", "side": "S", "target": "present", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0041", "family": "attribution", "side": "P", "target": "present", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0042", "family": "attribution", "side": "S", "target": "handbag", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0042", "family": "attribution", "side": "P", "target": "handbag", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0043", "family": "attribution", "side": "S", "target": "key", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0043", "family": "attribution", "side": "P", "target": "key", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0044", "family": "attribution", "side": "S", "target": "globe", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0044", "family": "attribution", "side": "P", "target": "globe", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0045", "family": "attribution", "side": "S", "target": "bear", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0045", "family": "attribution", "side": "P", "target": "bear", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0046", "family": "attribution", "side": "S", "target": "wolf", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0046", "family": "attribution", "side": "P", "target": "wolf", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0048", "family": "attribution", "side": "S", "target": "bear", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0048", "family": "attribution", "side": "P", "target": "bear", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0049", "family": "attribution", "side": "S", "target": "treasure", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0049", "family": "attribution", "side": "P", "target": "treasure", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0052", "family": "attribution", "side": "S", "target": "ballet dancer", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0052", "family": "attribution", "side": "P", "target": "ballet dancer", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0053", "family": "attribution", "side": "S", "target": "cotton candy", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0053", "family": "attribution", "side": "P", "target": "cotton candy", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0054", "family": "attribution", "side": "S", "target": "laptop", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0054", "family": "attribution", "side": "P", "target": "laptop", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0055", "family": "attribution", "side": "S", "target": "suitcase", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0055", "family": "attribution", "side": "P", "target": "suitcase", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0057", "family": "attribution", "side": "S", "target": "hot drink", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0057", "family": "attribution", "side": "P", "target": "hot drink", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0058", "family": "attribution", "side": "S", "target": "kite", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0058", "family": "attribution", "side": "P", "target": "kite", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0059", "family": "attribution", "side": "S", "target": "sheep", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0059", "family": "attribution", "side": "P", "target": "sheep", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0060", "family": "attribution", "side": "S", "target": "dog", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0060", "family": "attribution", "side": "P", "target": "dog", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0061", "family": "attribution", "side": "S", "target": "cafe", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "attribution/prompt_0061", "family": "attribution", "side": "P", "target": "cafe", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0062", "family": "attribution", "side": "S", "target": "hospital", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0062", "family": "attribution", "side": "P", "target": "hospital", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0063", "family": "attribution", "side": "S", "target": "flowers", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "attribution/prompt_0063", "family": "attribution", "side": "P", "target": "flowers", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0064", "family": "attribution", "side": "S", "target": "motorbike", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0064", "family": "attribution", "side": "P", "target": "motorbike", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0065", "family": "attribution", "side": "S", "target": "roses", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0065", "family": "attribution", "side": "P", "target": "roses", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0066", "family": "attribution", "side": "S", "target": "scarf/snowman", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "attribution/prompt_0066", "family": "attribution", "side": "P", "target": "scarf/snowman", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0067", "family": "attribution", "side": "S", "target": "bank", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0067", "family": "attribution", "side": "P", "target": "bank", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0068", "family": "attribution", "side": "S", "target": "ring", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0068", "family": "attribution", "side": "P", "target": "ring", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0069", "family": "attribution", "side": "S", "target": "book", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0069", "family": "attribution", "side": "P", "target": "book", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0071", "family": "attribution", "side": "S", "target": "dinosaur", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0071", "family": "attribution", "side": "P", "target": "dinosaur", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0072", "family": "attribution", "side": "S", "target": "desert", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0072", "family": "attribution", "side": "P", "target": "desert", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0073", "family": "attribution", "side": "S", "target": "peacock", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0073", "family": "attribution", "side": "P", "target": "peacock", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0075", "family": "attribution", "side": "S", "target": "wings", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0075", "family": "attribution", "side": "P", "target": "wings", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0077", "family": "attribution", "side": "S", "target": "moon", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0077", "family": "attribution", "side": "P", "target": "moon", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0078", "family": "attribution", "side": "S", "target": "snake", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0078", "family": "attribution", "side": "P", "target": "snake", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0079", "family": "attribution", "side": "S", "target": "apple juice", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0079", "family": "attribution", "side": "P", "target": "apple juice", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0080", "family": "attribution", "side": "S", "target": "balloon", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0080", "family": "attribution", "side": "P", "target": "balloon", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0081", "family": "attribution", "side": "S", "target": "train", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "attribution/prompt_0081", "family": "attribution", "side": "P", "target": "train", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0082", "family": "attribution", "side": "S", "target": "planet", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0082", "family": "attribution", "side": "P", "target": "planet", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0083", "family": "attribution", "side": "S", "target": "beach ball", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0083", "family": "attribution", "side": "P", "target": "beach ball", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0085", "family": "attribution", "side": "S", "target": "tram", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0085", "family": "attribution", "side": "P", "target": "tram", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0087", "family": "attribution", "side": "S", "target": "astronaut", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0087", "family": "attribution", "side": "P", "target": "astronaut", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0091", "family": "attribution", "side": "S", "target": "clock", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "attribution/prompt_0091", "family": "attribution", "side": "P", "target": "clock", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0092", "family": "attribution", "side": "S", "target": "balloon", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "attribution/prompt_0092", "family": "attribution", "side": "P", "target": "balloon", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0094", "family": "attribution", "side": "S", "target": "glass castle", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "attribution/prompt_0094", "family": "attribution", "side": "P", "target": "glass castle", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0095", "family": "attribution", "side": "S", "target": "lighthouse", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "attribution/prompt_0095", "family": "attribution", "side": "P", "target": "lighthouse", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0096", "family": "attribution", "side": "S", "target": "lantern", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "attribution/prompt_0096", "family": "attribution", "side": "P", "target": "lantern", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0098", "family": "attribution", "side": "S", "target": "spiral tower", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0098", "family": "attribution", "side": "P", "target": "spiral tower", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0099", "family": "attribution", "side": "S", "target": "yellow taxi", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "attribution/prompt_0099", "family": "attribution", "side": "P", "target": "yellow taxi", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0101", "family": "attribution", "side": "S", "target": "robot", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0101", "family": "attribution", "side": "P", "target": "robot", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0102", "family": "attribution", "side": "S", "target": "sailing ship", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0102", "family": "attribution", "side": "P", "target": "sailing ship", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0103", "family": "attribution", "side": "S", "target": "bakery, grandmother", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "attribution/prompt_0103", "family": "attribution", "side": "P", "target": "bakery, grandmother", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "attribution/prompt_0108", "family": "attribution", "side": "S", "target": "school bus", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "attribution/prompt_0108", "family": "attribution", "side": "P", "target": "school bus", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0001", "family": "figurative", "side": "S", "target": "tiger", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0001", "family": "figurative", "side": "P", "target": "tiger", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0002", "family": "figurative", "side": "S", "target": "air traffic controller", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0002", "family": "figurative", "side": "P", "target": "air traffic controller", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0003", "family": "figurative", "side": "S", "target": "shadow", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0003", "family": "figurative", "side": "P", "target": "shadow", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0004", "family": "figurative", "side": "S", "target": "loose thread unraveling a sweater", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0004", "family": "figurative", "side": "P", "target": "loose thread unraveling a sweater", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0005", "family": "figurative", "side": "S", "target": "balloon", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0005", "family": "figurative", "side": "P", "target": "balloon", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0006", "family": "figurative", "side": "S", "target": "fish", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0006", "family": "figurative", "side": "P", "target": "fish", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0007", "family": "figurative", "side": "S", "target": "goalposts", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0007", "family": "figurative", "side": "P", "target": "goalposts", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0008", "family": "figurative", "side": "S", "target": "fire", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0008", "family": "figurative", "side": "P", "target": "fire", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0009", "family": "figurative", "side": "S", "target": "anchor", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0009", "family": "figurative", "side": "P", "target": "anchor", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "figurative/prompt_0010", "family": "figurative", "side": "S", "target": "grenade", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0010", "family": "figurative", "side": "P", "target": "grenade", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0011", "family": "figurative", "side": "S", "target": "washing machine", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0011", "family": "figurative", "side": "P", "target": "washing machine", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0012", "family": "figurative", "side": "S", "target": "towel", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0012", "family": "figurative", "side": "P", "target": "towel", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0013", "family": "figurative", "side": "S", "target": "beans", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0013", "family": "figurative", "side": "P", "target": "beans", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0014", "family": "figurative", "side": "S", "target": "hot potatoe", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0014", "family": "figurative", "side": "P", "target": "hot potatoe", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "figurative/prompt_0015", "family": "figurative", "side": "S", "target": "goose", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0015", "family": "figurative", "side": "P", "target": "goose", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0016", "family": "figurative", "side": "S", "target": "can of worms", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0016", "family": "figurative", "side": "P", "target": "can of worms", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0017", "family": "figurative", "side": "S", "target": "hatchet", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0017", "family": "figurative", "side": "P", "target": "hatchet", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0018", "family": "figurative", "side": "S", "target": "hoops", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0018", "family": "figurative", "side": "P", "target": "hoops", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "figurative/prompt_0019", "family": "figurative", "side": "S", "target": "bone", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0019", "family": "figurative", "side": "P", "target": "bone", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0020", "family": "figurative", "side": "S", "target": "\"fish to fry\"", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0020", "family": "figurative", "side": "P", "target": "\"fish to fry\"", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "figurative/prompt_0021", "family": "figurative", "side": "S", "target": "cow", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0021", "family": "figurative", "side": "P", "target": "cow", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0022", "family": "figurative", "side": "S", "target": "donkey", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0022", "family": "figurative", "side": "P", "target": "donkey", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0023", "family": "figurative", "side": "S", "target": "salt", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0023", "family": "figurative", "side": "P", "target": "salt", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0024", "family": "figurative", "side": "S", "target": "eggs basket", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0024", "family": "figurative", "side": "P", "target": "eggs basket", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0025", "family": "figurative", "side": "S", "target": "piece of cake", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0025", "family": "figurative", "side": "P", "target": "piece of cake", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0026", "family": "figurative", "side": "S", "target": "brick wall", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0026", "family": "figurative", "side": "P", "target": "brick wall", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0027", "family": "figurative", "side": "S", "target": "porcupine", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0027", "family": "figurative", "side": "P", "target": "porcupine", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0028", "family": "figurative", "side": "S", "target": "red flag", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0028", "family": "figurative", "side": "P", "target": "red flag", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0029", "family": "figurative", "side": "S", "target": "compass", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0029", "family": "figurative", "side": "P", "target": "compass", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0030", "family": "figurative", "side": "S", "target": "dark horse", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0030", "family": "figurative", "side": "P", "target": "dark horse", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0031", "family": "figurative", "side": "S", "target": "cake", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0031", "family": "figurative", "side": "P", "target": "cake", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0032", "family": "figurative", "side": "S", "target": "apples", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0032", "family": "figurative", "side": "P", "target": "apples", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0033", "family": "figurative", "side": "S", "target": "butterfly", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0033", "family": "figurative", "side": "P", "target": "butterfly", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0034", "family": "figurative", "side": "S", "target": "horse", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0034", "family": "figurative", "side": "P", "target": "horse", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0035", "family": "figurative", "side": "S", "target": "roses", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0035", "family": "figurative", "side": "P", "target": "roses", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0036", "family": "figurative", "side": "S", "target": "mouse", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0036", "family": "figurative", "side": "P", "target": "mouse", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0037", "family": "figurative", "side": "S", "target": "rose", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0037", "family": "figurative", "side": "P", "target": "rose", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0038", "family": "figurative", "side": "S", "target": "dog", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0038", "family": "figurative", "side": "P", "target": "dog", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0039", "family": "figurative", "side": "S", "target": "cat", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0039", "family": "figurative", "side": "P", "target": "cat", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0040", "family": "figurative", "side": "S", "target": "sunflower", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0040", "family": "figurative", "side": "P", "target": "sunflower", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0041", "family": "figurative", "side": "S", "target": "kiwi", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0041", "family": "figurative", "side": "P", "target": "kiwi", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0042", "family": "figurative", "side": "S", "target": "pineapple", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0042", "family": "figurative", "side": "P", "target": "pineapple", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0043", "family": "figurative", "side": "S", "target": "banana", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0043", "family": "figurative", "side": "P", "target": "banana", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0044", "family": "figurative", "side": "S", "target": "grapes", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0044", "family": "figurative", "side": "P", "target": "grapes", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0045", "family": "figurative", "side": "S", "target": "lemon", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0045", "family": "figurative", "side": "P", "target": "lemon", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0046", "family": "figurative", "side": "S", "target": "peach", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0046", "family": "figurative", "side": "P", "target": "peach", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0047", "family": "figurative", "side": "S", "target": "strawberry", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0047", "family": "figurative", "side": "P", "target": "strawberry", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0048", "family": "figurative", "side": "S", "target": "tomato", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0048", "family": "figurative", "side": "P", "target": "tomato", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0049", "family": "figurative", "side": "S", "target": "broccoli", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0049", "family": "figurative", "side": "P", "target": "broccoli", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0050", "family": "figurative", "side": "S", "target": "mango", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0050", "family": "figurative", "side": "P", "target": "mango", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0051", "family": "figurative", "side": "S", "target": "watermelon", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0051", "family": "figurative", "side": "P", "target": "watermelon", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0052", "family": "figurative", "side": "S", "target": "blueberry", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0052", "family": "figurative", "side": "P", "target": "blueberry", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0053", "family": "figurative", "side": "S", "target": "strawberry", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0053", "family": "figurative", "side": "P", "target": "strawberry", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "figurative/prompt_0054", "family": "figurative", "side": "S", "target": "Cappuccino", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0054", "family": "figurative", "side": "P", "target": "Cappuccino", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0055", "family": "figurative", "side": "S", "target": "coffee", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0055", "family": "figurative", "side": "P", "target": "coffee", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0056", "family": "figurative", "side": "S", "target": "tea", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0056", "family": "figurative", "side": "P", "target": "tea", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0057", "family": "figurative", "side": "S", "target": "bread", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0057", "family": "figurative", "side": "P", "target": "bread", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0058", "family": "figurative", "side": "S", "target": "popcorn", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0058", "family": "figurative", "side": "P", "target": "popcorn", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0059", "family": "figurative", "side": "S", "target": "spaghetti", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0059", "family": "figurative", "side": "P", "target": "spaghetti", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0060", "family": "figurative", "side": "S", "target": "pumpkin", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0060", "family": "figurative", "side": "P", "target": "pumpkin", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0061", "family": "figurative", "side": "S", "target": "coconut", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0061", "family": "figurative", "side": "P", "target": "coconut", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0062", "family": "figurative", "side": "S", "target": "durian", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0062", "family": "figurative", "side": "P", "target": "durian", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0063", "family": "figurative", "side": "S", "target": "chocolate", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0063", "family": "figurative", "side": "P", "target": "chocolate", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0064", "family": "figurative", "side": "S", "target": "orange", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0064", "family": "figurative", "side": "P", "target": "orange", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0065", "family": "figurative", "side": "S", "target": "banana", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0065", "family": "figurative", "side": "P", "target": "banana", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0066", "family": "figurative", "side": "S", "target": "pineapple", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0066", "family": "figurative", "side": "P", "target": "pineapple", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0067", "family": "figurative", "side": "S", "target": "coconut", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0067", "family": "figurative", "side": "P", "target": "coconut", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0068", "family": "figurative", "side": "S", "target": "bird", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0068", "family": "figurative", "side": "P", "target": "bird", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0069", "family": "figurative", "side": "S", "target": "avocado", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0069", "family": "figurative", "side": "P", "target": "avocado", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0070", "family": "figurative", "side": "S", "target": "cherry blossoms", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0070", "family": "figurative", "side": "P", "target": "cherry blossoms", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0071", "family": "figurative", "side": "S", "target": "corn plant", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0071", "family": "figurative", "side": "P", "target": "corn plant", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0072", "family": "figurative", "side": "S", "target": "cucumbers", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0072", "family": "figurative", "side": "P", "target": "cucumbers", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0073", "family": "figurative", "side": "S", "target": "carrot", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0073", "family": "figurative", "side": "P", "target": "carrot", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0074", "family": "figurative", "side": "S", "target": "dragon fruits", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0074", "family": "figurative", "side": "P", "target": "dragon fruits", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0075", "family": "figurative", "side": "S", "target": "bear", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0075", "family": "figurative", "side": "P", "target": "bear", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0076", "family": "figurative", "side": "S", "target": "tulip", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0076", "family": "figurative", "side": "P", "target": "tulip", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0077", "family": "figurative", "side": "S", "target": "lavender flower", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0077", "family": "figurative", "side": "P", "target": "lavender flower", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0078", "family": "figurative", "side": "S", "target": "lamppost", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0078", "family": "figurative", "side": "P", "target": "lamppost", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0079", "family": "figurative", "side": "S", "target": "mailbox", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0079", "family": "figurative", "side": "P", "target": "mailbox", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0080", "family": "figurative", "side": "S", "target": "trash can", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0080", "family": "figurative", "side": "P", "target": "trash can", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0081", "family": "figurative", "side": "S", "target": "candle", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0081", "family": "figurative", "side": "P", "target": "candle", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0083", "family": "figurative", "side": "S", "target": "pencil", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0083", "family": "figurative", "side": "P", "target": "pencil", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0084", "family": "figurative", "side": "S", "target": "cucumbers", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0084", "family": "figurative", "side": "P", "target": "cucumbers", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0085", "family": "figurative", "side": "S", "target": "spoon", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0085", "family": "figurative", "side": "P", "target": "spoon", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0086", "family": "figurative", "side": "S", "target": "brick", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0086", "family": "figurative", "side": "P", "target": "brick", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0087", "family": "figurative", "side": "S", "target": "pig", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0087", "family": "figurative", "side": "P", "target": "pig", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0088", "family": "figurative", "side": "S", "target": "hare", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0088", "family": "figurative", "side": "P", "target": "hare", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0089", "family": "figurative", "side": "S", "target": "swan", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0089", "family": "figurative", "side": "P", "target": "swan", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0090", "family": "figurative", "side": "S", "target": "chicken", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0090", "family": "figurative", "side": "P", "target": "chicken", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0091", "family": "figurative", "side": "S", "target": "trumpet", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0091", "family": "figurative", "side": "P", "target": "trumpet", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0092", "family": "figurative", "side": "S", "target": "vulture", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0092", "family": "figurative", "side": "P", "target": "vulture", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0093", "family": "figurative", "side": "S", "target": "shark", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0093", "family": "figurative", "side": "P", "target": "shark", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "figurative/prompt_0095", "family": "figurative", "side": "S", "target": "snake", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0095", "family": "figurative", "side": "P", "target": "snake", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0096", "family": "figurative", "side": "S", "target": "mantise", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0096", "family": "figurative", "side": "P", "target": "mantise", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0097", "family": "figurative", "side": "S", "target": "bat", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0097", "family": "figurative", "side": "P", "target": "bat", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0098", "family": "figurative", "side": "S", "target": "turtle", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0098", "family": "figurative", "side": "P", "target": "turtle", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0099", "family": "figurative", "side": "S", "target": "mouse", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0099", "family": "figurative", "side": "P", "target": "mouse", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0100", "family": "figurative", "side": "S", "target": "honey", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0100", "family": "figurative", "side": "P", "target": "honey", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0101", "family": "figurative", "side": "S", "target": "whirlwind", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0101", "family": "figurative", "side": "P", "target": "whirlwind", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "figurative/prompt_0102", "family": "figurative", "side": "S", "target": "leaf", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0102", "family": "figurative", "side": "P", "target": "leaf", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0103", "family": "figurative", "side": "S", "target": "oak tree", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0103", "family": "figurative", "side": "P", "target": "oak tree", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0104", "family": "figurative", "side": "S", "target": "dagger", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0104", "family": "figurative", "side": "P", "target": "dagger", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0105", "family": "figurative", "side": "S", "target": "elephant", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0105", "family": "figurative", "side": "P", "target": "elephant", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0106", "family": "figurative", "side": "S", "target": "octopus", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0106", "family": "figurative", "side": "P", "target": "octopus", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0108", "family": "figurative", "side": "S", "target": "war zone", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0108", "family": "figurative", "side": "P", "target": "war zone", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0110", "family": "figurative", "side": "S", "target": "brick", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0110", "family": "figurative", "side": "P", "target": "brick", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0111", "family": "figurative", "side": "S", "target": "pomegranate", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0111", "family": "figurative", "side": "P", "target": "pomegranate", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0112", "family": "figurative", "side": "S", "target": "orange", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0112", "family": "figurative", "side": "P", "target": "orange", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0113", "family": "figurative", "side": "S", "target": "domino", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0113", "family": "figurative", "side": "P", "target": "domino", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0114", "family": "figurative", "side": "S", "target": "conveyor belt", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0114", "family": "figurative", "side": "P", "target": "conveyor belt", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0116", "family": "figurative", "side": "S", "target": "cage", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0116", "family": "figurative", "side": "P", "target": "cage", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0117", "family": "figurative", "side": "S", "target": "treadmill", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0117", "family": "figurative", "side": "P", "target": "treadmill", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0118", "family": "figurative", "side": "S", "target": "ink", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0118", "family": "figurative", "side": "P", "target": "ink", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0119", "family": "figurative", "side": "S", "target": "swan", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0119", "family": "figurative", "side": "P", "target": "swan", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0120", "family": "figurative", "side": "S", "target": "crab", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0120", "family": "figurative", "side": "P", "target": "crab", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0121", "family": "figurative", "side": "S", "target": "owl", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0121", "family": "figurative", "side": "P", "target": "owl", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0122", "family": "figurative", "side": "S", "target": "ram", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0122", "family": "figurative", "side": "P", "target": "ram", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0123", "family": "figurative", "side": "S", "target": "sandcastle", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0123", "family": "figurative", "side": "P", "target": "sandcastle", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0124", "family": "figurative", "side": "S", "target": "mousetrap", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0124", "family": "figurative", "side": "P", "target": "mousetrap", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0125", "family": "figurative", "side": "S", "target": "neon sign", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0125", "family": "figurative", "side": "P", "target": "neon sign", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0126", "family": "figurative", "side": "S", "target": "photocopier", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0126", "family": "figurative", "side": "P", "target": "photocopier", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0127", "family": "figurative", "side": "S", "target": "pinball machine", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0127", "family": "figurative", "side": "P", "target": "pinball machine", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0128", "family": "figurative", "side": "S", "target": "accordion", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0128", "family": "figurative", "side": "P", "target": "accordion", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0129", "family": "figurative", "side": "S", "target": "plate", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0129", "family": "figurative", "side": "P", "target": "plate", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0130", "family": "figurative", "side": "S", "target": "padlock", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0130", "family": "figurative", "side": "P", "target": "padlock", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0131", "family": "figurative", "side": "S", "target": "seat belt", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0131", "family": "figurative", "side": "P", "target": "seat belt", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0133", "family": "figurative", "side": "S", "target": "fog", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0133", "family": "figurative", "side": "P", "target": "fog", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0134", "family": "figurative", "side": "S", "target": "hailstone", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0134", "family": "figurative", "side": "P", "target": "hailstone", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "figurative/prompt_0135", "family": "figurative", "side": "S", "target": "sandstorm", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0135", "family": "figurative", "side": "P", "target": "sandstorm", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0136", "family": "figurative", "side": "S", "target": "quicksand", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0136", "family": "figurative", "side": "P", "target": "quicksand", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0137", "family": "figurative", "side": "S", "target": "butterfly", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0137", "family": "figurative", "side": "P", "target": "butterfly", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0138", "family": "figurative", "side": "S", "target": "sponge", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0138", "family": "figurative", "side": "P", "target": "sponge", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0139", "family": "figurative", "side": "S", "target": "dart", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0139", "family": "figurative", "side": "P", "target": "dart", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "figurative/prompt_0140", "family": "figurative", "side": "S", "target": "sunflower", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0140", "family": "figurative", "side": "P", "target": "sunflower", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0141", "family": "figurative", "side": "S", "target": "bubble", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0141", "family": "figurative", "side": "P", "target": "bubble", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0142", "family": "figurative", "side": "S", "target": "bell", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0142", "family": "figurative", "side": "P", "target": "bell", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0143", "family": "figurative", "side": "S", "target": "paper fan", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0143", "family": "figurative", "side": "P", "target": "paper fan", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0144", "family": "figurative", "side": "S", "target": "backpack", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0144", "family": "figurative", "side": "P", "target": "backpack", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0145", "family": "figurative", "side": "S", "target": "pearl", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0145", "family": "figurative", "side": "P", "target": "pearl", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0146", "family": "figurative", "side": "S", "target": "candle", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0146", "family": "figurative", "side": "P", "target": "candle", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0147", "family": "figurative", "side": "S", "target": "popcorn", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0147", "family": "figurative", "side": "P", "target": "popcorn", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "figurative/prompt_0148", "family": "figurative", "side": "S", "target": "honey", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0148", "family": "figurative", "side": "P", "target": "honey", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0149", "family": "figurative", "side": "S", "target": "arrow", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0149", "family": "figurative", "side": "P", "target": "arrow", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0150", "family": "figurative", "side": "S", "target": "cucumber", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0150", "family": "figurative", "side": "P", "target": "cucumber", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0151", "family": "figurative", "side": "S", "target": "sponge", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0151", "family": "figurative", "side": "P", "target": "sponge", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0152", "family": "figurative", "side": "S", "target": "pieces of a puzzle", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0152", "family": "figurative", "side": "P", "target": "pieces of a puzzle", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0153", "family": "figurative", "side": "S", "target": "steel trap", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0153", "family": "figurative", "side": "P", "target": "steel trap", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0154", "family": "figurative", "side": "S", "target": "feather", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0154", "family": "figurative", "side": "P", "target": "feather", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0155", "family": "figurative", "side": "S", "target": "velvet", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0155", "family": "figurative", "side": "P", "target": "velvet", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0158", "family": "figurative", "side": "S", "target": "ripple", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0158", "family": "figurative", "side": "P", "target": "ripple", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0159", "family": "figurative", "side": "S", "target": "key", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0159", "family": "figurative", "side": "P", "target": "key", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0160", "family": "figurative", "side": "S", "target": "leaf", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0160", "family": "figurative", "side": "P", "target": "leaf", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0161", "family": "figurative", "side": "S", "target": "machine", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0161", "family": "figurative", "side": "P", "target": "machine", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0162", "family": "figurative", "side": "S", "target": "pot", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0162", "family": "figurative", "side": "P", "target": "pot", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0163", "family": "figurative", "side": "S", "target": "knife", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0163", "family": "figurative", "side": "P", "target": "knife", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0164", "family": "figurative", "side": "S", "target": "marble", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0164", "family": "figurative", "side": "P", "target": "marble", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0165", "family": "figurative", "side": "S", "target": "glass ornament", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0165", "family": "figurative", "side": "P", "target": "glass ornament", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0166", "family": "figurative", "side": "S", "target": "smoke", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0166", "family": "figurative", "side": "P", "target": "smoke", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0167", "family": "figurative", "side": "S", "target": "cloud", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0167", "family": "figurative", "side": "P", "target": "cloud", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0168", "family": "figurative", "side": "S", "target": "sail", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0168", "family": "figurative", "side": "P", "target": "sail", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0169", "family": "figurative", "side": "S", "target": "stream", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0169", "family": "figurative", "side": "P", "target": "stream", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0170", "family": "figurative", "side": "S", "target": "spark", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0170", "family": "figurative", "side": "P", "target": "spark", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0171", "family": "figurative", "side": "S", "target": "glue", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0171", "family": "figurative", "side": "P", "target": "glue", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0172", "family": "figurative", "side": "S", "target": "jigsaw puzzle", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0172", "family": "figurative", "side": "P", "target": "jigsaw puzzle", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0173", "family": "figurative", "side": "S", "target": "cushion", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0173", "family": "figurative", "side": "P", "target": "cushion", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0174", "family": "figurative", "side": "S", "target": "butterfly", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0174", "family": "figurative", "side": "P", "target": "butterfly", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "figurative/prompt_0175", "family": "figurative", "side": "S", "target": "snail", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0175", "family": "figurative", "side": "P", "target": "snail", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0176", "family": "figurative", "side": "S", "target": "siren", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0176", "family": "figurative", "side": "P", "target": "siren", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "figurative/prompt_0177", "family": "figurative", "side": "S", "target": "shock wave", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0177", "family": "figurative", "side": "P", "target": "shock wave", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "figurative/prompt_0178", "family": "figurative", "side": "S", "target": "silk", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0178", "family": "figurative", "side": "P", "target": "silk", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "figurative/prompt_0179", "family": "figurative", "side": "S", "target": "rail", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0179", "family": "figurative", "side": "P", "target": "rail", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0180", "family": "figurative", "side": "S", "target": "lighthouse", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0180", "family": "figurative", "side": "P", "target": "lighthouse", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0181", "family": "figurative", "side": "S", "target": "suitcase", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0181", "family": "figurative", "side": "P", "target": "suitcase", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0182", "family": "figurative", "side": "S", "target": "tomato", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0182", "family": "figurative", "side": "P", "target": "tomato", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0183", "family": "figurative", "side": "S", "target": "cactus", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0183", "family": "figurative", "side": "P", "target": "cactus", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0184", "family": "figurative", "side": "S", "target": "flashlight", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0184", "family": "figurative", "side": "P", "target": "flashlight", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0185", "family": "figurative", "side": "S", "target": "paper boat", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0185", "family": "figurative", "side": "P", "target": "paper boat", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0186", "family": "figurative", "side": "S", "target": "black hole", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0186", "family": "figurative", "side": "P", "target": "black hole", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "figurative/prompt_0187", "family": "figurative", "side": "S", "target": "anvil", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0187", "family": "figurative", "side": "P", "target": "anvil", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0188", "family": "figurative", "side": "S", "target": "red flag", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0188", "family": "figurative", "side": "P", "target": "red flag", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0189", "family": "figurative", "side": "S", "target": "green light", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0189", "family": "figurative", "side": "P", "target": "green light", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0190", "family": "figurative", "side": "S", "target": "cat", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0190", "family": "figurative", "side": "P", "target": "cat", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0191", "family": "figurative", "side": "S", "target": "leopard", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0191", "family": "figurative", "side": "P", "target": "leopard", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0192", "family": "figurative", "side": "S", "target": "god", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0192", "family": "figurative", "side": "P", "target": "god", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0193", "family": "figurative", "side": "S", "target": "friend", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0193", "family": "figurative", "side": "P", "target": "friend", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "figurative/prompt_0194", "family": "figurative", "side": "S", "target": "rose", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0194", "family": "figurative", "side": "P", "target": "rose", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0195", "family": "figurative", "side": "S", "target": "knight", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0195", "family": "figurative", "side": "P", "target": "knight", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0196", "family": "figurative", "side": "S", "target": "sun", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0196", "family": "figurative", "side": "P", "target": "sun", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0197", "family": "figurative", "side": "S", "target": "Surstr\u00f6mming", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0197", "family": "figurative", "side": "P", "target": "Surstr\u00f6mming", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0198", "family": "figurative", "side": "S", "target": "kite", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0198", "family": "figurative", "side": "P", "target": "kite", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0199", "family": "figurative", "side": "S", "target": "mouse", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0199", "family": "figurative", "side": "P", "target": "mouse", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0200", "family": "figurative", "side": "S", "target": "superhero", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0200", "family": "figurative", "side": "P", "target": "superhero", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0202", "family": "figurative", "side": "S", "target": "chess piece", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0202", "family": "figurative", "side": "P", "target": "chess piece", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0203", "family": "figurative", "side": "S", "target": "sloth", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0203", "family": "figurative", "side": "P", "target": "sloth", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0204", "family": "figurative", "side": "S", "target": "angel", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0204", "family": "figurative", "side": "P", "target": "angel", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0206", "family": "figurative", "side": "S", "target": "mule", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0206", "family": "figurative", "side": "P", "target": "mule", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0207", "family": "figurative", "side": "S", "target": "fox", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0207", "family": "figurative", "side": "P", "target": "fox", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0208", "family": "figurative", "side": "S", "target": "ox", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0208", "family": "figurative", "side": "P", "target": "ox", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0209", "family": "figurative", "side": "S", "target": "peach", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0209", "family": "figurative", "side": "P", "target": "peach", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0210", "family": "figurative", "side": "S", "target": "cheetah", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0210", "family": "figurative", "side": "P", "target": "cheetah", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0211", "family": "figurative", "side": "S", "target": "mouse", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0211", "family": "figurative", "side": "P", "target": "mouse", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0212", "family": "figurative", "side": "S", "target": "dove", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0212", "family": "figurative", "side": "P", "target": "dove", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0213", "family": "figurative", "side": "S", "target": "bee", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0213", "family": "figurative", "side": "P", "target": "bee", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0214", "family": "figurative", "side": "S", "target": "turtle", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0214", "family": "figurative", "side": "P", "target": "turtle", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0215", "family": "figurative", "side": "S", "target": "bulldog", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0215", "family": "figurative", "side": "P", "target": "bulldog", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0216", "family": "figurative", "side": "S", "target": "cat", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0216", "family": "figurative", "side": "P", "target": "cat", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0217", "family": "figurative", "side": "S", "target": "owl", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0217", "family": "figurative", "side": "P", "target": "owl", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0218", "family": "figurative", "side": "S", "target": "ant", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0218", "family": "figurative", "side": "P", "target": "ant", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0219", "family": "figurative", "side": "S", "target": "wolf", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0219", "family": "figurative", "side": "P", "target": "wolf", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0220", "family": "figurative", "side": "S", "target": "spider", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0220", "family": "figurative", "side": "P", "target": "spider", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0221", "family": "figurative", "side": "S", "target": "tiger", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0221", "family": "figurative", "side": "P", "target": "tiger", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0222", "family": "figurative", "side": "S", "target": "beaver", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0222", "family": "figurative", "side": "P", "target": "beaver", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0223", "family": "figurative", "side": "S", "target": "lion", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0223", "family": "figurative", "side": "P", "target": "lion", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0224", "family": "figurative", "side": "S", "target": "moon", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0224", "family": "figurative", "side": "P", "target": "moon", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0225", "family": "figurative", "side": "S", "target": "toy", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0225", "family": "figurative", "side": "P", "target": "toy", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0226", "family": "figurative", "side": "S", "target": "drink", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0226", "family": "figurative", "side": "P", "target": "drink", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0227", "family": "figurative", "side": "S", "target": "burning cash", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0227", "family": "figurative", "side": "P", "target": "burning cash", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0228", "family": "figurative", "side": "S", "target": "breakfast", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0228", "family": "figurative", "side": "P", "target": "breakfast", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0229", "family": "figurative", "side": "S", "target": "dance", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0229", "family": "figurative", "side": "P", "target": "dance", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0230", "family": "figurative", "side": "S", "target": "finish line", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0230", "family": "figurative", "side": "P", "target": "finish line", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0232", "family": "figurative", "side": "S", "target": "tree trunks", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0232", "family": "figurative", "side": "P", "target": "tree trunks", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0233", "family": "figurative", "side": "S", "target": "armor", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0233", "family": "figurative", "side": "P", "target": "armor", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0234", "family": "figurative", "side": "S", "target": "asphalt, lane", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0234", "family": "figurative", "side": "P", "target": "asphalt, lane", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0235", "family": "figurative", "side": "S", "target": "wheat", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0235", "family": "figurative", "side": "P", "target": "wheat", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0236", "family": "figurative", "side": "S", "target": "autumn leaves", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "figurative/prompt_0236", "family": "figurative", "side": "P", "target": "autumn leaves", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0237", "family": "figurative", "side": "S", "target": "fog", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0237", "family": "figurative", "side": "P", "target": "fog", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0238", "family": "figurative", "side": "S", "target": "cherry blossoms", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0238", "family": "figurative", "side": "P", "target": "cherry blossoms", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0239", "family": "figurative", "side": "S", "target": "arctic ice", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0239", "family": "figurative", "side": "P", "target": "arctic ice", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0240", "family": "figurative", "side": "S", "target": "riverbed mud", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0240", "family": "figurative", "side": "P", "target": "riverbed mud", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0241", "family": "figurative", "side": "S", "target": "Ferris wheels", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0241", "family": "figurative", "side": "P", "target": "Ferris wheels", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0242", "family": "figurative", "side": "S", "target": "cathedral rose window", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0242", "family": "figurative", "side": "P", "target": "cathedral rose window", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0243", "family": "figurative", "side": "S", "target": "manhole cover", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0243", "family": "figurative", "side": "P", "target": "manhole cover", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0244", "family": "figurative", "side": "S", "target": "stars", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0244", "family": "figurative", "side": "P", "target": "stars", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0245", "family": "figurative", "side": "S", "target": "tree, ring", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0245", "family": "figurative", "side": "P", "target": "tree, ring", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0246", "family": "figurative", "side": "S", "target": "lobster", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0246", "family": "figurative", "side": "P", "target": "lobster", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "figurative/prompt_0247", "family": "figurative", "side": "S", "target": "raven", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "figurative/prompt_0247", "family": "figurative", "side": "P", "target": "raven", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0001", "family": "perspectival", "side": "S", "target": "I miss you", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0001", "family": "perspectival", "side": "P", "target": "I miss you", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0002", "family": "perspectival", "side": "S", "target": "octopus", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0002", "family": "perspectival", "side": "P", "target": "octopus", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0003", "family": "perspectival", "side": "S", "target": "airplane", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0003", "family": "perspectival", "side": "P", "target": "airplane", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0004", "family": "perspectival", "side": "S", "target": "unicorn doll", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0004", "family": "perspectival", "side": "P", "target": "unicorn doll", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0005", "family": "perspectival", "side": "S", "target": "eagle", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0005", "family": "perspectival", "side": "P", "target": "eagle", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0006", "family": "perspectival", "side": "S", "target": "tea cup", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0006", "family": "perspectival", "side": "P", "target": "tea cup", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0007", "family": "perspectival", "side": "S", "target": "dragon", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0007", "family": "perspectival", "side": "P", "target": "dragon", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0008", "family": "perspectival", "side": "S", "target": "elephant", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0008", "family": "perspectival", "side": "P", "target": "elephant", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0009", "family": "perspectival", "side": "S", "target": "Paris", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0009", "family": "perspectival", "side": "P", "target": "Paris", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0010", "family": "perspectival", "side": "S", "target": "dolphin", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0010", "family": "perspectival", "side": "P", "target": "dolphin", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0011", "family": "perspectival", "side": "S", "target": "penguin", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0011", "family": "perspectival", "side": "P", "target": "penguin", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0012", "family": "perspectival", "side": "S", "target": "frog", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0012", "family": "perspectival", "side": "P", "target": "frog", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0013", "family": "perspectival", "side": "S", "target": "watermelon", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0013", "family": "perspectival", "side": "P", "target": "watermelon", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0014", "family": "perspectival", "side": "S", "target": "giraffe", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0014", "family": "perspectival", "side": "P", "target": "giraffe", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0015", "family": "perspectival", "side": "S", "target": "golden retriever", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0015", "family": "perspectival", "side": "P", "target": "golden retriever", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0016", "family": "perspectival", "side": "S", "target": "map", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0016", "family": "perspectival", "side": "P", "target": "map", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0017", "family": "perspectival", "side": "S", "target": "lobster toy", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0017", "family": "perspectival", "side": "P", "target": "lobster toy", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0018", "family": "perspectival", "side": "S", "target": "whale", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0018", "family": "perspectival", "side": "P", "target": "whale", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0019", "family": "perspectival", "side": "S", "target": "fox", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0019", "family": "perspectival", "side": "P", "target": "fox", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0020", "family": "perspectival", "side": "S", "target": "milk", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0020", "family": "perspectival", "side": "P", "target": "milk", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0021", "family": "perspectival", "side": "S", "target": "water bottle", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0021", "family": "perspectival", "side": "P", "target": "water bottle", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0022", "family": "perspectival", "side": "S", "target": "apple", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0022", "family": "perspectival", "side": "P", "target": "apple", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0023", "family": "perspectival", "side": "S", "target": "travel pillow", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0023", "family": "perspectival", "side": "P", "target": "travel pillow", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0024", "family": "perspectival", "side": "S", "target": "bottle", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0024", "family": "perspectival", "side": "P", "target": "bottle", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0025", "family": "perspectival", "side": "S", "target": "coffee cup", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0025", "family": "perspectival", "side": "P", "target": "coffee cup", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0026", "family": "perspectival", "side": "S", "target": "butterfly", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0026", "family": "perspectival", "side": "P", "target": "butterfly", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0027", "family": "perspectival", "side": "S", "target": "banana", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0027", "family": "perspectival", "side": "P", "target": "banana", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0028", "family": "perspectival", "side": "S", "target": "red tower", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0028", "family": "perspectival", "side": "P", "target": "red tower", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0029", "family": "perspectival", "side": "S", "target": "train", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0029", "family": "perspectival", "side": "P", "target": "train", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0030", "family": "perspectival", "side": "S", "target": "teapot", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0030", "family": "perspectival", "side": "P", "target": "teapot", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0031", "family": "perspectival", "side": "S", "target": "checkered thermos", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0031", "family": "perspectival", "side": "P", "target": "checkered thermos", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0032", "family": "perspectival", "side": "S", "target": "airplane", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0032", "family": "perspectival", "side": "P", "target": "airplane", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0033", "family": "perspectival", "side": "S", "target": "seashell", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0033", "family": "perspectival", "side": "P", "target": "seashell", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0034", "family": "perspectival", "side": "S", "target": "mug", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0034", "family": "perspectival", "side": "P", "target": "mug", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0035", "family": "perspectival", "side": "S", "target": "pencil case", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0035", "family": "perspectival", "side": "P", "target": "pencil case", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0036", "family": "perspectival", "side": "S", "target": "desk lamp", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0036", "family": "perspectival", "side": "P", "target": "desk lamp", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0037", "family": "perspectival", "side": "S", "target": "pizza", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0037", "family": "perspectival", "side": "P", "target": "pizza", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0038", "family": "perspectival", "side": "S", "target": "watering can", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0038", "family": "perspectival", "side": "P", "target": "watering can", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0039", "family": "perspectival", "side": "S", "target": "keychain", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0039", "family": "perspectival", "side": "P", "target": "keychain", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0040", "family": "perspectival", "side": "S", "target": "strawberry", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0040", "family": "perspectival", "side": "P", "target": "strawberry", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0041", "family": "perspectival", "side": "S", "target": "school bus", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0041", "family": "perspectival", "side": "P", "target": "school bus", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0042", "family": "perspectival", "side": "S", "target": "sailboat", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0042", "family": "perspectival", "side": "P", "target": "sailboat", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0043", "family": "perspectival", "side": "S", "target": "suitcase", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0043", "family": "perspectival", "side": "P", "target": "suitcase", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0044", "family": "perspectival", "side": "S", "target": "lighthouse.", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0044", "family": "perspectival", "side": "P", "target": "lighthouse.", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0045", "family": "perspectival", "side": "S", "target": "crown", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0045", "family": "perspectival", "side": "P", "target": "crown", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0046", "family": "perspectival", "side": "S", "target": "yellow airplane model", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0046", "family": "perspectival", "side": "P", "target": "yellow airplane model", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0047", "family": "perspectival", "side": "S", "target": "airplane", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0047", "family": "perspectival", "side": "P", "target": "airplane", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0048", "family": "perspectival", "side": "S", "target": "surfboard", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0048", "family": "perspectival", "side": "P", "target": "surfboard", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0049", "family": "perspectival", "side": "S", "target": "palm tree", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0049", "family": "perspectival", "side": "P", "target": "palm tree", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0050", "family": "perspectival", "side": "S", "target": "red and blue train", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0050", "family": "perspectival", "side": "P", "target": "red and blue train", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0051", "family": "perspectival", "side": "S", "target": "hamburger with flag", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0051", "family": "perspectival", "side": "P", "target": "hamburger with flag", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0052", "family": "perspectival", "side": "S", "target": "straberry sticker", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0052", "family": "perspectival", "side": "P", "target": "straberry sticker", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0053", "family": "perspectival", "side": "S", "target": "coffee mug", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0053", "family": "perspectival", "side": "P", "target": "coffee mug", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0054", "family": "perspectival", "side": "S", "target": "pencil", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0054", "family": "perspectival", "side": "P", "target": "pencil", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0055", "family": "perspectival", "side": "S", "target": "lobster", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0055", "family": "perspectival", "side": "P", "target": "lobster", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0056", "family": "perspectival", "side": "S", "target": "small teacup with yellow flowers", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0056", "family": "perspectival", "side": "P", "target": "small teacup with yellow flowers", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0057", "family": "perspectival", "side": "S", "target": "cupcake", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0057", "family": "perspectival", "side": "P", "target": "cupcake", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0058", "family": "perspectival", "side": "S", "target": "book with star", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0058", "family": "perspectival", "side": "P", "target": "book with star", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0059", "family": "perspectival", "side": "S", "target": "bowl filled with lemons", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0059", "family": "perspectival", "side": "P", "target": "bowl filled with lemons", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0060", "family": "perspectival", "side": "S", "target": "watering can", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0060", "family": "perspectival", "side": "P", "target": "watering can", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0061", "family": "perspectival", "side": "S", "target": "lemon tart", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0061", "family": "perspectival", "side": "P", "target": "lemon tart", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0062", "family": "perspectival", "side": "S", "target": "mug", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0062", "family": "perspectival", "side": "P", "target": "mug", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0063", "family": "perspectival", "side": "S", "target": "a small blue airplane model with orange wings", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0063", "family": "perspectival", "side": "P", "target": "a small blue airplane model with orange wings", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0064", "family": "perspectival", "side": "S", "target": "butterfly ornaments", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0064", "family": "perspectival", "side": "P", "target": "butterfly ornaments", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0065", "family": "perspectival", "side": "S", "target": "a bright red teapot with small white flowers", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0065", "family": "perspectival", "side": "P", "target": "a bright red teapot with small white flowers", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0066", "family": "perspectival", "side": "S", "target": "a pale green coffee cup with a small white heart", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0066", "family": "perspectival", "side": "P", "target": "a pale green coffee cup with a small white heart", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0067", "family": "perspectival", "side": "S", "target": "a turquoise teapot with yellow dots", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0067", "family": "perspectival", "side": "P", "target": "a turquoise teapot with yellow dots", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0068", "family": "perspectival", "side": "S", "target": "pizza", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0068", "family": "perspectival", "side": "P", "target": "pizza", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0069", "family": "perspectival", "side": "S", "target": "brown coffee cup with white spot", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0069", "family": "perspectival", "side": "P", "target": "brown coffee cup with white spot", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0070", "family": "perspectival", "side": "S", "target": "a white teapot with thin green stripes", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0070", "family": "perspectival", "side": "P", "target": "a white teapot with thin green stripes", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0071", "family": "perspectival", "side": "S", "target": "red sightseeing bus", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0071", "family": "perspectival", "side": "P", "target": "red sightseeing bus", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0072", "family": "perspectival", "side": "S", "target": "lamp with green stripes", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0072", "family": "perspectival", "side": "P", "target": "lamp with green stripes", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0073", "family": "perspectival", "side": "S", "target": "lemon tart  topped with blueberries", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0073", "family": "perspectival", "side": "P", "target": "lemon tart  topped with blueberries", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0074", "family": "perspectival", "side": "S", "target": "a red mug with small white dots", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0074", "family": "perspectival", "side": "P", "target": "a red mug with small white dots", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0075", "family": "perspectival", "side": "S", "target": "milk carton", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0075", "family": "perspectival", "side": "P", "target": "milk carton", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0076", "family": "perspectival", "side": "S", "target": "croissant", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0076", "family": "perspectival", "side": "P", "target": "croissant", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0077", "family": "perspectival", "side": "S", "target": "small orange fish", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0077", "family": "perspectival", "side": "P", "target": "small orange fish", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0078", "family": "perspectival", "side": "S", "target": "a yellow pencil with two blue stripes", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0078", "family": "perspectival", "side": "P", "target": "a yellow pencil with two blue stripes", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0079", "family": "perspectival", "side": "S", "target": "a green eraser shaped like a small apple", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0079", "family": "perspectival", "side": "P", "target": "a green eraser shaped like a small apple", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0080", "family": "perspectival", "side": "S", "target": "A small red book with a gold star", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0080", "family": "perspectival", "side": "P", "target": "A small red book with a gold star", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0081", "family": "perspectival", "side": "S", "target": "a blue bar chart with one red bar", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0081", "family": "perspectival", "side": "P", "target": "a blue bar chart with one red bar", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0082", "family": "perspectival", "side": "S", "target": "a yellow sticky-note pad with a purple border", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0082", "family": "perspectival", "side": "P", "target": "a yellow sticky-note pad with a purple border", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0083", "family": "perspectival", "side": "S", "target": "a turquoise sports bottle with a white lightning symbol", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0083", "family": "perspectival", "side": "P", "target": "a turquoise sports bottle with a white lightning symbol", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0084", "family": "perspectival", "side": "S", "target": "A red dumbbell with two yellow stripes", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0084", "family": "perspectival", "side": "P", "target": "A red dumbbell with two yellow stripes", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0085", "family": "perspectival", "side": "S", "target": "A blue sports car with yellow stripes", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0085", "family": "perspectival", "side": "P", "target": "A blue sports car with yellow stripes", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0086", "family": "perspectival", "side": "S", "target": "a turquoise surfboard with three stripes.", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0086", "family": "perspectival", "side": "P", "target": "a turquoise surfboard with three stripes.", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0087", "family": "perspectival", "side": "S", "target": "a coral-pink sunscreen bottle", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0087", "family": "perspectival", "side": "P", "target": "a coral-pink sunscreen bottle", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0088", "family": "perspectival", "side": "S", "target": "A red sailboat with a yellow sail", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0088", "family": "perspectival", "side": "P", "target": "A red sailboat with a yellow sail", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0089", "family": "perspectival", "side": "S", "target": "a mint-green wallet with a tiny yellow sunflower", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0089", "family": "perspectival", "side": "P", "target": "a mint-green wallet with a tiny yellow sunflower", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0090", "family": "perspectival", "side": "S", "target": "A small silver train with bright red doors", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0090", "family": "perspectival", "side": "P", "target": "A small silver train with bright red doors", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0091", "family": "perspectival", "side": "S", "target": "a dark blue coffee mug with small yellow stars", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0091", "family": "perspectival", "side": "P", "target": "a dark blue coffee mug with small yellow stars", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0092", "family": "perspectival", "side": "S", "target": "a bright green calculator with orange buttons", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0092", "family": "perspectival", "side": "P", "target": "a bright green calculator with orange buttons", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0093", "family": "perspectival", "side": "S", "target": "a red metronome with a white pendulum", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0093", "family": "perspectival", "side": "P", "target": "a red metronome with a white pendulum", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0094", "family": "perspectival", "side": "S", "target": "a brass room key with a blue tassel", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0094", "family": "perspectival", "side": "P", "target": "a brass room key with a blue tassel", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0095", "family": "perspectival", "side": "S", "target": "turquoise stethoscope with yellow stripes", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0095", "family": "perspectival", "side": "P", "target": "turquoise stethoscope with yellow stripes", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0096", "family": "perspectival", "side": "S", "target": "A small orange parcel with a blue ribbon", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0096", "family": "perspectival", "side": "P", "target": "A small orange parcel with a blue ribbon", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0097", "family": "perspectival", "side": "S", "target": "A green tennis racket with purple strings", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0097", "family": "perspectival", "side": "P", "target": "A green tennis racket with purple strings", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0098", "family": "perspectival", "side": "S", "target": "a red book with a silver moon", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0098", "family": "perspectival", "side": "P", "target": "a red book with a silver moon", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0099", "family": "perspectival", "side": "S", "target": "A golden museum ticket with a purple star", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0099", "family": "perspectival", "side": "P", "target": "A golden museum ticket with a purple star", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0100", "family": "perspectival", "side": "S", "target": "RED UMBRELLA.", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0100", "family": "perspectival", "side": "P", "target": "RED UMBRELLA.", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0101", "family": "perspectival", "side": "S", "target": "yellow butterfly", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0101", "family": "perspectival", "side": "P", "target": "yellow butterfly", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0102", "family": "perspectival", "side": "S", "target": "sea", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0102", "family": "perspectival", "side": "P", "target": "sea", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0103", "family": "perspectival", "side": "S", "target": "calendar of August", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0103", "family": "perspectival", "side": "P", "target": "calendar of August", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0104", "family": "perspectival", "side": "S", "target": "star burst", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0104", "family": "perspectival", "side": "P", "target": "star burst", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0105", "family": "perspectival", "side": "S", "target": "Takoyaki Festival", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0105", "family": "perspectival", "side": "P", "target": "Takoyaki Festival", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0106", "family": "perspectival", "side": "S", "target": "red balloon", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0106", "family": "perspectival", "side": "P", "target": "red balloon", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0107", "family": "perspectival", "side": "S", "target": "red bus", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0107", "family": "perspectival", "side": "P", "target": "red bus", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0108", "family": "perspectival", "side": "S", "target": "monkey", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0108", "family": "perspectival", "side": "P", "target": "monkey", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0109", "family": "perspectival", "side": "S", "target": "green apple", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0109", "family": "perspectival", "side": "P", "target": "green apple", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0110", "family": "perspectival", "side": "S", "target": "lion", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0110", "family": "perspectival", "side": "P", "target": "lion", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0111", "family": "perspectival", "side": "S", "target": "MS Excel", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0111", "family": "perspectival", "side": "P", "target": "MS Excel", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0112", "family": "perspectival", "side": "S", "target": "Pikachu umbrella", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0112", "family": "perspectival", "side": "P", "target": "Pikachu umbrella", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0113", "family": "perspectival", "side": "S", "target": "Email", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0113", "family": "perspectival", "side": "P", "target": "Email", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0114", "family": "perspectival", "side": "S", "target": "rubber duck", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0114", "family": "perspectival", "side": "P", "target": "rubber duck", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0115", "family": "perspectival", "side": "S", "target": "owl", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0115", "family": "perspectival", "side": "P", "target": "owl", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0116", "family": "perspectival", "side": "S", "target": "horse", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0116", "family": "perspectival", "side": "P", "target": "horse", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0117", "family": "perspectival", "side": "S", "target": "ballerina", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0117", "family": "perspectival", "side": "P", "target": "ballerina", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0118", "family": "perspectival", "side": "S", "target": "panda", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0118", "family": "perspectival", "side": "P", "target": "panda", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0119", "family": "perspectival", "side": "S", "target": "penguin", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0119", "family": "perspectival", "side": "P", "target": "penguin", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0120", "family": "perspectival", "side": "S", "target": "wedding cake", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0120", "family": "perspectival", "side": "P", "target": "wedding cake", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0121", "family": "perspectival", "side": "S", "target": "panda", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0121", "family": "perspectival", "side": "P", "target": "panda", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0122", "family": "perspectival", "side": "S", "target": "made in japan", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0122", "family": "perspectival", "side": "P", "target": "made in japan", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0123", "family": "perspectival", "side": "S", "target": "deer warning symbol", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0123", "family": "perspectival", "side": "P", "target": "deer warning symbol", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0124", "family": "perspectival", "side": "S", "target": "pineapple pizza", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0124", "family": "perspectival", "side": "P", "target": "pineapple pizza", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0125", "family": "perspectival", "side": "S", "target": "black rabbit", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0125", "family": "perspectival", "side": "P", "target": "black rabbit", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0126", "family": "perspectival", "side": "S", "target": "eagle", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0126", "family": "perspectival", "side": "P", "target": "eagle", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0127", "family": "perspectival", "side": "S", "target": "bag of apples", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0127", "family": "perspectival", "side": "P", "target": "bag of apples", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0130", "family": "perspectival", "side": "S", "target": "sun", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0130", "family": "perspectival", "side": "P", "target": "sun", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0131", "family": "perspectival", "side": "S", "target": "Meet me outside", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0131", "family": "perspectival", "side": "P", "target": "Meet me outside", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0132", "family": "perspectival", "side": "S", "target": "Congratulations, you got the job", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0132", "family": "perspectival", "side": "P", "target": "Congratulations, you got the job", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0133", "family": "perspectival", "side": "S", "target": "Good luck", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0133", "family": "perspectival", "side": "P", "target": "Good luck", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0134", "family": "perspectival", "side": "S", "target": "birthday cake", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0134", "family": "perspectival", "side": "P", "target": "birthday cake", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0135", "family": "perspectival", "side": "S", "target": "akita-inu dog", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0135", "family": "perspectival", "side": "P", "target": "akita-inu dog", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0136", "family": "perspectival", "side": "S", "target": "football", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0136", "family": "perspectival", "side": "P", "target": "football", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0137", "family": "perspectival", "side": "S", "target": "broccoli", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0137", "family": "perspectival", "side": "P", "target": "broccoli", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0138", "family": "perspectival", "side": "S", "target": "instagram", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0138", "family": "perspectival", "side": "P", "target": "instagram", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0139", "family": "perspectival", "side": "S", "target": "penguin", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0139", "family": "perspectival", "side": "P", "target": "penguin", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0140", "family": "perspectival", "side": "S", "target": "hole", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0140", "family": "perspectival", "side": "P", "target": "hole", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0141", "family": "perspectival", "side": "S", "target": "Pumkin Soup", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0141", "family": "perspectival", "side": "P", "target": "Pumkin Soup", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0142", "family": "perspectival", "side": "S", "target": "Good luck", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0142", "family": "perspectival", "side": "P", "target": "Good luck", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0143", "family": "perspectival", "side": "S", "target": "OPEN sign", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0143", "family": "perspectival", "side": "P", "target": "OPEN sign", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0144", "family": "perspectival", "side": "S", "target": "star", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0144", "family": "perspectival", "side": "P", "target": "star", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0145", "family": "perspectival", "side": "S", "target": "stuffed anpanman", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0145", "family": "perspectival", "side": "P", "target": "stuffed anpanman", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0146", "family": "perspectival", "side": "S", "target": "a silver crown with a peacock engraving", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0146", "family": "perspectival", "side": "P", "target": "a silver crown with a peacock engraving", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0147", "family": "perspectival", "side": "S", "target": "sushi", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0147", "family": "perspectival", "side": "P", "target": "sushi", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0148", "family": "perspectival", "side": "S", "target": "Congratulations on your promotion", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0148", "family": "perspectival", "side": "P", "target": "Congratulations on your promotion", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0149", "family": "perspectival", "side": "S", "target": "piano", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0149", "family": "perspectival", "side": "P", "target": "piano", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0150", "family": "perspectival", "side": "S", "target": "rose garden", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0150", "family": "perspectival", "side": "P", "target": "rose garden", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0151", "family": "perspectival", "side": "S", "target": "key", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0151", "family": "perspectival", "side": "P", "target": "key", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0152", "family": "perspectival", "side": "S", "target": "cat", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0152", "family": "perspectival", "side": "P", "target": "cat", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0153", "family": "perspectival", "side": "S", "target": "instagram", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0153", "family": "perspectival", "side": "P", "target": "instagram", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0154", "family": "perspectival", "side": "S", "target": "instagram", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0154", "family": "perspectival", "side": "P", "target": "instagram", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0155", "family": "perspectival", "side": "S", "target": "bitcoin", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0155", "family": "perspectival", "side": "P", "target": "bitcoin", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0156", "family": "perspectival", "side": "S", "target": "MOM", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0156", "family": "perspectival", "side": "P", "target": "MOM", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0157", "family": "perspectival", "side": "S", "target": "diamond necklace", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0157", "family": "perspectival", "side": "P", "target": "diamond necklace", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0158", "family": "perspectival", "side": "S", "target": "Hello Kitty cake", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0158", "family": "perspectival", "side": "P", "target": "Hello Kitty cake", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0159", "family": "perspectival", "side": "S", "target": "gingerbread men", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0159", "family": "perspectival", "side": "P", "target": "gingerbread men", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0160", "family": "perspectival", "side": "S", "target": "bright red dress", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0160", "family": "perspectival", "side": "P", "target": "bright red dress", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0161", "family": "perspectival", "side": "S", "target": "computer screen", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0161", "family": "perspectival", "side": "P", "target": "computer screen", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0164", "family": "perspectival", "side": "S", "target": "young man", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0164", "family": "perspectival", "side": "P", "target": "young man", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0165", "family": "perspectival", "side": "S", "target": "red heart", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0165", "family": "perspectival", "side": "P", "target": "red heart", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0166", "family": "perspectival", "side": "S", "target": "jewelry", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0166", "family": "perspectival", "side": "P", "target": "jewelry", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0167", "family": "perspectival", "side": "S", "target": "penguin", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0167", "family": "perspectival", "side": "P", "target": "penguin", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0168", "family": "perspectival", "side": "S", "target": "sliding socks", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0168", "family": "perspectival", "side": "P", "target": "sliding socks", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0169", "family": "perspectival", "side": "S", "target": "broken heart", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0169", "family": "perspectival", "side": "P", "target": "broken heart", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0170", "family": "perspectival", "side": "S", "target": "passport", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0170", "family": "perspectival", "side": "P", "target": "passport", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0171", "family": "perspectival", "side": "S", "target": "spider", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0171", "family": "perspectival", "side": "P", "target": "spider", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0172", "family": "perspectival", "side": "S", "target": "gum", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0172", "family": "perspectival", "side": "P", "target": "gum", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0173", "family": "perspectival", "side": "S", "target": "letter 'p'", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0173", "family": "perspectival", "side": "P", "target": "letter 'p'", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0174", "family": "perspectival", "side": "S", "target": "massive ice mountain", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0174", "family": "perspectival", "side": "P", "target": "massive ice mountain", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0176", "family": "perspectival", "side": "S", "target": "hole", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0176", "family": "perspectival", "side": "P", "target": "hole", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0177", "family": "perspectival", "side": "S", "target": "kid with blonde hair", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0177", "family": "perspectival", "side": "P", "target": "kid with blonde hair", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0178", "family": "perspectival", "side": "S", "target": "volleyball", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0178", "family": "perspectival", "side": "P", "target": "volleyball", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0179", "family": "perspectival", "side": "S", "target": "blonde, curly hair", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0179", "family": "perspectival", "side": "P", "target": "blonde, curly hair", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0180", "family": "perspectival", "side": "S", "target": "Chinese characters", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0180", "family": "perspectival", "side": "P", "target": "Chinese characters", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0181", "family": "perspectival", "side": "S", "target": "score", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0181", "family": "perspectival", "side": "P", "target": "score", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0182", "family": "perspectival", "side": "S", "target": "cat meme", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0182", "family": "perspectival", "side": "P", "target": "cat meme", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0183", "family": "perspectival", "side": "S", "target": "monster", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0183", "family": "perspectival", "side": "P", "target": "monster", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0184", "family": "perspectival", "side": "S", "target": "onion", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0184", "family": "perspectival", "side": "P", "target": "onion", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0185", "family": "perspectival", "side": "S", "target": "bomb", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0185", "family": "perspectival", "side": "P", "target": "bomb", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0186", "family": "perspectival", "side": "S", "target": "photographer", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0186", "family": "perspectival", "side": "P", "target": "photographer", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0187", "family": "perspectival", "side": "S", "target": "viewfinder", "answer": "Yes.", "expected": "no", "correct": false}
+{"item_id": "perspectival/prompt_0187", "family": "perspectival", "side": "P", "target": "viewfinder", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "perspectival/prompt_0188", "family": "perspectival", "side": "S", "target": "the Moon'", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0188", "family": "perspectival", "side": "P", "target": "the Moon'", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "perspectival/prompt_0189", "family": "perspectival", "side": "S", "target": "rabbit", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "perspectival/prompt_0189", "family": "perspectival", "side": "P", "target": "rabbit", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0001", "family": "cancellation", "side": "S", "target": "book", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0001", "family": "cancellation", "side": "P", "target": "book", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0002", "family": "cancellation", "side": "S", "target": "hot dog", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0002", "family": "cancellation", "side": "P", "target": "hot dog", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0003", "family": "cancellation", "side": "S", "target": "toilet", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0003", "family": "cancellation", "side": "P", "target": "toilet", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "cancellation/prompt_0004", "family": "cancellation", "side": "S", "target": "teddy bear", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0004", "family": "cancellation", "side": "P", "target": "teddy bear", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0005", "family": "cancellation", "side": "S", "target": "spoon", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0005", "family": "cancellation", "side": "P", "target": "spoon", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0006", "family": "cancellation", "side": "S", "target": "toilet", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0006", "family": "cancellation", "side": "P", "target": "toilet", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0007", "family": "cancellation", "side": "S", "target": "microwave", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0007", "family": "cancellation", "side": "P", "target": "microwave", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "cancellation/prompt_0008", "family": "cancellation", "side": "S", "target": "train", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0008", "family": "cancellation", "side": "P", "target": "train", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "cancellation/prompt_0009", "family": "cancellation", "side": "S", "target": "skateboard", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0009", "family": "cancellation", "side": "P", "target": "skateboard", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "cancellation/prompt_0010", "family": "cancellation", "side": "S", "target": "spoon", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0010", "family": "cancellation", "side": "P", "target": "spoon", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0011", "family": "cancellation", "side": "S", "target": "surfboard", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0011", "family": "cancellation", "side": "P", "target": "surfboard", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "cancellation/prompt_0012", "family": "cancellation", "side": "S", "target": "horse", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0012", "family": "cancellation", "side": "P", "target": "horse", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "cancellation/prompt_0013", "family": "cancellation", "side": "S", "target": "keyboard", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0013", "family": "cancellation", "side": "P", "target": "keyboard", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0014", "family": "cancellation", "side": "S", "target": "bottle", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0014", "family": "cancellation", "side": "P", "target": "bottle", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0015", "family": "cancellation", "side": "S", "target": "bowl", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0015", "family": "cancellation", "side": "P", "target": "bowl", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "cancellation/prompt_0016", "family": "cancellation", "side": "S", "target": "keyboard", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0016", "family": "cancellation", "side": "P", "target": "keyboard", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0017", "family": "cancellation", "side": "S", "target": "backpack", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0017", "family": "cancellation", "side": "P", "target": "backpack", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0018", "family": "cancellation", "side": "S", "target": "car", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0018", "family": "cancellation", "side": "P", "target": "car", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "cancellation/prompt_0019", "family": "cancellation", "side": "S", "target": "sports ball", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0019", "family": "cancellation", "side": "P", "target": "sports ball", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0020", "family": "cancellation", "side": "S", "target": "tennis racket", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0020", "family": "cancellation", "side": "P", "target": "tennis racket", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0021", "family": "cancellation", "side": "S", "target": "kite", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0021", "family": "cancellation", "side": "P", "target": "kite", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0022", "family": "cancellation", "side": "S", "target": "fork", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0022", "family": "cancellation", "side": "P", "target": "fork", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0023", "family": "cancellation", "side": "S", "target": "carrot", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0023", "family": "cancellation", "side": "P", "target": "carrot", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0024", "family": "cancellation", "side": "S", "target": "pizza", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0024", "family": "cancellation", "side": "P", "target": "pizza", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0025", "family": "cancellation", "side": "S", "target": "cup", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0025", "family": "cancellation", "side": "P", "target": "cup", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0026", "family": "cancellation", "side": "S", "target": "keyboard", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0026", "family": "cancellation", "side": "P", "target": "keyboard", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0027", "family": "cancellation", "side": "S", "target": "carrot", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0027", "family": "cancellation", "side": "P", "target": "carrot", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0028", "family": "cancellation", "side": "S", "target": "dining table", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0028", "family": "cancellation", "side": "P", "target": "dining table", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0029", "family": "cancellation", "side": "S", "target": "mouse", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0029", "family": "cancellation", "side": "P", "target": "mouse", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0030", "family": "cancellation", "side": "S", "target": "cup", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0030", "family": "cancellation", "side": "P", "target": "cup", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "cancellation/prompt_0031", "family": "cancellation", "side": "S", "target": "frisbee", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0031", "family": "cancellation", "side": "P", "target": "frisbee", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0032", "family": "cancellation", "side": "S", "target": "tie", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0032", "family": "cancellation", "side": "P", "target": "tie", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0033", "family": "cancellation", "side": "S", "target": "bowl", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0033", "family": "cancellation", "side": "P", "target": "bowl", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0034", "family": "cancellation", "side": "S", "target": "sandwich", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0034", "family": "cancellation", "side": "P", "target": "sandwich", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0035", "family": "cancellation", "side": "S", "target": "fire hydrant", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0035", "family": "cancellation", "side": "P", "target": "fire hydrant", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0036", "family": "cancellation", "side": "S", "target": "book", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0036", "family": "cancellation", "side": "P", "target": "book", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0037", "family": "cancellation", "side": "S", "target": "sheep", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0037", "family": "cancellation", "side": "P", "target": "sheep", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0038", "family": "cancellation", "side": "S", "target": "motorcycle", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0038", "family": "cancellation", "side": "P", "target": "motorcycle", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "cancellation/prompt_0039", "family": "cancellation", "side": "S", "target": "tennis racket", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0039", "family": "cancellation", "side": "P", "target": "tennis racket", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "cancellation/prompt_0040", "family": "cancellation", "side": "S", "target": "backpack", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0040", "family": "cancellation", "side": "P", "target": "backpack", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0041", "family": "cancellation", "side": "S", "target": "chair", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0041", "family": "cancellation", "side": "P", "target": "chair", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0042", "family": "cancellation", "side": "S", "target": "truck", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0042", "family": "cancellation", "side": "P", "target": "truck", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0043", "family": "cancellation", "side": "S", "target": "bed", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0043", "family": "cancellation", "side": "P", "target": "bed", "answer": "No.", "expected": "yes", "correct": false}
+{"item_id": "cancellation/prompt_0044", "family": "cancellation", "side": "S", "target": "wine glass", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0044", "family": "cancellation", "side": "P", "target": "wine glass", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0045", "family": "cancellation", "side": "S", "target": "truck", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0045", "family": "cancellation", "side": "P", "target": "truck", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0046", "family": "cancellation", "side": "S", "target": "traffic light", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0046", "family": "cancellation", "side": "P", "target": "traffic light", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0047", "family": "cancellation", "side": "S", "target": "dining table", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0047", "family": "cancellation", "side": "P", "target": "dining table", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0048", "family": "cancellation", "side": "S", "target": "apple", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0048", "family": "cancellation", "side": "P", "target": "apple", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0049", "family": "cancellation", "side": "S", "target": "sandwich", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0049", "family": "cancellation", "side": "P", "target": "sandwich", "answer": "Yes.", "expected": "yes", "correct": true}
+{"item_id": "cancellation/prompt_0050", "family": "cancellation", "side": "S", "target": "keyboard", "answer": "No.", "expected": "no", "correct": true}
+{"item_id": "cancellation/prompt_0050", "family": "cancellation", "side": "P", "target": "keyboard", "answer": "Yes.", "expected": "yes", "correct": true}

@@ -1,0 +1,179 @@
+{
+ "t5": [
+  {
+   "cancellation": 0.5,
+   "attribution": 0.5,
+   "figurative": 0.5042372881355932,
+   "perspectival": 0.5,
+   "pooled": 0.5010593220338984
+  },
+  {
+   "cancellation": 0.71,
+   "attribution": 0.5933333333333334,
+   "figurative": 0.6271186440677966,
+   "perspectival": 0.5244565217391305,
+   "pooled": 0.6137271247850651
+  },
+  {
+   "cancellation": 0.69,
+   "attribution": 0.6133333333333333,
+   "figurative": 0.625,
+   "perspectival": 0.529891304347826,
+   "pooled": 0.6145561594202898
+  },
+  {
+   "cancellation": 0.8,
+   "attribution": 0.6866666666666666,
+   "figurative": 0.6779661016949152,
+   "perspectival": 0.5570652173913043,
+   "pooled": 0.6804244964382216
+  },
+  {
+   "cancellation": 0.78,
+   "attribution": 0.6733333333333333,
+   "figurative": 0.711864406779661,
+   "perspectival": 0.5760869565217391,
+   "pooled": 0.6853211741586834
+  },
+  {
+   "cancellation": 0.82,
+   "attribution": 0.7733333333333333,
+   "figurative": 0.788135593220339,
+   "perspectival": 0.5815217391304348,
+   "pooled": 0.7407476664210269
+  },
+  {
+   "cancellation": 0.87,
+   "attribution": 0.78,
+   "figurative": 0.8114406779661016,
+   "perspectival": 0.5842391304347826,
+   "pooled": 0.7614199521002211
+  },
+  {
+   "cancellation": 0.84,
+   "attribution": 0.7866666666666666,
+   "figurative": 0.8347457627118644,
+   "perspectival": 0.595108695652174,
+   "pooled": 0.7641302812576762
+  },
+  {
+   "cancellation": 0.85,
+   "attribution": 0.8266666666666667,
+   "figurative": 0.8114406779661016,
+   "perspectival": 0.6032608695652174,
+   "pooled": 0.7728420535494964
+  },
+  {
+   "cancellation": 0.89,
+   "attribution": 0.8066666666666666,
+   "figurative": 0.8199152542372882,
+   "perspectival": 0.6168478260869565,
+   "pooled": 0.7833574367477278
+  },
+  {
+   "cancellation": 0.89,
+   "attribution": 0.8,
+   "figurative": 0.8305084745762712,
+   "perspectival": 0.6005434782608695,
+   "pooled": 0.7802629882092852
+  },
+  {
+   "cancellation": 0.92,
+   "attribution": 0.8133333333333334,
+   "figurative": 0.8495762711864406,
+   "perspectival": 0.6168478260869565,
+   "pooled": 0.7999393576516827
+  },
+  {
+   "cancellation": 0.93,
+   "attribution": 0.8533333333333334,
+   "figurative": 0.875,
+   "perspectival": 0.6195652173913043,
+   "pooled": 0.8194746376811594
+  },
+  {
+   "cancellation": 0.92,
+   "attribution": 0.8733333333333333,
+   "figurative": 0.8834745762711864,
+   "perspectival": 0.6059782608695652,
+   "pooled": 0.8206965426185213
+  },
+  {
+   "cancellation": 0.93,
+   "attribution": 0.86,
+   "figurative": 0.902542372881356,
+   "perspectival": 0.6086956521739131,
+   "pooled": 0.8253095062638173
+  },
+  {
+   "cancellation": 0.92,
+   "attribution": 0.8533333333333334,
+   "figurative": 0.9046610169491526,
+   "perspectival": 0.6222826086956522,
+   "pooled": 0.8250692397445346
+  },
+  {
+   "cancellation": 0.98,
+   "attribution": 0.86,
+   "figurative": 0.9110169491525424,
+   "perspectival": 0.6141304347826086,
+   "pooled": 0.8412868459837877
+  },
+  {
+   "cancellation": 0.96,
+   "attribution": 0.86,
+   "figurative": 0.9194915254237288,
+   "perspectival": 0.6277173913043478,
+   "pooled": 0.8418022291820191
+  },
+  {
+   "cancellation": 0.97,
+   "attribution": 0.88,
+   "figurative": 0.9279661016949152,
+   "perspectival": 0.6358695652173914,
+   "pooled": 0.8534589167280766
+  },
+  {
+   "cancellation": 0.97,
+   "attribution": 0.8933333333333333,
+   "figurative": 0.9216101694915254,
+   "perspectival": 0.657608695652174,
+   "pooled": 0.8606380496192582
+  },
+  {
+   "cancellation": 0.98,
+   "attribution": 0.9066666666666666,
+   "figurative": 0.923728813559322,
+   "perspectival": 0.6739130434782609,
+   "pooled": 0.8710771309260623
+  },
+  {
+   "cancellation": 0.96,
+   "attribution": 0.9133333333333333,
+   "figurative": 0.9258474576271186,
+   "perspectival": 0.6711956521739131,
+   "pooled": 0.8675941107835913
+  },
+  {
+   "cancellation": 0.96,
+   "attribution": 0.92,
+   "figurative": 0.923728813559322,
+   "perspectival": 0.6521739130434783,
+   "pooled": 0.8639756816507
+  },
+  {
+   "cancellation": 0.96,
+   "attribution": 0.8733333333333333,
+   "figurative": 0.9258474576271186,
+   "perspectival": 0.6603260869565217,
+   "pooled": 0.8548767194792435
+  },
+  {
+   "cancellation": 0.96,
+   "attribution": 0.9,
+   "figurative": 0.9427966101694916,
+   "perspectival": 0.6304347826086957,
+   "pooled": 0.8583078481945469
+  }
+ ]
+}
