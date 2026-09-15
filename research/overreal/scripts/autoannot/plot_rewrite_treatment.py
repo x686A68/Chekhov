@@ -57,7 +57,7 @@ def main():
     orate = [o[k][0] / o[k][1] for k in (1, 2, 3, 4)]
 
     plt.rcParams.update({"font.size": 8, "font.family": "serif", "axes.edgecolor": "#888", "axes.linewidth": 0.6})
-    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(6.6, 2.45), gridspec_kw={"width_ratios": [2.3, 1]})
+    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(6.6, 2.7), gridspec_kw={"width_ratios": [2.3, 1]})
     labels, ys, y = [], [], 0
     for fam, fn in FAM:
         y0 = y
@@ -86,7 +86,6 @@ def main():
     ax.legend(handles=[plt.Rectangle((0, 0), 1, 1, color=c) for c in COL], labels=CAT, loc="upper center",
               bbox_to_anchor=(0.3, 1.25), ncol=4, frameon=False, fontsize=7, handlelength=1,
               columnspacing=0.9, handletextpad=0.4)
-    ax.text(-0.42, 1.16, "(a)", transform=ax.transAxes, fontsize=9, fontweight="bold", va="top")
     for k, r in enumerate(orate):
         ax2.bar(k, r, color=COL[k], width=0.7)
         ax2.text(k, r + 0.02, f"{100*r:.0f}%", ha="center", va="bottom", fontsize=7)
@@ -98,9 +97,11 @@ def main():
     ax2.set_ylabel("over-realization rate", labelpad=4)
     ax2.spines[["top", "right"]].set_visible(False)
     ax2.tick_params(length=2)
-    ax2.text(-0.55, 1.16, "(b)", transform=ax2.transAxes, fontsize=9, fontweight="bold", va="top")
     fig.tight_layout()
-    fig.subplots_adjust(top=0.84, wspace=0.5, left=0.235)
+    fig.subplots_adjust(top=0.86, bottom=0.3, wspace=0.5, left=0.235)
+    for a, tag in ((ax, "(a)"), (ax2, "(b)")):
+        bb = a.get_position()
+        fig.text((bb.x0 + bb.x1) / 2, 0.02, tag, ha="center", va="bottom", fontsize=9, fontweight="bold")
     fig.savefig(ROOT / "Chekhov_paper_ICLR" / "figures" / "rewrite_treatment.pdf")
     fig.savefig(Path(__file__).with_name("rewrite_treatment.png"), dpi=200)
     print("saved; over-realization by treatment:", [round(x, 3) for x in orate])
