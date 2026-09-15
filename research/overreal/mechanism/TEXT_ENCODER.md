@@ -90,11 +90,27 @@ Cross-validation: **GroupKFold with the target lemma as the group**, 5 folds,
 so no target word appears in both train and test. Otherwise the probe can
 memorize which targets tend to come with which construction.
 
-Reported per family and pooled. Family sizes (S+P): cancellation 2x50 as
-generated (`prompts.jsonl` and every manifest hold 50 cancellation items,
-while Table 1 of the paper says 200; to be reconciled before the run),
-mental-state 2x75, figurative 2x237, perspectival 2x186. The two small
-families will have wide intervals; report bootstrap 95% intervals everywhere.
+Training regime: **one probe per encoder, trained on all four families
+together** (decided 2026-09-15). The label means the same thing in every
+family, "this mention is not a request", and the paper treats the four
+families as one phenomenon, so the probe should too. Families are weighted so
+that each contributes equally to the loss. Test accuracy is still reported
+**per family** (each family's held-out folds), plus pooled.
+
+Appendix checks: (a) per-family probes, to see whether any family separates
+better on its own than under the pooled probe, which would mean its cue lives
+on a different direction; (b) leave-one-family-out, the strict version of
+"same direction".
+
+Family sizes (S+P): cancellation 2x50 as generated (`prompts.jsonl` and every
+manifest hold 50 cancellation items, while Table 1 of the paper says 200; to
+be reconciled before the run), mental-state 2x75, figurative 2x237,
+perspectival 2x186; pooled 1,096 to 1,396. Report bootstrap 95% intervals.
+
+Small-sample safeguards: regularization chosen inside the training folds
+only; a label-shuffle null distribution reported next to every accuracy; and a
+training-free mass-mean probe (difference of class means as the direction)
+reported alongside logistic regression.
 
 ## Controls
 
