@@ -180,3 +180,52 @@ Encoder forward passes over 1,396 prompts: minutes on one GPU. P rewriting:
 scikit-learn 1.6). Model weights in `/data/users/jiahao_huang/hf`
 (`HF_HOME`). All four encoders are already cached inside the SD3.5, FLUX and
 Qwen-Image repos.
+
+## Results (run 2026-09-15)
+
+Files: `results/text_encoder_<encoder>.json`, `results/layer_sweep_<encoder>.json`,
+`results/layer_sweep.pdf`, `results/ask_encoder.jsonl`, `results/text_encoder_table.tex`.
+Probe settings: logistic regression, C from {0.01, 0.1, 1, 10} by inner CV
+(0.01 chosen almost everywhere), 5 GroupKFold folds by target word, family
+weights, 1000 bootstrap resamples, 50 label-shuffle nulls (95th percentile
+0.51 to 0.54).
+
+Target-word probe at the deployed layer (EC / MS / Fig / Per / pooled):
+
+| encoder | target word | nearest other word |
+|---|---|---|
+| CLIP-L/14 | .95 .81 .87 .53 / .79 | .50 .81 .63 .54 / .62 |
+| CLIP-bigG/14 | .96 .87 .87 .60 / .82 | .50 .77 .65 .61 / .63 |
+| T5-XXL | .95 .89 .94 .62 / .85 | .78 .82 .81 .66 / .77 |
+| Qwen2.5-VL-7B | 1.00 .92 .91 .60 / .86 | .50 .75 .69 .63 / .64 |
+
+Prompt-mean probe: .84 / .86 / .92 / .91 pooled (CLIP-L, bigG, T5, Qwen);
+perspectival .77 / .80 / .83 / .84. CLIP-L pooled vector (FLUX): .80 .79 .82
+.67 / .77.
+
+Layer sweep: perspectival stays in the chance band at every layer of every
+encoder; the other three families separate within the first 4 CLIP layers
+and rise gradually in T5 and Qwen.
+
+Bridge (Spearman rho, probe margin vs item over-realization rate of the
+generator using that encoder, raw prompts, Opus labels): within-family rho
+between -0.28 and 0.28, no consistent sign; pooled rho slightly negative
+(-0.15 to -0.20 for T5 and Qwen) which is the perspectival family confound
+(low margins, high rates), not a within-family effect.
+
+Ask the encoder (Qwen2.5-VL-7B, "would the target be visible", S expects no,
+P expects yes): EC 1.00 / .76, MS .75 / 1.00, Fig .84 / .93, Per .56 / .85.
+Perspectival errors: "closed container, inside is X" is answered yes.
+Cancellation P errors: implausible scenes (a toilet on a tray) answered no.
+
+Reading for the paper: for EC, MS and Fig the space builder survives
+encoding on the target word itself, and the encoder's confidence does not
+predict the generator's failure, so the loss is downstream (paragraphs 2 and
+3). For Per the target's representation never records that it is out of
+view, in any encoder and at any layer, so that family's failure begins in
+the encoder.
+
+Caveats: the mental-state control word is often the verb the rewrite
+replaces, so its control accuracy is inflated; the T5 control word is high
+in general (T5 mixes context into neighbours strongly). Family 1 has 50
+items only.
