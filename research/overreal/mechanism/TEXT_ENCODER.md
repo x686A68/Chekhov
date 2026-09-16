@@ -1,4 +1,8 @@
-# 6.3 "Text encoder": does the encoder represent the space builder?
+# 6.3 text-encoder probe (dropped from the paper 2026-09-16; kept as a record)
+
+Author decision 2026-09-16: section 6.3 looks at the backbone only. The
+experiment below was run and its results stand, but the paragraph, table and
+appendix were removed from the paper.
 
 Design for the first paragraph of paper section 6.3 (The mechanism behind
 over-realization). Written 2026-09-15. The section now asks two questions only,
