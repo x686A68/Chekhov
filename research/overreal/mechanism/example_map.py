@@ -37,6 +37,8 @@ def main():
     ap.add_argument("--out", default=os.path.join(ROOT, "results", "examples"))
     ap.add_argument("--smooth", type=float, default=1.0, help="gaussian sigma in patches (0 = none)")
     ap.add_argument("--no-title", action="store_true")
+    ap.add_argument("--pair", default="", help="item stem like figurative_prompt_0084 with --seed: S and P side by side")
+    ap.add_argument("--seed", type=int, default=0)
     args = ap.parse_args()
     d = os.path.join(ROOT, "attn", args.model)
 
@@ -55,6 +57,35 @@ def main():
     import matplotlib.pyplot as plt
     from PIL import Image
     os.makedirs(args.out, exist_ok=True)
+
+    def load_map(name):
+        z = np.load(os.path.join(d, name + ".npz"))
+        mp = z["map"].astype(np.float32)[args.bins].mean(0)
+        side = int(np.sqrt(mp.size))
+        mp = mp.reshape(side, side)
+        if args.smooth > 0:
+            from scipy.ndimage import gaussian_filter
+            mp = gaussian_filter(mp, args.smooth)
+        return z, Image.open(os.path.join(d, name + ".png")).convert("RGB"), mp
+
+    if args.pair:
+        panels = [load_map(f"{args.pair}__{side}_s{args.seed}") for side in ("S", "P")]
+        vmax = max(mp.max() for _, _, mp in panels)
+        fig, axes = plt.subplots(1, 4, figsize=(12, 3.2))
+        for i, (z, img, mp) in enumerate(panels):
+            axes[2 * i].imshow(img); axes[2 * i].axis("off")
+            axes[2 * i + 1].imshow(img, alpha=0.35)
+            axes[2 * i + 1].imshow(mp, cmap="inferno", alpha=0.75, vmin=0, vmax=vmax,
+                                   extent=(0, img.width, img.height, 0), interpolation="bilinear")
+            axes[2 * i + 1].axis("off")
+            if not args.no_title:
+                axes[2 * i].set_title(str(z["prompt"]), fontsize=8)
+        fig.tight_layout(pad=0.3)
+        out = os.path.join(args.out, f"{args.pair}_pair_s{args.seed}.png")
+        fig.savefig(out, dpi=150); fig.savefig(out.replace(".png", ".pdf"))
+        print("saved", out)
+        return
+
     for name in args.name:
         z = np.load(os.path.join(d, name + ".npz"))
         img = Image.open(os.path.join(d, name + ".png")).convert("RGB")

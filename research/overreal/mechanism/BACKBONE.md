@@ -67,3 +67,28 @@ cannot see.
 FLUX: about 40 s per 50-step image with recording; 2,180 images per model.
 SD3.5-L similar; Qwen-Image slower. Runs chained per GPU by
 `run_attn_chain.sh` (FLUX, then SD3.5-L, then Qwen-Image).
+
+## Results (runs finished 2026-09-17; three models, 2,180 records each)
+
+Reading 1, target share ratio original/control (exp of mean paired log-ratio),
+EC / MS / Fig / Per: FLUX .79 .74 .83 .98; SD3.5-L .85 .85 .92 .99;
+Qwen-Image .80 .90 .92 .97. Every CI excludes 0 except perspectival.
+
+Reading 2, AUC over-realized (DO+SO) vs withheld, early-step map peak:
+FLUX .65 .69 .70 .56; SD3.5-L .92 .98 .87 .67; Qwen-Image .54 .87 .62 .48.
+Mean share AUC is lower for SD3.5-L (.60 .84 .72 .51) and similar for FLUX.
+Perspectival at chance everywhere.
+
+Reading 3, replaced-words per-token share / other words: FLUX .71 .73 .77 .83;
+SD3.5-L .46 .54 .63 .81; Qwen .73 .54 .54 .66. AUC of that share for
+withheld vs over-realized: .33 to .57 (no effect).
+
+Expanded prompts (FLUX, 25 labeled items per family with the target kept):
+target per-token share relative to other words rises from .85 to 1.37 (Qwen
+rewriter) and .97 to 1.43 (Ideogram); AUC of the relative share for
+appearance .75 / .77 pooled.
+
+Paper: section 6.3 (four paragraphs, Table tab:attn, Figure fig:attn with the
+cucumber pair), Appendix app:encoder (probe restored) and app:attn (detail
+tables). Example maps: results/examples/ (five appendix items on SD3.5-L,
+cucumber pair in results/examples/paper/).
