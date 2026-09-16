@@ -67,9 +67,16 @@ def summarize(z):
         "target_share_tok": float(per_tok[t].mean() / total),
         "map_peak": float(z["map"].astype(np.float32)[:2].mean(0).max()),
         "text_total": float(total),
-        "profile": mass[:, :, t].sum(-1) / mass[:, :, :n].sum(-1),  # [blocks, steps] share
+        "profile": _bin_steps(mass[:, :, t].sum(-1) / mass[:, :, :n].sum(-1), 10),  # [blocks, 10]
     }
     return out
+
+
+def _bin_steps(x, nb):
+    """Average the step axis of [blocks, steps] into nb equal bins."""
+    T = x.shape[1]
+    edges = np.linspace(0, T, nb + 1).astype(int)
+    return np.stack([x[:, a:max(b, a + 1)].mean(1) for a, b in zip(edges[:-1], edges[1:])], 1)
 
 
 def boot_ci(x, n=2000, seed=0):
@@ -81,9 +88,52 @@ def boot_ci(x, n=2000, seed=0):
     return float(np.percentile(b, 2.5)), float(np.percentile(b, 97.5))
 
 
+def expanded(args, recs, lab):
+    """Expanded prompts (side X) against the raw prompt (side S) of the same
+    item and seed: the target's per-token share relative to the other real
+    tokens (length-free), and whether it still predicts appearance."""
+    d = os.path.join(ROOT, "attn", f"{args.model}_{args.cond}")
+    xrecs = {}
+    for f in sorted(glob.glob(os.path.join(d, "*.npz"))):
+        z = np.load(f)
+        xrecs[(str(z["item_id"]), int(z["seed"]))] = summarize(z) | {"family": str(z["family"])}
+    xlab = {}
+    for line in open(AUTO):
+        r = json.loads(line)
+        m = re.match(rf"(.+)/gen_{MODEL_KEY[args.model]}_{args.cond}_s(\d+)$", r["image_id"])
+        if m:
+            xlab[(m.group(1), int(m.group(2)))] = r.get("label")
+    print(f"\n[expanded: {args.cond}] {len(xrecs)} records; target per-token share relative to other tokens")
+    print(f"{'family':<14}{'n':>5}{'raw':>8}{'expanded':>10}{'log-ratio':>11}{'95% CI':>17}"
+          f"{'n_over':>7}{'n_with':>7}{'AUC':>6}")
+    for fam in FAMILIES + ["all"]:
+        lr, a, b, y, sc = [], [], [], [], []
+        for (item, seed), x in xrecs.items():
+            if fam != "all" and x["family"] != fam:
+                continue
+            rel_x = x["target_share_tok"] / x["other_share_tok"]
+            sraw = recs.get((item, "S", seed))
+            if sraw is not None:
+                rel_s = sraw["target_share_tok"] / sraw["other_share_tok"]
+                lr.append(np.log(rel_x / rel_s)); a.append(rel_s); b.append(rel_x)
+            l = xlab.get((item, seed))
+            if l in ("disruptive", "silent"):
+                y.append(1); sc.append(rel_x)
+            elif l == "withheld":
+                y.append(0); sc.append(rel_x)
+        if not lr and not y:
+            continue
+        lo, hi = boot_ci(lr) if lr else (np.nan, np.nan)
+        auc = roc_auc_score(y, sc) if len(set(y)) == 2 else np.nan
+        print(f"{fam:<14}{len(lr):>5}{np.mean(a) if a else np.nan:>8.2f}{np.mean(b) if b else np.nan:>10.2f}"
+              f"{np.mean(lr) if lr else np.nan:>11.3f}{f'[{lo:.3f}, {hi:.3f}]':>17}"
+              f"{sum(y):>7}{len(y)-sum(y):>7}{auc:>6.2f}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", default="flux")
+    ap.add_argument("--cond", default="", help="expanded-prompt run to compare with raw: qwen or ideogram")
     args = ap.parse_args()
     d = os.path.join(ROOT, "attn", args.model)
     recs = {}
@@ -93,6 +143,8 @@ def main():
         recs[key] = summarize(z) | {"family": str(z["family"])}
     print(f"{len(recs)} records")
     lab = labels(args.model)
+    if args.cond:
+        return expanded(args, recs, lab)
 
     # ---- reading 1: S vs P -------------------------------------------------
     print("\n[1] target attention, S vs P (paired by item and seed)")

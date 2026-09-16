@@ -168,10 +168,46 @@ def diff_spans(text_a, text_b):
 
 
 # ----------------------------------------------------------------------------
-def load_manifest():
+def expanded_jobs(cond, per_family, manifest):
+    """Labeled expanded prompts (FLUX + this expander) that keep the target
+    verbatim, up to per_family items per family, one seed each (the labeled
+    one, seed 0 preferred)."""
+    AUTO = os.path.join(REPO, "data", "overreal_v1", "auto", "final__claude-opus-5-api__sample.jsonl")
+    labeled = set()
+    for line in open(AUTO):
+        rr = json.loads(line)
+        m = re.match(rf"(.+)/gen_flux_{cond}_s(\d)$", rr["image_id"])
+        if m and rr.get("label") in ("disruptive", "silent", "withheld", "integrated"):
+            labeled.add((m.group(1), int(m.group(2))))
+    targets = {json.loads(l)["item_id"]: json.loads(l)["target"]
+               for l in open(os.path.join(REPO, "data", "generation", "prompts.jsonl")) if l.strip()}
+    rows = [json.loads(l) for l in open(os.path.join(REPO, "data", "generation", "expanded_prompts.jsonl"))
+            if l.strip()]
+    jobs, count = [], {}
+    for rr in rows:
+        if rr["expander"] != cond:
+            continue
+        t = targets[rr["item_id"]].strip().strip('"').strip("'").rstrip(".").strip()
+        m = re.search(re.escape(t), rr["text"], flags=re.IGNORECASE)
+        if not m:
+            continue
+        seeds = [sd for sd in SEEDS if (rr["item_id"], sd) in labeled]
+        if not seeds:
+            continue
+        fam = rr["family"]
+        if count.get(fam, 0) >= per_family:
+            continue
+        count[fam] = count.get(fam, 0) + 1
+        jobs.append(({"item_id": rr["item_id"], "family": fam, "target": targets[rr["item_id"]],
+                      "x_text": rr["text"], "x_spans": [[m.start(), m.end()]]}, "X", seeds[0]))
+    return jobs
+
+
+def load_manifest(cond="raw"):
     m = {}
-    if os.path.exists(MANIFEST):
-        for line in open(MANIFEST):
+    path = MANIFEST.replace("flux_raw", f"flux_{cond}")
+    if os.path.exists(path):
+        for line in open(path):
             r = json.loads(line)
             m[(r["item_id"], r["seed"])] = r
     return m
@@ -183,6 +219,8 @@ def main():
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--sides", default="SP")
     ap.add_argument("--check", action="store_true", help="compare with the stored benchmark image")
+    ap.add_argument("--cond", default="raw", help="raw, or an expander (qwen, ideogram): expanded prompts")
+    ap.add_argument("--per-family", type=int, default=25, help="expanded: labeled items per family")
     args = ap.parse_args()
     k, n = map(int, args.shard.split("/"))
 
@@ -191,25 +229,34 @@ def main():
     pairs = pairs[k::n]
     if args.limit:
         pairs = pairs[:args.limit]
-    manifest = load_manifest()
+    manifest = load_manifest(args.cond)
+    global OUT
+    if args.cond != "raw":
+        OUT = OUT + "_" + args.cond
     os.makedirs(OUT, exist_ok=True)
 
     pipe = FluxPipeline.from_pretrained(MODEL, torch_dtype=torch.bfloat16).to("cuda")
     tok = pipe.tokenizer_2
     n_img = (SIZE // 16) ** 2
 
-    jobs = [(r, side, seed) for r in pairs for side in args.sides for seed in SEEDS]
+    if args.cond == "raw":
+        jobs = [(r, side, seed) for r in pairs for side in args.sides for seed in SEEDS]
+    else:
+        jobs = expanded_jobs(args.cond, args.per_family, manifest)[k::n]
     print(f"shard {k}/{n}: {len(jobs)} images", flush=True)
     for r, side, seed in jobs:
         name = f"{r['item_id'].replace('/', '_')}__{side}_s{seed}"
         out_npz = os.path.join(OUT, name + ".npz")
         if os.path.exists(out_npz):
             continue
-        text = r["s_text"] if side == "S" else r["p_text"]
-        spans = r["s_spans"] if side == "S" else r["p_spans"]
-        other = r["p_text"] if side == "S" else r["s_text"]
+        if side == "X":                       # expanded prompt: no control, no cue
+            text, spans, other = r["x_text"], r["x_spans"], None
+        else:
+            text = r["s_text"] if side == "S" else r["p_text"]
+            spans = r["s_spans"] if side == "S" else r["p_spans"]
+            other = r["p_text"] if side == "S" else r["s_text"]
         target_idx, n_real = token_indices(tok, text, spans)
-        cue_idx, _ = token_indices(tok, text, diff_spans(text, other))
+        cue_idx = token_indices(tok, text, diff_spans(text, other))[0] if other else []
         mrow = manifest.get((r["item_id"], seed))
         steps = mrow["steps"] if mrow else STEPS_DEFAULT
         cfg = mrow["cfg"] if mrow else CFG_DEFAULT
@@ -237,7 +284,7 @@ def main():
             item_id=r["item_id"], family=r["family"], side=side, seed=seed, steps=steps,
             cfg=cfg, prompt=text, target=r["target"])
         msg = f"{name} {sec:.0f}s target_tok={target_idx} cue_tok={cue_idx}"
-        if args.check and side == "S" and mrow:
+        if args.check and side in "SX" and mrow:
             from PIL import Image
             ref = np.asarray(Image.open(os.path.join(REPO, "data", mrow["file"])).convert("RGB")).astype(np.float32)
             cur = np.asarray(img.convert("RGB")).astype(np.float32)
