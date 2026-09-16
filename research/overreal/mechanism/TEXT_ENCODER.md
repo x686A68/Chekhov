@@ -1,8 +1,10 @@
 # 6.3 "Text encoder": does the encoder represent the space builder?
 
 Design for the first paragraph of paper section 6.3 (The mechanism behind
-over-realization). Written 2026-09-15. The other two paragraphs (Diffusion
-backbone, Causal analysis) get their own files when they start.
+over-realization). Written 2026-09-15. The section now asks two questions only,
+encoder or backbone (author decision 2026-09-16); the causal-analysis paragraph
+was dropped because u already covers removing the target. The backbone
+paragraph gets its own file when it starts.
 
 ## Question
 
