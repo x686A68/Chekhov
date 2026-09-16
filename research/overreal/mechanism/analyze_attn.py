@@ -45,29 +45,49 @@ def labels(model):
     return lab
 
 
-def summarize(z):
+_SD35_TOK = {}
+
+
+def real_indices(z, model):
+    if "real_idx" in z.files:
+        return z["real_idx"]
+    if model != "sd35l":
+        return np.arange(int(z["n_real"]))
+    # older sd35l records: recompute the real positions from the tokenizers
+    if not _SD35_TOK:
+        from transformers import CLIPTokenizer, T5TokenizerFast
+        _SD35_TOK["clip"] = CLIPTokenizer.from_pretrained("stabilityai/stable-diffusion-3.5-large", subfolder="tokenizer")
+        _SD35_TOK["t5"] = T5TokenizerFast.from_pretrained("stabilityai/stable-diffusion-3.5-large", subfolder="tokenizer_3")
+    text = str(z["prompt"])
+    e1 = _SD35_TOK["clip"](text, padding="max_length", max_length=77, truncation=True, return_offsets_mapping=True)
+    e2 = _SD35_TOK["t5"](text, padding="max_length", max_length=256, truncation=True, return_offsets_mapping=True)
+    return np.array([i for i, (a, b) in enumerate(e1["offset_mapping"]) if b > a]
+                    + [77 + i for i, (a, b) in enumerate(e2["offset_mapping"]) if b > a])
+
+
+def summarize(z, model="flux"):
     mass = z["mass"].astype(np.float32)           # [blocks, steps, n_txt]
-    n = int(z["n_real"])
     t = z["target_idx"]
     c = z["cue_idx"]
+    real_idx = real_indices(z, model)
     per_tok = mass.mean((0, 1))                    # mean over blocks and steps
-    real = per_tok[:n]
-    total = real.sum()
-    other = np.ones(n, bool)
+    total = per_tok[real_idx].sum()
+    other = np.ones(len(per_tok), bool)
     other[t] = False
     if len(c):
         other[c] = False
+    other_idx = np.array([i for i in real_idx if other[i]])
+    early = mass[:, : max(1, mass.shape[1] // 4)].mean((0, 1))
     out = {
         "target_mass": float(per_tok[t].sum()),
         "target_share": float(per_tok[t].sum() / total),
-        "target_share_early": float(mass[:, : max(1, mass.shape[1] // 4)].mean((0, 1))[t].sum()
-                                    / mass[:, : max(1, mass.shape[1] // 4)].mean((0, 1))[:n].sum()),
+        "target_share_early": float(early[t].sum() / early[real_idx].sum()),
         "cue_share_tok": float(per_tok[c].mean() / total) if len(c) else np.nan,
-        "other_share_tok": float(real[other].mean() / total) if other.any() else np.nan,
+        "other_share_tok": float(per_tok[other_idx].mean() / total) if len(other_idx) else np.nan,
         "target_share_tok": float(per_tok[t].mean() / total),
         "map_peak": float(z["map"].astype(np.float32)[:2].mean(0).max()),
         "text_total": float(total),
-        "profile": _bin_steps(mass[:, :, t].sum(-1) / mass[:, :, :n].sum(-1), 10),  # [blocks, 10]
+        "profile": _bin_steps(mass[:, :, t].sum(-1) / mass[:, :, real_idx].sum(-1), 10),  # [blocks, 10]
     }
     return out
 
@@ -96,7 +116,7 @@ def expanded(args, recs, lab):
     xrecs = {}
     for f in sorted(glob.glob(os.path.join(d, "*.npz"))):
         z = np.load(f)
-        xrecs[(str(z["item_id"]), int(z["seed"]))] = summarize(z) | {"family": str(z["family"])}
+        xrecs[(str(z["item_id"]), int(z["seed"]))] = summarize(z, args.model) | {"family": str(z["family"])}
     xlab = {}
     for line in open(AUTO):
         r = json.loads(line)
@@ -140,7 +160,7 @@ def main():
     for f in sorted(glob.glob(os.path.join(d, "*.npz"))):
         z = np.load(f)
         key = (str(z["item_id"]), str(z["side"]), int(z["seed"]))
-        recs[key] = summarize(z) | {"family": str(z["family"])}
+        recs[key] = summarize(z, args.model) | {"family": str(z["family"])}
     print(f"{len(recs)} records")
     lab = labels(args.model)
     if args.cond:

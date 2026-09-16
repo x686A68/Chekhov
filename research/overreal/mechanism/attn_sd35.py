@@ -43,6 +43,18 @@ class Model:
         ti, n2 = span_token_indices(enc["offset_mapping"], spans)
         return ci + [N_CLIP + i for i in ti], n1 + n2
 
+    def real_indices(self, pipe, text):
+        """Positions of the prompt's own tokens (no BOS/EOS/pad) in the
+        [77 CLIP + 256 T5] text sequence."""
+        idx = []
+        enc = pipe.tokenizer(text, padding="max_length", max_length=N_CLIP, truncation=True,
+                             return_offsets_mapping=True)
+        idx += [i for i, (a, b) in enumerate(enc["offset_mapping"]) if b > a]
+        enc = pipe.tokenizer_3(text, padding="max_length", max_length=N_T5, truncation=True,
+                               add_special_tokens=True, return_offsets_mapping=True)
+        idx += [N_CLIP + i for i, (a, b) in enumerate(enc["offset_mapping"]) if b > a]
+        return idx
+
     def install(self, pipe, rec):
         from diffusers.models.attention_processor import JointAttnProcessor2_0
         n_img = self.n_img

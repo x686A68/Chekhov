@@ -96,6 +96,9 @@ def load_manifest(model_key):
 def run(model, args):
     k, n = map(int, args.shard.split("/"))
     pairs = [r for r in (json.loads(l) for l in open(PAIRS)) if not r["exclude"]]
+    if args.items:
+        want = set(args.items.split(","))
+        pairs = [r for r in pairs if r["item_id"] in want]
     pairs = pairs[k::n]
     if args.limit:
         pairs = pairs[:args.limit]
@@ -116,6 +119,7 @@ def run(model, args):
         other = r["p_text"] if side == "S" else r["s_text"]
         target_idx, n_real = model.tokens(pipe, text, spans)
         cue_idx, _ = model.tokens(pipe, text, diff_spans(text, other))
+        real_idx = model.real_indices(pipe, text) if hasattr(model, "real_indices") else np.arange(n_real)
         mrow = manifest.get((r["item_id"], seed))
         steps = mrow["steps"] if mrow else model.steps_default
         cfg = mrow["cfg"] if mrow else model.cfg_default
@@ -133,6 +137,7 @@ def run(model, args):
             mass=rec.mass.half().cpu().numpy(),
             map=(rec.map / rec.map_count.clamp(min=1)[:, None]).half().cpu().numpy(),
             target_idx=np.array(target_idx), cue_idx=np.array(cue_idx), n_real=n_real,
+            real_idx=np.array(real_idx),
             item_id=r["item_id"], family=r["family"], side=side, seed=seed, steps=steps,
             cfg=cfg, prompt=text, target=r["target"])
         msg = f"{name} {sec:.0f}s target_tok={target_idx} cue_tok={cue_idx}"
@@ -151,4 +156,5 @@ def argparser():
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--sides", default="SP")
     ap.add_argument("--check", action="store_true")
+    ap.add_argument("--items", default="", help="comma-separated item ids to run (default: all)")
     return ap

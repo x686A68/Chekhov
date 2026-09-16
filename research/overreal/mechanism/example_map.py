@@ -35,6 +35,8 @@ def main():
     ap.add_argument("--list", default="")
     ap.add_argument("--bins", nargs="*", type=int, default=[0, 1])
     ap.add_argument("--out", default=os.path.join(ROOT, "results", "examples"))
+    ap.add_argument("--smooth", type=float, default=1.0, help="gaussian sigma in patches (0 = none)")
+    ap.add_argument("--no-title", action="store_true")
     args = ap.parse_args()
     d = os.path.join(ROOT, "attn", args.model)
 
@@ -59,14 +61,18 @@ def main():
         mp = z["map"].astype(np.float32)[args.bins].mean(0)
         side = int(np.sqrt(mp.size))
         mp = mp.reshape(side, side)
+        if args.smooth > 0:
+            from scipy.ndimage import gaussian_filter
+            mp = gaussian_filter(mp, args.smooth)
         fig, axes = plt.subplots(1, 2, figsize=(8, 4.1))
         axes[0].imshow(img); axes[0].axis("off")
         axes[1].imshow(img, alpha=0.35)
         axes[1].imshow(mp, cmap="inferno", alpha=0.75, extent=(0, img.width, img.height, 0),
                        interpolation="bilinear")
         axes[1].axis("off")
-        fig.suptitle(f"{z['prompt']}\ntarget: {z['target']}", fontsize=8)
-        fig.tight_layout()
+        if not args.no_title:
+            fig.suptitle(f"{z['prompt']}\ntarget: {z['target']}", fontsize=8)
+        fig.tight_layout(pad=0.3)
         out = os.path.join(args.out, name + ".png")
         fig.savefig(out, dpi=150)
         fig.savefig(out.replace(".png", ".pdf"))
