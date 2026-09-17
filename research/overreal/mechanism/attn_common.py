@@ -83,8 +83,30 @@ def diff_spans(text_a, text_b):
     return spans
 
 
-def load_manifest(model_key):
-    path = os.path.join(REPO, "data", "generation", "manifests", f"{model_key}_raw.jsonl")
+def expanded_jobs(cond, seeds=SEEDS):
+    """All expanded prompts of one rewriter in which the target string of the
+    item survives verbatim, both seeds. Items excluded from pairs.jsonl are
+    excluded here too."""
+    pairs = {r["item_id"]: r for r in (json.loads(l) for l in open(PAIRS)) if not r["exclude"]}
+    rows = [json.loads(l) for l in open(os.path.join(REPO, "data", "generation", "expanded_prompts.jsonl"))
+            if l.strip()]
+    jobs = []
+    for rr in rows:
+        if rr["expander"] != cond or rr["item_id"] not in pairs:
+            continue
+        pr = pairs[rr["item_id"]]
+        t = pr["target"].strip().strip('"').strip("'").rstrip(".").strip()
+        m = re.search(re.escape(t), rr["text"], flags=re.IGNORECASE)
+        if not m:
+            continue
+        r = {"item_id": rr["item_id"], "family": rr["family"], "target": pr["target"],
+             "x_text": rr["text"], "x_spans": [[m.start(), m.end()]]}
+        jobs += [(r, "X", sd) for sd in seeds]
+    return jobs
+
+
+def load_manifest(model_key, cond="raw"):
+    path = os.path.join(REPO, "data", "generation", "manifests", f"{model_key}_{cond}.jsonl")
     m = {}
     if os.path.exists(path):
         for line in open(path):
@@ -102,23 +124,31 @@ def run(model, args):
     pairs = pairs[k::n]
     if args.limit:
         pairs = pairs[:args.limit]
-    manifest = load_manifest(model.key)
-    out_dir = os.path.join(ROOT, "attn", model.key)
+    manifest = load_manifest(model.key, args.cond)
+    out_dir = os.path.join(ROOT, "attn", model.key + ("" if args.cond == "raw" else "_" + args.cond))
     os.makedirs(out_dir, exist_ok=True)
 
     pipe = model.load()
-    jobs = [(r, side, seed) for r in pairs for side in args.sides for seed in SEEDS]
+    if args.cond == "raw":
+        jobs = [(r, side, seed) for r in pairs for side in args.sides for seed in SEEDS]
+    else:
+        jobs = expanded_jobs(args.cond)[k::n]
+        if args.limit:
+            jobs = jobs[:args.limit]
     print(f"{model.key} shard {k}/{n}: {len(jobs)} images", flush=True)
     for r, side, seed in jobs:
         name = f"{r['item_id'].replace('/', '_')}__{side}_s{seed}"
         out_npz = os.path.join(out_dir, name + ".npz")
         if os.path.exists(out_npz):
             continue
-        text = r["s_text"] if side == "S" else r["p_text"]
-        spans = r["s_spans"] if side == "S" else r["p_spans"]
-        other = r["p_text"] if side == "S" else r["s_text"]
+        if side == "X":                       # expanded prompt: no control, no cue
+            text, spans, other = r["x_text"], r["x_spans"], None
+        else:
+            text = r["s_text"] if side == "S" else r["p_text"]
+            spans = r["s_spans"] if side == "S" else r["p_spans"]
+            other = r["p_text"] if side == "S" else r["s_text"]
         target_idx, n_real = model.tokens(pipe, text, spans)
-        cue_idx, _ = model.tokens(pipe, text, diff_spans(text, other))
+        cue_idx = model.tokens(pipe, text, diff_spans(text, other))[0] if other else []
         real_idx = model.real_indices(pipe, text) if hasattr(model, "real_indices") else np.arange(n_real)
         mrow = manifest.get((r["item_id"], seed))
         steps = mrow["steps"] if mrow else model.steps_default
@@ -141,7 +171,7 @@ def run(model, args):
             item_id=r["item_id"], family=r["family"], side=side, seed=seed, steps=steps,
             cfg=cfg, prompt=text, target=r["target"])
         msg = f"{name} {sec:.0f}s target_tok={target_idx} cue_tok={cue_idx}"
-        if args.check and side == "S" and mrow:
+        if args.check and side in "SX" and mrow:
             from PIL import Image
             ref = np.asarray(Image.open(os.path.join(REPO, "data", mrow["file"])).convert("RGB")).astype(np.float32)
             cur = np.asarray(img.convert("RGB")).astype(np.float32)
@@ -157,4 +187,5 @@ def argparser():
     ap.add_argument("--sides", default="SP")
     ap.add_argument("--check", action="store_true")
     ap.add_argument("--items", default="", help="comma-separated item ids to run (default: all)")
+    ap.add_argument("--cond", default="raw", help="raw, or an expander (qwen, ideogram): expanded prompts")
     return ap

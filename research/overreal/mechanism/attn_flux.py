@@ -242,7 +242,8 @@ def main():
     if args.cond == "raw":
         jobs = [(r, side, seed) for r in pairs for side in args.sides for seed in SEEDS]
     else:
-        jobs = expanded_jobs(args.cond, args.per_family, manifest)[k::n]
+        from attn_common import expanded_jobs as shared_expanded_jobs
+        jobs = shared_expanded_jobs(args.cond)[k::n]
     print(f"shard {k}/{n}: {len(jobs)} images", flush=True)
     for r, side, seed in jobs:
         name = f"{r['item_id'].replace('/', '_')}__{side}_s{seed}"

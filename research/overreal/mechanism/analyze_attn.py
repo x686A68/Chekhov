@@ -158,7 +158,7 @@ def table(args, recs, lab):
     for fam in FAMILIES:
         S = [(k, r) for k, r in recs.items() if k[1] == "S" and r["family"] == fam]
         P = {k[0:1] + k[2:]: r for k, r in recs.items() if k[1] == "P" and r["family"] == fam}
-        st, sc, so, pt, pc, po, lr = [], [], [], [], [], [], []
+        st, sc, so, pt, pc, po, lr, lrc = [], [], [], [], [], [], [], []
         y, pk, cy = [], [], []
         for (item, side, seed), r in S:
             q = P.get((item, seed))
@@ -167,6 +167,8 @@ def table(args, recs, lab):
             st.append(r["target_share_tok"]); sc.append(r["cue_share_tok"]); so.append(r["other_share_tok"])
             pt.append(q["target_share_tok"]); pc.append(q["cue_share_tok"]); po.append(q["other_share_tok"])
             lr.append(np.log(r["target_share"] / q["target_share"]))
+            if not (np.isnan(r["cue_share_tok"]) or np.isnan(q["cue_share_tok"])) and q["cue_share_tok"] > 0:
+                lrc.append(np.log(r["cue_share_tok"] / q["cue_share_tok"]))
             l = lab.get((item, seed))
             if l in ("disruptive", "silent"):
                 y.append(1); pk.append(r["map_peak"]); cy.append(r["cue_share_tok"])
@@ -177,15 +179,16 @@ def table(args, recs, lab):
         auc_c = roc_auc_score([1 - y[i] for i in ok], [cy[i] for i in ok]) if len(set(y[i] for i in ok)) == 2 else np.nan
         rows[fam] = dict(n=len(lr), s_t=np.nanmean(st), s_c=np.nanmean(sc), s_o=np.nanmean(so),
                          p_t=np.nanmean(pt), p_c=np.nanmean(pc), p_o=np.nanmean(po),
-                         ratio=float(np.exp(np.mean(lr))), auc=auc, auc_c=auc_c)
+                         ratio=float(np.exp(np.mean(lr))), ratio_c=float(np.exp(np.mean(lrc))),
+                         n_c=len(lrc), auc=auc, auc_c=auc_c)
     rows["mean"] = {k: (sum(rows[f]["n"] for f in FAMILIES) if k == "n" else float(np.mean([rows[f][k] for f in FAMILIES])))
                     for k in rows[FAMILIES[0]]}
     print(f"\n[table] {args.model}: per-token share (% of image-to-text attention on real tokens)")
-    print(f"{'family':<14}{'n':>5}{'S tgt':>7}{'S cue':>7}{'S oth':>7}{'P tgt':>7}{'P cue':>7}{'P oth':>7}{'ratio':>7}{'AUC':>6}{'AUCcue':>7}")
+    print(f"{'family':<14}{'n':>5}{'S tgt':>7}{'S cue':>7}{'S oth':>7}{'P tgt':>7}{'P cue':>7}{'P oth':>7}{'rho_t':>7}{'rho_c':>7}{'n_c':>5}{'AUC':>6}{'AUCcue':>7}")
     for fam in FAMILIES + ["mean"]:
         r = rows[fam]
         print(f"{fam:<14}{r['n']:>5}{100*r['s_t']:>7.2f}{100*r['s_c']:>7.2f}{100*r['s_o']:>7.2f}"
-              f"{100*r['p_t']:>7.2f}{100*r['p_c']:>7.2f}{100*r['p_o']:>7.2f}{r['ratio']:>7.2f}{r['auc']:>6.2f}{r['auc_c']:>7.2f}")
+              f"{100*r['p_t']:>7.2f}{100*r['p_c']:>7.2f}{100*r['p_o']:>7.2f}{r['ratio']:>7.2f}{r['ratio_c']:>7.2f}{int(r['n_c']):>5}{r['auc']:>6.2f}{r['auc_c']:>7.2f}")
     with open(os.path.join(ROOT, "results", f"attn_table_{args.model}.json"), "w") as fp:
         json.dump(rows, fp, indent=1)
 
