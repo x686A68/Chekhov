@@ -1,0 +1,102 @@
+From 6a4652ce617459d18a42935aa1faab93b7e53757 Mon Sep 17 00:00:00 2001
+From: jiahao-huang <huangjh16@qq.com>
+Date: Thu, 17 Sep 2026 10:24:29 +0900
+Subject: [PATCH 1/2] 6.3: drop the appearance paragraph; figure under the
+ first paragraph; Table 5 without AUC columns
+
+Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
+---
+ overrealization.tex | 47 ++++++++++++++++-----------------------------
+ 1 file changed, 17 insertions(+), 30 deletions(-)
+
+diff --git a/overrealization.tex b/overrealization.tex
+index 123f6be..346f0fb 100644
+--- a/overrealization.tex
++++ b/overrealization.tex
+@@ -672,15 +672,15 @@ the cue words, and on the other words in Table \ref{tab:attn}. Conclusions are g
+ \centering
+ \scriptsize
+ \setlength{\tabcolsep}{3pt}
+-\begin{tabular}{l ccc@{\hspace{6pt}}ccc@{\hspace{6pt}}cc@{\hspace{6pt}}cc}
++\begin{tabular}{l ccc@{\hspace{8pt}}ccc@{\hspace{8pt}}cc}
+ \toprule
+-& \multicolumn{3}{c}{\textbf{Original prompt}} & \multicolumn{3}{c}{\textbf{Plain-mention control}} & \multicolumn{2}{c}{\textbf{Ratios}} & \multicolumn{2}{c}{\textbf{Appearance AUC}} \\
+-\cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-9} \cmidrule(lr){10-11}
+-& target $a_\mathrm{t}$ & cue $a_\mathrm{c}$ & other $a_\mathrm{o}$ & target $a'_\mathrm{t}$ & replacing $a'_\mathrm{r}$ & other $a'_\mathrm{o}$ & $\rho = a_\mathrm{t}/a'_\mathrm{t}$ & $\gamma = a_\mathrm{c}/a_\mathrm{o}$ & target AUC$_\mathrm{t}$ & cue AUC$_\mathrm{c}$ \\
++& \multicolumn{3}{c}{\textbf{Original prompt}} & \multicolumn{3}{c}{\textbf{Plain-mention control}} & \multicolumn{2}{c}{\textbf{Ratios}} \\
++\cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-9}
++& target $a_\mathrm{t}$ & cue $a_\mathrm{c}$ & other $a_\mathrm{o}$ & target $a'_\mathrm{t}$ & replacing $a'_\mathrm{r}$ & other $a'_\mathrm{o}$ & $\rho = a_\mathrm{t}/a'_\mathrm{t}$ & $\gamma = a_\mathrm{c}/a_\mathrm{o}$ \\
+ \midrule
+-FLUX.1-dev   & 4.2 & 3.8 & 5.1 & 5.0 & 4.1 & 4.9 & .83 & .76 & .65 & .52 \\
+-SD3.5-Large  & 2.8 & 1.7 & 2.8 & 3.0 & 2.0 & 2.7 & .90 & .60 & .86 & .47 \\
+-Qwen-Image   & 4.4 & 3.8 & 6.1 & 4.8 & 4.4 & 6.0 & .90 & .62 & .63 & .40 \\
++FLUX.1-dev   & 4.2 & 3.8 & 5.1 & 5.0 & 4.1 & 4.9 & .83 & .76 \\
++SD3.5-Large  & 2.8 & 1.7 & 2.8 & 3.0 & 2.0 & 2.7 & .90 & .60 \\
++Qwen-Image   & 4.4 & 3.8 & 6.1 & 4.8 & 4.4 & 6.0 & .90 & .62 \\
+ \bottomrule
+ \end{tabular}
+ \caption{How the backbone reads the prompt, averaged over the four families
+@@ -692,11 +692,7 @@ same under the control, where the cue words are replaced by the replacing
+ words. $\rho$: the target words' attention under the original prompt over
+ their attention under the control, same seed (1 means a mention is read
+ exactly like a request). $\gamma = a_\mathrm{c}/a_\mathrm{o}$: the cue
+-words' attention relative to an ordinary word. AUC$_\mathrm{t}$,
+-AUC$_\mathrm{c}$: within the original prompts, how well the target words'
+-attention (peak of the early-step map) and the cue words' attention
+-($a_\mathrm{c}$) separate images in which the target appeared from withheld
+-ones; 0.5 is chance, 1 is a perfect separation.}
++words' attention relative to an ordinary word.}
+ \label{tab:attn}
+ \end{table}
+ 
+@@ -707,10 +703,8 @@ ones; 0.5 is chance, 1 is a perfect separation.}
+ in the first denoising steps of SD3.5-Large. Left pair: the original prompt
+ \emph{``His vest is as green as a cucumber''}, the disruptive example of
+ Table~\ref{tab:taxonomy}. Right pair: its plain-mention control
+-\emph{``His vest is green, and he holds a cucumber''}, same seed. The target
+-receives 15\% of the image-to-text attention under the original prompt and
+-10\% under the control, and in both cases the attention sits exactly where
+-the cucumber is drawn.}
++\emph{``His vest is green, and he holds a cucumber''}, same seed. In both cases
++the attention sits exactly where the cucumber is drawn.}
+ \label{fig:attn}
+ \end{figure}
+ 
+@@ -722,17 +716,10 @@ $\rho$, 0.83 to 0.90, means that the target receives almost the same
+ attention under the original prompt as under the control, although the
+ control requests the target and the original only mentions it. Therefore,
+ the backbone does not register whether the target is requested or only
+-mentioned.
+-
+-\paragraph{That attention is what puts the target into the image.}
+-Within the original prompts, the images in which the target appeared are
+-the images in which its attention formed a peak. AUC$_\mathrm{t}$ gives the
+-AUC with which the peak of the target's early-step attention map separates
+-over-realized images from withheld ones: 0.65 for FLUX.1-dev, 0.86 for
+-SD3.5-Large and 0.63 for Qwen-Image. Figure~\ref{fig:attn} shows the map
+-for the cucumber of Table~\ref{tab:taxonomy}: the attention lands on the
+-man's head, exactly where the cucumber was rendered, and under the control
+-prompt it moves to the cucumber in his hand.
++mentioned. Figure~\ref{fig:attn} shows the map for the cucumber of
++Table~\ref{tab:taxonomy}: under both prompts the attention sits where the
++cucumber is drawn, on the man's head under the original prompt and in his
++hand under the control.
+ 
+ \paragraph{The cue words are read no more than the words that replace them.}
+ The words that should keep the target out, \emph{no}, \emph{imagines},
+@@ -741,9 +728,9 @@ The words that should keep the target out, \emph{no}, \emph{imagines},
+ to 0.76), and no more than the words that replace them in the control
+ ($a'_\mathrm{r}$: \emph{with}, \emph{holding}, \emph{next to}, \emph{open}). The
+ backbone reads \emph{no} and \emph{with} alike. Nor does reading the cue
+-words more help: withheld images do not show higher attention on them than
+-over-realized ones (AUC$_\mathrm{c}$ 0.40 to 0.52). Withholding, when it happens, is not the backbone acting on
+-the words that ask for it.
++words more help: withheld images do not attend to them more than
++over-realized ones do (Appendix~\ref{app:attn}). Withholding, when it
++happens, is not the backbone acting on the words that ask for it.
+ 
+ \paragraph{Expansion that keeps the target makes it more prominent to the backbone.}
+ The same reading on the expanded prompts of \S\ref{sec:expansion} explains
+-- 
+2.43.0
+
