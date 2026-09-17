@@ -181,14 +181,30 @@ def table(args, recs, lab):
                          p_t=np.nanmean(pt), p_c=np.nanmean(pc), p_o=np.nanmean(po),
                          ratio=float(np.exp(np.mean(lr))), ratio_c=float(np.exp(np.mean(lrc))),
                          n_c=len(lrc), auc=auc, auc_c=auc_c)
-    rows["mean"] = {k: (sum(rows[f]["n"] for f in FAMILIES) if k == "n" else float(np.mean([rows[f][k] for f in FAMILIES])))
+    # expanded prompts (side X), per rewriter: per-token share of the target and of the other words
+    for cond in ("qwen", "ideogram"):
+        d = os.path.join(ROOT, "attn", f"{args.model}_{cond}")
+        xt, xo = defaultdict(list), defaultdict(list)
+        for f in glob.glob(os.path.join(d, "*.npz")):
+            z = np.load(f)
+            r = summarize(z, args.model)
+            xt[str(z["family"])].append(r["target_share_tok"]); xo[str(z["family"])].append(r["other_share_tok"])
+        for fam in FAMILIES:
+            rows[fam][f"x_{cond}_t"] = float(np.mean(xt[fam])) if xt[fam] else np.nan
+            rows[fam][f"x_{cond}_o"] = float(np.mean(xo[fam])) if xo[fam] else np.nan
+            rows[fam][f"x_{cond}_n"] = len(xt[fam])
+    rows["mean"] = {k: (sum(rows[f][k] for f in FAMILIES) if k in ("n",) or k.endswith("_n")
+                        else float(np.nanmean([rows[f][k] for f in FAMILIES])))
                     for k in rows[FAMILIES[0]]}
     print(f"\n[table] {args.model}: per-token share (% of image-to-text attention on real tokens)")
-    print(f"{'family':<14}{'n':>5}{'S tgt':>7}{'S cue':>7}{'S oth':>7}{'P tgt':>7}{'P cue':>7}{'P oth':>7}{'rho_t':>7}{'rho_c':>7}{'n_c':>5}{'AUC':>6}{'AUCcue':>7}")
+    print(f"{'family':<14}{'n':>5}{'S tgt':>7}{'S cue':>7}{'S oth':>7}{'P tgt':>7}{'P cue':>7}{'P oth':>7}{'rho_t':>7}{'rho_c':>7}"
+          f"{'Xq tgt':>8}{'Xq oth':>8}{'n':>5}{'Xi tgt':>8}{'Xi oth':>8}{'n':>5}")
     for fam in FAMILIES + ["mean"]:
         r = rows[fam]
         print(f"{fam:<14}{r['n']:>5}{100*r['s_t']:>7.2f}{100*r['s_c']:>7.2f}{100*r['s_o']:>7.2f}"
-              f"{100*r['p_t']:>7.2f}{100*r['p_c']:>7.2f}{100*r['p_o']:>7.2f}{r['ratio']:>7.2f}{r['ratio_c']:>7.2f}{int(r['n_c']):>5}{r['auc']:>6.2f}{r['auc_c']:>7.2f}")
+              f"{100*r['p_t']:>7.2f}{100*r['p_c']:>7.2f}{100*r['p_o']:>7.2f}{r['ratio']:>7.2f}{r['ratio_c']:>7.2f}"
+              f"{100*r['x_qwen_t']:>8.2f}{100*r['x_qwen_o']:>8.2f}{int(r['x_qwen_n']):>5}"
+              f"{100*r['x_ideogram_t']:>8.2f}{100*r['x_ideogram_o']:>8.2f}{int(r['x_ideogram_n']):>5}")
     with open(os.path.join(ROOT, "results", f"attn_table_{args.model}.json"), "w") as fp:
         json.dump(rows, fp, indent=1)
 
