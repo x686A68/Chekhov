@@ -95,8 +95,15 @@ def expanded_jobs(cond, seeds=SEEDS):
         if rr["expander"] != cond or rr["item_id"] not in pairs:
             continue
         pr = pairs[rr["item_id"]]
+        # the target string as located in the original prompt (handles the
+        # target_text overrides: "cucumbers" -> "cucumber", typos, plurals)
+        cands = [pr["s_text"][a:b] for a, b in pr["s_spans"]]
         t = pr["target"].strip().strip('"').strip("'").rstrip(".").strip()
-        m = re.search(re.escape(t), rr["text"], flags=re.IGNORECASE)
+        m = None
+        for cand in [t] + cands:
+            m = re.search(re.escape(cand), rr["text"], flags=re.IGNORECASE)
+            if m:
+                break
         if not m:
             continue
         r = {"item_id": rr["item_id"], "family": rr["family"], "target": pr["target"],

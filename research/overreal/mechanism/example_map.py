@@ -39,6 +39,8 @@ def main():
     ap.add_argument("--no-title", action="store_true")
     ap.add_argument("--pair", default="", help="item stem like figurative_prompt_0084 with --seed: S and P side by side")
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--quad", default="", help="item stem: original, control, Qwen rewrite, Ideogram rewrite (2 x 4 grid)")
+    ap.add_argument("--labels", nargs="*", default=["Original prompt", "Plain-mention control", "Qwen rewrite", "Ideogram rewrite"])
     args = ap.parse_args()
     d = os.path.join(ROOT, "attn", args.model)
 
@@ -67,6 +69,46 @@ def main():
             from scipy.ndimage import gaussian_filter
             mp = gaussian_filter(mp, args.smooth)
         return z, Image.open(os.path.join(d, name + ".png")).convert("RGB"), mp
+
+    if args.quad:
+        REPO = os.path.abspath(os.path.join(ROOT, "..", "..", ".."))
+        specs = [(d, f"{args.quad}__S_s{args.seed}"), (d, f"{args.quad}__P_s{args.seed}"),
+                 (d + "_qwen", f"{args.quad}__X_s{args.seed}"), (d + "_ideogram", f"{args.quad}__X_s{args.seed}")]
+        panels = []
+        for (dd, name), cond in zip(specs, ["raw", "raw", "qwen", "ideogram"]):
+            npz = os.path.join(dd, name + ".npz")
+            if os.path.exists(npz):
+                z = np.load(npz)
+                mp = z["map"].astype(np.float32)[args.bins].mean(0)
+                side = int(np.sqrt(mp.size)); mp = mp.reshape(side, side)
+                if args.smooth > 0:
+                    from scipy.ndimage import gaussian_filter
+                    mp = gaussian_filter(mp, args.smooth)
+                panels.append((Image.open(os.path.join(dd, name + ".png")).convert("RGB"), mp))
+            else:  # no record (target absent from the rewrite): show the benchmark image only
+                stem = args.quad.replace("_prompt_", "_")
+                img_path = os.path.join(REPO, "data", "generation", "images", args.model, cond, f"{stem}__s{args.seed}.png")
+                panels.append((Image.open(img_path).convert("RGB") if os.path.exists(img_path) else None, None))
+        vmax = max(mp.max() for _, mp in panels if mp is not None)
+        fig, axes = plt.subplots(2, 4, figsize=(12, 6.3))
+        for i, (img, mp) in enumerate(panels):
+            ax_img, ax_map = axes[0, i], axes[1, i]
+            if img is not None:
+                ax_img.imshow(img)
+            ax_img.axis("off"); ax_map.axis("off")
+            if mp is not None:
+                ax_map.imshow(img, alpha=0.35)
+                ax_map.imshow(mp, cmap="inferno", alpha=0.75, vmin=0, vmax=vmax,
+                              extent=(0, img.width, img.height, 0), interpolation="bilinear")
+            else:
+                ax_map.text(0.5, 0.5, "target dropped\nby the rewriter", ha="center", va="center", fontsize=10)
+            if not args.no_title:
+                ax_img.set_title(args.labels[i], fontsize=9)
+        fig.tight_layout(pad=0.3)
+        out = os.path.join(args.out, f"{args.quad}_quad_s{args.seed}.png")
+        fig.savefig(out, dpi=150); fig.savefig(out.replace(".png", ".pdf"))
+        print("saved", out)
+        return
 
     if args.pair:
         panels = [load_map(f"{args.pair}__{side}_s{args.seed}") for side in ("S", "P")]
