@@ -37,6 +37,7 @@ def main():
     ap.add_argument("--out", default=os.path.join(ROOT, "results", "examples"))
     ap.add_argument("--smooth", type=float, default=1.0, help="gaussian sigma in patches (0 = none)")
     ap.add_argument("--no-title", action="store_true")
+    ap.add_argument("--px", type=int, default=512, help="downscale images to this width before embedding")
     ap.add_argument("--pair", default="", help="item stem like figurative_prompt_0084 with --seed: S and P side by side")
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--quad", default="", help="item stem: original, control, Qwen rewrite, Ideogram rewrite (2 x 4 grid)")
@@ -68,7 +69,9 @@ def main():
         if args.smooth > 0:
             from scipy.ndimage import gaussian_filter
             mp = gaussian_filter(mp, args.smooth)
-        return z, Image.open(os.path.join(d, name + ".png")).convert("RGB"), mp
+        im = Image.open(os.path.join(d, name + ".png")).convert("RGB")
+        im = im.resize((args.px, int(args.px * im.height / im.width)), Image.LANCZOS)
+        return z, im, mp
 
     if args.quad:
         REPO = os.path.abspath(os.path.join(ROOT, "..", "..", ".."))
@@ -84,11 +87,16 @@ def main():
                 if args.smooth > 0:
                     from scipy.ndimage import gaussian_filter
                     mp = gaussian_filter(mp, args.smooth)
-                panels.append((Image.open(os.path.join(dd, name + ".png")).convert("RGB"), mp))
+                im = Image.open(os.path.join(dd, name + ".png")).convert("RGB")
+                im = im.resize((args.px, int(args.px * im.height / im.width)), Image.LANCZOS)
+                panels.append((im, mp))
             else:  # no record (target absent from the rewrite): show the benchmark image only
                 stem = args.quad.replace("_prompt_", "_")
                 img_path = os.path.join(REPO, "data", "generation", "images", args.model, cond, f"{stem}__s{args.seed}.png")
-                panels.append((Image.open(img_path).convert("RGB") if os.path.exists(img_path) else None, None))
+                im = Image.open(img_path).convert("RGB") if os.path.exists(img_path) else None
+                if im is not None:
+                    im = im.resize((args.px, int(args.px * im.height / im.width)), Image.LANCZOS)
+                panels.append((im, None))
         vmax = max(mp.max() for _, mp in panels if mp is not None)
         fig, axes = plt.subplots(2, 4, figsize=(12, 6.3))
         for i, (img, mp) in enumerate(panels):
