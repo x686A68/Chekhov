@@ -1,0 +1,44 @@
+From 6dda46917eaf165d7eebef303cbcc5e4dbbaa1ed Mon Sep 17 00:00:00 2001
+From: jiahao-huang <huangjh16@qq.com>
+Date: Mon, 21 Sep 2026 15:01:15 +0900
+Subject: [PATCH 2/5] Appendix B: no second annotator
+
+Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
+---
+ overrealization.tex | 13 +++----------
+ 1 file changed, 3 insertions(+), 10 deletions(-)
+
+diff --git a/overrealization.tex b/overrealization.tex
+index 9f8aa91..d17a0a0 100644
+--- a/overrealization.tex
++++ b/overrealization.tex
+@@ -988,10 +988,9 @@ again. The best wording is selected per family.
+ \subsection{Agreement with the human labels}
+ \label{app:autoannot-results}
+ 
+-The annotator runs on Claude Opus~5 \citep{anthropic2026opus5}; a second
+-annotator built from GPT-5.2 \citep{openai2025gpt52} uses the same frozen
+-questions without further revision. Table~\ref{tab:autoannot} reports the
+-Opus annotator against the human gold labels on the test half. Conclusions
++The annotator runs on Claude Opus~5 \citep{anthropic2026opus5}.
++Table~\ref{tab:autoannot} reports it against the human gold labels on the
++test half. Conclusions
+ are given as follows.
+ 
+ \paragraph{The evolved questions agree with the human labels far better
+@@ -1025,12 +1024,6 @@ reliable in every family.} Collapsing the four outcomes to over-realized
+ $\kappa=0.53$ to $1.00$ per family and $0.70$ overall, the figure quoted in
+ \S\ref{sec:autoannot}.
+ 
+-\paragraph{The second annotator agrees with the first, except on
+-perspectival prompts.} The GPT-5.2 annotator agrees with the Opus one at
+-$\kappa=0.87$, $0.69$, $0.64$ and $0.31$ on the four families.
+-Table~\ref{tab:mainresults} reports the Opus labels; the GPT-5.2 labels are
+-released with the data.
+-
+ \begin{table}[h]
+ \centering
+ \small
+-- 
+2.43.0
+

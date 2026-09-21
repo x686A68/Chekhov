@@ -1,0 +1,56 @@
+From 97389243c9d4549455fcb2b19c8de9f4fe299026 Mon Sep 17 00:00:00 2001
+From: jiahao-huang <huangjh16@qq.com>
+Date: Mon, 21 Sep 2026 15:25:46 +0900
+Subject: [PATCH 5/5] Table 7: target-appears row second, allowed-form row
+ dropped
+
+Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
+---
+ overrealization.tex | 15 ++++++---------
+ 1 file changed, 6 insertions(+), 9 deletions(-)
+
+diff --git a/overrealization.tex b/overrealization.tex
+index a8f8135..a7abb47 100644
+--- a/overrealization.tex
++++ b/overrealization.tex
+@@ -1017,8 +1017,8 @@ it appears in a form the prompt allows is harder, for the annotator and
+ for the humans alike.} The first decision of the cascade reaches
+ $\kappa=0.83$, next to $0.86$ between the humans. The decision between an
+ allowed form and an over-realization, taken on the images in which the
+-target appears, drops to $0.30$ for the annotator and $0.49$ for the
+-humans. The difficulty lies in the task rather than in the annotator: the
++target appears, drops to $\kappa=0.30$ for the annotator and $0.49$ for the
++humans (not in the table). The difficulty lies in the task rather than in the annotator: the
+ outcome labels are defined by the effect that the target's appearance has
+ on the image, and this effect is a matter of degree
+ (\S\ref{sec:limitations}).
+@@ -1034,22 +1034,19 @@ Decision & & Existence-canceling & Mental-state & Figurative & Perspectival & Ov
+ \multirow{2}{*}{Four outcomes} & annotator & 1.00 & 0.42 & 0.60 & 0.41 & 0.58 \\
+  & humans & 0.83 & 0.47 & 0.67 & 0.75 & 0.70 \\
+ \midrule
+-\multirow{2}{*}{Over-realized vs.\ correct} & annotator & 1.00 & 0.53 & 0.69 & 0.60 & 0.70 \\
+- & humans & 0.88 & 0.49 & 0.74 & 0.79 & 0.75 \\
+-\midrule
+ \multirow{2}{*}{Target appears} & annotator & 1.00 & 0.74 & 0.82 & 0.71 & 0.83 \\
+  & humans & 0.88 & 0.84 & 0.83 & 0.87 & 0.86 \\
+ \midrule
+-\multirow{2}{*}{Allowed form, given it appears} & annotator & --- & 0.41 & 0.12 & 0.39 & 0.30 \\
+- & humans & --- & 0.32 & 0.31 & 0.71 & 0.49 \\
++\multirow{2}{*}{Over-realized vs.\ correct} & annotator & 1.00 & 0.53 & 0.69 & 0.60 & 0.70 \\
++ & humans & 0.88 & 0.49 & 0.74 & 0.79 & 0.75 \\
+ \bottomrule
+ \end{tabular}
+ \caption{Cohen's $\kappa$ of the automatic annotator (Claude Opus~5) against
+ the human gold labels on the held-out test split of OverReal-Det (1{,}118
+ images), and of the two human annotators against each other on the 2{,}688
+ doubly annotated images with one label each, for the four-outcome label,
+-its collapse to over-realized against correct, and the two decisions of the
+-cascade. Existence-canceling prompts have no allowed form.}
++for whether the target appears, and for the collapse to over-realized
++against correct.}
+ \label{tab:autoannot}
+ \end{table}
+ 
+-- 
+2.43.0
+

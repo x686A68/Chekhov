@@ -1,0 +1,131 @@
+From 2541e75ae162eb64014e6f587120babacfb0f648 Mon Sep 17 00:00:00 2001
+From: jiahao-huang <huangjh16@qq.com>
+Date: Mon, 21 Sep 2026 15:20:22 +0900
+Subject: [PATCH 4/5] Appendix B.3: three conclusions; Table 7 in kappa only,
+ per cascade decision, against the human agreement
+
+Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
+---
+ overrealization.tex | 97 ++++++++++++++++++++++++---------------------
+ 1 file changed, 52 insertions(+), 45 deletions(-)
+
+diff --git a/overrealization.tex b/overrealization.tex
+index 3f6b6b1..a8f8135 100644
+--- a/overrealization.tex
++++ b/overrealization.tex
+@@ -989,60 +989,67 @@ again. The best wording is selected per family.
+ \label{app:autoannot-results}
+ 
+ The annotator runs on Claude Opus~5 \citep{anthropic2026opus5}.
+-Table~\ref{tab:autoannot} reports it against the human gold labels on the
+-test split. Conclusions
+-are given as follows.
+-
+-\paragraph{The evolved questions agree with the human labels far better
+-than a direct label request, and better than their first version where
+-that version was weak.} Asking for a label outright is unreliable: in a
+-pilot with a 7B vision-language model, a multiple-choice prompt with a
+-hedged third option reached $\kappa=0.23$ to $0.80$ on images that a single
+-binary question scored at $0.94$ to $1.00$, which is why every question of
+-the cascade is binary. Seven rounds of self-evolution then raised the
+-agreement on the development split where the first version was weakest,
+-from $\kappa=0.39$ to $0.59$ on perspectival prompts and from $0.56$ to
+-$0.59$ on mental-state prompts, while existence-canceling ($0.88$) and
+-figurative ($0.66$) prompts kept their first wording; the rewrites of later
+-rounds did not improve on it, and tuning stopped.
+-
+-\paragraph{Deciding whether the target appears is easy.} The first
+-question of the cascade alone reaches an accuracy of 0.92 to 1.00 in every
+-family, and existence-canceling prompts, where that decision is the whole
+-label, are scored perfectly.
+-
+-\paragraph{Deciding the status of a target that appears is harder, for the
+-annotator and for humans alike.} $\kappa$ over the four outcomes is 0.60 on
+-figurative prompts and about 0.41 on mental-state and perspectival ones,
+-where the two human annotators themselves agree at only 0.51 and 0.72. For
+-these two families the disruptive and silent columns of
+-Table~\ref{tab:mainresults} are best read jointly.
+-
+-\paragraph{The split between over-realization and correct output is
+-reliable in every family.} Collapsing the four outcomes to over-realized
+-(disruptive or silent) against correct (integrated or withheld) gives
+-$\kappa=0.53$ to $1.00$ per family and $0.70$ overall, the figure quoted in
+-\S\ref{sec:autoannot}.
++Table~\ref{tab:autoannot} reports its agreement with the human gold labels
++on the test split, as Cohen's $\kappa$, next to the agreement between the
++two human annotators on the same decisions. Conclusions are given as
++follows.
++
++\paragraph{Self-evolution improves the annotator.} Asking for a label
++outright is unreliable: in a pilot with a 7B vision-language model, a
++multiple-choice prompt with a hedged third option reached $\kappa=0.23$ to
++$0.80$ on images that a single binary question scored at $0.94$ to $1.00$,
++which is why every question of the cascade is binary. Seven rounds of
++self-evolution then raised the agreement on the development split where the
++first version was weakest, from $\kappa=0.39$ to $0.59$ on perspectival
++prompts and from $0.56$ to $0.59$ on mental-state prompts, while
++existence-canceling ($0.88$) and figurative ($0.66$) prompts kept their
++first wording; later rounds did not improve on it, and tuning stopped.
++
++\paragraph{The annotator agrees with the human labels nearly as well as
++the humans agree with each other.} Over the four outcomes, $\kappa$ is
++$0.58$ overall against $0.70$ between the humans, and on the split between
++over-realization and correct output, which the results of
++\S\ref{sec:experiments} rest on, $0.70$ against $0.75$. Existence-canceling
++prompts are scored perfectly.
++
++\paragraph{Deciding whether the target appears is easy; deciding whether
++it appears in a form the prompt allows is harder, for the annotator and
++for the humans alike.} The first decision of the cascade reaches
++$\kappa=0.83$, next to $0.86$ between the humans. The decision between an
++allowed form and an over-realization, taken on the images in which the
++target appears, drops to $0.30$ for the annotator and $0.49$ for the
++humans. The difficulty lies in the task rather than in the annotator: the
++outcome labels are defined by the effect that the target's appearance has
++on the image, and this effect is a matter of degree
++(\S\ref{sec:limitations}).
+ 
+ \begin{table}[h]
+ \centering
+ \small
+-\begin{tabular}{l cccc c}
++\setlength{\tabcolsep}{4pt}
++\begin{tabular}{ll ccccc}
+ \toprule
+-& Existence-canceling & Mental-state & Figurative & Perspectival & Overall \\
++Decision & & Existence-canceling & Mental-state & Figurative & Perspectival & Overall \\
++\midrule
++\multirow{2}{*}{Four outcomes} & annotator & 1.00 & 0.42 & 0.60 & 0.41 & 0.58 \\
++ & humans & 0.83 & 0.47 & 0.67 & 0.75 & 0.70 \\
++\midrule
++\multirow{2}{*}{Over-realized vs.\ correct} & annotator & 1.00 & 0.53 & 0.69 & 0.60 & 0.70 \\
++ & humans & 0.88 & 0.49 & 0.74 & 0.79 & 0.75 \\
+ \midrule
+-Accuracy                          & 1.00 & 0.59 & 0.72 & 0.70 & 0.72 \\
+-$\kappa$, four outcomes           & 1.00 & 0.42 & 0.60 & 0.41 & 0.58 \\
+-$\kappa$, over-realized vs.\ correct & 1.00 & 0.53 & 0.69 & 0.60 & 0.70 \\
+-Presence accuracy                 & 1.00 & 0.92 & 0.92 & 0.93 & 0.93 \\
++\multirow{2}{*}{Target appears} & annotator & 1.00 & 0.74 & 0.82 & 0.71 & 0.83 \\
++ & humans & 0.88 & 0.84 & 0.83 & 0.87 & 0.86 \\
+ \midrule
+-Human--human $\kappa$             & 0.73 & 0.51 & 0.65 & 0.72 & 0.68 \\
++\multirow{2}{*}{Allowed form, given it appears} & annotator & --- & 0.41 & 0.12 & 0.39 & 0.30 \\
++ & humans & --- & 0.32 & 0.31 & 0.71 & 0.49 \\
+ \bottomrule
+ \end{tabular}
+-\caption{The automatic annotator (Claude Opus~5) against the human gold labels
+-on the held-out test split of OverReal-Det (1{,}118 images). Presence accuracy
+-is the first question of the cascade alone. The last row is the agreement
+-between the two human annotators.}
++\caption{Cohen's $\kappa$ of the automatic annotator (Claude Opus~5) against
++the human gold labels on the held-out test split of OverReal-Det (1{,}118
++images), and of the two human annotators against each other on the 2{,}688
++doubly annotated images with one label each, for the four-outcome label,
++its collapse to over-realized against correct, and the two decisions of the
++cascade. Existence-canceling prompts have no allowed form.}
+ \label{tab:autoannot}
+ \end{table}
+ 
+-- 
+2.43.0
+

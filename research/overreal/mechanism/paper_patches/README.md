@@ -23,3 +23,15 @@ be re-applied once Overleaf has synced.
 Re-apply after the Overleaf sync with, in the paper submodule,
 `git am research/../paper_patches/*.patch` (or `git revert` of the revert
 commit), or by hand if Overleaf's edits touched the same lines.
+
+
+2026-09-21: five commits after the Overleaf sync f2bfa38 reverted for the same
+reason; patches 0001 to 0005 replaced accordingly:
+1. B.2 and B.3 rewritten (self-evolution, base model first, evolved questions
+   versus first version and direct labels)
+2. B: second annotator (GPT-5.2) removed
+3. B: "split" instead of "half"
+4. B.3: three conclusions; Table 7 in kappa only, per cascade decision,
+   against the human agreement
+5. Table 7: target-appears row second, allowed-form row dropped
+Re-apply with `git am` in the paper submodule after the Overleaf merge.

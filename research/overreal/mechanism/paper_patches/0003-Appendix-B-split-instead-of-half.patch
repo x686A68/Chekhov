@@ -1,0 +1,59 @@
+From e2ed0f50dc0139240b06b022f10791efc4e915f5 Mon Sep 17 00:00:00 2001
+From: jiahao-huang <huangjh16@qq.com>
+Date: Mon, 21 Sep 2026 15:04:13 +0900
+Subject: [PATCH 3/5] Appendix B: split instead of half
+
+Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
+---
+ overrealization.tex | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/overrealization.tex b/overrealization.tex
+index d17a0a0..3f6b6b1 100644
+--- a/overrealization.tex
++++ b/overrealization.tex
+@@ -976,10 +976,10 @@ The AI annotator is adapted to the task without updating any model weights,
+ by a form of self-evolution: the model annotates a development set with its
+ current questions, revises the questions from the mistakes it made, and
+ repeats until its agreement with the human labels stops improving. We build
+-it on the human labels of OverReal-Det, split in half, stratified by family
+-and generator, into a development set and a test set; the development half
+-alone drives the self-evolution, and the frozen annotator is then evaluated
+-once on the test set. In each round the model scores the development half,
++it on the human labels of OverReal-Det, split evenly, stratified by family
++and generator, into a development split and a test split; the development
++split alone drives the self-evolution, and the frozen annotator is then evaluated
++once on the test set. In each round the model scores the development split,
+ receives the images on which its label disagrees with the human one, traces
+ each disagreement to the question that produced it, and proposes a rewrite
+ of that question; we accept the rewrite and score the revised questions
+@@ -990,7 +990,7 @@ again. The best wording is selected per family.
+ 
+ The annotator runs on Claude Opus~5 \citep{anthropic2026opus5}.
+ Table~\ref{tab:autoannot} reports it against the human gold labels on the
+-test half. Conclusions
++test split. Conclusions
+ are given as follows.
+ 
+ \paragraph{The evolved questions agree with the human labels far better
+@@ -1000,7 +1000,7 @@ pilot with a 7B vision-language model, a multiple-choice prompt with a
+ hedged third option reached $\kappa=0.23$ to $0.80$ on images that a single
+ binary question scored at $0.94$ to $1.00$, which is why every question of
+ the cascade is binary. Seven rounds of self-evolution then raised the
+-agreement on the development half where the first version was weakest,
++agreement on the development split where the first version was weakest,
+ from $\kappa=0.39$ to $0.59$ on perspectival prompts and from $0.56$ to
+ $0.59$ on mental-state prompts, while existence-canceling ($0.88$) and
+ figurative ($0.66$) prompts kept their first wording; the rewrites of later
+@@ -1040,7 +1040,7 @@ Human--human $\kappa$             & 0.73 & 0.51 & 0.65 & 0.72 & 0.68 \\
+ \bottomrule
+ \end{tabular}
+ \caption{The automatic annotator (Claude Opus~5) against the human gold labels
+-on the held-out test half of OverReal-Det (1{,}118 images). Presence accuracy
++on the held-out test split of OverReal-Det (1{,}118 images). Presence accuracy
+ is the first question of the cascade alone. The last row is the agreement
+ between the two human annotators.}
+ \label{tab:autoannot}
+-- 
+2.43.0
+

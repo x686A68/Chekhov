@@ -1,0 +1,98 @@
+From 95282b817e56326adc98c977737bf058a1843651 Mon Sep 17 00:00:00 2001
+From: jiahao-huang <huangjh16@qq.com>
+Date: Mon, 21 Sep 2026 14:53:50 +0900
+Subject: [PATCH 1/5] Appendix B.2 and B.3 rewritten: self-evolution, base
+ model first, evolved questions versus first version and direct labels
+
+Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
+---
+ overrealization.tex | 62 ++++++++++++++++++++++++++-------------------
+ 1 file changed, 36 insertions(+), 26 deletions(-)
+
+diff --git a/overrealization.tex b/overrealization.tex
+index 0d1e03e..9f8aa91 100644
+--- a/overrealization.tex
++++ b/overrealization.tex
+@@ -971,32 +971,41 @@ Appendix~\ref{app:autoannot}.
+ 
+ \subsection{Self-evolution of the AI annotator}
+ \label{app:autoannot-dev}
+-We build the AI annotator based on OverReal-Det. We split the gold images in half,
+-stratified by family and generator, into a development set and a test set,
+-and the development half alone drives the self-evolution. 
+-The annotator is adapted to the task without updating any model weights,
+-by a form of self-evolution: the model iteratively annotate on the development set with a guideline and modify the guideline according the mistakes it made in the annotation, until the AI annotator a high agreement with human labels. We further verify the performance of the AI annotator on the test to verify its generalizability.
+-
+-The form of the
+-questions was fixed first: in a pilot with a 7B vision-language model,
+-multiple-choice prompts with a hedged third option reached $\kappa=0.23$ to
+-$0.80$ on images that a binary question scored at $0.94$ to $1.00$, so
+-every question is binary. Each round then scores the development half,
+-collects the images on which the label disagrees with the human one, and
+-hands them back to the model, which reads them, traces each disagreement to
+-the question that produced it, and proposes a rewrite of that question; we
+-accept the rewrite and score the revised set again. Seven rounds took the
+-annotator from its first wording to the final one, with the wording
+-selected per family. The result was frozen and the test half was scored
+-once, with Claude Opus~5 \citep{anthropic2026opus5}. A second annotator was
+-built from GPT-5.2 \citep{openai2025gpt52} on the same frozen questions,
+-without further revision.
++
++The AI annotator is adapted to the task without updating any model weights,
++by a form of self-evolution: the model annotates a development set with its
++current questions, revises the questions from the mistakes it made, and
++repeats until its agreement with the human labels stops improving. We build
++it on the human labels of OverReal-Det, split in half, stratified by family
++and generator, into a development set and a test set; the development half
++alone drives the self-evolution, and the frozen annotator is then evaluated
++once on the test set. In each round the model scores the development half,
++receives the images on which its label disagrees with the human one, traces
++each disagreement to the question that produced it, and proposes a rewrite
++of that question; we accept the rewrite and score the revised questions
++again. The best wording is selected per family.
+ 
+ \subsection{Agreement with the human labels}
+ \label{app:autoannot-results}
+ 
+-Table~\ref{tab:autoannot} reports the annotator against the human gold
+-labels on the test half. Conclusions are given as follows.
++The annotator runs on Claude Opus~5 \citep{anthropic2026opus5}; a second
++annotator built from GPT-5.2 \citep{openai2025gpt52} uses the same frozen
++questions without further revision. Table~\ref{tab:autoannot} reports the
++Opus annotator against the human gold labels on the test half. Conclusions
++are given as follows.
++
++\paragraph{The evolved questions agree with the human labels far better
++than a direct label request, and better than their first version where
++that version was weak.} Asking for a label outright is unreliable: in a
++pilot with a 7B vision-language model, a multiple-choice prompt with a
++hedged third option reached $\kappa=0.23$ to $0.80$ on images that a single
++binary question scored at $0.94$ to $1.00$, which is why every question of
++the cascade is binary. Seven rounds of self-evolution then raised the
++agreement on the development half where the first version was weakest,
++from $\kappa=0.39$ to $0.59$ on perspectival prompts and from $0.56$ to
++$0.59$ on mental-state prompts, while existence-canceling ($0.88$) and
++figurative ($0.66$) prompts kept their first wording; the rewrites of later
++rounds did not improve on it, and tuning stopped.
+ 
+ \paragraph{Deciding whether the target appears is easy.} The first
+ question of the cascade alone reaches an accuracy of 0.92 to 1.00 in every
+@@ -1016,10 +1025,11 @@ reliable in every family.} Collapsing the four outcomes to over-realized
+ $\kappa=0.53$ to $1.00$ per family and $0.70$ overall, the figure quoted in
+ \S\ref{sec:autoannot}.
+ 
+-\paragraph{A second annotator agrees with the first, except on perspectival
+-prompts.} The GPT-5.2 annotator agrees with the Opus one at $\kappa=0.87$,
+-$0.69$, $0.64$ and $0.31$ on the four families. Table~\ref{tab:mainresults}
+-reports the Opus labels; the GPT-5.2 labels are released with the data.
++\paragraph{The second annotator agrees with the first, except on
++perspectival prompts.} The GPT-5.2 annotator agrees with the Opus one at
++$\kappa=0.87$, $0.69$, $0.64$ and $0.31$ on the four families.
++Table~\ref{tab:mainresults} reports the Opus labels; the GPT-5.2 labels are
++released with the data.
+ 
+ \begin{table}[h]
+ \centering
+-- 
+2.43.0
+
