@@ -133,3 +133,12 @@ images. b per generator x family is the share judged present; filled into
 Table 2 with `fill_main_table.py --b-file`. Five attribution items have a
 person as target (friend, grandmother, ...), where the placeholder "someone"
 makes a person appear by design; excluding them moves b by at most 0.06.
+
+## Pilot judge, pooled (2026-09-21)
+
+Pooled over the 108 inspected pilot images (families 2, 3, 4b; 36 each,
+`research/overreal/pilot/images/{marking_protocols,4b_protocols}.json`):
+multiple-choice protocol kappa 0.46 (raw agreement 63%), single binary
+question kappa 0.96 (98%). Per family: 0.80 / 0.42 / 0.23 vs 0.94 / 1.00 /
+0.94. Dev-split check of the B.3 claim: v1 on all families kappa4 0.612,
+kappa2 0.648; frozen `final` mix on dev 0.680 / 0.756.
