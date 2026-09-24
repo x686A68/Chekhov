@@ -291,10 +291,16 @@ def main():
     ap.add_argument("--out", default="", help="override output path")
     ap.add_argument("--families", default="", help="comma-separated family filter")
     ap.add_argument("--manifests", default="", help="generation manifest glob, e.g. '*_notarget.jsonl'")
+    ap.add_argument("--id-regex", default="", help="keep only image ids matching this regex "
+                    "(e.g. '__s0\\.png$' to judge one seed per prompt)")
     args = ap.parse_args()
 
     if args.manifests:
         meta = manifest_rows(args.manifests)
+        if args.id_regex:
+            import re as _re
+            rx = _re.compile(args.id_regex)
+            meta = {k: v for k, v in meta.items() if rx.search(k)}
         ids = sorted(meta)
     else:
         meta = load_meta()
