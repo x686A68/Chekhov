@@ -18,6 +18,7 @@ targeted, each in wid order).
 """
 import argparse
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[4]
@@ -39,19 +40,37 @@ def main():
 
     rows = []
     seen = set()
+    per_target = {}
+    dropped = {"pretend": 0, "dup_prompt": 0, "target_cap": 0}
     for sample, path in (("random", W / "positives.jsonl"),
                          ("targeted", W / "targeted" / "positives.jsonl")):
         for r in sorted(read(path), key=lambda r: r["wid"]):
             fam = FAM[r["family"]]
             if sample == "targeted" and fam not in topup:
                 continue
-            key = r["prompt"].strip().lower()
+            # Ruling (2026-09-24): "pretending to be X" is role play, not a mental state.
+            if sample == "targeted" and "pretend" in r["cue"].lower():
+                dropped["pretend"] += 1
+                continue
+            # (targeted rows only, so the random part keeps its item_ids)
+            # DiffusionDB holds many variants of one user's prompt: same opening, same
+            # target. Dedupe on the normalised first 60 characters, then cap each
+            # (family, target) at 2 prompts so no single user dominates a family.
+            key = (re.sub(r"[^a-z0-9 ]", "", r["prompt"].lower())[:60].strip()
+                   if sample == "targeted" else r["prompt"].strip().lower())
             if key in seen:
+                dropped["dup_prompt"] += 1
+                continue
+            tkey = (fam, re.sub(r"[^a-z0-9 ]", "", r["target"].lower()).strip())
+            if sample == "targeted" and per_target.get(tkey, 0) >= 2:
+                dropped["target_cap"] += 1
                 continue
             seen.add(key)
+            per_target[tkey] = per_target.get(tkey, 0) + 1
             rows.append({"family": fam, "prompt": r["prompt"], "target": r["target"],
                          "wid": r["wid"], "source": r["source"], "sample": sample,
                          "cue": r["cue"], "confidence": r["confidence"]})
+    print("dropped:", dropped)
 
     counts = {}
     OUT.parent.mkdir(parents=True, exist_ok=True)
