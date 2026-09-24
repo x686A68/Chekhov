@@ -24,6 +24,18 @@ COND = "deployed"
 STATE = GEN / "batches" / "gpt-image.json"
 
 
+def set_cond(cond):
+    """--cond wild: the in-the-wild prompt set; state and request files get a suffix."""
+    global COND, STATE
+    COND = cond
+    if cond != "deployed":
+        STATE = GEN / "batches" / f"gpt-image_{cond}.json"
+
+
+def prompts_for_cond():
+    return load_prompts("raw" if COND == "deployed" else COND)
+
+
 def client():
     load_env()
     from openai import OpenAI
@@ -33,11 +45,11 @@ def client():
 def submit():
     c = client()
     done = done_keys("gpt-image", COND)
-    jobs = [(i, p, s) for i, _, p in load_prompts("raw")
+    jobs = [(i, p, s) for i, _, p in prompts_for_cond()
             for s in range(N_SAMPLES) if (i, s) not in done]
     if not jobs:
         print("nothing to submit"); return
-    req = GEN / "batches" / "gpt-image_requests.jsonl"
+    req = GEN / "batches" / (f"gpt-image_{COND}_requests.jsonl" if COND != "deployed" else "gpt-image_requests.jsonl")
     req.parent.mkdir(parents=True, exist_ok=True)
     with open(req, "w", encoding="utf-8") as f:
         for item_id, prompt, sample in jobs:
@@ -69,7 +81,7 @@ def fetch():
     b = c.batches.retrieve(st["batch_id"])
     if b.status != "completed":
         sys.exit(f"batch is {b.status}, not completed")
-    prompts = {i: (f, p) for i, f, p in load_prompts("raw")}
+    prompts = {i: (f, p) for i, f, p in prompts_for_cond()}
     done = done_keys("gpt-image", COND)
     n_ok = n_fail = 0
     for line in c.files.content(b.output_file_id).text.splitlines():
@@ -103,4 +115,7 @@ def fetch():
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("cmd", choices=["submit", "status", "fetch"])
-    {"submit": submit, "status": status, "fetch": fetch}[ap.parse_args().cmd]()
+    ap.add_argument("--cond", choices=["deployed", "wild"], default="deployed")
+    args = ap.parse_args()
+    set_cond(args.cond)
+    {"submit": submit, "status": status, "fetch": fetch}[args.cmd]()
