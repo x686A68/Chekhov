@@ -96,6 +96,29 @@ bag, facing away, back to the camera, out of view, from behind*.
   character or away from the viewer, or is inside something closed. "a sign that
   says HELLO" with no such wording is negative (the text is requested).
 
+## Rulings from the pilot (binding)
+
+1. **Negative-prompt tool syntax** ("Negative prompt: person", "[bad anatomy,
+   extra legs, gun, flowers]", bracketed exclusion lists, "Steps: 20, Sampler:
+   ..."): the prompt string carries generator settings, not a scene a user would
+   type into a general text-to-image system. Family `none`, flag
+   `negative_prompt_syntax`. This replaces `meta_negation` for such strings;
+   keep `meta_negation` for plain-language quality negations ("no blur").
+2. **Ordinary poses of body parts** ("hands in pockets", "arms crossed behind the
+   back", "eyes closed"): `none`. A perspectival target must be a separately
+   mentioned entity that the wording places wholly out of sight.
+3. **Speech and discourse verbs** ("explaining why X", "talking about X",
+   "a sign advertising X"): not mental-state. `none`, flag `speech`.
+4. **Abstract or semi-abstract targets** ("the land that was stolen", "his
+   past", "the future"): `none`, per global condition 1.
+5. **"from behind", "back view", "seen from the back" with no target named as
+   being on the far side**: `none`. The cue alone does not create a target.
+6. **Costume and role** ("dressed as a pirate", "as a knight"): `none`.
+   **Material** ("made of water", "made out of vegetables"): `none`; the material
+   is requested.
+7. Confidence: we keep `high` and `medium` positives for the study and drop
+   `low`. So mark `low` only when you would not defend the case in a review.
+
 ## Output
 
 One JSON object per prompt, on its own line, in the order given:
