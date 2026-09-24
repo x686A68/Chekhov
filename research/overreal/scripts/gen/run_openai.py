@@ -31,7 +31,7 @@ def main():
     ap.add_argument("--model", required=True, choices=list(MODEL_IDS))
     ap.add_argument("--model-id", default=None, help="override the API model id")
     ap.add_argument("--limit", type=int, default=0, help="stop after N images")
-    ap.add_argument("--cond", choices=["deployed", "notarget"], default="deployed")
+    ap.add_argument("--cond", choices=["deployed", "notarget", "wild"], default="deployed")
     ap.add_argument("--items", default="", help="file of item_ids to restrict the run to")
     args = ap.parse_args()
     global COND

@@ -58,9 +58,13 @@ def manifest_rows(pattern):
     import glob
     root = Path(__file__).resolve().parents[4]
     prompts = {}
-    for line in open(root / "data" / "generation" / "prompts.jsonl", encoding="utf-8"):
-        r = json.loads(line)
-        prompts[r["item_id"]] = r
+    for name in ("prompts.jsonl", "wild_prompts.jsonl"):
+        p = root / "data" / "generation" / name
+        if not p.exists():
+            continue
+        for line in open(p, encoding="utf-8"):
+            r = json.loads(line)
+            prompts[r["item_id"]] = r
     meta = {}
     for f in sorted(glob.glob(str(root / "data" / "generation" / "manifests" / pattern))):
         for line in open(f, encoding="utf-8"):

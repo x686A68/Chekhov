@@ -6,26 +6,32 @@ Reads data/wild/chunks/chunk_*.jsonl (inputs) and data/wild/out/chunk_*.out.json
   data/wild/positives.jsonl     family != none and confidence in {high, medium}
   data/wild/summary.md          counts per family x confidence, per flag, per source
 """
+import argparse
 import collections
 import glob
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[4]
-W = ROOT / "data" / "wild"
 FAMS = ["existence", "mental", "figurative", "perspectival"]
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--dir", default="data/wild",
+                    help="study directory holding chunks/ and out/ (default: the random sample; "
+                         "use data/wild/targeted for the trigger-word candidates)")
+    args = ap.parse_args()
+    W = ROOT / args.dir
     prompts = {}
-    for f in sorted(glob.glob(str(W / "chunks" / "chunk_*.jsonl"))):
+    for f in sorted(glob.glob(str(W / "chunks" / "*.jsonl"))):
         for line in open(f, encoding="utf-8"):
             r = json.loads(line)
             prompts[r["wid"]] = r
     labels = []
     seen = collections.Counter()
     bad = []
-    for f in sorted(glob.glob(str(W / "out" / "chunk_*.out.jsonl"))):
+    for f in sorted(glob.glob(str(W / "out" / "*.out.jsonl"))):
         for n, line in enumerate(open(f, encoding="utf-8"), 1):
             line = line.strip()
             if not line:

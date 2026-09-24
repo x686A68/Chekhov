@@ -18,9 +18,10 @@ GEN = ROOT / "data" / "generation"
 PROMPTS = GEN / "prompts.jsonl"
 EXPANDED = GEN / "expanded_prompts.jsonl"
 NOTARGET = GEN / "notarget_prompts.jsonl"
+WILD = GEN / "wild_prompts.jsonl"        # in-the-wild prompts (scripts/wild/); cond "wild"
 
 SEEDS = [0, 1]          # two images per prompt
-CONDS = ["raw", "qwen", "dalle3", "ideogram", "notarget"]
+CONDS = ["raw", "qwen", "dalle3", "ideogram", "notarget", "wild"]
 
 
 def load_env():
@@ -54,6 +55,8 @@ def load_prompts(cond):
         return [(r["item_id"], r["family"], r["prompt"]) for r in read_jsonl(PROMPTS)]
     if cond == "notarget":
         return [(r["item_id"], r["family"], r["text"]) for r in read_jsonl(NOTARGET)]
+    if cond == "wild":
+        return [(r["item_id"], r["family"], r["prompt"]) for r in read_jsonl(WILD)]
     rows = [r for r in read_jsonl(EXPANDED) if r["expander"] == cond]
     fam = {r["item_id"]: r["family"] for r in read_jsonl(PROMPTS)}
     return [(r["item_id"], fam[r["item_id"]], r["text"]) for r in rows]

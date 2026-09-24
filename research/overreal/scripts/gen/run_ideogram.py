@@ -24,7 +24,7 @@ SPEED = "BALANCED"
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0)
-    ap.add_argument("--cond", choices=["deployed", "notarget"], default="deployed")
+    ap.add_argument("--cond", choices=["deployed", "notarget", "wild"], default="deployed")
     ap.add_argument("--items", default="", help="file of item_ids to restrict the run to")
     args = ap.parse_args()
     global COND
