@@ -30,7 +30,7 @@ class Model:
         N = N_TXT + self.n_img
         m = torch.zeros(1, 1, N, N, dtype=torch.bfloat16, device="cuda")
         cols = torch.tensor(idx, device="cuda")
-        m[0, 0, N_TXT:, cols] = logk          # image-query rows, chosen text columns
+        m[0, 0, (0 if Bias.rows == "all" else N_TXT):, cols] = logk   # image-query rows (or all rows), chosen text columns
         return m
 
     def install(self, pipe):

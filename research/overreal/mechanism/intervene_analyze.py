@@ -6,7 +6,7 @@ Usage: python intervene_analyze.py --model sd35l
 import argparse, collections, glob, json, os, random
 ROOT = os.path.dirname(os.path.abspath(__file__))
 FAMS = ["cancellation", "attribution", "figurative", "perspectival"]
-ORDER = ["baseline", "cue_x2", "cue_x4", "cue_x8", "tgt_d2", "tgt_d4", "tgt_d8", "rand_x8", "P_baseline", "P_rep_x8", "P_tgt_d8"]
+ORDER = ["baseline", "cue_x2", "cue_x4", "cue_x8", "cue_x8_all", "tgt_d2", "tgt_d4", "tgt_d8", "rand_x8", "func_x8", "P_baseline", "P_rep_x8", "P_tgt_d8"]
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--model", required=True); ap.add_argument("--json", default="")
@@ -32,14 +32,14 @@ def main():
             flat = [x for v in smp for x in v]; bs.append(sum(flat) / len(flat))
         bs.sort(); return dict(n=len(keys), rate=rate, diff=d, lo=bs[int(.025 * len(bs))], hi=bs[int(.975 * len(bs))])
     out = {}
-    print(f"{'cond':12s}" + "".join(f"{f[:13]:>26s}" for f in FAMS + ["all"]))
+    print(f"{'cond':12s}" + "".join(f"{f[:13]:>30s}" for f in FAMS + ["all"]))
     for c in conds:
         line = f"{c:12s}"
         for f in FAMS + [None]:
             r = cell(c, f); out[(c, f or "all")] = r
-            if r is None: line += f"{'---':>26s}"; continue
-            s = f"{r['rate']:.2f}" + (f" ({r['diff']:+.2f} [{r['lo']:+.2f},{r['hi']:+.2f}])" if "diff" in r else "") + f" n={r['n']}"
-            line += f"{s:>26s}"
+            if r is None: line += f"{'---':>30s}"; continue
+            s = f"{r['rate']:.2f}" + (f" {r['diff']:+.2f}[{r['lo']:+.2f},{r['hi']:+.2f}]" if "diff" in r else "") + f" n={r['n']}"
+            line += f"{s:>30s}"
         print(line)
     if a.json: json.dump({f"{c}|{f}": v for (c, f), v in out.items()}, open(a.json, "w"), indent=1)
 

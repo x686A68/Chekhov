@@ -37,12 +37,17 @@ CONDS = [
     ("rand_x8", "S", "random", math.log(8)),
     ("P_rep_x8", "P", "cue", math.log(8)),
     ("P_tgt_d8", "P", "target", -math.log(8)),
+    ("cue_x8_all", "S", "cue", math.log(8)),   # bias on every query row (text rows too), see Bias.rows
+    ("func_x8", "S", "func", math.log(8)),     # one function word x 8: a neutral magnitude control
 ]
+FUNC = {"a", "an", "the", "of", "in", "on", "at", "to", "and", "with", "for", "from", "by", "her", "his", "its"}
 
 
 class Bias:
-    """Holder the attention processors read: additive mask [B,1,N,N] or None."""
+    """Holder the attention processors read: additive mask [B,1,N,N] or None.
+    rows = "img" (image queries only) or "all" (text queries too)."""
     mask = None
+    rows = "img"
 
 
 def spans_for(r, side, kind):
@@ -52,8 +57,13 @@ def spans_for(r, side, kind):
     if kind == "cue":
         # the words the control replaces (S) / the words that replace them (P): word-level diff
         return diff_spans(r["s_text"], r["p_text"]) if side == "S" else diff_spans(r["p_text"], r["s_text"])
-    # random: a content word (>= 4 letters) outside target and cue spans, deterministic per item
     taken = (r["s_spans"] or []) + diff_spans(r["s_text"], r["p_text"])
+    if kind == "func":
+        # one function word outside target and cue spans, deterministic per item
+        cands = [(m.start(), m.end()) for m in WORD.finditer(text)
+                 if m.group(0).lower() in FUNC and not any(m.start() < e and m.end() > s for s, e in taken)]
+        return [random.Random(r["item_id"] + "f").choice(cands)] if cands else []
+    # random: a content word (>= 4 letters) outside target and cue spans, deterministic per item
     cands = [(m.start(), m.end()) for m in WORD.finditer(text)
              if m.end() - m.start() >= 4 and not any(m.start() < e and m.end() > s for s, e in taken)]
     if not cands:
@@ -61,11 +71,14 @@ def spans_for(r, side, kind):
     return [random.Random(r["item_id"]).choice(cands)]
 
 
-def load_jobs(shard, seeds=SEEDS, items_file=None):
+def load_jobs(shard, seeds=SEEDS, items_file=None, conds=None):
+    """Filter by condition first, then shard, so every shard holds every
+    condition and shards launched with different filters stay consistent."""
     items = set(json.load(open(items_file or ITEMS)))
     pairs = [json.loads(l) for l in open(PAIRS)]
     pairs = [r for r in pairs if r["item_id"] in items and not r["exclude"]]
-    jobs = [(r, seed, c) for r in pairs for seed in seeds for c in CONDS]
+    keep = set(conds.split(",")) if conds else None
+    jobs = [(r, seed, c) for r in pairs for seed in seeds for c in CONDS if keep is None or c[0] in keep]
     i, n = map(int, shard.split("/"))
     return jobs[i::n]
 
@@ -85,10 +98,7 @@ def run(model, args):
     out_root = os.path.join(ROOT, "intervene", model.key)
     os.makedirs(out_root, exist_ok=True)
     seeds = [int(x) for x in args.seeds.split(",")] if args.seeds else SEEDS
-    jobs = load_jobs(args.shard, seeds, args.items or None)
-    if args.conds:
-        keep = set(args.conds.split(","))
-        jobs = [j for j in jobs if j[2][0] in keep]
+    jobs = load_jobs(args.shard, seeds, args.items or None, args.conds or None)
     if args.limit:
         jobs = jobs[:args.limit]
     pending = [j for j in jobs if not os.path.exists(
@@ -108,6 +118,7 @@ def run(model, args):
         mrow = manifest.get((r["item_id"], seed))
         steps = mrow["steps"] if mrow else model.steps_default
         cfg = mrow["cfg"] if mrow else model.cfg_default
+        Bias.rows = "all" if cname.endswith("_all") else "img"
         Bias.mask = model.make_mask(pipe, text, idx, logk) if idx else None
         img = model.generate(pipe, text, steps, cfg, seed)
         Bias.mask = None

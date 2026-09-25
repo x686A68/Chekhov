@@ -22,7 +22,7 @@ class Model(Base):
         N = n_txt + self.n_img
         m = torch.zeros(1, 1, N, N, dtype=torch.bfloat16, device="cuda")
         cols = torch.tensor(idx, device="cuda")
-        m[0, 0, n_txt:, cols] = logk
+        m[0, 0, (0 if Bias.rows == "all" else n_txt):, cols] = logk
         self._n_txt_cond = n_txt
         return m
 

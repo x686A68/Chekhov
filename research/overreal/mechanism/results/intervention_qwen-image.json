@@ -1,0 +1,217 @@
+{
+ "baseline|cancellation": {
+  "n": 20,
+  "rate": 0.65
+ },
+ "baseline|attribution": {
+  "n": 20,
+  "rate": 0.95
+ },
+ "baseline|figurative": {
+  "n": 20,
+  "rate": 0.75
+ },
+ "baseline|perspectival": {
+  "n": 20,
+  "rate": 0.9
+ },
+ "baseline|all": {
+  "n": 80,
+  "rate": 0.8125
+ },
+ "cue_x8|cancellation": {
+  "n": 20,
+  "rate": 0.5,
+  "diff": -0.15,
+  "lo": -0.3,
+  "hi": 0.0
+ },
+ "cue_x8|attribution": {
+  "n": 20,
+  "rate": 0.95,
+  "diff": 0.0,
+  "lo": 0.0,
+  "hi": 0.0
+ },
+ "cue_x8|figurative": {
+  "n": 20,
+  "rate": 0.75,
+  "diff": 0.0,
+  "lo": -0.2,
+  "hi": 0.2
+ },
+ "cue_x8|perspectival": {
+  "n": 20,
+  "rate": 0.85,
+  "diff": -0.05,
+  "lo": -0.15,
+  "hi": 0.0
+ },
+ "cue_x8|all": {
+  "n": 80,
+  "rate": 0.7625,
+  "diff": -0.05,
+  "lo": -0.1125,
+  "hi": 0.0125
+ },
+ "tgt_d8|cancellation": {
+  "n": 20,
+  "rate": 0.3,
+  "diff": -0.35,
+  "lo": -0.55,
+  "hi": -0.15
+ },
+ "tgt_d8|attribution": {
+  "n": 20,
+  "rate": 0.95,
+  "diff": 0.0,
+  "lo": 0.0,
+  "hi": 0.0
+ },
+ "tgt_d8|figurative": {
+  "n": 20,
+  "rate": 0.45,
+  "diff": -0.3,
+  "lo": -0.5,
+  "hi": -0.1
+ },
+ "tgt_d8|perspectival": {
+  "n": 20,
+  "rate": 0.75,
+  "diff": -0.15,
+  "lo": -0.3,
+  "hi": 0.0
+ },
+ "tgt_d8|all": {
+  "n": 80,
+  "rate": 0.6125,
+  "diff": -0.2,
+  "lo": -0.2875,
+  "hi": -0.1125
+ },
+ "rand_x8|cancellation": {
+  "n": 20,
+  "rate": 0.6,
+  "diff": -0.05,
+  "lo": -0.15,
+  "hi": 0.0
+ },
+ "rand_x8|attribution": {
+  "n": 20,
+  "rate": 1.0,
+  "diff": 0.05,
+  "lo": 0.0,
+  "hi": 0.15
+ },
+ "rand_x8|figurative": {
+  "n": 20,
+  "rate": 0.75,
+  "diff": 0.0,
+  "lo": -0.15,
+  "hi": 0.15
+ },
+ "rand_x8|perspectival": {
+  "n": 20,
+  "rate": 0.9,
+  "diff": 0.0,
+  "lo": 0.0,
+  "hi": 0.0
+ },
+ "rand_x8|all": {
+  "n": 80,
+  "rate": 0.8125,
+  "diff": 0.0,
+  "lo": -0.05,
+  "hi": 0.05
+ },
+ "P_baseline|cancellation": {
+  "n": 20,
+  "rate": 1.0
+ },
+ "P_baseline|attribution": {
+  "n": 20,
+  "rate": 0.95
+ },
+ "P_baseline|figurative": {
+  "n": 20,
+  "rate": 0.95
+ },
+ "P_baseline|perspectival": {
+  "n": 20,
+  "rate": 0.95
+ },
+ "P_baseline|all": {
+  "n": 80,
+  "rate": 0.9625
+ },
+ "P_rep_x8|cancellation": {
+  "n": 20,
+  "rate": 1.0,
+  "diff": 0.0,
+  "lo": 0.0,
+  "hi": 0.0
+ },
+ "P_rep_x8|attribution": {
+  "n": 20,
+  "rate": 0.95,
+  "diff": 0.0,
+  "lo": 0.0,
+  "hi": 0.0
+ },
+ "P_rep_x8|figurative": {
+  "n": 20,
+  "rate": 0.9,
+  "diff": -0.05,
+  "lo": -0.15,
+  "hi": 0.0
+ },
+ "P_rep_x8|perspectival": {
+  "n": 20,
+  "rate": 0.9,
+  "diff": -0.05,
+  "lo": -0.15,
+  "hi": 0.0
+ },
+ "P_rep_x8|all": {
+  "n": 80,
+  "rate": 0.9375,
+  "diff": -0.025,
+  "lo": -0.0625,
+  "hi": 0.0
+ },
+ "P_tgt_d8|cancellation": {
+  "n": 20,
+  "rate": 0.85,
+  "diff": -0.15,
+  "lo": -0.3,
+  "hi": 0.0
+ },
+ "P_tgt_d8|attribution": {
+  "n": 20,
+  "rate": 0.95,
+  "diff": 0.0,
+  "lo": 0.0,
+  "hi": 0.0
+ },
+ "P_tgt_d8|figurative": {
+  "n": 20,
+  "rate": 0.75,
+  "diff": -0.2,
+  "lo": -0.4,
+  "hi": -0.05
+ },
+ "P_tgt_d8|perspectival": {
+  "n": 20,
+  "rate": 0.85,
+  "diff": -0.1,
+  "lo": -0.25,
+  "hi": 0.0
+ },
+ "P_tgt_d8|all": {
+  "n": 80,
+  "rate": 0.85,
+  "diff": -0.1125,
+  "lo": -0.1875,
+  "hi": -0.05
+ }
+}
