@@ -58,8 +58,12 @@ def rates(labels):
 def wild_labels():
     items = {r["item_id"]: r for r in read_jsonl(GEN / "wild_prompts.jsonl")}
     cells = collections.defaultdict(list)          # (model, family, sample) -> labels
-    for f in sorted(glob.glob(str(DS / "auto" / "final__claude-opus-5-api__wild_s*.jsonl"))):
+    seen = set()                                    # shard files share pre-seeded rows
+    for f in sorted(glob.glob(str(DS / "auto" / "final__claude-opus-5-api__wild_*.jsonl"))):
         for r in read_jsonl(f):
+            if r["image_id"] in seen:
+                continue
+            seen.add(r["image_id"])
             lab = derive_label(r["answers"], r["questions"])
             if not lab or lab == "other":
                 continue
