@@ -1,7 +1,7 @@
 """Main-results figure: over-realization rate per generator and family, DO/SO stacked.
-
-Data: the Opus judge run on the eval sample (Table 1(b) population), same filters as
-fill_main_table.py --outcomes auto. Writes figures/main_results.{pdf,png}.
+Top row: OverReal-Gen (Opus judge on the eval sample, same filters as
+fill_main_table.py --outcomes auto). Bottom row: the in-the-wild prompt set
+(wild_rates.py). Writes figures/main_results.{pdf,png}.
 """
 import collections
 import json
@@ -15,7 +15,9 @@ from matplotlib.patches import Patch
 
 ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "research" / "overreal" / "scripts" / "autoannot"))
+sys.path.insert(0, str(ROOT / "research" / "overreal" / "scripts" / "wild"))
 from common import derive_label  # noqa: E402
+import wild_rates  # noqa: E402
 
 DS = ROOT / "data" / "overreal_v1"
 OUT = ROOT / "Chekhov_paper_ICLR" / "figures" / "main_results"
@@ -52,35 +54,50 @@ def rates():
     return out
 
 
+def wild():
+    cells, _ = wild_rates.wild_labels()
+    out = {}
+    for g, _ in GENS:
+        m = wild_rates.GEN_KEY[g]
+        for fam, _ in FAMS:
+            labs = cells.get((m, fam, "random"), []) + cells.get((m, fam, "targeted"), [])
+            r = wild_rates.rates(labs)
+            if r:
+                out[(g, fam)] = (r["disruptive"], r["silent"], r["n"])
+    return out
+
+
 def main():
-    R = rates()
+    ROWS = [("OverReal-Gen", rates()), ("In-the-wild", wild())]
     plt.rcParams.update({"font.size": 7, "font.family": "serif", "axes.linewidth": 0.5,
                          "xtick.major.width": 0.5, "ytick.major.width": 0.5})
-    fig, axes = plt.subplots(1, 4, figsize=(6.9, 1.6), sharey=True)
+    fig, axes = plt.subplots(2, 4, figsize=(6.9, 2.55), sharey=True, sharex=True)
     c_prop, c_open = "#b2412f", "#2f5f8f"          # proprietary red, open blue
-    for ax, (fam, title) in zip(axes, FAMS):
-        for i, (g, name) in enumerate(GENS):
-            do, so, n = R.get((g, fam), (0, 0, 0))
-            base = c_prop if g in PROP else c_open
-            ax.bar(i, do, color=base, width=0.72, linewidth=0)
-            ax.bar(i, so, bottom=do, color=base, alpha=0.4, width=0.72, linewidth=0)
-            ax.text(i, do + so + 0.02, f"{do + so:.2f}"[1:], ha="center", va="bottom", fontsize=5.5)
-        ax.set_title(title, fontsize=7.5, pad=3)
-        ax.set_xticks(range(len(GENS)))
-        ax.set_xticklabels([n for _, n in GENS], rotation=45, ha="right", rotation_mode="anchor", fontsize=6)
-        ax.set_ylim(0, 1.08)
-        ax.axvline(2.5, color="0.7", linewidth=0.5, linestyle=":")
-        for s in ("top", "right"):
-            ax.spines[s].set_visible(False)
-        ax.tick_params(length=2)
-    axes[0].set_ylabel("share of images")
+    for r, (rowname, R) in enumerate(ROWS):
+        for ax, (fam, title) in zip(axes[r], FAMS):
+            for i, (g, name) in enumerate(GENS):
+                do, so, n = R.get((g, fam), (0, 0, 0))
+                base = c_prop if g in PROP else c_open
+                ax.bar(i, do, color=base, width=0.72, linewidth=0)
+                ax.bar(i, so, bottom=do, color=base, alpha=0.4, width=0.72, linewidth=0)
+                ax.text(i, do + so + 0.02, f"{do + so:.2f}"[1:], ha="center", va="bottom", fontsize=5.5)
+            if r == 0:
+                ax.set_title(title, fontsize=7.5, pad=3)
+            ax.set_xticks(range(len(GENS)))
+            ax.set_xticklabels([n for _, n in GENS], rotation=45, ha="right", rotation_mode="anchor", fontsize=6)
+            ax.set_ylim(0, 1.08)
+            ax.axvline(2.5, color="0.7", linewidth=0.5, linestyle=":")
+            for s in ("top", "right"):
+                ax.spines[s].set_visible(False)
+            ax.tick_params(length=2)
+        axes[r][0].set_ylabel(rowname, fontsize=7)
     handles = [Patch(color=c_prop, label="proprietary, disruptive"),
                Patch(color=c_prop, alpha=0.4, label="proprietary, silent"),
                Patch(color=c_open, label="open, disruptive"),
                Patch(color=c_open, alpha=0.4, label="open, silent")]
     fig.legend(handles=handles, ncol=4, loc="lower center", bbox_to_anchor=(0.5, -0.02),
                frameon=False, fontsize=6, handlelength=1.2, columnspacing=1.2)
-    fig.tight_layout(rect=(0, 0.06, 1, 1))
+    fig.tight_layout(rect=(0, 0.04, 1, 1), h_pad=0.6)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(OUT.with_suffix(".pdf"), bbox_inches="tight")
     fig.savefig(OUT.with_suffix(".png"), dpi=200, bbox_inches="tight")
