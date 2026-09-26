@@ -21,9 +21,9 @@ DS = ROOT / "data" / "overreal_v1"
 OUT = ROOT / "Chekhov_paper_ICLR" / "figures" / "main_results"
 FAMS = [("cancellation", "Existence-canceling"), ("attribution", "Mental-state"),
         ("figurative", "Figurative"), ("perspectival", "Perspectival")]
-GENS = [("gpt-image-1.5", "GPT-Image"), ("gemini-2.5-flash-image-api", "Nano Banana"),
-        ("ideogram-v3", "Ideogram"), ("flux.1-dev", "FLUX.1-dev"), ("qwen-image", "Qwen-Image"),
-        ("omnigen2", "OmniGen2"), ("sd3.5-medium", "SD3.5-M"), ("sd3.5-large", "SD3.5-L")]
+GENS = [("gpt-image-1.5", "GPT"), ("gemini-2.5-flash-image-api", "NB"),
+        ("ideogram-v3", "Ideo"), ("flux.1-dev", "FLUX"), ("qwen-image", "Qwen"),
+        ("omnigen2", "Omni"), ("sd3.5-medium", "SD-M"), ("sd3.5-large", "SD-L")]
 PROP = {"gpt-image-1.5", "gemini-2.5-flash-image-api", "ideogram-v3"}
 
 
@@ -56,7 +56,7 @@ def main():
     R = rates()
     plt.rcParams.update({"font.size": 7, "font.family": "serif", "axes.linewidth": 0.5,
                          "xtick.major.width": 0.5, "ytick.major.width": 0.5})
-    fig, axes = plt.subplots(1, 4, figsize=(6.9, 1.75), sharey=True)
+    fig, axes = plt.subplots(1, 4, figsize=(6.9, 1.6), sharey=True)
     c_prop, c_open = "#b2412f", "#2f5f8f"          # proprietary red, open blue
     for ax, (fam, title) in zip(axes, FAMS):
         for i, (g, name) in enumerate(GENS):
@@ -67,7 +67,7 @@ def main():
             ax.text(i, do + so + 0.02, f"{do + so:.2f}"[1:], ha="center", va="bottom", fontsize=5.5)
         ax.set_title(title, fontsize=7.5, pad=3)
         ax.set_xticks(range(len(GENS)))
-        ax.set_xticklabels([n for _, n in GENS], rotation=60, ha="right", fontsize=6)
+        ax.set_xticklabels([n for _, n in GENS], rotation=45, ha="right", rotation_mode="anchor", fontsize=6)
         ax.set_ylim(0, 1.08)
         ax.axvline(2.5, color="0.7", linewidth=0.5, linestyle=":")
         for s in ("top", "right"):
