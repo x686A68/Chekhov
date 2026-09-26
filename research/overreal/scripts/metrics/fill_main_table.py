@@ -4,8 +4,8 @@ Block (a): mean conventional metrics per generator x family (raw/deployed).
 Block (b): outcome rates, by default from the Det gold split; with
 --outcomes auto --auto-file <jsonl> from an automatic-annotation run over the
 eval sample (scripts/autoannot). A cell needs >= 10 labelled images,
-otherwise ---. Rates are over all labelled images of the cell, so they need
-not sum to 1 (the "other" label is in the denominator). The best value per column is bolded (min for
+otherwise ---. Rates are over the images that received one of the four
+labels (the "other" label is excluded from the denominator). The best value per column is bolded (min for
 D.O./S.O./b, max elsewhere).
 
 Cells: mean metric over a generator's raw/deployed images of one family
@@ -99,7 +99,7 @@ def main():
         for line in open(args.auto_file, encoding="utf-8"):
             r = json.loads(line)
             lab = derive_label(r["answers"], r["questions"])
-            if lab and r["image_id"] in meta and r["image_id"] in sample:
+            if lab and lab != "other" and r["image_id"] in meta and r["image_id"] in sample:
                 gold[meta[r["image_id"]]].append({lab})
     OUTS = ["disruptive", "silent", "integrated", "withheld"]
     rates = {}

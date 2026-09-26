@@ -45,7 +45,7 @@ def rates():
         if r["image_id"] not in sample or r["image_id"] not in meta:
             continue
         lab = derive_label(r["answers"], r["questions"])
-        if lab:
+        if lab and lab != "other":          # rates over the four labels, as in the tables
             cells[meta[r["image_id"]]].append(lab)
     out = {}
     for k, labs in cells.items():
