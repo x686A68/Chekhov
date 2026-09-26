@@ -27,3 +27,4 @@ data/
 
 # wild-prompt study: raw source parquet (download with scripts/wild/sample_prompts.py)
 data/wild/source/
+supplementary/
