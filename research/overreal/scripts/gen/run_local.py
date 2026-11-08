@@ -84,13 +84,15 @@ def main():
     ap.add_argument("--cond", required=True, choices=CONDS)
     ap.add_argument("--limit", type=int, default=0, help="debug: stop after N images")
     ap.add_argument("--steps", type=int, default=0, help="override step count (debug)")
+    ap.add_argument("--seeds", default=",".join(map(str, SEEDS)), help="comma-separated seeds")
     args = ap.parse_args()
 
     import torch
 
     prompts = load_prompts(args.cond)
     done = done_keys(args.model, args.cond)
-    jobs = [(i, f, p, s) for i, f, p in prompts for s in SEEDS if (i, s) not in done]
+    seeds = [int(x) for x in args.seeds.split(",")]
+    jobs = [(i, f, p, s) for i, f, p in prompts for s in seeds if (i, s) not in done]
     print(f"{args.model}/{args.cond}: {len(jobs)} images to go ({len(done)} done)")
     if not jobs:
         return
