@@ -31,7 +31,8 @@ def main():
     ap.add_argument("--model", required=True, choices=list(MODEL_IDS))
     ap.add_argument("--model-id", default=None, help="override the API model id")
     ap.add_argument("--limit", type=int, default=0, help="stop after N images")
-    ap.add_argument("--cond", choices=["deployed", "notarget", "wild"], default="deployed")
+    ap.add_argument("--cond", choices=["deployed", "notarget", "wild", "constraint"], default="deployed")
+    ap.add_argument("--samples", type=int, default=0, help="images per prompt (default: model preset)")
     ap.add_argument("--items", default="", help="file of item_ids to restrict the run to")
     args = ap.parse_args()
     global COND
@@ -48,7 +49,7 @@ def main():
         prompts = [p for p in prompts if p[0] in keep]
     done = done_keys(args.model, COND)
     jobs = [(i, f, p, s) for i, f, p in prompts
-            for s in range(N_SAMPLES[args.model]) if (i, s) not in done]
+            for s in range(args.samples or N_SAMPLES[args.model]) if (i, s) not in done]
     print(f"{args.model} ({model_id}): {len(jobs)} images to go ({len(done)} done)")
 
     exp_done = ({r["item_id"] for r in read_jsonl(EXPANDED) if r["expander"] == "dalle3"}

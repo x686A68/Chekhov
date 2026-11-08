@@ -21,10 +21,10 @@ ROOT = Path(__file__).resolve().parents[4]
 GEN = ROOT / "data" / "generation"
 DS = ROOT / "data" / "overreal_v1"
 OUT = ROOT / "research" / "overreal" / "constraint" / "rates.md"
-MODELS = ["flux", "qwen-image", "omnigen2", "sd35m", "sd35l"]
-NAME = {"flux": "FLUX.1-dev", "qwen-image": "Qwen-Image", "omnigen2": "OmniGen2",
+MODELS = ["gpt-image", "flux", "qwen-image", "omnigen2", "sd35m", "sd35l"]
+NAME = {"gpt-image": "GPT-Image-1.5", "flux": "FLUX.1-dev", "qwen-image": "Qwen-Image", "omnigen2": "OmniGen2",
         "sd35m": "SD3.5-Medium", "sd35l": "SD3.5-Large"}
-GEN_KEY = {"flux.1-dev": "flux", "qwen-image": "qwen-image", "omnigen2": "omnigen2",
+GEN_KEY = {"gpt-image-1.5": "gpt-image", "flux.1-dev": "flux", "qwen-image": "qwen-image", "omnigen2": "omnigen2",
            "sd3.5-medium": "sd35m", "sd3.5-large": "sd35l"}
 FAMS = ["attribution", "figurative"]
 FAM_NAME = {"attribution": "Mental-state", "figurative": "Figurative"}
@@ -52,7 +52,7 @@ def main():
     es = {r["image_id"]: r for r in read_jsonl(DS / "eval_sample.jsonl")}
     for r in read_jsonl(DS / "auto" / "final__claude-opus-5-api__sample.jsonl"):
         e = es.get(r["image_id"])
-        if not e or e["prompt_cond"] != "raw" or not r.get("label"):
+        if not e or e["prompt_cond"] not in ("raw", "deployed") or not r.get("label"):
             continue
         item = "/".join(r["image_id"].split("/")[:2])
         if item in items and e["generator"] in GEN_KEY:
@@ -68,7 +68,7 @@ def main():
 
     lines = ["# Explicit-constraint prompts: outcome shares (other kept in the denominator)", "",
              "Constraint = original prompt + \"No <target> should appear in the image.\", seed 0.",
-             "Baseline = raw prompts of the same items in the Gen eval sample (both seeds).", ""]
+             "Baseline = raw prompts (deployed for GPT-Image) of the same items in the Gen eval sample (both seeds).", ""]
     for fam in FAMS:
         lines += [f"## {FAM_NAME[fam]}", "",
                   "| Model | Prompts | n | target present | DO | SO | I | target absent | W | other |",
