@@ -51,24 +51,24 @@ def main():
         for ann, labels in human.get(r["image_id"], {}).items():
             j = r["judge_label"]
             h = j if j in labels else labels[0]      # two-label record: credit the judge if it matches
-            rows.append((r["family"], ann, j, h))
+            rows.append((r["family"], ann, j, h, r["image_id"]))
     lines = ["# In-the-wild human check: judge vs. human", "",
-             f"Sample: {len(sample)} images; annotated so far: {len({(f, a) for f, a, _, _ in rows})} "
-             f"(annotators: {sorted({a for _, a, _, _ in rows})})", "",
+             f"Sample: {len(sample)} images; annotated so far: {len({x[4] for x in rows})} "
+             f"(annotators: {sorted({x[1] for x in rows})})", "",
              "| Family | n | exact agreement | κ, 4 labels | κ, over-realized vs. correct |",
              "|---|---|---|---|---|"]
     for fam in ["cancellation", "attribution", "figurative", "perspectival", "all"]:
         sub = [x for x in rows if fam == "all" or x[0] == fam]
         if not sub:
             continue
-        pairs = [(j, h) for _, _, j, h in sub]
+        pairs = [(j, h) for _, _, j, h, _ in sub]
         agree = sum(j == h for j, h in pairs) / len(pairs)
         k4 = kappa(pairs)
         k2 = kappa([(j in OR, h in OR) for j, h in pairs])
         lines.append(f"| {FAM_NAME.get(fam, 'All')} | {len(sub)} | {agree:.2f} | {k4:.2f} | {k2:.2f} |")
     lines += ["", "Confusion matrix (rows: judge, columns: human), all families:", "",
               "| judge \\ human | " + " | ".join(LABS) + " |", "|---|" + "---|" * len(LABS)]
-    conf = collections.Counter((j, h) for _, _, j, h in rows)
+    conf = collections.Counter((j, h) for _, _, j, h, _ in rows)
     for j in LABS:
         lines.append(f"| {j} | " + " | ".join(str(conf[(j, h)]) for h in LABS) + " |")
     OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
