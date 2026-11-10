@@ -25,6 +25,14 @@ LABELS = ["disruptive", "silent", "integrated", "withheld", "other"]
 KEYS = json.load(open(ROOT / "data" / "wild_check_keys.private.json"))  # {name: secret}
 
 tasks_path = STAGING / "tasks.jsonl"
+# SHOW_JUDGE=1 displays the judge's label under the target (inspection mode);
+# unset for the blind annotation run.
+SHOW_JUDGE = os.environ.get("SHOW_JUDGE") == "1"
+JUDGE = {}
+if SHOW_JUDGE:
+    for line in open(ROOT / "research" / "overreal" / "wild" / "human_check_sample.jsonl", encoding="utf-8"):
+        r = json.loads(line)
+        JUDGE[r["image_id"]] = r["judge_label"]
 TASKS = {}
 for line in open(tasks_path, encoding="utf-8"):
     r = json.loads(line)
@@ -139,7 +147,8 @@ def render(iid, img, name, pos, prefill):
     t = TASKS[iid]
     note = f"  ·  *reviewing {pos} back — submitting overwrites*" if pos else ""
     return (gr.update(visible=True), gr.update(visible=False),
-            img, f"**Prompt:** {t['prompt']}", f"**Target:** {t['target']}",
+            img, f"**Prompt:** {t['prompt']}",
+            f"**Target:** {t['target']}" + (f"\n\n**Judge:** {JUDGE.get(iid, '?')}" if SHOW_JUDGE else ""),
             progress_text(name) + note, prefill, iid, pos, hist_update(name))
 
 
