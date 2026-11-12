@@ -73,12 +73,12 @@ def main():
         lines += [f"## {FAM_NAME[fam]}", "",
                   "| Model | Prompts | n | target present | DO | SO | I | target absent | W | other |",
                   "|---|---|---|---|---|---|---|---|---|---|"]
-        for m in MODELS + ["pooled"]:
+        for m in MODELS + ["open", "pooled"]:
             for tag, src in (("raw", base), ("constraint", cons)):
-                labels = (src[(m, fam)] if m != "pooled"
-                          else [l for mm in MODELS for l in src[(mm, fam)]])
+                labels = (src[(m, fam)] if m not in ("open", "pooled")
+                          else [l for mm in MODELS if m == "pooled" or mm != "gpt-image" for l in src[(mm, fam)]])
                 s = row(labels)
-                lines.append(f"| {NAME.get(m, 'Pooled')} | {tag} | {s['n']} | {s['present']:.2f} | {s['disruptive']:.2f} | "
+                lines.append(f"| {NAME.get(m, 'Open-weight' if m == 'open' else 'Pooled')} | {tag} | {s['n']} | {s['present']:.2f} | {s['disruptive']:.2f} | "
                              f"{s['silent']:.2f} | {s['integrated']:.2f} | {s['withheld'] + s['other']:.2f} | "
                              f"{s['withheld']:.2f} | {s['other']:.2f} |")
         lines.append("")

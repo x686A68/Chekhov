@@ -19,6 +19,8 @@ Baseline = raw prompts (deployed for GPT-Image) of the same items in the Gen eva
 | SD3.5-Medium | constraint | 75 | 0.87 | 0.44 | 0.43 | 0.00 | 0.13 | 0.13 | 0.00 |
 | SD3.5-Large | raw | 100 | 0.87 | 0.61 | 0.23 | 0.03 | 0.13 | 0.13 | 0.00 |
 | SD3.5-Large | constraint | 75 | 0.87 | 0.68 | 0.19 | 0.00 | 0.13 | 0.13 | 0.00 |
+| Open-weight | raw | 500 | 0.86 | 0.60 | 0.23 | 0.02 | 0.14 | 0.14 | 0.00 |
+| Open-weight | constraint | 375 | 0.85 | 0.59 | 0.25 | 0.01 | 0.15 | 0.15 | 0.00 |
 | Pooled | raw | 600 | 0.86 | 0.56 | 0.24 | 0.07 | 0.14 | 0.14 | 0.00 |
 | Pooled | constraint | 445 | 0.73 | 0.50 | 0.21 | 0.03 | 0.27 | 0.26 | 0.00 |
 
@@ -38,5 +40,7 @@ Baseline = raw prompts (deployed for GPT-Image) of the same items in the Gen eva
 | SD3.5-Medium | constraint | 118 | 0.58 | 0.17 | 0.35 | 0.06 | 0.42 | 0.41 | 0.02 |
 | SD3.5-Large | raw | 54 | 0.67 | 0.17 | 0.37 | 0.13 | 0.33 | 0.31 | 0.02 |
 | SD3.5-Large | constraint | 118 | 0.74 | 0.25 | 0.39 | 0.10 | 0.26 | 0.25 | 0.01 |
+| Open-weight | raw | 259 | 0.54 | 0.14 | 0.31 | 0.09 | 0.46 | 0.45 | 0.01 |
+| Open-weight | constraint | 590 | 0.65 | 0.21 | 0.37 | 0.07 | 0.35 | 0.34 | 0.02 |
 | Pooled | raw | 301 | 0.54 | 0.14 | 0.30 | 0.10 | 0.46 | 0.45 | 0.01 |
 | Pooled | constraint | 705 | 0.55 | 0.17 | 0.32 | 0.07 | 0.45 | 0.43 | 0.01 |
