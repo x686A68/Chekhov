@@ -80,7 +80,18 @@ def main():
                 base = c_prop if g in PROP else c_open
                 ax.bar(i, do, color=base, width=0.72, linewidth=0)
                 ax.bar(i, so, bottom=do, color=base, alpha=0.4, width=0.72, linewidth=0)
-                ax.text(i, do + so + 0.02, f"{do + so:.2f}"[1:], ha="center", va="bottom", fontsize=5.5)
+                fmt = lambda v: f"{v:.2f}"[1:]
+                # disruptive rate (the error) in bold: inside the dark part when it fits
+                if do >= 0.13:
+                    ax.text(i, do - 0.015, fmt(do), ha="center", va="top", fontsize=5.5,
+                            fontweight="bold", color="white")
+                else:
+                    ax.text(i, do + 0.015, fmt(do), ha="center", va="bottom", fontsize=5.5,
+                            fontweight="bold", color=base)
+                # total over-realization rate (DO+SO) above the bar, when it differs
+                if fmt(so) != ".00":
+                    ax.text(i, do + so + 0.02, fmt(do + so), ha="center", va="bottom",
+                            fontsize=5.5, color="0.35")
             if r == 0:
                 ax.set_title(title, fontsize=7.5, pad=3)
             ax.set_xticks(range(len(GENS)))
